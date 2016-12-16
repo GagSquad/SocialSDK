@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E3171271E02B81200A75EA4 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3171261E02B81200A75EA4 /* LoginManager.swift */; };
-		0E3171301E0387C500A75EA4 /* PlatformParamConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31712D1E0387C500A75EA4 /* PlatformParamConfigManager.swift */; };
-		0E3171311E0387C500A75EA4 /* PlatformTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31712E1E0387C500A75EA4 /* PlatformTypeEnum.swift */; };
-		0E3171331E03882F00A75EA4 /* PayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3171321E03882F00A75EA4 /* PayManager.swift */; };
-		0E3171351E03883C00A75EA4 /* ShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3171341E03883C00A75EA4 /* ShareManager.swift */; };
 		0E3171371E03887200A75EA4 /* TestUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3171361E03887200A75EA4 /* TestUI.swift */; };
 		0E4B31F21E0294A000F231F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4B31F11E0294A000F231F0 /* AppDelegate.swift */; };
 		0E4B31F41E0294A000F231F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4B31F31E0294A000F231F0 /* ViewController.swift */; };
@@ -21,21 +16,24 @@
 		0E4B320C1E02962C00F231F0 /* SocialSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E4B320A1E02962C00F231F0 /* SocialSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E4B320F1E02962C00F231F0 /* SocialSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4B32081E02962C00F231F0 /* SocialSDK.framework */; };
 		0E4B32101E02962C00F231F0 /* SocialSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4B32081E02962C00F231F0 /* SocialSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0EDF13B71E03BA6F00C554FC /* GSPlatformParamConfigManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EDF13B51E03BA6F00C554FC /* GSPlatformParamConfigManager.h */; };
+		0EDF13B81E03BA6F00C554FC /* GSPlatformParamConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF13B61E03BA6F00C554FC /* GSPlatformParamConfigManager.m */; };
+		0EDF13BC1E03BAA700C554FC /* GSLoginManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EDF13BA1E03BAA700C554FC /* GSLoginManager.h */; };
+		0EDF13BD1E03BAA700C554FC /* GSLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF13BB1E03BAA700C554FC /* GSLoginManager.m */; };
+		0EDF13C01E03BAB700C554FC /* GSPayManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EDF13BE1E03BAB700C554FC /* GSPayManager.h */; };
+		0EDF13C11E03BAB700C554FC /* GSPayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF13BF1E03BAB700C554FC /* GSPayManager.m */; };
+		0EDF13C41E03BAC500C554FC /* GSBaseShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EDF13C21E03BAC500C554FC /* GSBaseShare.h */; };
+		0EDF13C51E03BAC500C554FC /* GSBaseShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF13C31E03BAC500C554FC /* GSBaseShare.m */; };
+		0EDF13C81E03BADD00C554FC /* GSSinaShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EDF13C61E03BADD00C554FC /* GSSinaShare.h */; };
+		0EDF13C91E03BADD00C554FC /* GSSinaShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF13C71E03BADD00C554FC /* GSSinaShare.m */; };
+		0EDF13CC1E03BAEA00C554FC /* GSShareManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EDF13CA1E03BAEA00C554FC /* GSShareManager.h */; };
+		0EDF13CD1E03BAEA00C554FC /* GSShareManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF13CB1E03BAEA00C554FC /* GSShareManager.mm */; };
+		0EDF13D01E03BB0500C554FC /* GSQQShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EDF13CE1E03BB0500C554FC /* GSQQShare.h */; };
+		0EDF13D11E03BB0500C554FC /* GSQQShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF13CF1E03BB0500C554FC /* GSQQShare.m */; };
+		6EE178E64608D9FE80D853D6 /* Pods_SocialSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 828793C50AC8B1B8F0E93277 /* Pods_SocialSDK.framework */; };
+		79CB53B5CB6FCC98DF33B7FC /* Pods_SocialSDKDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA65CA283A949C0585437B0 /* Pods_SocialSDKDemo.framework */; };
 		F5ADC98A1E029EC700632969 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5ADC97A1E029EC700632969 /* TencentOpenAPI.framework */; };
 		F5ADC98B1E029EC700632969 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5ADC97B1E029EC700632969 /* TencentOpenApi_IOS_Bundle.bundle */; };
-		F5ADC98C1E029EC700632969 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5ADC97D1E029EC700632969 /* libWeiboSDK.a */; };
-		F5ADC98D1E029EC700632969 /* WBHttpRequest+WeiboGame.h in Headers */ = {isa = PBXBuildFile; fileRef = F5ADC97E1E029EC700632969 /* WBHttpRequest+WeiboGame.h */; };
-		F5ADC98E1E029EC700632969 /* WBHttpRequest+WeiboShare.h in Headers */ = {isa = PBXBuildFile; fileRef = F5ADC97F1E029EC700632969 /* WBHttpRequest+WeiboShare.h */; };
-		F5ADC98F1E029EC700632969 /* WBHttpRequest+WeiboToken.h in Headers */ = {isa = PBXBuildFile; fileRef = F5ADC9801E029EC700632969 /* WBHttpRequest+WeiboToken.h */; };
-		F5ADC9901E029EC700632969 /* WBHttpRequest+WeiboUser.h in Headers */ = {isa = PBXBuildFile; fileRef = F5ADC9811E029EC700632969 /* WBHttpRequest+WeiboUser.h */; };
-		F5ADC9911E029EC700632969 /* WBHttpRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = F5ADC9821E029EC700632969 /* WBHttpRequest.h */; };
-		F5ADC9921E029EC700632969 /* WBSDKBasicButton.h in Headers */ = {isa = PBXBuildFile; fileRef = F5ADC9831E029EC700632969 /* WBSDKBasicButton.h */; };
-		F5ADC9931E029EC700632969 /* WBSDKCommentButton.h in Headers */ = {isa = PBXBuildFile; fileRef = F5ADC9841E029EC700632969 /* WBSDKCommentButton.h */; };
-		F5ADC9941E029EC700632969 /* WBSDKRelationshipButton.h in Headers */ = {isa = PBXBuildFile; fileRef = F5ADC9851E029EC700632969 /* WBSDKRelationshipButton.h */; };
-		F5ADC9951E029EC700632969 /* WeiboSDK+Statistics.h in Headers */ = {isa = PBXBuildFile; fileRef = F5ADC9861E029EC700632969 /* WeiboSDK+Statistics.h */; };
-		F5ADC9961E029EC700632969 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5ADC9871E029EC700632969 /* WeiboSDK.bundle */; };
-		F5ADC9971E029EC700632969 /* WeiboSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = F5ADC9881E029EC700632969 /* WeiboSDK.h */; };
-		F5ADC9981E029EC700632969 /* WeiboUser.h in Headers */ = {isa = PBXBuildFile; fileRef = F5ADC9891E029EC700632969 /* WeiboUser.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,11 +61,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0E3171261E02B81200A75EA4 /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
-		0E31712D1E0387C500A75EA4 /* PlatformParamConfigManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformParamConfigManager.swift; sourceTree = "<group>"; };
-		0E31712E1E0387C500A75EA4 /* PlatformTypeEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformTypeEnum.swift; sourceTree = "<group>"; };
-		0E3171321E03882F00A75EA4 /* PayManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayManager.swift; sourceTree = "<group>"; };
-		0E3171341E03883C00A75EA4 /* ShareManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareManager.swift; sourceTree = "<group>"; };
+		059743971EFDA68B29DD7166 /* Pods-SocialSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialSDKDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialSDKDemo/Pods-SocialSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		0E3171361E03887200A75EA4 /* TestUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUI.swift; sourceTree = "<group>"; };
 		0E4B31EE1E0294A000F231F0 /* SocialSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E4B31F11E0294A000F231F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,21 +73,29 @@
 		0E4B32081E02962C00F231F0 /* SocialSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SocialSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E4B320A1E02962C00F231F0 /* SocialSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocialSDK.h; sourceTree = "<group>"; };
 		0E4B320B1E02962C00F231F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EDF13A71E039D3900C554FC /* SocialSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = SocialSDK.podspec; sourceTree = "<group>"; };
+		0EDF13B51E03BA6F00C554FC /* GSPlatformParamConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPlatformParamConfigManager.h; sourceTree = "<group>"; };
+		0EDF13B61E03BA6F00C554FC /* GSPlatformParamConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPlatformParamConfigManager.m; sourceTree = "<group>"; };
+		0EDF13B91E03BA8B00C554FC /* GSPlatformTypeEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSPlatformTypeEnum.h; sourceTree = "<group>"; };
+		0EDF13BA1E03BAA700C554FC /* GSLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLoginManager.h; sourceTree = "<group>"; };
+		0EDF13BB1E03BAA700C554FC /* GSLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSLoginManager.m; sourceTree = "<group>"; };
+		0EDF13BE1E03BAB700C554FC /* GSPayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPayManager.h; sourceTree = "<group>"; };
+		0EDF13BF1E03BAB700C554FC /* GSPayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPayManager.m; sourceTree = "<group>"; };
+		0EDF13C21E03BAC500C554FC /* GSBaseShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSBaseShare.h; sourceTree = "<group>"; };
+		0EDF13C31E03BAC500C554FC /* GSBaseShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSBaseShare.m; sourceTree = "<group>"; };
+		0EDF13C61E03BADD00C554FC /* GSSinaShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSSinaShare.h; sourceTree = "<group>"; };
+		0EDF13C71E03BADD00C554FC /* GSSinaShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSSinaShare.m; sourceTree = "<group>"; };
+		0EDF13CA1E03BAEA00C554FC /* GSShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSShareManager.h; sourceTree = "<group>"; };
+		0EDF13CB1E03BAEA00C554FC /* GSShareManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GSShareManager.mm; sourceTree = "<group>"; };
+		0EDF13CE1E03BB0500C554FC /* GSQQShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSQQShare.h; sourceTree = "<group>"; };
+		0EDF13CF1E03BB0500C554FC /* GSQQShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSQQShare.m; sourceTree = "<group>"; };
+		211A32EFE914CA25D164F791 /* Pods-SocialSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialSDKDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialSDKDemo/Pods-SocialSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
+		257AA106F638C7438C63C51D /* Pods-SocialSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialSDK/Pods-SocialSDK.release.xcconfig"; sourceTree = "<group>"; };
+		828793C50AC8B1B8F0E93277 /* Pods_SocialSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9559809474D9F814326C3975 /* Pods-SocialSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialSDK/Pods-SocialSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		EAA65CA283A949C0585437B0 /* Pods_SocialSDKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialSDKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5ADC97A1E029EC700632969 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
 		F5ADC97B1E029EC700632969 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
-		F5ADC97D1E029EC700632969 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
-		F5ADC97E1E029EC700632969 /* WBHttpRequest+WeiboGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboGame.h"; sourceTree = "<group>"; };
-		F5ADC97F1E029EC700632969 /* WBHttpRequest+WeiboShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboShare.h"; sourceTree = "<group>"; };
-		F5ADC9801E029EC700632969 /* WBHttpRequest+WeiboToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboToken.h"; sourceTree = "<group>"; };
-		F5ADC9811E029EC700632969 /* WBHttpRequest+WeiboUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboUser.h"; sourceTree = "<group>"; };
-		F5ADC9821E029EC700632969 /* WBHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBHttpRequest.h; sourceTree = "<group>"; };
-		F5ADC9831E029EC700632969 /* WBSDKBasicButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSDKBasicButton.h; sourceTree = "<group>"; };
-		F5ADC9841E029EC700632969 /* WBSDKCommentButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSDKCommentButton.h; sourceTree = "<group>"; };
-		F5ADC9851E029EC700632969 /* WBSDKRelationshipButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSDKRelationshipButton.h; sourceTree = "<group>"; };
-		F5ADC9861E029EC700632969 /* WeiboSDK+Statistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WeiboSDK+Statistics.h"; sourceTree = "<group>"; };
-		F5ADC9871E029EC700632969 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
-		F5ADC9881E029EC700632969 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
-		F5ADC9891E029EC700632969 /* WeiboUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboUser.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E4B320F1E02962C00F231F0 /* SocialSDK.framework in Frameworks */,
+				79CB53B5CB6FCC98DF33B7FC /* Pods_SocialSDKDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +113,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5ADC98A1E029EC700632969 /* TencentOpenAPI.framework in Frameworks */,
-				F5ADC98C1E029EC700632969 /* libWeiboSDK.a in Frameworks */,
+				6EE178E64608D9FE80D853D6 /* Pods_SocialSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +123,8 @@
 		0E3171231E02B7C800A75EA4 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				0E3171261E02B81200A75EA4 /* LoginManager.swift */,
+				0EDF13BA1E03BAA700C554FC /* GSLoginManager.h */,
+				0EDF13BB1E03BAA700C554FC /* GSLoginManager.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -128,7 +132,8 @@
 		0E3171241E02B7C800A75EA4 /* Pay */ = {
 			isa = PBXGroup;
 			children = (
-				0E3171321E03882F00A75EA4 /* PayManager.swift */,
+				0EDF13BE1E03BAB700C554FC /* GSPayManager.h */,
+				0EDF13BF1E03BAB700C554FC /* GSPayManager.m */,
 			);
 			path = Pay;
 			sourceTree = "<group>";
@@ -136,7 +141,11 @@
 		0E3171251E02B7C800A75EA4 /* Share */ = {
 			isa = PBXGroup;
 			children = (
-				0E3171341E03883C00A75EA4 /* ShareManager.swift */,
+				0EDF13D41E03BB1B00C554FC /* Base */,
+				0EDF13D31E03BB1300C554FC /* Sina */,
+				0EDF13D21E03BB0D00C554FC /* QQ */,
+				0EDF13CA1E03BAEA00C554FC /* GSShareManager.h */,
+				0EDF13CB1E03BAEA00C554FC /* GSShareManager.mm */,
 			);
 			path = Share;
 			sourceTree = "<group>";
@@ -144,8 +153,9 @@
 		0E31712C1E0387C500A75EA4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				0E31712D1E0387C500A75EA4 /* PlatformParamConfigManager.swift */,
-				0E31712E1E0387C500A75EA4 /* PlatformTypeEnum.swift */,
+				0EDF13B51E03BA6F00C554FC /* GSPlatformParamConfigManager.h */,
+				0EDF13B61E03BA6F00C554FC /* GSPlatformParamConfigManager.m */,
+				0EDF13B91E03BA8B00C554FC /* GSPlatformTypeEnum.h */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -161,9 +171,12 @@
 		0E4B31E51E0294A000F231F0 = {
 			isa = PBXGroup;
 			children = (
+				0EDF13A71E039D3900C554FC /* SocialSDK.podspec */,
 				0E4B31F01E0294A000F231F0 /* SocialSDKDemo */,
 				0E4B32091E02962C00F231F0 /* SocialSDK */,
 				0E4B31EF1E0294A000F231F0 /* Products */,
+				CAE9A321ADA2282D12CD0928 /* Pods */,
+				E53E332F43DA01F024BE9E5F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,11 +225,57 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		0EDF13D21E03BB0D00C554FC /* QQ */ = {
+			isa = PBXGroup;
+			children = (
+				0EDF13CE1E03BB0500C554FC /* GSQQShare.h */,
+				0EDF13CF1E03BB0500C554FC /* GSQQShare.m */,
+			);
+			name = QQ;
+			sourceTree = "<group>";
+		};
+		0EDF13D31E03BB1300C554FC /* Sina */ = {
+			isa = PBXGroup;
+			children = (
+				0EDF13C61E03BADD00C554FC /* GSSinaShare.h */,
+				0EDF13C71E03BADD00C554FC /* GSSinaShare.m */,
+			);
+			name = Sina;
+			sourceTree = "<group>";
+		};
+		0EDF13D41E03BB1B00C554FC /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				0EDF13C21E03BAC500C554FC /* GSBaseShare.h */,
+				0EDF13C31E03BAC500C554FC /* GSBaseShare.m */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		CAE9A321ADA2282D12CD0928 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9559809474D9F814326C3975 /* Pods-SocialSDK.debug.xcconfig */,
+				257AA106F638C7438C63C51D /* Pods-SocialSDK.release.xcconfig */,
+				059743971EFDA68B29DD7166 /* Pods-SocialSDKDemo.debug.xcconfig */,
+				211A32EFE914CA25D164F791 /* Pods-SocialSDKDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E53E332F43DA01F024BE9E5F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				828793C50AC8B1B8F0E93277 /* Pods_SocialSDK.framework */,
+				EAA65CA283A949C0585437B0 /* Pods_SocialSDKDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F5ADC9781E029EC700632969 /* SocialLibraries */ = {
 			isa = PBXGroup;
 			children = (
 				F5ADC9791E029EC700632969 /* QQ */,
-				F5ADC97C1E029EC700632969 /* Sina */,
 			);
 			name = SocialLibraries;
 			path = SocialSDK/SocialLibraries;
@@ -231,26 +290,6 @@
 			path = QQ;
 			sourceTree = "<group>";
 		};
-		F5ADC97C1E029EC700632969 /* Sina */ = {
-			isa = PBXGroup;
-			children = (
-				F5ADC97D1E029EC700632969 /* libWeiboSDK.a */,
-				F5ADC97E1E029EC700632969 /* WBHttpRequest+WeiboGame.h */,
-				F5ADC97F1E029EC700632969 /* WBHttpRequest+WeiboShare.h */,
-				F5ADC9801E029EC700632969 /* WBHttpRequest+WeiboToken.h */,
-				F5ADC9811E029EC700632969 /* WBHttpRequest+WeiboUser.h */,
-				F5ADC9821E029EC700632969 /* WBHttpRequest.h */,
-				F5ADC9831E029EC700632969 /* WBSDKBasicButton.h */,
-				F5ADC9841E029EC700632969 /* WBSDKCommentButton.h */,
-				F5ADC9851E029EC700632969 /* WBSDKRelationshipButton.h */,
-				F5ADC9861E029EC700632969 /* WeiboSDK+Statistics.h */,
-				F5ADC9871E029EC700632969 /* WeiboSDK.bundle */,
-				F5ADC9881E029EC700632969 /* WeiboSDK.h */,
-				F5ADC9891E029EC700632969 /* WeiboUser.h */,
-			);
-			path = Sina;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -258,18 +297,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5ADC98F1E029EC700632969 /* WBHttpRequest+WeiboToken.h in Headers */,
-				F5ADC98D1E029EC700632969 /* WBHttpRequest+WeiboGame.h in Headers */,
-				F5ADC9981E029EC700632969 /* WeiboUser.h in Headers */,
+				0EDF13CC1E03BAEA00C554FC /* GSShareManager.h in Headers */,
+				0EDF13C01E03BAB700C554FC /* GSPayManager.h in Headers */,
 				0E4B320C1E02962C00F231F0 /* SocialSDK.h in Headers */,
-				F5ADC9971E029EC700632969 /* WeiboSDK.h in Headers */,
-				F5ADC9911E029EC700632969 /* WBHttpRequest.h in Headers */,
-				F5ADC9931E029EC700632969 /* WBSDKCommentButton.h in Headers */,
-				F5ADC9941E029EC700632969 /* WBSDKRelationshipButton.h in Headers */,
-				F5ADC9921E029EC700632969 /* WBSDKBasicButton.h in Headers */,
-				F5ADC98E1E029EC700632969 /* WBHttpRequest+WeiboShare.h in Headers */,
-				F5ADC9901E029EC700632969 /* WBHttpRequest+WeiboUser.h in Headers */,
-				F5ADC9951E029EC700632969 /* WeiboSDK+Statistics.h in Headers */,
+				0EDF13C81E03BADD00C554FC /* GSSinaShare.h in Headers */,
+				0EDF13C41E03BAC500C554FC /* GSBaseShare.h in Headers */,
+				0EDF13B71E03BA6F00C554FC /* GSPlatformParamConfigManager.h in Headers */,
+				0EDF13BC1E03BAA700C554FC /* GSLoginManager.h in Headers */,
+				0EDF13D01E03BB0500C554FC /* GSQQShare.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,10 +315,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E4B32001E0294A000F231F0 /* Build configuration list for PBXNativeTarget "SocialSDKDemo" */;
 			buildPhases = (
+				CC0B0111F211B6DE6D3F3570 /* [CP] Check Pods Manifest.lock */,
 				0E4B31EA1E0294A000F231F0 /* Sources */,
 				0E4B31EB1E0294A000F231F0 /* Frameworks */,
 				0E4B31EC1E0294A000F231F0 /* Resources */,
 				0E4B32141E02962C00F231F0 /* Embed Frameworks */,
+				4CDDDFF1C54B8793C443DE4C /* [CP] Embed Pods Frameworks */,
+				AC3C9FD864FCA0CD622CB587 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -299,10 +337,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E4B32131E02962C00F231F0 /* Build configuration list for PBXNativeTarget "SocialSDK" */;
 			buildPhases = (
+				BB93FD2D01FDF749F9952DE8 /* [CP] Check Pods Manifest.lock */,
 				0E4B32031E02962C00F231F0 /* Sources */,
 				0E4B32041E02962C00F231F0 /* Frameworks */,
 				0E4B32051E02962C00F231F0 /* Headers */,
 				0E4B32061E02962C00F231F0 /* Resources */,
+				DD5AC484DC31C8ED9ECDC442 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -369,11 +409,88 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5ADC98B1E029EC700632969 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
-				F5ADC9961E029EC700632969 /* WeiboSDK.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4CDDDFF1C54B8793C443DE4C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialSDKDemo/Pods-SocialSDKDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC3C9FD864FCA0CD622CB587 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialSDKDemo/Pods-SocialSDKDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB93FD2D01FDF749F9952DE8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CC0B0111F211B6DE6D3F3570 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DD5AC484DC31C8ED9ECDC442 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialSDK/Pods-SocialSDK-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0E4B31EA1E0294A000F231F0 /* Sources */ = {
@@ -389,12 +506,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E3171331E03882F00A75EA4 /* PayManager.swift in Sources */,
+				0EDF13BD1E03BAA700C554FC /* GSLoginManager.m in Sources */,
+				0EDF13D11E03BB0500C554FC /* GSQQShare.m in Sources */,
 				0E3171371E03887200A75EA4 /* TestUI.swift in Sources */,
-				0E3171311E0387C500A75EA4 /* PlatformTypeEnum.swift in Sources */,
-				0E3171301E0387C500A75EA4 /* PlatformParamConfigManager.swift in Sources */,
-				0E3171271E02B81200A75EA4 /* LoginManager.swift in Sources */,
-				0E3171351E03883C00A75EA4 /* ShareManager.swift in Sources */,
+				0EDF13C91E03BADD00C554FC /* GSSinaShare.m in Sources */,
+				0EDF13C51E03BAC500C554FC /* GSBaseShare.m in Sources */,
+				0EDF13B81E03BA6F00C554FC /* GSPlatformParamConfigManager.m in Sources */,
+				0EDF13CD1E03BAEA00C554FC /* GSShareManager.mm in Sources */,
+				0EDF13C11E03BAB700C554FC /* GSPayManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +640,7 @@
 		};
 		0E4B32011E0294A000F231F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 059743971EFDA68B29DD7166 /* Pods-SocialSDKDemo.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -536,6 +656,7 @@
 		};
 		0E4B32021E0294A000F231F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 211A32EFE914CA25D164F791 /* Pods-SocialSDKDemo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -551,6 +672,7 @@
 		};
 		0E4B32111E02962C00F231F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9559809474D9F814326C3975 /* Pods-SocialSDK.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -584,6 +706,7 @@
 		};
 		0E4B32121E02962C00F231F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 257AA106F638C7438C63C51D /* Pods-SocialSDK.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";

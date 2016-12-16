@@ -1,13 +1,13 @@
 //
-//  PayManager.swift
+//  GSLoginManager.h
 //  SocialSDKDemo
 //
 //  Created by lijunjie on 16/12/2016.
 //  Copyright © 2016 GagSquad. All rights reserved.
 //
 
-import UIKit
+#import <Foundation/Foundation.h>
 
-class PayManager: NSObject {
+@interface GSLoginManager : NSObject
 
-}
+@end

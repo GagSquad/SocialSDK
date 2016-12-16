@@ -1,13 +1,13 @@
 //
-//  ShareManager.swift
+//  GSSinaShare.h
 //  SocialSDKDemo
 //
 //  Created by lijunjie on 16/12/2016.
 //  Copyright © 2016 GagSquad. All rights reserved.
 //
 
-import UIKit
+#import "GSBaseShare.h"
 
-class ShareManager: NSObject {
+@interface GSSinaShare : GSBaseShare
 
-}
+@end
