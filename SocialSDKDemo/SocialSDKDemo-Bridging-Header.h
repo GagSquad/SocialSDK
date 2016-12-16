@@ -3,3 +3,4 @@
 //
 
 #import "GSViewController.h"
+#import "WeiboSDK.h"
