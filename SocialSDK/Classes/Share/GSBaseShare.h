@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GSShareProtocol.h"
 
-@interface GSBaseShare : NSObject
+@interface GSBaseShare : NSObject <GSShareProtocol>
 
 @end

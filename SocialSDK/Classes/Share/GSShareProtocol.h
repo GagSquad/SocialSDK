@@ -1,5 +1,5 @@
 //
-//  GSPlatformParamConfigManager.h
+//  GSShareProtocol.h
 //  SocialSDKDemo
 //
 //  Created by lijunjie on 16/12/2016.
@@ -8,10 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface GSPlatformParamConfigManager : NSObject
+@protocol GSShareProtocol <NSObject>
 
-+ (instancetype)share;
-
-- (void)addSinaPlatformConfig:(NSString *)key;
+- (void)shareSimpleText:(NSString *)text;
 
 @end

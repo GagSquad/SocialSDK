@@ -16,6 +16,7 @@
 		0E4B320C1E02962C00F231F0 /* SocialSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E4B320A1E02962C00F231F0 /* SocialSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E4B320F1E02962C00F231F0 /* SocialSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4B32081E02962C00F231F0 /* SocialSDK.framework */; };
 		0E4B32101E02962C00F231F0 /* SocialSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4B32081E02962C00F231F0 /* SocialSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0E90C00A1E03C391000D646E /* GSShareProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E90C0091E03C391000D646E /* GSShareProtocol.h */; };
 		0EDF13B71E03BA6F00C554FC /* GSPlatformParamConfigManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EDF13B51E03BA6F00C554FC /* GSPlatformParamConfigManager.h */; };
 		0EDF13B81E03BA6F00C554FC /* GSPlatformParamConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF13B61E03BA6F00C554FC /* GSPlatformParamConfigManager.m */; };
 		0EDF13BC1E03BAA700C554FC /* GSLoginManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EDF13BA1E03BAA700C554FC /* GSLoginManager.h */; };
@@ -73,6 +74,7 @@
 		0E4B32081E02962C00F231F0 /* SocialSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SocialSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E4B320A1E02962C00F231F0 /* SocialSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocialSDK.h; sourceTree = "<group>"; };
 		0E4B320B1E02962C00F231F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E90C0091E03C391000D646E /* GSShareProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSShareProtocol.h; sourceTree = "<group>"; };
 		0EDF13A71E039D3900C554FC /* SocialSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = SocialSDK.podspec; sourceTree = "<group>"; };
 		0EDF13B51E03BA6F00C554FC /* GSPlatformParamConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPlatformParamConfigManager.h; sourceTree = "<group>"; };
 		0EDF13B61E03BA6F00C554FC /* GSPlatformParamConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPlatformParamConfigManager.m; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 		0EDF13D41E03BB1B00C554FC /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				0E90C0091E03C391000D646E /* GSShareProtocol.h */,
 				0EDF13C21E03BAC500C554FC /* GSBaseShare.h */,
 				0EDF13C31E03BAC500C554FC /* GSBaseShare.m */,
 			);
@@ -297,6 +300,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E90C00A1E03C391000D646E /* GSShareProtocol.h in Headers */,
 				0EDF13CC1E03BAEA00C554FC /* GSShareManager.h in Headers */,
 				0EDF13C01E03BAB700C554FC /* GSPayManager.h in Headers */,
 				0E4B320C1E02962C00F231F0 /* SocialSDK.h in Headers */,
