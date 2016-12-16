@@ -72,7 +72,9 @@
 
 - (void)didReceiveWeiboResponse:(WBBaseResponse *)response
 {
-    
+    if (_completionBlock) {
+        _completionBlock(nil);
+    }
 }
 
 @end

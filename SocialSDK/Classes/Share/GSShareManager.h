@@ -8,12 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "GSPlatformType.h"
+#import "GSShareProtocol.h"
 
 @interface GSShareManager : NSObject
 
 + (instancetype)share;
 
-- (void)shareSimpleText:(NSString *)text platformType:(GSPlatformType)platformType;
+- (id<GSShareProtocol>)getShareProtocolWithPlatformType:(GSPlatformType)platformType;
 
 - (BOOL)handleOpenURL:(NSURL *)url;
 

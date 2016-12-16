@@ -8,10 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol GSShareResultProtocol;
+
+typedef void (^GSShareCompletionBlock) (id<GSShareResultProtocol> result);
+
 @protocol GSShareProtocol <NSObject>
 
 - (void)shareSimpleText:(NSString *)text;
 
 - (BOOL)handleOpenURL:(NSURL *)url;
+
+- (void)setShareCompletionBlock:(GSShareCompletionBlock)completionBlock;
 
 @end

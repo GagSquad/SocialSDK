@@ -25,4 +25,9 @@
     return GSPlatformTypeNone;
 }
 
+- (void)setShareCompletionBlock:(GSShareCompletionBlock)completionBlock
+{
+    _completionBlock = completionBlock;
+}
+
 @end

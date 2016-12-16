@@ -12,6 +12,11 @@
 #import "GSPlatformType.h"
 
 @interface GSBaseShare : NSObject <GSShareProtocol>
+{
+    GSShareCompletionBlock _completionBlock;
+}
+
+@property (nonatomic, strong) GSShareCompletionBlock completionBlock;
 
 - (GSPlatformType)platformType;
 

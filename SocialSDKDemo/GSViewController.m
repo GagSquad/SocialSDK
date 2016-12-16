@@ -22,7 +22,12 @@
 }
 
 - (IBAction)sinaTest:(id)sender {
-    [[GSShareManager share] shareSimpleText:@"ssss" platformType:GSPlatformTypeSina];
+    id<GSShareProtocol> share = [[GSShareManager share] getShareProtocolWithPlatformType:GSPlatformTypeSina];
+    
+    [share setShareCompletionBlock:^(id<GSShareResultProtocol> result) {
+        NSLog(@"aa");
+    }];
+    [share shareSimpleText:@"aa"];
 }
 
 - (void)didReceiveMemoryWarning {

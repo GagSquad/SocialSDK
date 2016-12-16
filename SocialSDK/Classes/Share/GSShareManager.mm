@@ -25,18 +25,18 @@
     return res;
 }
 
-- (void)shareSimpleText:(NSString *)text platformType:(GSPlatformType)platformType
+- (id<GSShareProtocol>)getShareProtocolWithPlatformType:(GSPlatformType)platformType;
 {
-    id<GSShareProtocol> platform = nil;
+    id<GSShareProtocol> res = nil;
     switch (platformType) {
         case GSPlatformTypeSina:{
-            platform = [GSSinaShare share];
-            [platform shareSimpleText:text];
+            res = [GSSinaShare share];
             break;
         }
         default:
             break;
     }
+    return res;
 }
 
 - (BOOL)handleOpenURL:(NSURL *)url
