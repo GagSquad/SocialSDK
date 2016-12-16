@@ -76,7 +76,7 @@
 		0EDF13A71E039D3900C554FC /* SocialSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = SocialSDK.podspec; sourceTree = "<group>"; };
 		0EDF13B51E03BA6F00C554FC /* GSPlatformParamConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPlatformParamConfigManager.h; sourceTree = "<group>"; };
 		0EDF13B61E03BA6F00C554FC /* GSPlatformParamConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPlatformParamConfigManager.m; sourceTree = "<group>"; };
-		0EDF13B91E03BA8B00C554FC /* GSPlatformTypeEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSPlatformTypeEnum.h; sourceTree = "<group>"; };
+		0EDF13B91E03BA8B00C554FC /* GSPlatformType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSPlatformType.h; sourceTree = "<group>"; };
 		0EDF13BA1E03BAA700C554FC /* GSLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLoginManager.h; sourceTree = "<group>"; };
 		0EDF13BB1E03BAA700C554FC /* GSLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSLoginManager.m; sourceTree = "<group>"; };
 		0EDF13BE1E03BAB700C554FC /* GSPayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPayManager.h; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 			children = (
 				0EDF13B51E03BA6F00C554FC /* GSPlatformParamConfigManager.h */,
 				0EDF13B61E03BA6F00C554FC /* GSPlatformParamConfigManager.m */,
-				0EDF13B91E03BA8B00C554FC /* GSPlatformTypeEnum.h */,
+				0EDF13B91E03BA8B00C554FC /* GSPlatformType.h */,
 			);
 			path = Core;
 			sourceTree = "<group>";
