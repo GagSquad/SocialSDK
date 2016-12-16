@@ -10,6 +10,7 @@
 #define GSPlatformType_h
 
 typedef enum : NSUInteger {
+    GSPlatformTypeNone,
     GSPlatformTypeSina
 } GSPlatformType;
 

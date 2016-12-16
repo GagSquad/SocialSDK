@@ -15,4 +15,14 @@
     
 }
 
+- (BOOL)handleOpenURL:(NSURL *)url
+{
+    return NO;
+}
+
+- (GSPlatformType)platformType
+{
+    return GSPlatformTypeNone;
+}
+
 @end

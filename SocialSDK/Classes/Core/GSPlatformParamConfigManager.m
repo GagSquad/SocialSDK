@@ -38,19 +38,24 @@
     return self;
 }
 
-- (void)addSinaPlatformConfigKey:(NSString *)key redirectURI:(NSString *)redirectURI
+- (void)addSinaPlatformConfigAppKey:(NSString *)appKey redirectURI:(NSString *)redirectURI
 {
-    if (key) {
+    if (appKey) {
         NSDictionary *config = @{
-                                 @"key": key,
+                                 @"appKey": appKey,
                                  @"redirectURI": redirectURI
                                  };
         _configs[@(GSPlatformTypeSina)] = config;
-        GSLogger(@"设Sina_Key%@", key);
-        [WeiboSDK registerApp:key];
+        GSLogger(@"设Sina_appKey%@", appKey);
+        GSLogger(@"设Sina_redirectURI%@", redirectURI);
     } else {
         GSLogger(@"请设置正确的Key");
     }
+}
+
+- (NSDictionary *)getConfigWithPlatformType:(GSPlatformType)platformType
+{
+    return _configs[@(platformType)];
 }
 
 - (NSMutableDictionary *)getConfigs

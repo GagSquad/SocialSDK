@@ -13,7 +13,9 @@
 
 + (instancetype)share;
 
-- (void)addSinaPlatformConfigKey:(NSString *)key redirectURI:(NSString *)redirectURI;
+- (void)addSinaPlatformConfigAppKey:(NSString *)appKey redirectURI:(NSString *)redirectURI;
+
+- (NSDictionary *)getConfigWithPlatformType:(GSPlatformType)platformType;
 
 - (NSMutableDictionary *)getConfigs;
 

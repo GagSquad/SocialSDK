@@ -7,7 +7,7 @@
 //
 
 #import "GSViewController.h"
-#import "GSSinaShare.h"
+#import "GSShareManager.h"
 
 @import SocialSDK;
 
@@ -19,18 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    UIButton *sinaTestBtn = [UIButton new];
-    sinaTestBtn.frame = CGRectMake(100, 100, 100, 40);
-    [sinaTestBtn setTitle:@"sinaTest" forState:UIControlStateNormal];
-    [sinaTestBtn addTarget:self action:@selector(sinaTest) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:sinaTestBtn];
 }
 
-- (void)sinaTest
-{
-    GSSinaShare *sinaShare = [[GSSinaShare alloc] init];
-    [sinaShare shareSimpleText:@"这是一条测试信息"];
+- (IBAction)sinaTest:(id)sender {
+    [[GSShareManager share] shareSimpleText:@"ssss" platformType:GSPlatformTypeSina];
 }
 
 - (void)didReceiveMemoryWarning {

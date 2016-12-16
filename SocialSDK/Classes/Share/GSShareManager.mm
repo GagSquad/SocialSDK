@@ -7,6 +7,7 @@
 //
 
 #import "GSShareManager.h"
+#import "GSSinaShare.h"
 
 @interface GSShareManager ()
 
@@ -21,6 +22,28 @@
     dispatch_once(&onceToken, ^{
         res = [[GSShareManager alloc] init];
     });
+    return res;
+}
+
+- (void)shareSimpleText:(NSString *)text platformType:(GSPlatformType)platformType
+{
+    id<GSShareProtocol> platform = nil;
+    switch (platformType) {
+        case GSPlatformTypeSina:{
+            platform = [GSSinaShare share];
+            [platform shareSimpleText:text];
+            break;
+        }
+        default:
+            break;
+    }
+}
+
+- (BOOL)handleOpenURL:(NSURL *)url
+{
+    BOOL res = NO;
+    id<GSShareProtocol> platform = [GSSinaShare share];
+    res = [platform handleOpenURL:url];
     return res;
 }
 

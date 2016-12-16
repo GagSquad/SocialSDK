@@ -13,4 +13,8 @@
 
 + (instancetype)share;
 
+- (void)shareSimpleText:(NSString *)text platformType:(GSPlatformType)platformType;
+
+- (BOOL)handleOpenURL:(NSURL *)url;
+
 @end

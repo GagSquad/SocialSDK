@@ -10,7 +10,7 @@ import UIKit
 import SocialSDK
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, WeiboSDKDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WeiboSDKDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         GSLoggerConfig.share().openLogger()
-        GSPlatformParamConfigManager.share().addSinaPlatformConfigKey(SinaWeiBoKey, redirectURI:SinaWeiBoCallBack)
+        GSPlatformParamConfigManager.share().addSinaPlatformConfigAppKey(SinaWeiBoKey, redirectURI:SinaWeiBoCallBack)
         return true
     }
 
@@ -45,16 +45,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WeiboSDKDelegate {
     }
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        return WeiboSDK.handleOpen(url, delegate: self)
+        return GSShareManager.share().handleOpen(url)
     }
     
-    func didReceiveWeiboResponse(_ response: WBBaseResponse!) {
-        let code = response.statusCode
-        print(code)
+    func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
+        return GSShareManager.share().handleOpen(url)
     }
     
-    func didReceiveWeiboRequest(_ request: WBBaseRequest!) {
-        
-    }
+    
 }
 

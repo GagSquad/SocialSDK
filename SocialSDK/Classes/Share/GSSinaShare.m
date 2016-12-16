@@ -9,8 +9,38 @@
 #import "GSSinaShare.h"
 #import "WeiboSDK.h"
 #import "WBHttpRequest.h"
+#import "GSPlatformParamConfigManager.h"
+
+@interface GSSinaShare () <WeiboSDKDelegate>
+
+@end
 
 @implementation GSSinaShare
+
++ (id<GSShareProtocol>)share;
+{
+    static id<GSShareProtocol> res = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        res = [[GSSinaShare alloc] init];
+    });
+    return res;
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        NSDictionary *config = [[GSPlatformParamConfigManager share] getConfigWithPlatformType:[self platformType]];
+        [WeiboSDK registerApp:config[@"appKey"]];
+    }
+    return self;
+}
+
+- (GSPlatformType)platformType
+{
+    return GSPlatformTypeSina;
+}
 
 - (void)shareSimpleText:(NSString *)text
 {
@@ -23,10 +53,26 @@
 - (WBAuthorizeRequest *)authRequest
 {
     WBAuthorizeRequest *authRequest = [WBAuthorizeRequest request];
-    NSDictionary *sinaConfig = [[[GSPlatformParamConfigManager share] getConfigs] objectForKey:@(GSPlatformTypeSina)];
-    authRequest.redirectURI = sinaConfig[@"redirectURI"];
+    NSDictionary *config = [[GSPlatformParamConfigManager share] getConfigWithPlatformType:[self platformType]];
+    authRequest.redirectURI = config[@"redirectURI"];
     authRequest.scope = @"all";
     return authRequest;
+}
+
+- (BOOL)handleOpenURL:(NSURL *)url
+{
+    return [WeiboSDK handleOpenURL:url delegate:self];
+}
+
+#pragma mark - WeiboSDKDelegate
+- (void)didReceiveWeiboRequest:(WBBaseRequest *)request
+{
+    
+}
+
+- (void)didReceiveWeiboResponse:(WBBaseResponse *)response
+{
+    
 }
 
 @end

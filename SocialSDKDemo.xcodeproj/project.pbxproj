@@ -30,7 +30,7 @@
 		0EDF13C51E03BAC500C554FC /* GSBaseShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF13C31E03BAC500C554FC /* GSBaseShare.m */; };
 		0EDF13C81E03BADD00C554FC /* GSSinaShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EDF13C61E03BADD00C554FC /* GSSinaShare.h */; };
 		0EDF13C91E03BADD00C554FC /* GSSinaShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF13C71E03BADD00C554FC /* GSSinaShare.m */; };
-		0EDF13CC1E03BAEA00C554FC /* GSShareManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EDF13CA1E03BAEA00C554FC /* GSShareManager.h */; };
+		0EDF13CC1E03BAEA00C554FC /* GSShareManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EDF13CA1E03BAEA00C554FC /* GSShareManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0EDF13CD1E03BAEA00C554FC /* GSShareManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF13CB1E03BAEA00C554FC /* GSShareManager.mm */; };
 		0EDF13D01E03BB0500C554FC /* GSQQShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EDF13CE1E03BB0500C554FC /* GSQQShare.h */; };
 		0EDF13D11E03BB0500C554FC /* GSQQShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF13CF1E03BB0500C554FC /* GSQQShare.m */; };
@@ -316,9 +316,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E90C00A1E03C391000D646E /* GSShareProtocol.h in Headers */,
-				0EDF13CC1E03BAEA00C554FC /* GSShareManager.h in Headers */,
 				0EDF13B71E03BA6F00C554FC /* GSPlatformParamConfigManager.h in Headers */,
 				0E90C0111E03C895000D646E /* GSLoggerConfig.h in Headers */,
+				0EDF13CC1E03BAEA00C554FC /* GSShareManager.h in Headers */,
 				0E90C0141E03CAF4000D646E /* GSPlatformType.h in Headers */,
 				0EDF13C01E03BAB700C554FC /* GSPayManager.h in Headers */,
 				0E4B320C1E02962C00F231F0 /* SocialSDK.h in Headers */,

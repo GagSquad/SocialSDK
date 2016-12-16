@@ -12,4 +12,6 @@
 
 - (void)shareSimpleText:(NSString *)text;
 
+- (BOOL)handleOpenURL:(NSURL *)url;
+
 @end

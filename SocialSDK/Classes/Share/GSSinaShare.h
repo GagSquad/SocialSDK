@@ -10,4 +10,6 @@
 
 @interface GSSinaShare : GSBaseShare
 
++ (id<GSShareProtocol>)share;
+
 @end

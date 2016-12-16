@@ -7,12 +7,10 @@ project 'SocialSDKDemo.xcodeproj'
 
 source 'https://github.com/CocoaPods/Specs.git'
 
-pod "WeiboSDK", :git => "https://github.com/sinaweibosdk/weibo_ios_sdk.git" 
-
 target :SocialSDKDemo do
     
 end
 
 target :SocialSDK do
-    
+    pod "WeiboSDK", :git => "https://github.com/sinaweibosdk/weibo_ios_sdk.git"
 end
