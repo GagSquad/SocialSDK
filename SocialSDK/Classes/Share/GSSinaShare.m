@@ -10,10 +10,6 @@
 #import "WeiboSDK.h"
 #import "WBHttpRequest.h"
 
-@interface GSSinaShare ()<WBHttpRequestDelegate>
-
-@end
-
 @implementation GSSinaShare
 
 - (void)shareSimpleText:(NSString *)text
@@ -31,22 +27,6 @@
     authRequest.redirectURI = sinaConfig[@"redirectURI"];
     authRequest.scope = @"all";
     return authRequest;
-}
-
-#pragma mark - WBHttpRequestDelegate
-- (void)request:(WBHttpRequest *)request didFinishLoadingWithDataResult:(NSData *)data
-{
-    
-}
-
-- (void)request:(WBHttpRequest *)request didFinishLoadingWithResult:(NSString *)result
-{
-    
-}
-
-- (void)request:(WBHttpRequest *)request didFailWithError:(NSError *)error
-{
-    
 }
 
 @end

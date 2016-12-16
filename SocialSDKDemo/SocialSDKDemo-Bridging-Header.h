@@ -4,3 +4,4 @@
 
 #import "GSViewController.h"
 #import "CUThirdPartyConstant.h"
+#import "WeiboSDK.h"
