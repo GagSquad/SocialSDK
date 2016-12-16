@@ -8,6 +8,7 @@
 
 #import "GSPlatformParamConfigManager.h"
 #import "GSPlatformType.h"
+#import "GSLogger.h"
 
 @interface GSPlatformParamConfigManager ()
 {
@@ -37,15 +38,17 @@
     return self;
 }
 
-- (void)addSinaPlatformConfig:(NSString *)key
+- (void)addSinaPlatformConfigKey:(NSString *)key redirectURI:(NSString *)redirectURI
 {
     if (key) {
         NSDictionary *config = @{
-                                 @"key": key
+                                 @"key": key,
+                                 @"redirectURI": redirectURI
                                  };
         _configs[@(GSPlatformTypeSina)] = config;
+        GSLogger(@"设Sina_Key%@", key);
     } else {
-        NSLog(@"请设置正确的Key");
+        GSLogger(@"请设置正确的Key");
     }
 }
 

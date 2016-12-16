@@ -16,4 +16,7 @@ FOUNDATION_EXPORT const unsigned char SocialSDKVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <SocialSDK/PublicHeader.h>
 
-
+#import <SocialSDK/GSPlatformParamConfigManager.h>
+#import <SocialSDK/GSLoggerConfig.h>
+#import <SocialSDK/GSPlatformType.h>
+#import <SocialSDK/GSShareProtocol.h>

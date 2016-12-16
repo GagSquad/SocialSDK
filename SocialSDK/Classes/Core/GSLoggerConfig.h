@@ -1,5 +1,5 @@
 //
-//  GSPlatformParamConfigManager.h
+//  GSLoggerConfig.h
 //  SocialSDKDemo
 //
 //  Created by lijunjie on 16/12/2016.
@@ -8,10 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface GSPlatformParamConfigManager : NSObject
+@interface GSLoggerConfig : NSObject
+{
+    
+}
 
 + (instancetype)share;
 
-- (void)addSinaPlatformConfigKey:(NSString *)key redirectURI:(NSString *)redirectURI;
+- (void)openLogger;
+
+- (BOOL)isLogger;
 
 @end
