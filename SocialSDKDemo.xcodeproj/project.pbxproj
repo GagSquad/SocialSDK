@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E3171271E02B81200A75EA4 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3171261E02B81200A75EA4 /* LoginManager.swift */; };
+		0E3171301E0387C500A75EA4 /* PlatformParamConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31712D1E0387C500A75EA4 /* PlatformParamConfigManager.swift */; };
+		0E3171311E0387C500A75EA4 /* PlatformTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31712E1E0387C500A75EA4 /* PlatformTypeEnum.swift */; };
+		0E3171331E03882F00A75EA4 /* PayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3171321E03882F00A75EA4 /* PayManager.swift */; };
+		0E3171351E03883C00A75EA4 /* ShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3171341E03883C00A75EA4 /* ShareManager.swift */; };
+		0E3171371E03887200A75EA4 /* TestUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3171361E03887200A75EA4 /* TestUI.swift */; };
 		0E4B31F21E0294A000F231F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4B31F11E0294A000F231F0 /* AppDelegate.swift */; };
 		0E4B31F41E0294A000F231F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4B31F31E0294A000F231F0 /* ViewController.swift */; };
 		0E4B31F71E0294A000F231F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E4B31F51E0294A000F231F0 /* Main.storyboard */; };
@@ -57,6 +63,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E3171261E02B81200A75EA4 /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		0E31712D1E0387C500A75EA4 /* PlatformParamConfigManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformParamConfigManager.swift; sourceTree = "<group>"; };
+		0E31712E1E0387C500A75EA4 /* PlatformTypeEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformTypeEnum.swift; sourceTree = "<group>"; };
+		0E3171321E03882F00A75EA4 /* PayManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayManager.swift; sourceTree = "<group>"; };
+		0E3171341E03883C00A75EA4 /* ShareManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareManager.swift; sourceTree = "<group>"; };
+		0E3171361E03887200A75EA4 /* TestUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUI.swift; sourceTree = "<group>"; };
 		0E4B31EE1E0294A000F231F0 /* SocialSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E4B31F11E0294A000F231F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E4B31F31E0294A000F231F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +117,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E3171231E02B7C800A75EA4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0E3171261E02B81200A75EA4 /* LoginManager.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		0E3171241E02B7C800A75EA4 /* Pay */ = {
+			isa = PBXGroup;
+			children = (
+				0E3171321E03882F00A75EA4 /* PayManager.swift */,
+			);
+			path = Pay;
+			sourceTree = "<group>";
+		};
+		0E3171251E02B7C800A75EA4 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				0E3171341E03883C00A75EA4 /* ShareManager.swift */,
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
+		0E31712C1E0387C500A75EA4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0E31712D1E0387C500A75EA4 /* PlatformParamConfigManager.swift */,
+				0E31712E1E0387C500A75EA4 /* PlatformTypeEnum.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		0E31712F1E0387C500A75EA4 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0E3171361E03887200A75EA4 /* TestUI.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		0E4B31E51E0294A000F231F0 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +192,7 @@
 		0E4B32091E02962C00F231F0 /* SocialSDK */ = {
 			isa = PBXGroup;
 			children = (
+				F5ADC9781E029EC700632969 /* SocialLibraries */,
 				0E4B32381E02973100F231F0 /* Classes */,
 				0E4B320A1E02962C00F231F0 /* SocialSDK.h */,
 				0E4B320B1E02962C00F231F0 /* Info.plist */,
@@ -149,7 +203,11 @@
 		0E4B32381E02973100F231F0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				F5ADC9781E029EC700632969 /* SocialLibraries */,
+				0E31712C1E0387C500A75EA4 /* Core */,
+				0E31712F1E0387C500A75EA4 /* UI */,
+				0E3171231E02B7C800A75EA4 /* Login */,
+				0E3171241E02B7C800A75EA4 /* Pay */,
+				0E3171251E02B7C800A75EA4 /* Share */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -271,6 +329,7 @@
 					};
 					0E4B32071E02962C00F231F0 = {
 						CreatedOnToolsVersion = 8.2;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -330,6 +389,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E3171331E03882F00A75EA4 /* PayManager.swift in Sources */,
+				0E3171371E03887200A75EA4 /* TestUI.swift in Sources */,
+				0E3171311E0387C500A75EA4 /* PlatformTypeEnum.swift in Sources */,
+				0E3171301E0387C500A75EA4 /* PlatformParamConfigManager.swift in Sources */,
+				0E3171271E02B81200A75EA4 /* LoginManager.swift in Sources */,
+				0E3171351E03883C00A75EA4 /* ShareManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +522,7 @@
 		0E4B32011E0294A000F231F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SocialSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -471,6 +537,7 @@
 		0E4B32021E0294A000F231F0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SocialSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -485,6 +552,7 @@
 		0E4B32111E02962C00F231F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -506,6 +574,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.GagSquad.SocialSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -516,6 +585,7 @@
 		0E4B32121E02962C00F231F0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
