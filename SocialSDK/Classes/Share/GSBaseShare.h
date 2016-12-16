@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "GSShareProtocol.h"
+#import "GSPlatformParamConfigManager.h"
 
 @interface GSBaseShare : NSObject <GSShareProtocol>
 

@@ -7,11 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GSPlatformType.h"
 
 @interface GSPlatformParamConfigManager : NSObject
 
 + (instancetype)share;
 
 - (void)addSinaPlatformConfigKey:(NSString *)key redirectURI:(NSString *)redirectURI;
+
+- (NSMutableDictionary *)getConfigs;
 
 @end

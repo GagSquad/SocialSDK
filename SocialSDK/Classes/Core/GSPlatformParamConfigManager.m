@@ -7,8 +7,8 @@
 //
 
 #import "GSPlatformParamConfigManager.h"
-#import "GSPlatformType.h"
 #import "GSLogger.h"
+#import "WeiboSDK.h"
 
 @interface GSPlatformParamConfigManager ()
 {
@@ -47,9 +47,14 @@
                                  };
         _configs[@(GSPlatformTypeSina)] = config;
         GSLogger(@"设Sina_Key%@", key);
+        [WeiboSDK registerApp:key];
     } else {
         GSLogger(@"请设置正确的Key");
     }
 }
 
+- (NSMutableDictionary *)getConfigs
+{
+    return _configs;
+}
 @end
