@@ -10,8 +10,6 @@
 
 @import SocialSDK;
 
-#define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
-
 @interface GSViewController ()
 
 @end
@@ -20,9 +18,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[GSLoggerConfig share] openLogger];
-    [[GSPlatformParamConfigManager share] addSinaPlatformConfigKey:@"sinakey" redirectURI:@"redirectURI"];
-    
     // Do any additional setup after loading the view.
 }
 
