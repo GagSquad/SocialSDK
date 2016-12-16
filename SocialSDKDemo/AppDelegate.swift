@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WeiboSDKDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         GSLoggerConfig.share().openLogger()
-        GSPlatformParamConfigManager.share().addSinaPlatformConfigKey("1136823502", redirectURI: "http://sns.whalecloud.com/sina2/callback")
+        GSPlatformParamConfigManager.share().addSinaPlatformConfigKey(SinaWeiBoKey, redirectURI:SinaWeiBoCallBack)
         return true
     }
 

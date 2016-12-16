@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GSPlatformType.h"
 
 @interface GSShareManager : NSObject
+
++ (instancetype)share;
 
 @end
