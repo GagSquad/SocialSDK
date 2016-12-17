@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum : NSUInteger {
+typedef enum : NSInteger {
     GSShareResultStatusSuccess,
     GSShareResultStatusFailing,
     GSShareResultStatusCancel,
@@ -16,7 +16,8 @@ typedef enum : NSUInteger {
 
 @protocol GSShareResultProtocol <NSObject>
 
-- (GSShareResultStatus)isSuccess;
+- (BOOL)isSuccess;
+- (GSShareResultStatus)status;
 - (NSInteger)sourceCode;
 - (NSString *)soucreMessage;
 - (NSString *)message;
