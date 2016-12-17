@@ -18,6 +18,8 @@
 		0E7144841E052AAD00BC105E /* GSSocialSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E7144831E052AAD00BC105E /* GSSocialSDKResources.bundle */; };
 		0E7144881E052C4200BC105E /* GSReourcesManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E7144861E052C4200BC105E /* GSReourcesManager.h */; };
 		0E7144891E052C4200BC105E /* GSReourcesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7144871E052C4200BC105E /* GSReourcesManager.m */; };
+		0E71448C1E0536D000BC105E /* GSShareViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E71448A1E0536D000BC105E /* GSShareViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E71448D1E0536D000BC105E /* GSShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E71448B1E0536D000BC105E /* GSShareViewController.m */; };
 		0E90C00A1E03C391000D646E /* GSShareProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E90C0091E03C391000D646E /* GSShareProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E90C00E1E03C6C9000D646E /* GSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E90C00D1E03C6C9000D646E /* GSViewController.m */; };
 		0E90C0111E03C895000D646E /* GSLoggerConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E90C00F1E03C895000D646E /* GSLoggerConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -92,6 +94,8 @@
 		0E7144831E052AAD00BC105E /* GSSocialSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GSSocialSDKResources.bundle; sourceTree = "<group>"; };
 		0E7144861E052C4200BC105E /* GSReourcesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSReourcesManager.h; sourceTree = "<group>"; };
 		0E7144871E052C4200BC105E /* GSReourcesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSReourcesManager.m; sourceTree = "<group>"; };
+		0E71448A1E0536D000BC105E /* GSShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSShareViewController.h; sourceTree = "<group>"; };
+		0E71448B1E0536D000BC105E /* GSShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSShareViewController.m; sourceTree = "<group>"; };
 		0E90C0091E03C391000D646E /* GSShareProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSShareProtocol.h; sourceTree = "<group>"; };
 		0E90C00B1E03C6C8000D646E /* SocialSDKDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SocialSDKDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		0E90C00C1E03C6C9000D646E /* GSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSViewController.h; sourceTree = "<group>"; };
@@ -201,6 +205,7 @@
 		0E31712F1E0387C500A75EA4 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				0E71448E1E05370B00BC105E /* Share */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -273,6 +278,15 @@
 				0E7144871E052C4200BC105E /* GSReourcesManager.m */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		0E71448E1E05370B00BC105E /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				0E71448A1E0536D000BC105E /* GSShareViewController.h */,
+				0E71448B1E0536D000BC105E /* GSShareViewController.m */,
+			);
+			name = Share;
 			sourceTree = "<group>";
 		};
 		0EA864531E04E98400B9420D /* Sina */ = {
@@ -402,6 +416,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E71448C1E0536D000BC105E /* GSShareViewController.h in Headers */,
 				0E90C00A1E03C391000D646E /* GSShareProtocol.h in Headers */,
 				0EAE69691E04E32500238DF1 /* GSSinaPlatformParamConfig.h in Headers */,
 				0E7144881E052C4200BC105E /* GSReourcesManager.h in Headers */,
@@ -481,6 +496,7 @@
 				TargetAttributes = {
 					0E4B31ED1E0294A000F231F0 = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 684DUL4925;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 					};
@@ -632,6 +648,7 @@
 				0EF038291E04016100F11B4E /* GSShareResult.m in Sources */,
 				0EDF13C91E03BADD00C554FC /* GSSinaShare.m in Sources */,
 				0EDF13C51E03BAC500C554FC /* GSBaseShare.m in Sources */,
+				0E71448D1E0536D000BC105E /* GSShareViewController.m in Sources */,
 				0EAE69621E04E2D000238DF1 /* GSBasePlatformParamConfig.m in Sources */,
 				0EDF13B81E03BA6F00C554FC /* GSPlatformParamConfigManager.m in Sources */,
 				0EDF13CD1E03BAEA00C554FC /* GSShareManager.mm in Sources */,
@@ -768,14 +785,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 684DUL4925;
 				INFOPLIST_FILE = SocialSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xingengyuan.wanduoduo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "20597e6c-c438-4f47-8e5e-69702aa320a5";
+				PROVISIONING_PROFILE_SPECIFIER = dev_wanduoduo;
 				SWIFT_OBJC_BRIDGING_HEADER = "SocialSDKDemo/SocialSDKDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;

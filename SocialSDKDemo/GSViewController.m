@@ -7,7 +7,6 @@
 //
 
 #import "GSViewController.h"
-#import "GSShareManager.h"
 
 @import SocialSDK;
 
@@ -17,13 +16,19 @@
 
 @implementation GSViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
 }
 
-- (IBAction)sinaTest:(id)sender {
+- (IBAction)selectSharePlan:(id)sender
+{
+    [GSShareWindow showShareViewWithChannels:nil];
+}
+
+- (IBAction)sinaTest:(id)sender
+{
     id<GSShareProtocol> share = [[GSShareManager share] getShareProtocolWithChannelType:GSShareChannelTypeSina];
-    
     [share setShareCompletionBlock:^(id<GSShareResultProtocol> result) {
         NSLog(@"aa");
     }];
