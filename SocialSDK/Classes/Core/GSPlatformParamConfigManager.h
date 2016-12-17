@@ -19,6 +19,8 @@
 
 - (void)addSinaPlatformConfigAppKey:(NSString *)appKey redirectURI:(NSString *)redirectURI;
 
+- (void)addQQPlatformConfigAppID:(NSString *)appID;
+
 - (NSDictionary *)getConfigWithPlatformType:(GSPlatformType)platformType;
 
 @end

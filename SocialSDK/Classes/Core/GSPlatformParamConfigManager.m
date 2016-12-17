@@ -63,6 +63,21 @@
     }
 }
 
+- (void)addQQPlatformConfigAppID:(NSString *)appID;
+{
+    GSPlatformType p = GSPlatformTypeQQ;
+    if (appID) {
+        NSDictionary *config = @{
+                                 @"appID": appID,
+                                 };
+        _configs[@(p)] = config;
+        [_platforms[@(p)] config:config];
+        GSLogger(@"设QQ_appID%@", appID);
+    } else {
+        GSLogger(@"请设置正确的Key");
+    }
+}
+
 - (NSDictionary *)getConfigWithPlatformType:(GSPlatformType)platformType
 {
     return _configs[@(platformType)];

@@ -47,6 +47,8 @@
 		0EF0382B1E04018100F11B4E /* GSShareResultProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EF0382A1E04018100F11B4E /* GSShareResultProtocol.h */; };
 		6EE178E64608D9FE80D853D6 /* Pods_SocialSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 828793C50AC8B1B8F0E93277 /* Pods_SocialSDK.framework */; };
 		79CB53B5CB6FCC98DF33B7FC /* Pods_SocialSDKDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA65CA283A949C0585437B0 /* Pods_SocialSDKDemo.framework */; };
+		F56676391E0518380018F4F9 /* GSQQPlatformParamConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = F56676371E0518380018F4F9 /* GSQQPlatformParamConfig.h */; };
+		F566763A1E0518380018F4F9 /* GSQQPlatformParamConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F56676381E0518380018F4F9 /* GSQQPlatformParamConfig.m */; };
 		F5ADC98A1E029EC700632969 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5ADC97A1E029EC700632969 /* TencentOpenAPI.framework */; };
 		F5ADC98B1E029EC700632969 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5ADC97B1E029EC700632969 /* TencentOpenApi_IOS_Bundle.bundle */; };
 /* End PBXBuildFile section */
@@ -127,6 +129,8 @@
 		828793C50AC8B1B8F0E93277 /* Pods_SocialSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9559809474D9F814326C3975 /* Pods-SocialSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialSDK/Pods-SocialSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		EAA65CA283A949C0585437B0 /* Pods_SocialSDKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialSDKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F56676371E0518380018F4F9 /* GSQQPlatformParamConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSQQPlatformParamConfig.h; sourceTree = "<group>"; };
+		F56676381E0518380018F4F9 /* GSQQPlatformParamConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSQQPlatformParamConfig.m; sourceTree = "<group>"; };
 		F5ADC97A1E029EC700632969 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
 		F5ADC97B1E029EC700632969 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -303,6 +307,7 @@
 		0EAE695C1E04E1B300238DF1 /* PlatformParamConfig */ = {
 			isa = PBXGroup;
 			children = (
+				F56676361E05180B0018F4F9 /* QQ */,
 				0EA864531E04E98400B9420D /* Sina */,
 				0EAE695D1E04E2AC00238DF1 /* GSPlatformParamConfigProtocol.h */,
 				0EAE695F1E04E2D000238DF1 /* GSBasePlatformParamConfig.h */,
@@ -363,6 +368,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F56676361E05180B0018F4F9 /* QQ */ = {
+			isa = PBXGroup;
+			children = (
+				F56676371E0518380018F4F9 /* GSQQPlatformParamConfig.h */,
+				F56676381E0518380018F4F9 /* GSQQPlatformParamConfig.m */,
+			);
+			name = QQ;
+			sourceTree = "<group>";
+		};
 		F5ADC9781E029EC700632969 /* SocialLibraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -394,6 +408,7 @@
 				0EAE695E1E04E2AC00238DF1 /* GSPlatformParamConfigProtocol.h in Headers */,
 				0EDF13B71E03BA6F00C554FC /* GSPlatformParamConfigManager.h in Headers */,
 				0E90C0111E03C895000D646E /* GSLoggerConfig.h in Headers */,
+				F56676391E0518380018F4F9 /* GSQQPlatformParamConfig.h in Headers */,
 				0EDF13CC1E03BAEA00C554FC /* GSShareManager.h in Headers */,
 				0E7144821E051FC300BC105E /* GSShareChannelType.h in Headers */,
 				0E90C0141E03CAF4000D646E /* GSPlatformType.h in Headers */,
@@ -466,7 +481,6 @@
 				TargetAttributes = {
 					0E4B31ED1E0294A000F231F0 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = 684DUL4925;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 					};
@@ -611,6 +625,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EDF13BD1E03BAA700C554FC /* GSLoginManager.m in Sources */,
+				F566763A1E0518380018F4F9 /* GSQQPlatformParamConfig.m in Sources */,
 				0EDF13D11E03BB0500C554FC /* GSQQShare.m in Sources */,
 				0E90C0121E03C895000D646E /* GSLoggerConfig.m in Sources */,
 				0E7144891E052C4200BC105E /* GSReourcesManager.m in Sources */,
@@ -752,14 +767,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 684DUL4925;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SocialSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xingengyuan.wanduoduo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "20597e6c-c438-4f47-8e5e-69702aa320a5";
-				PROVISIONING_PROFILE_SPECIFIER = dev_wanduoduo;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SocialSDKDemo/SocialSDKDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -773,6 +789,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SocialSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

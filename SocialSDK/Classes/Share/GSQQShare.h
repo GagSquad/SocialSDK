@@ -6,8 +6,10 @@
 //  Copyright © 2016 GagSquad. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "GSBaseShare.h"
 
-@interface GSQQShare : NSObject
+@interface GSQQShare : GSBaseShare
+
++ (id<GSShareProtocol>)share;
 
 @end
