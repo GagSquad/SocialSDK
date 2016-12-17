@@ -48,11 +48,8 @@
 		0EF038291E04016100F11B4E /* GSShareResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF038271E04016100F11B4E /* GSShareResult.m */; };
 		0EF0382B1E04018100F11B4E /* GSShareResultProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EF0382A1E04018100F11B4E /* GSShareResultProtocol.h */; };
 		6EE178E64608D9FE80D853D6 /* Pods_SocialSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 828793C50AC8B1B8F0E93277 /* Pods_SocialSDK.framework */; };
-		79CB53B5CB6FCC98DF33B7FC /* Pods_SocialSDKDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA65CA283A949C0585437B0 /* Pods_SocialSDKDemo.framework */; };
 		F56676391E0518380018F4F9 /* GSQQPlatformParamConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = F56676371E0518380018F4F9 /* GSQQPlatformParamConfig.h */; };
 		F566763A1E0518380018F4F9 /* GSQQPlatformParamConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F56676381E0518380018F4F9 /* GSQQPlatformParamConfig.m */; };
-		F5ADC98A1E029EC700632969 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5ADC97A1E029EC700632969 /* TencentOpenAPI.framework */; };
-		F5ADC98B1E029EC700632969 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F5ADC97B1E029EC700632969 /* TencentOpenApi_IOS_Bundle.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +77,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		059743971EFDA68B29DD7166 /* Pods-SocialSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialSDKDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialSDKDemo/Pods-SocialSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		0E4B31EE1E0294A000F231F0 /* SocialSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E4B31F11E0294A000F231F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E4B31F61E0294A000F231F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -128,15 +124,12 @@
 		0EF038261E04016100F11B4E /* GSShareResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSShareResult.h; sourceTree = "<group>"; };
 		0EF038271E04016100F11B4E /* GSShareResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSShareResult.m; sourceTree = "<group>"; };
 		0EF0382A1E04018100F11B4E /* GSShareResultProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSShareResultProtocol.h; sourceTree = "<group>"; };
-		211A32EFE914CA25D164F791 /* Pods-SocialSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialSDKDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialSDKDemo/Pods-SocialSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
 		257AA106F638C7438C63C51D /* Pods-SocialSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialSDK/Pods-SocialSDK.release.xcconfig"; sourceTree = "<group>"; };
 		828793C50AC8B1B8F0E93277 /* Pods_SocialSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9559809474D9F814326C3975 /* Pods-SocialSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialSDK/Pods-SocialSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		EAA65CA283A949C0585437B0 /* Pods_SocialSDKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialSDKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F56676371E0518380018F4F9 /* GSQQPlatformParamConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSQQPlatformParamConfig.h; sourceTree = "<group>"; };
 		F56676381E0518380018F4F9 /* GSQQPlatformParamConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSQQPlatformParamConfig.m; sourceTree = "<group>"; };
-		F5ADC97A1E029EC700632969 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
-		F5ADC97B1E029EC700632969 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,7 +138,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E4B320F1E02962C00F231F0 /* SocialSDK.framework in Frameworks */,
-				79CB53B5CB6FCC98DF33B7FC /* Pods_SocialSDKDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,7 +145,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5ADC98A1E029EC700632969 /* TencentOpenAPI.framework in Frameworks */,
 				6EE178E64608D9FE80D853D6 /* Pods_SocialSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,7 +242,6 @@
 		0E4B32091E02962C00F231F0 /* SocialSDK */ = {
 			isa = PBXGroup;
 			children = (
-				F5ADC9781E029EC700632969 /* SocialLibraries */,
 				0E4B32381E02973100F231F0 /* Classes */,
 				0E4B320A1E02962C00F231F0 /* SocialSDK.h */,
 				0E4B320B1E02962C00F231F0 /* Info.plist */,
@@ -367,8 +357,6 @@
 			children = (
 				9559809474D9F814326C3975 /* Pods-SocialSDK.debug.xcconfig */,
 				257AA106F638C7438C63C51D /* Pods-SocialSDK.release.xcconfig */,
-				059743971EFDA68B29DD7166 /* Pods-SocialSDKDemo.debug.xcconfig */,
-				211A32EFE914CA25D164F791 /* Pods-SocialSDKDemo.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -389,24 +377,6 @@
 				F56676381E0518380018F4F9 /* GSQQPlatformParamConfig.m */,
 			);
 			name = QQ;
-			sourceTree = "<group>";
-		};
-		F5ADC9781E029EC700632969 /* SocialLibraries */ = {
-			isa = PBXGroup;
-			children = (
-				F5ADC9791E029EC700632969 /* QQ */,
-			);
-			name = SocialLibraries;
-			path = SocialSDK/SocialLibraries;
-			sourceTree = SOURCE_ROOT;
-		};
-		F5ADC9791E029EC700632969 /* QQ */ = {
-			isa = PBXGroup;
-			children = (
-				F5ADC97A1E029EC700632969 /* TencentOpenAPI.framework */,
-				F5ADC97B1E029EC700632969 /* TencentOpenApi_IOS_Bundle.bundle */,
-			);
-			path = QQ;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,13 +416,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E4B32001E0294A000F231F0 /* Build configuration list for PBXNativeTarget "SocialSDKDemo" */;
 			buildPhases = (
-				CC0B0111F211B6DE6D3F3570 /* [CP] Check Pods Manifest.lock */,
 				0E4B31EA1E0294A000F231F0 /* Sources */,
 				0E4B31EB1E0294A000F231F0 /* Frameworks */,
 				0E4B31EC1E0294A000F231F0 /* Resources */,
 				0E4B32141E02962C00F231F0 /* Embed Frameworks */,
-				4CDDDFF1C54B8793C443DE4C /* [CP] Embed Pods Frameworks */,
-				AC3C9FD864FCA0CD622CB587 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -542,59 +509,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5ADC98B1E029EC700632969 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4CDDDFF1C54B8793C443DE4C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialSDKDemo/Pods-SocialSDKDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AC3C9FD864FCA0CD622CB587 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialSDKDemo/Pods-SocialSDKDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		BB93FD2D01FDF749F9952DE8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		CC0B0111F211B6DE6D3F3570 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -780,7 +701,6 @@
 		};
 		0E4B32011E0294A000F231F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 059743971EFDA68B29DD7166 /* Pods-SocialSDKDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -802,7 +722,6 @@
 		};
 		0E4B32021E0294A000F231F0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 211A32EFE914CA25D164F791 /* Pods-SocialSDKDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
