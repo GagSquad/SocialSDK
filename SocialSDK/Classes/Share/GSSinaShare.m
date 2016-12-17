@@ -11,6 +11,7 @@
 #import "WBHttpRequest.h"
 #import "GSPlatformParamConfigManager.h"
 #import "GSShareManager.h"
+#import "GSShareResult.h"
 
 @interface GSSinaShare () <WeiboSDKDelegate>
 
@@ -30,7 +31,12 @@
 
 + (void)load
 {
-    [[GSShareManager share] addPlatformWithPlatformType:[[GSSinaShare share] platformType] platform:[GSSinaShare share]];
+    [[GSShareManager share] addChannelWithChannelType:[[GSSinaShare share] channelType] channel:[GSSinaShare share]];
+}
+
+- (GSShareChannelType)channelType;
+{
+    return GSShareChannelTypeSina;
 }
 
 - (GSPlatformType)platformType
@@ -69,9 +75,31 @@
 - (void)didReceiveWeiboResponse:(WBBaseResponse *)response
 {
     if (_completionBlock) {
-        _completionBlock(nil);
+        _completionBlock([self createResultWithResponse:response]);
     }
     _completionBlock = nil;
+}
+
+- (id<GSShareResultProtocol>)createResultWithResponse:(WBBaseResponse *)response
+{
+    WeiboSDKResponseStatusCode statusCode = response.statusCode;
+    GSShareResult *res = [[GSShareResult alloc] init];
+    res.sourceCode = statusCode;
+    res.soucreMessage = @"";
+    res.status = GSShareResultStatusFailing;
+    switch (statusCode) {
+        case WeiboSDKResponseStatusCodeSuccess: {
+            res.status = GSShareResultStatusSuccess;
+            break;
+        }
+        case WeiboSDKResponseStatusCodeUserCancel: {
+            res.status = GSShareResultStatusCancel;
+        }
+        default:
+            break;
+    }
+    
+    return res;
 }
 
 @end

@@ -11,7 +11,7 @@
 
 @interface GSShareResult : NSObject <GSShareResultProtocol>
 
-@property (nonatomic, assign, getter=isSuccess) GSShareResultStatus success;
+@property (nonatomic, assign) GSShareResultStatus status;
 @property (nonatomic, assign) NSInteger sourceCode;
 @property (nonatomic, copy) NSString *soucreMessage;
 @property (nonatomic, copy) NSString *message;

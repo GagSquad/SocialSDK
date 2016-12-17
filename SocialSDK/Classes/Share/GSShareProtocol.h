@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GSShareChannelType.h"
 #import "GSPlatformType.h"
 
 @protocol GSShareResultProtocol;
@@ -20,6 +21,8 @@ typedef void (^GSShareCompletionBlock) (id<GSShareResultProtocol> result);
 - (BOOL)handleOpenURL:(NSURL *)url;
 
 - (void)setShareCompletionBlock:(GSShareCompletionBlock)completionBlock;
+
+- (GSShareChannelType)channelType;
 
 - (GSPlatformType)platformType;
 

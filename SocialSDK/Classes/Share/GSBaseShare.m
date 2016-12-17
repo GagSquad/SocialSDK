@@ -20,6 +20,11 @@
     return NO;
 }
 
+- (GSShareChannelType)channelType;
+{
+    return GSShareChannelTypeNone;
+}
+
 - (GSPlatformType)platformType
 {
     return GSPlatformTypeNone;
