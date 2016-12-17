@@ -26,7 +26,7 @@
 
 - (GSPlatformType)platformType
 {
-    return GSPlatformTypeSina;
+    return GSPlatformTypeQQ;
 }
 
 @end
