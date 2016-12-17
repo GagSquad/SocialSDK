@@ -27,7 +27,7 @@
     [share setShareCompletionBlock:^(id<GSShareResultProtocol> result) {
         NSLog(@"aa");
     }];
-    [share shareSimpleText:@"aa"];
+    [share shareSimpleText:@"测试分享"];
 }
 
 - (void)didReceiveMemoryWarning {

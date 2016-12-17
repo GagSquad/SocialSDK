@@ -9,14 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "GSPlatformType.h"
 
+@protocol GSPlatformParamConfigProtocol;
+//平台参数配置管理
 @interface GSPlatformParamConfigManager : NSObject
 
 + (instancetype)share;
 
+- (void)addPlatformWithPlatformType:(GSPlatformType)platformType platform:(id<GSPlatformParamConfigProtocol>)platform;
+
 - (void)addSinaPlatformConfigAppKey:(NSString *)appKey redirectURI:(NSString *)redirectURI;
 
 - (NSDictionary *)getConfigWithPlatformType:(GSPlatformType)platformType;
-
-- (NSMutableDictionary *)getConfigs;
 
 @end

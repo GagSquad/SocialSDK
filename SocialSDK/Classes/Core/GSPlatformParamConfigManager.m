@@ -9,10 +9,12 @@
 #import "GSPlatformParamConfigManager.h"
 #import "GSLogger.h"
 #import "WeiboSDK.h"
+#import "GSPlatformParamConfigProtocol.h"
 
 @interface GSPlatformParamConfigManager ()
 {
     NSMutableDictionary *_configs;
+    NSMutableDictionary <NSNumber *, id<GSPlatformParamConfigProtocol>> *_platforms;
 }
 
 @end
@@ -34,18 +36,26 @@
     self = [super init];
     if (self) {
         _configs = [[NSMutableDictionary alloc] init];
+        _platforms = [[NSMutableDictionary alloc] init];
     }
     return self;
 }
 
+- (void)addPlatformWithPlatformType:(GSPlatformType)platformType platform:(id<GSPlatformParamConfigProtocol>)platform
+{
+    _platforms[@(platformType)] = platform;
+}
+
 - (void)addSinaPlatformConfigAppKey:(NSString *)appKey redirectURI:(NSString *)redirectURI
 {
+    GSPlatformType p = GSPlatformTypeSina;
     if (appKey) {
         NSDictionary *config = @{
                                  @"appKey": appKey,
                                  @"redirectURI": redirectURI
                                  };
-        _configs[@(GSPlatformTypeSina)] = config;
+        _configs[@(p)] = config;
+        [_platforms[@(p)] config:config];
         GSLogger(@"设Sina_appKey%@", appKey);
         GSLogger(@"设Sina_redirectURI%@", redirectURI);
     } else {
@@ -58,8 +68,4 @@
     return _configs[@(platformType)];
 }
 
-- (NSMutableDictionary *)getConfigs
-{
-    return _configs;
-}
 @end

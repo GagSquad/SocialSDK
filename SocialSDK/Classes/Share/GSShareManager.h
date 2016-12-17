@@ -16,6 +16,8 @@
 
 - (id<GSShareProtocol>)getShareProtocolWithPlatformType:(GSPlatformType)platformType;
 
+- (void)addPlatformWithPlatformType:(GSPlatformType)platformType platform:(id<GSShareProtocol>)platform;
+
 - (BOOL)handleOpenURL:(NSURL *)url;
 
 @end

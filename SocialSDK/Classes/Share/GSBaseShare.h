@@ -18,6 +18,4 @@
 
 @property (nonatomic, strong) GSShareCompletionBlock completionBlock;
 
-- (GSPlatformType)platformType;
-
 @end

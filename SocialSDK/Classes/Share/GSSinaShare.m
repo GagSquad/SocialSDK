@@ -10,6 +10,7 @@
 #import "WeiboSDK.h"
 #import "WBHttpRequest.h"
 #import "GSPlatformParamConfigManager.h"
+#import "GSShareManager.h"
 
 @interface GSSinaShare () <WeiboSDKDelegate>
 
@@ -27,14 +28,9 @@
     return res;
 }
 
-- (instancetype)init
++ (void)load
 {
-    self = [super init];
-    if (self) {
-        NSDictionary *config = [[GSPlatformParamConfigManager share] getConfigWithPlatformType:[self platformType]];
-        [WeiboSDK registerApp:config[@"appKey"]];
-    }
-    return self;
+    [[GSShareManager share] addPlatformWithPlatformType:[[GSSinaShare share] platformType] platform:[GSSinaShare share]];
 }
 
 - (GSPlatformType)platformType
@@ -75,6 +71,7 @@
     if (_completionBlock) {
         _completionBlock(nil);
     }
+    _completionBlock = nil;
 }
 
 @end
