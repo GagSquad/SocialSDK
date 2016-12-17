@@ -7,16 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GSPlatformType.h"
+#import "GSShareChannelType.h"
 #import "GSShareProtocol.h"
 
 @interface GSShareManager : NSObject
 
 + (instancetype)share;
 
-- (id<GSShareProtocol>)getShareProtocolWithPlatformType:(GSPlatformType)platformType;
+- (id<GSShareProtocol>)getShareProtocolWithChannelType:(GSShareChannelType)channelType;
 
-- (void)addPlatformWithPlatformType:(GSPlatformType)platformType platform:(id<GSShareProtocol>)platform;
+- (void)addChannelWithChannelType:(GSShareChannelType)channelType channel:(id<GSShareProtocol>)channel;
 
 - (BOOL)handleOpenURL:(NSURL *)url;
 

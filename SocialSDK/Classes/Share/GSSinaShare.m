@@ -31,7 +31,12 @@
 
 + (void)load
 {
-    [[GSShareManager share] addPlatformWithPlatformType:[[GSSinaShare share] platformType] platform:[GSSinaShare share]];
+    [[GSShareManager share] addChannelWithChannelType:[[GSSinaShare share] channelType] channel:[GSSinaShare share]];
+}
+
+- (GSShareChannelType)channelType;
+{
+    return GSShareChannelTypeSina;
 }
 
 - (GSPlatformType)platformType

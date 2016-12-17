@@ -22,7 +22,7 @@
 }
 
 - (IBAction)sinaTest:(id)sender {
-    id<GSShareProtocol> share = [[GSShareManager share] getShareProtocolWithPlatformType:GSPlatformTypeSina];
+    id<GSShareProtocol> share = [[GSShareManager share] getShareProtocolWithChannelType:GSShareChannelTypeSina];
     
     [share setShareCompletionBlock:^(id<GSShareResultProtocol> result) {
         NSLog(@"aa");

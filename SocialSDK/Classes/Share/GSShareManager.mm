@@ -37,18 +37,18 @@
     return self;
 }
 
-- (id<GSShareProtocol>)getShareProtocolWithPlatformType:(GSPlatformType)platformType;
+- (id<GSShareProtocol>)getShareProtocolWithChannelType:(GSShareChannelType)channelType;
 {
-    id<GSShareProtocol> res = _platforms[@(GSPlatformTypeSina)];
+    id<GSShareProtocol> res = _platforms[@(channelType)];
     if (!res) {
         GSLogger(@"未载入该平台");
     }
     return res;
 }
 
-- (void)addPlatformWithPlatformType:(GSPlatformType)platformType platform:(id<GSShareProtocol>)platform
+- (void)addChannelWithChannelType:(GSShareChannelType)channelType channel:(id<GSShareProtocol>)channel;
 {
-    _platforms[@(platformType)] = platform;
+    _platforms[@(channelType)] = channel;
 }
 
 - (BOOL)handleOpenURL:(NSURL *)url
