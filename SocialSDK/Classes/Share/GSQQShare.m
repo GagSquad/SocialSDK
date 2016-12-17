@@ -10,6 +10,7 @@
 #import "GSPlatformParamConfigManager.h"
 #import "GSShareManager.h"
 #import <TencentOpenAPI/QQApiInterface.h>
+#import <TencentOpenAPI/TencentOAuth.h>
 
 @interface GSQQShare ()
 
@@ -64,4 +65,8 @@
     }
 }
 
+- (BOOL)handleOpenURL:(NSURL *)url
+{
+    return [TencentOAuth HandleOpenURL:url];
+}
 @end
