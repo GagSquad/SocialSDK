@@ -29,7 +29,12 @@
 
 + (void)load
 {
-    [[GSShareManager share] addPlatformWithPlatformType:[[GSQQShare share] platformType] platform:[GSQQShare share]];
+    [[GSShareManager share] addChannelWithChannelType:[[GSQQShare share] channelType] channel:[GSQQShare share]];
+}
+
+- (GSShareChannelType)channelType
+{
+    return GSShareChannelTypeQQ;
 }
 
 - (GSPlatformType)platformType
