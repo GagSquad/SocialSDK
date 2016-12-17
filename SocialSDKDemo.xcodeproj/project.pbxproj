@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E3171371E03887200A75EA4 /* TestUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3171361E03887200A75EA4 /* TestUI.swift */; };
 		0E4B31F21E0294A000F231F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4B31F11E0294A000F231F0 /* AppDelegate.swift */; };
 		0E4B31F71E0294A000F231F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E4B31F51E0294A000F231F0 /* Main.storyboard */; };
 		0E4B31F91E0294A000F231F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E4B31F81E0294A000F231F0 /* Assets.xcassets */; };
@@ -16,6 +15,9 @@
 		0E4B320F1E02962C00F231F0 /* SocialSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4B32081E02962C00F231F0 /* SocialSDK.framework */; };
 		0E4B32101E02962C00F231F0 /* SocialSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4B32081E02962C00F231F0 /* SocialSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0E7144821E051FC300BC105E /* GSShareChannelType.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E7144811E051E0500BC105E /* GSShareChannelType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E7144841E052AAD00BC105E /* GSSocialSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E7144831E052AAD00BC105E /* GSSocialSDKResources.bundle */; };
+		0E7144881E052C4200BC105E /* GSReourcesManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E7144861E052C4200BC105E /* GSReourcesManager.h */; };
+		0E7144891E052C4200BC105E /* GSReourcesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7144871E052C4200BC105E /* GSReourcesManager.m */; };
 		0E90C00A1E03C391000D646E /* GSShareProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E90C0091E03C391000D646E /* GSShareProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E90C00E1E03C6C9000D646E /* GSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E90C00D1E03C6C9000D646E /* GSViewController.m */; };
 		0E90C0111E03C895000D646E /* GSLoggerConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E90C00F1E03C895000D646E /* GSLoggerConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -77,7 +79,6 @@
 
 /* Begin PBXFileReference section */
 		059743971EFDA68B29DD7166 /* Pods-SocialSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialSDKDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialSDKDemo/Pods-SocialSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		0E3171361E03887200A75EA4 /* TestUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUI.swift; sourceTree = "<group>"; };
 		0E4B31EE1E0294A000F231F0 /* SocialSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E4B31F11E0294A000F231F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E4B31F61E0294A000F231F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -88,6 +89,9 @@
 		0E4B320A1E02962C00F231F0 /* SocialSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocialSDK.h; sourceTree = "<group>"; };
 		0E4B320B1E02962C00F231F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E7144811E051E0500BC105E /* GSShareChannelType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSShareChannelType.h; sourceTree = "<group>"; };
+		0E7144831E052AAD00BC105E /* GSSocialSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GSSocialSDKResources.bundle; sourceTree = "<group>"; };
+		0E7144861E052C4200BC105E /* GSReourcesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSReourcesManager.h; sourceTree = "<group>"; };
+		0E7144871E052C4200BC105E /* GSReourcesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSReourcesManager.m; sourceTree = "<group>"; };
 		0E90C0091E03C391000D646E /* GSShareProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSShareProtocol.h; sourceTree = "<group>"; };
 		0E90C00B1E03C6C8000D646E /* SocialSDKDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SocialSDKDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		0E90C00C1E03C6C9000D646E /* GSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSViewController.h; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 		0E31712C1E0387C500A75EA4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				0E7144851E052B3C00BC105E /* Util */,
 				0EA864601E04ECA600B9420D /* ConfigManager */,
 				0EA8645F1E04EC9600B9420D /* Logger */,
 				0EAE695C1E04E1B300238DF1 /* PlatformParamConfig */,
@@ -196,7 +201,6 @@
 		0E31712F1E0387C500A75EA4 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				0E3171361E03887200A75EA4 /* TestUI.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -234,6 +238,7 @@
 				0E4B31FA1E0294A000F231F0 /* LaunchScreen.storyboard */,
 				0E4B31FD1E0294A000F231F0 /* Info.plist */,
 				0E90C00B1E03C6C8000D646E /* SocialSDKDemo-Bridging-Header.h */,
+				0E7144831E052AAD00BC105E /* GSSocialSDKResources.bundle */,
 			);
 			path = SocialSDKDemo;
 			sourceTree = "<group>";
@@ -259,6 +264,15 @@
 				0E3171251E02B7C800A75EA4 /* Share */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		0E7144851E052B3C00BC105E /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				0E7144861E052C4200BC105E /* GSReourcesManager.h */,
+				0E7144871E052C4200BC105E /* GSReourcesManager.m */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 		0EA864531E04E98400B9420D /* Sina */ = {
@@ -390,6 +404,7 @@
 			files = (
 				0E90C00A1E03C391000D646E /* GSShareProtocol.h in Headers */,
 				0EAE69691E04E32500238DF1 /* GSSinaPlatformParamConfig.h in Headers */,
+				0E7144881E052C4200BC105E /* GSReourcesManager.h in Headers */,
 				0EAE695E1E04E2AC00238DF1 /* GSPlatformParamConfigProtocol.h in Headers */,
 				0EDF13B71E03BA6F00C554FC /* GSPlatformParamConfigManager.h in Headers */,
 				0E90C0111E03C895000D646E /* GSLoggerConfig.h in Headers */,
@@ -501,6 +516,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E4B31FC1E0294A000F231F0 /* LaunchScreen.storyboard in Resources */,
+				0E7144841E052AAD00BC105E /* GSSocialSDKResources.bundle in Resources */,
 				0E4B31F91E0294A000F231F0 /* Assets.xcassets in Resources */,
 				0E4B31F71E0294A000F231F0 /* Main.storyboard in Resources */,
 			);
@@ -611,8 +627,8 @@
 				0EDF13BD1E03BAA700C554FC /* GSLoginManager.m in Sources */,
 				F566763A1E0518380018F4F9 /* GSQQPlatformParamConfig.m in Sources */,
 				0EDF13D11E03BB0500C554FC /* GSQQShare.m in Sources */,
-				0E3171371E03887200A75EA4 /* TestUI.swift in Sources */,
 				0E90C0121E03C895000D646E /* GSLoggerConfig.m in Sources */,
+				0E7144891E052C4200BC105E /* GSReourcesManager.m in Sources */,
 				0EF038291E04016100F11B4E /* GSShareResult.m in Sources */,
 				0EDF13C91E03BADD00C554FC /* GSSinaShare.m in Sources */,
 				0EDF13C51E03BAC500C554FC /* GSBaseShare.m in Sources */,
@@ -749,7 +765,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 059743971EFDA68B29DD7166 /* Pods-SocialSDKDemo.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -772,7 +787,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 211A32EFE914CA25D164F791 /* Pods-SocialSDKDemo.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
