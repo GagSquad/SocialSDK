@@ -7,13 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GSShareChannelType.h"
 
+typedef void (^GSShareViewCompletionBlock) (BOOL isCancel, GSShareChannelType channelType);
 
 /**
  选择分享渠道UI
  */
 @interface GSShareView : UIView
 
-+ (void)showShareViewWithChannels:(NSArray *)channels;
++ (void)showShareViewWithChannels:(NSArray *)channels completionBlock:(GSShareViewCompletionBlock)completionBlock;
 
 @end

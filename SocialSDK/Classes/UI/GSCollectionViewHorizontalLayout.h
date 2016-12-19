@@ -13,10 +13,10 @@
     
 }
 
-// 一行中cell的个数
+//一行中cell的个数
 @property (nonatomic) NSUInteger itemCountPerRow;
 
-// 一页显示多少行
+//一页显示多少行
 @property (nonatomic) NSUInteger rowCount;
 
 @end

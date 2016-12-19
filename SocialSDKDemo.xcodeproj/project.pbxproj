@@ -22,6 +22,8 @@
 		0E71448D1E0536D000BC105E /* GSShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E71448B1E0536D000BC105E /* GSShareView.m */; };
 		0E7A408B1E078C9C0083899C /* GSCollectionViewHorizontalLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E7A40891E078C9C0083899C /* GSCollectionViewHorizontalLayout.h */; };
 		0E7A408C1E078C9C0083899C /* GSCollectionViewHorizontalLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A408A1E078C9C0083899C /* GSCollectionViewHorizontalLayout.m */; };
+		0E7A40911E07AF4D0083899C /* GSCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E7A408F1E07AF4D0083899C /* GSCollectionViewCell.h */; };
+		0E7A40921E07AF4D0083899C /* GSCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A40901E07AF4D0083899C /* GSCollectionViewCell.m */; };
 		0E90C00A1E03C391000D646E /* GSShareProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E90C0091E03C391000D646E /* GSShareProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E90C00E1E03C6C9000D646E /* GSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E90C00D1E03C6C9000D646E /* GSViewController.m */; };
 		0E90C0111E03C895000D646E /* GSLoggerConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E90C00F1E03C895000D646E /* GSLoggerConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -96,6 +98,8 @@
 		0E71448B1E0536D000BC105E /* GSShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSShareView.m; sourceTree = "<group>"; };
 		0E7A40891E078C9C0083899C /* GSCollectionViewHorizontalLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCollectionViewHorizontalLayout.h; sourceTree = "<group>"; };
 		0E7A408A1E078C9C0083899C /* GSCollectionViewHorizontalLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCollectionViewHorizontalLayout.m; sourceTree = "<group>"; };
+		0E7A408F1E07AF4D0083899C /* GSCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCollectionViewCell.h; sourceTree = "<group>"; };
+		0E7A40901E07AF4D0083899C /* GSCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCollectionViewCell.m; sourceTree = "<group>"; };
 		0E90C0091E03C391000D646E /* GSShareProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSShareProtocol.h; sourceTree = "<group>"; };
 		0E90C00B1E03C6C8000D646E /* SocialSDKDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SocialSDKDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		0E90C00C1E03C6C9000D646E /* GSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSViewController.h; sourceTree = "<group>"; };
@@ -201,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				0E71448E1E05370B00BC105E /* Share */,
+				0E7A408E1E07AF160083899C /* CollectionView */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -279,10 +284,19 @@
 			children = (
 				0E71448A1E0536D000BC105E /* GSShareView.h */,
 				0E71448B1E0536D000BC105E /* GSShareView.m */,
-				0E7A40891E078C9C0083899C /* GSCollectionViewHorizontalLayout.h */,
-				0E7A408A1E078C9C0083899C /* GSCollectionViewHorizontalLayout.m */,
 			);
 			name = Share;
+			sourceTree = "<group>";
+		};
+		0E7A408E1E07AF160083899C /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				0E7A40891E078C9C0083899C /* GSCollectionViewHorizontalLayout.h */,
+				0E7A408A1E078C9C0083899C /* GSCollectionViewHorizontalLayout.m */,
+				0E7A408F1E07AF4D0083899C /* GSCollectionViewCell.h */,
+				0E7A40901E07AF4D0083899C /* GSCollectionViewCell.m */,
+			);
+			name = CollectionView;
 			sourceTree = "<group>";
 		};
 		0EA864531E04E98400B9420D /* Sina */ = {
@@ -401,6 +415,7 @@
 				0EDF13B71E03BA6F00C554FC /* GSPlatformParamConfigManager.h in Headers */,
 				0E90C0111E03C895000D646E /* GSLoggerConfig.h in Headers */,
 				F56676391E0518380018F4F9 /* GSQQPlatformParamConfig.h in Headers */,
+				0E7A40911E07AF4D0083899C /* GSCollectionViewCell.h in Headers */,
 				0EDF13CC1E03BAEA00C554FC /* GSShareManager.h in Headers */,
 				0E7144821E051FC300BC105E /* GSShareChannelType.h in Headers */,
 				0E90C0141E03CAF4000D646E /* GSPlatformType.h in Headers */,
@@ -570,6 +585,7 @@
 			files = (
 				0EDF13BD1E03BAA700C554FC /* GSLoginManager.m in Sources */,
 				F566763A1E0518380018F4F9 /* GSQQPlatformParamConfig.m in Sources */,
+				0E7A40921E07AF4D0083899C /* GSCollectionViewCell.m in Sources */,
 				0EDF13D11E03BB0500C554FC /* GSQQShare.m in Sources */,
 				0E90C0121E03C895000D646E /* GSLoggerConfig.m in Sources */,
 				0E7144891E052C4200BC105E /* GSReourcesManager.m in Sources */,

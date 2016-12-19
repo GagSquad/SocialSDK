@@ -13,14 +13,13 @@
 @property (strong, nonatomic) NSMutableArray *allAttributes;
 
 @end
+
 @implementation GSCollectionViewHorizontalLayout
 
 - (void)prepareLayout
 {
     [super prepareLayout];
-    
     self.allAttributes = [NSMutableArray array];
-    
     NSUInteger count = [self.collectionView numberOfItemsInSection:0];
     for (NSUInteger i = 0; i<count; i++) {
         NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
@@ -42,7 +41,6 @@
     [self targetPositionWithItem:item resultX:&x resultY:&y];
     NSUInteger item2 = [self originItemAtX:x y:y];
     NSIndexPath *theNewIndexPath = [NSIndexPath indexPathForItem:item2 inSection:indexPath.section];
-    
     UICollectionViewLayoutAttributes *theNewAttr = [super layoutAttributesForItemAtIndexPath:theNewIndexPath];
     theNewAttr.indexPath = indexPath;
     return theNewAttr;
@@ -51,9 +49,7 @@
 - (NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect
 {
     NSArray *attributes = [super layoutAttributesForElementsInRect:rect];
-    
     NSMutableArray *tmp = [NSMutableArray array];
-    
     for (UICollectionViewLayoutAttributes *attr in attributes) {
         for (UICollectionViewLayoutAttributes *attr2 in self.allAttributes) {
             if (attr.indexPath.item == attr2.indexPath.item) {
@@ -70,7 +66,6 @@
 - (void)targetPositionWithItem:(NSUInteger)item resultX:(NSUInteger *)x resultY:(NSUInteger *)y
 {
     NSUInteger page = item/(self.itemCountPerRow*self.rowCount);
-    
     NSUInteger theX = item % self.itemCountPerRow + page * self.itemCountPerRow;
     NSUInteger theY = item / self.itemCountPerRow - page * self.rowCount;
     if (x != NULL) {
