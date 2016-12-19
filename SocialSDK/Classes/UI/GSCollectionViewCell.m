@@ -23,14 +23,25 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        _logo = [[UIImageView alloc] initWithFrame:CGRectMake((frame.size.width - 50) / 2, 5, 50, 50)];
+        UIView *logoBG = [[UIView alloc] initWithFrame:CGRectMake((frame.size.width - 50) / 2, 8, 50, 50)];
+        logoBG.layer.cornerRadius = 25.f;
+        logoBG.layer.masksToBounds = YES;
+        logoBG.backgroundColor = [UIColor whiteColor];
         
-        _name = [[UILabel alloc] initWithFrame:CGRectMake(0, _logo.frame.size.height + _logo.frame.origin.y + 5, frame.size.width, 16)];
+        _logo = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+        _logo.center = logoBG.center;
+        
+        _name = [[UILabel alloc] initWithFrame:CGRectMake(0, logoBG.frame.size.height + logoBG.frame.origin.y + 8, frame.size.width, 16)];
         _name.backgroundColor = [UIColor clearColor];
         _name.textAlignment = NSTextAlignmentCenter;
+        _name.font = [UIFont systemFontOfSize:14.f];
+        _name.textColor = [UIColor colorWithRed:100/255.f green:100/255.f blue:100/255.f alpha:1.0];
         
-        self.backgroundColor = [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1];
+//        self.backgroundColor = [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1];
+        self.backgroundColor = [UIColor clearColor];
         
+        [self.contentView addSubview:logoBG];
+
         [self.contentView addSubview:_logo];
         
         [self.contentView addSubview:_name];

@@ -30,7 +30,7 @@
 {
     self = [super initWithFrame:[UIScreen mainScreen].bounds];
     if (self) {
-        self.backgroundColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.6];
+        self.backgroundColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.3];
         self.frame = [UIScreen mainScreen].bounds;
         self.userInteractionEnabled = YES;
         _channels = channels;
@@ -42,23 +42,24 @@
 
 - (void)createView
 {
-    CGFloat height = 262.f;
+    CGFloat height = 260.f;
     
     CGSize size = self.frame.size;
-    UIView *shareBGView = [[UIView alloc] initWithFrame:CGRectMake(0, size.height - height, size.width, height)];
-    shareBGView.backgroundColor = [UIColor redColor];
+    UIView *shareBGView = [[UIView alloc] initWithFrame:CGRectMake(0, size.height, size.width, height)];
+    shareBGView.backgroundColor = [UIColor colorWithRed:233/255.f green:239/255.f blue:242/255.f alpha:1.0];
     [self addSubview:shareBGView];
     
     CGFloat hfHeight = 40.f;
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, size.width, hfHeight)];
-    headerView.backgroundColor = [UIColor brownColor];
     UILabel *title = [[UILabel alloc] initWithFrame:headerView.bounds];
     title.textAlignment = NSTextAlignmentCenter;
-    title.text = @"选择分享平台";
+    title.textColor = [UIColor colorWithRed:143/255.f green:143/255.f blue:143/255.f alpha:1.0];
+    title.font = [UIFont systemFontOfSize:18.f];
+    title.text = @"请选择分享平台";
     [headerView addSubview:title];
     
     UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, headerView.frame.size.height + headerView.frame.origin.y, size.width, height - hfHeight * 2)];
-    contentView.backgroundColor = [UIColor cyanColor];
+    contentView.backgroundColor = [UIColor clearColor];
     
     GSCollectionViewHorizontalLayout *layout =[[GSCollectionViewHorizontalLayout alloc] init];
     layout.itemCountPerRow = 4;
@@ -71,7 +72,7 @@
     layout.headerReferenceSize = CGSizeMake(0, 0);
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     UICollectionView *collectionView =[[UICollectionView alloc] initWithFrame:contentView.bounds collectionViewLayout:layout];
-    collectionView.backgroundColor = [UIColor whiteColor];
+    collectionView.backgroundColor = [UIColor clearColor];
     collectionView.dataSource = self;
     collectionView.delegate = self;
     collectionView.pagingEnabled = YES;
@@ -83,14 +84,19 @@
     UIButton *cancelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     cancelBtn.exclusiveTouch = YES;
     cancelBtn.frame = fooderView.bounds;
-    [cancelBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [cancelBtn setTitleColor:[UIColor colorWithRed:90/255.f green:90/255.f blue:90/255.f alpha:1.0] forState:UIControlStateNormal];
+    [cancelBtn setBackgroundColor:[UIColor colorWithRed:246/255.f green:250/255.f blue:252/255.f alpha:1.0]];
     [cancelBtn setTitle:@"取消分享" forState:UIControlStateNormal];
     [cancelBtn addTarget:self action:@selector(cancelAction:) forControlEvents:UIControlEventTouchUpInside];
     [fooderView addSubview:cancelBtn];
-    
+    //246 250 252
     [shareBGView addSubview:headerView];
     [shareBGView addSubview:contentView];
     [shareBGView addSubview:fooderView];
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        shareBGView.frame = CGRectMake(0, size.height - height, size.width, height);
+    }];
 }
 
 - (void)cancelAction:(id)sender
