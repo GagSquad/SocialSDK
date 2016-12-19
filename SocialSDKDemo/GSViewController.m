@@ -23,7 +23,7 @@
 
 - (IBAction)selectSharePlan:(id)sender
 {
-    [GSShareWindow showShareViewWithChannels:nil];
+    [GSShareView showShareViewWithChannels:nil];
 }
 
 - (IBAction)sinaTest:(id)sender

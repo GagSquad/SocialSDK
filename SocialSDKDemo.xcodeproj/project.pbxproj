@@ -18,8 +18,10 @@
 		0E7144841E052AAD00BC105E /* GSSocialSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E7144831E052AAD00BC105E /* GSSocialSDKResources.bundle */; };
 		0E7144881E052C4200BC105E /* GSReourcesManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E7144861E052C4200BC105E /* GSReourcesManager.h */; };
 		0E7144891E052C4200BC105E /* GSReourcesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7144871E052C4200BC105E /* GSReourcesManager.m */; };
-		0E71448C1E0536D000BC105E /* GSShareViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E71448A1E0536D000BC105E /* GSShareViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0E71448D1E0536D000BC105E /* GSShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E71448B1E0536D000BC105E /* GSShareViewController.m */; };
+		0E71448C1E0536D000BC105E /* GSShareView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E71448A1E0536D000BC105E /* GSShareView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E71448D1E0536D000BC105E /* GSShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E71448B1E0536D000BC105E /* GSShareView.m */; };
+		0E7A408B1E078C9C0083899C /* GSCollectionViewHorizontalLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E7A40891E078C9C0083899C /* GSCollectionViewHorizontalLayout.h */; };
+		0E7A408C1E078C9C0083899C /* GSCollectionViewHorizontalLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A408A1E078C9C0083899C /* GSCollectionViewHorizontalLayout.m */; };
 		0E90C00A1E03C391000D646E /* GSShareProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E90C0091E03C391000D646E /* GSShareProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E90C00E1E03C6C9000D646E /* GSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E90C00D1E03C6C9000D646E /* GSViewController.m */; };
 		0E90C0111E03C895000D646E /* GSLoggerConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E90C00F1E03C895000D646E /* GSLoggerConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -90,8 +92,10 @@
 		0E7144831E052AAD00BC105E /* GSSocialSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GSSocialSDKResources.bundle; sourceTree = "<group>"; };
 		0E7144861E052C4200BC105E /* GSReourcesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSReourcesManager.h; sourceTree = "<group>"; };
 		0E7144871E052C4200BC105E /* GSReourcesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSReourcesManager.m; sourceTree = "<group>"; };
-		0E71448A1E0536D000BC105E /* GSShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSShareViewController.h; sourceTree = "<group>"; };
-		0E71448B1E0536D000BC105E /* GSShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSShareViewController.m; sourceTree = "<group>"; };
+		0E71448A1E0536D000BC105E /* GSShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSShareView.h; sourceTree = "<group>"; };
+		0E71448B1E0536D000BC105E /* GSShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSShareView.m; sourceTree = "<group>"; };
+		0E7A40891E078C9C0083899C /* GSCollectionViewHorizontalLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCollectionViewHorizontalLayout.h; sourceTree = "<group>"; };
+		0E7A408A1E078C9C0083899C /* GSCollectionViewHorizontalLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCollectionViewHorizontalLayout.m; sourceTree = "<group>"; };
 		0E90C0091E03C391000D646E /* GSShareProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSShareProtocol.h; sourceTree = "<group>"; };
 		0E90C00B1E03C6C8000D646E /* SocialSDKDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SocialSDKDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		0E90C00C1E03C6C9000D646E /* GSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSViewController.h; sourceTree = "<group>"; };
@@ -273,8 +277,10 @@
 		0E71448E1E05370B00BC105E /* Share */ = {
 			isa = PBXGroup;
 			children = (
-				0E71448A1E0536D000BC105E /* GSShareViewController.h */,
-				0E71448B1E0536D000BC105E /* GSShareViewController.m */,
+				0E71448A1E0536D000BC105E /* GSShareView.h */,
+				0E71448B1E0536D000BC105E /* GSShareView.m */,
+				0E7A40891E078C9C0083899C /* GSCollectionViewHorizontalLayout.h */,
+				0E7A408A1E078C9C0083899C /* GSCollectionViewHorizontalLayout.m */,
 			);
 			name = Share;
 			sourceTree = "<group>";
@@ -386,7 +392,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E71448C1E0536D000BC105E /* GSShareViewController.h in Headers */,
+				0E71448C1E0536D000BC105E /* GSShareView.h in Headers */,
+				0E7A408B1E078C9C0083899C /* GSCollectionViewHorizontalLayout.h in Headers */,
 				0E90C00A1E03C391000D646E /* GSShareProtocol.h in Headers */,
 				0EAE69691E04E32500238DF1 /* GSSinaPlatformParamConfig.h in Headers */,
 				0E7144881E052C4200BC105E /* GSReourcesManager.h in Headers */,
@@ -566,10 +573,11 @@
 				0EDF13D11E03BB0500C554FC /* GSQQShare.m in Sources */,
 				0E90C0121E03C895000D646E /* GSLoggerConfig.m in Sources */,
 				0E7144891E052C4200BC105E /* GSReourcesManager.m in Sources */,
+				0E7A408C1E078C9C0083899C /* GSCollectionViewHorizontalLayout.m in Sources */,
 				0EF038291E04016100F11B4E /* GSShareResult.m in Sources */,
 				0EDF13C91E03BADD00C554FC /* GSSinaShare.m in Sources */,
 				0EDF13C51E03BAC500C554FC /* GSBaseShare.m in Sources */,
-				0E71448D1E0536D000BC105E /* GSShareViewController.m in Sources */,
+				0E71448D1E0536D000BC105E /* GSShareView.m in Sources */,
 				0EAE69621E04E2D000238DF1 /* GSBasePlatformParamConfig.m in Sources */,
 				0EDF13B81E03BA6F00C554FC /* GSPlatformParamConfigManager.m in Sources */,
 				0EDF13CD1E03BAEA00C554FC /* GSShareManager.mm in Sources */,
