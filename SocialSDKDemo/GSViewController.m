@@ -41,9 +41,4 @@
     }];
 }
 
-- (IBAction)sinaTest:(id)sender
-{
-    
-}
-
 @end

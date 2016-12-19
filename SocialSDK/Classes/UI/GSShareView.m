@@ -42,7 +42,7 @@
 
 - (void)createView
 {
-    CGFloat height = 200.f;
+    CGFloat height = 262.f;
     
     CGSize size = self.frame.size;
     UIView *shareBGView = [[UIView alloc] initWithFrame:CGRectMake(0, size.height - height, size.width, height)];

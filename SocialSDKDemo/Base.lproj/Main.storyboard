@@ -22,15 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udD-bS-GiJ">
-                                <rect key="frame" x="36" y="40" width="108" height="30"/>
-                                <state key="normal" title="微博分享纯文本"/>
-                                <connections>
-                                    <action selector="sinaTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mwd-ce-n5L"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xmp-oe-FcR">
-                                <rect key="frame" x="36" y="75" width="92" height="30"/>
+                                <rect key="frame" x="36" y="40" width="92" height="30"/>
                                 <state key="normal" title="显示选择面板"/>
                                 <connections>
                                     <action selector="selectSharePlan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zaf-2U-dPP"/>
@@ -39,10 +32,8 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="udD-bS-GiJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="ChY-OZ-Ir3"/>
-                            <constraint firstItem="Xmp-oe-FcR" firstAttribute="leading" secondItem="udD-bS-GiJ" secondAttribute="leading" id="DwO-ev-1Wz"/>
-                            <constraint firstItem="Xmp-oe-FcR" firstAttribute="top" secondItem="udD-bS-GiJ" secondAttribute="bottom" constant="5" id="sQg-UK-eOY"/>
-                            <constraint firstItem="udD-bS-GiJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="zq3-ki-VN8"/>
+                            <constraint firstItem="Xmp-oe-FcR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="0Cw-5O-ZD7"/>
+                            <constraint firstItem="Xmp-oe-FcR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="z1e-xS-S4S"/>
                         </constraints>
                     </view>
                 </viewController>
