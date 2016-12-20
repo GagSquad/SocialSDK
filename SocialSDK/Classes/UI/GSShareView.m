@@ -17,21 +17,30 @@
     GSShareViewCompletionBlock _completionBlock;
 }
 
+@property (nonatomic, strong) UIWindow *window;
+
 @end
 
 @implementation GSShareView
 
+- (void)dealloc
+{
+    GSLogger(@"GSShareView 释放了");
+}
+
 + (void)showShareViewWithChannels:(NSArray *)channels completionBlock:(GSShareViewCompletionBlock)completionBlock;
 {
-    [[UIApplication sharedApplication].keyWindow addSubview:[[GSShareView alloc] initWithChannels:channels completionBlock:completionBlock]];
+    GSShareView *w = [[GSShareView alloc] initWithChannels:channels completionBlock:completionBlock];
+    [w makeKeyAndVisible];
+    w.window = w;
 }
 
 - (instancetype)initWithChannels:(NSArray<NSNumber *> *)channels completionBlock:(GSShareViewCompletionBlock)completionBlock
 {
     self = [super initWithFrame:[UIScreen mainScreen].bounds];
     if (self) {
+        [self setWindowLevel:UIWindowLevelAlert + 100];
         self.backgroundColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.3];
-        self.frame = [UIScreen mainScreen].bounds;
         self.userInteractionEnabled = YES;
         _channels = channels;
         _completionBlock = completionBlock;
@@ -113,10 +122,11 @@
 
 - (void)removeIsCancel:(BOOL)isCancel channelType:(GSShareChannelType)channelType;
 {
-    [self removeFromSuperview];
     if (_completionBlock) {
         _completionBlock(isCancel,channelType);
     }
+    [self resignKeyWindow];
+    _window = nil;
 }
 
 #pragma mark - UICollectionViewDataSource

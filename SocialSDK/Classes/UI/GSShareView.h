@@ -14,7 +14,7 @@ typedef void (^GSShareViewCompletionBlock) (BOOL isCancel, GSShareChannelType ch
 /**
  选择分享渠道UI
  */
-@interface GSShareView : UIView
+@interface GSShareView : UIWindow
 
 + (void)showShareViewWithChannels:(NSArray *)channels completionBlock:(GSShareViewCompletionBlock)completionBlock;
 
