@@ -54,6 +54,8 @@
 		6EE178E64608D9FE80D853D6 /* Pods_SocialSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 828793C50AC8B1B8F0E93277 /* Pods_SocialSDK.framework */; };
 		F56676391E0518380018F4F9 /* GSQQPlatformParamConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = F56676371E0518380018F4F9 /* GSQQPlatformParamConfig.h */; };
 		F566763A1E0518380018F4F9 /* GSQQPlatformParamConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F56676381E0518380018F4F9 /* GSQQPlatformParamConfig.m */; };
+		F5A3596C1E08F220000AEB64 /* GSQzoneShare.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A3596A1E08F220000AEB64 /* GSQzoneShare.h */; };
+		F5A3596D1E08F220000AEB64 /* GSQzoneShare.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A3596B1E08F220000AEB64 /* GSQzoneShare.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +140,8 @@
 		EAA65CA283A949C0585437B0 /* Pods_SocialSDKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialSDKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F56676371E0518380018F4F9 /* GSQQPlatformParamConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSQQPlatformParamConfig.h; sourceTree = "<group>"; };
 		F56676381E0518380018F4F9 /* GSQQPlatformParamConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSQQPlatformParamConfig.m; sourceTree = "<group>"; };
+		F5A3596A1E08F220000AEB64 /* GSQzoneShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSQzoneShare.h; sourceTree = "<group>"; };
+		F5A3596B1E08F220000AEB64 /* GSQzoneShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSQzoneShare.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +188,7 @@
 				0EDF13D41E03BB1B00C554FC /* Base */,
 				0EDF13D31E03BB1300C554FC /* Sina */,
 				0EDF13D21E03BB0D00C554FC /* QQ */,
+				F5A359691E08F1E8000AEB64 /* Qzone */,
 				0EDF13CA1E03BAEA00C554FC /* GSShareManager.h */,
 				0EDF13CB1E03BAEA00C554FC /* GSShareManager.mm */,
 			);
@@ -399,6 +404,15 @@
 			name = QQ;
 			sourceTree = "<group>";
 		};
+		F5A359691E08F1E8000AEB64 /* Qzone */ = {
+			isa = PBXGroup;
+			children = (
+				F5A3596A1E08F220000AEB64 /* GSQzoneShare.h */,
+				F5A3596B1E08F220000AEB64 /* GSQzoneShare.m */,
+			);
+			name = Qzone;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -407,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E71448C1E0536D000BC105E /* GSShareView.h in Headers */,
+				F5A3596C1E08F220000AEB64 /* GSQzoneShare.h in Headers */,
 				0E7A408B1E078C9C0083899C /* GSCollectionViewHorizontalLayout.h in Headers */,
 				0E90C00A1E03C391000D646E /* GSShareProtocol.h in Headers */,
 				0EAE69691E04E32500238DF1 /* GSSinaPlatformParamConfig.h in Headers */,
@@ -485,7 +500,6 @@
 				TargetAttributes = {
 					0E4B31ED1E0294A000F231F0 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = 684DUL4925;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 					};
@@ -590,6 +604,7 @@
 				0E90C0121E03C895000D646E /* GSLoggerConfig.m in Sources */,
 				0E7144891E052C4200BC105E /* GSReourcesManager.m in Sources */,
 				0E7A408C1E078C9C0083899C /* GSCollectionViewHorizontalLayout.m in Sources */,
+				F5A3596D1E08F220000AEB64 /* GSQzoneShare.m in Sources */,
 				0EF038291E04016100F11B4E /* GSShareResult.m in Sources */,
 				0EDF13C91E03BADD00C554FC /* GSSinaShare.m in Sources */,
 				0EDF13C51E03BAC500C554FC /* GSBaseShare.m in Sources */,
@@ -729,14 +744,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 684DUL4925;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SocialSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xingengyuan.wanduoduo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "20597e6c-c438-4f47-8e5e-69702aa320a5";
-				PROVISIONING_PROFILE_SPECIFIER = dev_wanduoduo;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SocialSDKDemo/SocialSDKDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;

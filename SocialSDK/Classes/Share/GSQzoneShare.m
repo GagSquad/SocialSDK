@@ -1,39 +1,36 @@
 //
-//  GSQQShare.m
+//  GSQzoneShare.m
 //  SocialSDKDemo
 //
-//  Created by lijunjie on 16/12/2016.
-//  Copyright © 2016 GagSquad. All rights reserved.
+//  Created by lvjialin on 2016/12/20.
+//  Copyright © 2016年 GagSquad. All rights reserved.
 //
 
-#import "GSQQShare.h"
+#import "GSQzoneShare.h"
 #import <TencentOpenAPI/QQApiInterface.h>
+#import <TencentOpenAPI/QQApiInterfaceObject.h>
 #import <TencentOpenAPI/TencentOAuth.h>
 
-@interface GSQQShare ()
-
-@end
-
-@implementation GSQQShare
+@implementation GSQzoneShare
 
 + (id<GSShareProtocol>)share;
 {
     static id<GSShareProtocol> res = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        res = [[GSQQShare alloc] init];
+        res = [[GSQzoneShare alloc] init];
     });
     return res;
 }
 
 + (void)load
 {
-    [[GSShareManager share] addChannelWithChannelType:[[GSQQShare share] channelType] channel:[GSQQShare share]];
+    [[GSShareManager share] addChannelWithChannelType:[[GSQzoneShare share] channelType] channel:[GSQzoneShare share]];
 }
 
-- (GSShareChannelType)channelType
+- (GSShareChannelType)channelType;
 {
-    return GSShareChannelTypeQQ;
+    return GSShareChannelTypeQzone;
 }
 
 - (GSPlatformType)platformType
@@ -43,9 +40,9 @@
 
 - (void)shareSimpleText:(NSString *)text
 {
-    QQApiTextObject *txtObj = [QQApiTextObject objectWithText:text];
-    SendMessageToQQReq *request = [SendMessageToQQReq reqWithContent:txtObj];
-    QQApiSendResultCode sent = [QQApiInterface sendReq:request];
+    QQApiImageArrayForQZoneObject *obj = [QQApiImageArrayForQZoneObject objectWithimageDataArray:nil title:text];
+    SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:obj];
+    QQApiSendResultCode sent = [QQApiInterface SendReqToQZone:req];
     [self handleSendResult:sent];
 }
 
@@ -67,4 +64,5 @@
 {
     return [TencentOAuth HandleOpenURL:url];
 }
+
 @end

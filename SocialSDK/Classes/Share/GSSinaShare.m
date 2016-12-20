@@ -9,9 +9,6 @@
 #import "GSSinaShare.h"
 #import "WeiboSDK.h"
 #import "WBHttpRequest.h"
-#import "GSPlatformParamConfigManager.h"
-#import "GSShareManager.h"
-#import "GSShareResult.h"
 
 @interface GSSinaShare () <WeiboSDKDelegate>
 
