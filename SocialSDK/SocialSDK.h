@@ -23,3 +23,4 @@ FOUNDATION_EXPORT const unsigned char SocialSDKVersionString[];
 #import <SocialSDK/GSShareManager.h>
 #import <SocialSDK/GSShareChannelType.h>
 #import <SocialSDK/GSShareView.h>
+#import <SocialSDK/GSShareResultProtocol.h>

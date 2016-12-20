@@ -36,7 +36,7 @@
                                } else {
                                    id<GSShareProtocol> share = [[GSShareManager share] getShareProtocolWithChannelType:channelType];
                                    [share setShareCompletionBlock:^(id<GSShareResultProtocol> result) {
-                                       NSLog(@"aa");
+                                       NSLog(@"%@", result.message);
                                    }];
                                    [share shareSimpleText:@"测试分享"];
                                }

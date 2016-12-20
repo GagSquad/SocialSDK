@@ -50,7 +50,7 @@
 		0EDF13D11E03BB0500C554FC /* GSQQShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF13CF1E03BB0500C554FC /* GSQQShare.m */; };
 		0EF038281E04016100F11B4E /* GSShareResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EF038261E04016100F11B4E /* GSShareResult.h */; };
 		0EF038291E04016100F11B4E /* GSShareResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF038271E04016100F11B4E /* GSShareResult.m */; };
-		0EF0382B1E04018100F11B4E /* GSShareResultProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EF0382A1E04018100F11B4E /* GSShareResultProtocol.h */; };
+		0EF0382B1E04018100F11B4E /* GSShareResultProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EF0382A1E04018100F11B4E /* GSShareResultProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6EE178E64608D9FE80D853D6 /* Pods_SocialSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 828793C50AC8B1B8F0E93277 /* Pods_SocialSDK.framework */; };
 		F538DA0C1E09082F008C0660 /* GSWeChatPlatformParamConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = F538DA0A1E09082F008C0660 /* GSWeChatPlatformParamConfig.h */; };
 		F538DA0D1E09082F008C0660 /* GSWeChatPlatformParamConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F538DA0B1E09082F008C0660 /* GSWeChatPlatformParamConfig.m */; };
@@ -471,6 +471,7 @@
 				0EAE69691E04E32500238DF1 /* GSSinaPlatformParamConfig.h in Headers */,
 				0E7144881E052C4200BC105E /* GSReourcesManager.h in Headers */,
 				0EAE695E1E04E2AC00238DF1 /* GSPlatformParamConfigProtocol.h in Headers */,
+				0EF0382B1E04018100F11B4E /* GSShareResultProtocol.h in Headers */,
 				0EDF13B71E03BA6F00C554FC /* GSPlatformParamConfigManager.h in Headers */,
 				0E90C0111E03C895000D646E /* GSLoggerConfig.h in Headers */,
 				F56676391E0518380018F4F9 /* GSQQPlatformParamConfig.h in Headers */,
@@ -489,7 +490,6 @@
 				0EDF13BC1E03BAA700C554FC /* GSLoginManager.h in Headers */,
 				0EAE69611E04E2D000238DF1 /* GSBasePlatformParamConfig.h in Headers */,
 				0EDF13D01E03BB0500C554FC /* GSQQShare.h in Headers */,
-				0EF0382B1E04018100F11B4E /* GSShareResultProtocol.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
