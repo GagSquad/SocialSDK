@@ -54,7 +54,7 @@
     UILabel *title = [[UILabel alloc] initWithFrame:headerView.bounds];
     title.textAlignment = NSTextAlignmentCenter;
     title.textColor = [UIColor colorWithRed:143/255.f green:143/255.f blue:143/255.f alpha:1.0];
-    title.font = [UIFont systemFontOfSize:18.f];
+    title.font = [UIFont systemFontOfSize:16.f];
     title.text = @"请选择分享平台";
     [headerView addSubview:title];
     
@@ -87,6 +87,7 @@
     [cancelBtn setTitleColor:[UIColor colorWithRed:90/255.f green:90/255.f blue:90/255.f alpha:1.0] forState:UIControlStateNormal];
     [cancelBtn setBackgroundColor:[UIColor colorWithRed:246/255.f green:250/255.f blue:252/255.f alpha:1.0]];
     [cancelBtn setTitle:@"取消分享" forState:UIControlStateNormal];
+    cancelBtn.titleLabel.font = [UIFont systemFontOfSize:14.f];
     [cancelBtn addTarget:self action:@selector(cancelAction:) forControlEvents:UIControlEventTouchUpInside];
     [fooderView addSubview:cancelBtn];
     //246 250 252

@@ -26,7 +26,9 @@
     [GSShareView showShareViewWithChannels:@[
                                              @(GSShareChannelTypeSina),
                                              @(GSShareChannelTypeQQ),
-                                             @(GSShareChannelTypeQzone)
+                                             @(GSShareChannelTypeQzone),
+                                             @(GSShareChannelTypeWechatSession),
+                                             @(GSShareChannelTypeWechatTimeLine)
                                              ]
                            completionBlock:^(BOOL isCancel, GSShareChannelType channelType) {
                                if (isCancel) {

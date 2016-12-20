@@ -34,7 +34,7 @@
         _name = [[UILabel alloc] initWithFrame:CGRectMake(0, logoBG.frame.size.height + logoBG.frame.origin.y + 8, frame.size.width, 16)];
         _name.backgroundColor = [UIColor clearColor];
         _name.textAlignment = NSTextAlignmentCenter;
-        _name.font = [UIFont systemFontOfSize:14.f];
+        _name.font = [UIFont systemFontOfSize:12.f];
         _name.textColor = [UIColor colorWithRed:100/255.f green:100/255.f blue:100/255.f alpha:1.0];
         
 //        self.backgroundColor = [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1];
