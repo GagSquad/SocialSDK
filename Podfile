@@ -10,4 +10,5 @@ source 'https://github.com/CocoaPods/Specs.git'
 target :SocialSDK do
     pod "WeiboSDK", :git => "https://github.com/sinaweibosdk/weibo_ios_sdk.git"
     pod "TencentOpenApiSDK", :git => "https://github.com/GagSquad/TencentOpenApiSDK.git"
+    pod "WeChatSDK", :git => "https://github.com/GagSquad/WeChatSDK.git"
 end
