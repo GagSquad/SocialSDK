@@ -16,7 +16,7 @@
 
 @implementation GSWeChatSessionShare
 
-+ (id<GSShareProtocol>)share;
++ (id<GSShareProtocol>)share
 {
     static id<GSShareProtocol> res = nil;
     static dispatch_once_t onceToken;
@@ -52,7 +52,32 @@
 
 - (void)onResp:(BaseResp *)resp
 {
-    
+    if (_completionBlock) {
+        _completionBlock([self createResultWithResponse:resp]);
+    }
+    _completionBlock = nil;
+}
+
+- (id<GSShareResultProtocol>)createResultWithResponse:(BaseResp *)response
+{
+    int errCode = response.errCode;
+    GSShareResult *res = [[GSShareResult alloc] init];
+    res.sourceCode = errCode;
+    res.soucreMessage = @"";
+    res.status = GSShareResultStatusFailing;
+    switch (errCode) {
+        case 0: {
+            res.status = GSShareResultStatusSuccess;
+            break;
+        }
+        case -2: {
+            res.status = GSShareResultStatusCancel;
+            break;
+        }
+        default:
+            break;
+    }
+    return res;
 }
 
 - (BOOL)handleOpenURL:(NSURL *)url
