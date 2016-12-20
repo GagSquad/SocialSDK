@@ -9,7 +9,10 @@
 #import "GSQzoneShare.h"
 #import <TencentOpenAPI/QQApiInterface.h>
 #import <TencentOpenAPI/QQApiInterfaceObject.h>
-#import <TencentOpenAPI/TencentOAuth.h>
+
+@interface GSQzoneShare ()<QQApiInterfaceDelegate>
+
+@end
 
 @implementation GSQzoneShare
 
@@ -46,23 +49,69 @@
     [self handleSendResult:sent];
 }
 
+
 - (void)handleSendResult:(QQApiSendResultCode)sendResult
 {
-    switch (sendResult) {
-        case EQQAPISENDSUCESS:{
+    if (sendResult != EQQAPISENDSUCESS) {
+        if (_completionBlock) {
+            _completionBlock([self createErrorResult:sendResult]);
+        }
+        _completionBlock = nil;
+    }
+}
+
+- (id<GSShareResultProtocol>)createErrorResult:(QQApiSendResultCode)sendResult
+{
+    GSShareResult *res = [[GSShareResult alloc] init];
+    res.sourceCode = sendResult;
+    res.status = GSShareResultStatusFailing;
+    return res;
+}
+
+- (id<GSShareResultProtocol>)createResultWithResponse:(QQBaseResp *)response
+{
+    NSInteger resultCode = [response.result integerValue];
+    GSShareResult *res = [[GSShareResult alloc] init];
+    res.sourceCode = resultCode;
+    res.soucreMessage = @"";
+    res.status = GSShareResultStatusFailing;
+    switch (resultCode) {
+        case 0: {
+            res.status = GSShareResultStatusSuccess;
             break;
         }
-        case EQQAPIVERSIONNEEDUPDATE:{
+        case -4:{
+            res.status = GSShareResultStatusCancel;
             break;
         }
         default:
             break;
     }
+    
+    return res;
 }
 
 - (BOOL)handleOpenURL:(NSURL *)url
 {
-    return [TencentOAuth HandleOpenURL:url];
+    return [QQApiInterface handleOpenURL:url delegate:self];
+}
+#pragma mark QQApiInterfaceDelegate
+- (void)onResp:(QQBaseResp *)resp
+{
+    if (_completionBlock) {
+        _completionBlock([self createResultWithResponse:resp]);
+    }
+    _completionBlock = nil;
+}
+
+- (void)onReq:(QQBaseReq *)req
+{
+    
+}
+
+- (void)isOnlineResponse:(NSDictionary *)response
+{
+    
 }
 
 @end
