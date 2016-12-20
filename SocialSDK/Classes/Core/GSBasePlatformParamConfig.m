@@ -10,14 +10,14 @@
 
 @implementation GSBasePlatformParamConfig
 
++ (GSPlatformType)platformType
+{
+    return GSPlatformTypeNone;
+}
+
 - (void)config:(NSDictionary *)config
 {
     
-}
-
-- (GSPlatformType)platformType
-{
-    return GSPlatformTypeNone;
 }
 
 @end

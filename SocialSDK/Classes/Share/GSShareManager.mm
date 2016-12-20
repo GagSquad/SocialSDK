@@ -11,7 +11,8 @@
 
 @interface GSShareManager ()
 {
-    NSMutableDictionary <NSNumber *, id<GSShareProtocol>> *_platforms;
+    NSMutableDictionary <NSNumber *, Class> *_platforms;
+    id<GSShareProtocol> _channel;
 }
 
 @end
@@ -37,29 +38,27 @@
     return self;
 }
 
-- (id<GSShareProtocol>)getShareProtocolWithChannelType:(GSShareChannelType)channelType;
+- (id<GSShareProtocol>)getShareProtocolWithChannelType:(GSShareChannelType)channelType
 {
-    id<GSShareProtocol> res = _platforms[@(channelType)];
+    id<GSShareProtocol> res = [[(Class)_platforms[@(channelType)] alloc] init];
+    _channel = res;
     if (!res) {
         GSLogger(@"未载入该平台");
     }
     return res;
 }
 
-- (void)addChannelWithChannelType:(GSShareChannelType)channelType channel:(id<GSShareProtocol>)channel;
+- (void)addChannelWithChannelType:(GSShareChannelType)channelType channel:(Class)channel
 {
     _platforms[@(channelType)] = channel;
 }
 
 - (BOOL)handleOpenURL:(NSURL *)url
 {
-    __block BOOL res = NO;
-    [_platforms enumerateKeysAndObjectsUsingBlock:^(NSNumber * _Nonnull key, id<GSShareProtocol>  _Nonnull obj, BOOL * _Nonnull stop) {
-        res = [obj handleOpenURL:url];
-        if (res) {
-            *stop = YES;
-        }
-    }];
+    BOOL res = NO;
+    if (_channel) {
+        res = [_channel handleOpenURL:url];
+    }
     return res;
 }
 

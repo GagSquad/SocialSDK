@@ -16,29 +16,19 @@
 
 @implementation GSQzoneShare
 
-+ (id<GSShareProtocol>)share;
-{
-    static id<GSShareProtocol> res = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        res = [[GSQzoneShare alloc] init];
-    });
-    return res;
-}
-
 + (void)load
 {
-    [[GSShareManager share] addChannelWithChannelType:[[GSQzoneShare share] channelType] channel:[GSQzoneShare share]];
+    [[GSShareManager share] addChannelWithChannelType:[GSQzoneShare channelType] channel:[GSQzoneShare class]];
 }
 
-- (GSShareChannelType)channelType;
-{
-    return GSShareChannelTypeQzone;
-}
-
-- (GSPlatformType)platformType
++ (GSPlatformType)platformType
 {
     return GSPlatformTypeQQ;
+}
+
++ (GSShareChannelType)channelType
+{
+    return GSShareChannelTypeQzone;
 }
 
 - (void)shareSimpleText:(NSString *)text

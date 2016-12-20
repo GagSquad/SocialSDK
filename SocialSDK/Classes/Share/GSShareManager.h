@@ -37,7 +37,7 @@
  @param channelType channelType
  @param channel channel
  */
-- (void)addChannelWithChannelType:(GSShareChannelType)channelType channel:(id<GSShareProtocol>)channel;
+- (void)addChannelWithChannelType:(GSShareChannelType)channelType channel:(Class)channel;
 
 /**
  openURL回调

@@ -16,29 +16,19 @@
 
 @implementation GSWeChatSessionShare
 
-+ (id<GSShareProtocol>)share
-{
-    static id<GSShareProtocol> res = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        res = [[GSWeChatSessionShare alloc] init];
-    });
-    return res;
-}
-
 + (void)load
 {
-    [[GSShareManager share] addChannelWithChannelType:[[GSWeChatSessionShare share] channelType] channel:[GSWeChatSessionShare share]];
+    [[GSShareManager share] addChannelWithChannelType:[GSWeChatSessionShare channelType] channel:[GSWeChatSessionShare class]];
 }
 
-- (GSShareChannelType)channelType;
-{
-    return GSShareChannelTypeWechatSession;
-}
-
-- (GSPlatformType)platformType
++ (GSPlatformType)platformType
 {
     return GSPlatformTypeWeChat;
+}
+
++ (GSShareChannelType)channelType;
+{
+    return GSShareChannelTypeWechatSession;
 }
 
 - (void)shareSimpleText:(NSString *)text

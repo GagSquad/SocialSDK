@@ -10,6 +10,5 @@
 
 @interface GSWeChatSessionShare : GSBaseShare
 
-+ (id<GSShareProtocol>)share;
 
 @end

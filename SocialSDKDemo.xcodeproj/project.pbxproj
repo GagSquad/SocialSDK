@@ -549,7 +549,7 @@
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 684DUL4925;
 						LastSwiftMigration = 0820;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					0E4B32071E02962C00F231F0 = {
 						CreatedOnToolsVersion = 8.2;

@@ -11,8 +11,8 @@
 
 @protocol GSPlatformParamConfigProtocol <NSObject>
 
-- (void)config:(NSDictionary *)config;
++ (GSPlatformType)platformType;
 
-- (GSPlatformType)platformType;
+- (void)config:(NSDictionary *)config;
 
 @end

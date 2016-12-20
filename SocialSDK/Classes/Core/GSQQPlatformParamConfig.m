@@ -20,17 +20,17 @@
 + (void)load
 {
     id<GSPlatformParamConfigProtocol> platform = [[GSQQPlatformParamConfig alloc] init];
-    [[GSPlatformParamConfigManager share] addPlatformWithPlatformType:[platform platformType] platform:platform];
+    [[GSPlatformParamConfigManager share] addPlatformWithPlatformType:[GSQQPlatformParamConfig platformType] platform:platform];
+}
+
++ (GSPlatformType)platformType
+{
+    return GSPlatformTypeQQ;
 }
 
 - (void)config:(NSDictionary *)config
 {
    _oauth = [[TencentOAuth alloc] initWithAppId:config[@"appID"] andDelegate:nil];
-}
-
-- (GSPlatformType)platformType
-{
-    return GSPlatformTypeQQ;
 }
 
 @end

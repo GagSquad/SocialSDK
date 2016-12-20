@@ -10,6 +10,5 @@
 
 @interface GSWeChatTimeLineShare : GSBaseShare
 
-+ (id<GSShareProtocol>)share;
 
 @end

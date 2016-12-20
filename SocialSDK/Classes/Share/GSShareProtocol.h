@@ -16,14 +16,14 @@ typedef void (^GSShareCompletionBlock) (id<GSShareResultProtocol> result);
 
 @protocol GSShareProtocol <NSObject>
 
++ (GSPlatformType)platformType;
+
++ (GSShareChannelType)channelType;
+
 - (void)shareSimpleText:(NSString *)text;
 
 - (BOOL)handleOpenURL:(NSURL *)url;
 
 - (void)setShareCompletionBlock:(GSShareCompletionBlock)completionBlock;
-
-- (GSShareChannelType)channelType;
-
-- (GSPlatformType)platformType;
 
 @end

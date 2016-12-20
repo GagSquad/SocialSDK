@@ -28,17 +28,17 @@
 
 + (void)load
 {
-    [[GSShareManager share] addChannelWithChannelType:[[GSSinaShare share] channelType] channel:[GSSinaShare share]];
+    [[GSShareManager share] addChannelWithChannelType:[GSSinaShare channelType] channel:[GSSinaShare class]];
 }
 
-- (GSShareChannelType)channelType;
-{
-    return GSShareChannelTypeSina;
-}
-
-- (GSPlatformType)platformType
++ (GSPlatformType)platformType
 {
     return GSPlatformTypeSina;
+}
+
++ (GSShareChannelType)channelType
+{
+    return GSShareChannelTypeSina;
 }
 
 - (void)shareSimpleText:(NSString *)text
@@ -52,7 +52,7 @@
 - (WBAuthorizeRequest *)authRequest
 {
     WBAuthorizeRequest *authRequest = [WBAuthorizeRequest request];
-    NSDictionary *config = [[GSPlatformParamConfigManager share] getConfigWithPlatformType:[self platformType]];
+    NSDictionary *config = [[GSPlatformParamConfigManager share] getConfigWithPlatformType:[GSSinaShare platformType]];
     authRequest.redirectURI = config[@"redirectURI"];
     authRequest.scope = @"all";
     return authRequest;

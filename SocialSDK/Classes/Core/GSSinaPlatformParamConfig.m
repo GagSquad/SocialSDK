@@ -14,17 +14,17 @@
 + (void)load
 {
     id<GSPlatformParamConfigProtocol> platform = [[GSSinaPlatformParamConfig alloc] init];
-    [[GSPlatformParamConfigManager share] addPlatformWithPlatformType:[platform platformType] platform:platform];
+    [[GSPlatformParamConfigManager share] addPlatformWithPlatformType:[GSSinaPlatformParamConfig platformType] platform:platform];
+}
+
++ (GSPlatformType)platformType
+{
+    return GSPlatformTypeSina;
 }
 
 - (void)config:(NSDictionary *)config
 {
     [WeiboSDK registerApp:config[@"appKey"]];
-}
-
-- (GSPlatformType)platformType
-{
-    return GSPlatformTypeSina;
 }
 
 @end

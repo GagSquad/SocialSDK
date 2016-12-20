@@ -14,17 +14,17 @@
 + (void)load
 {
     id<GSPlatformParamConfigProtocol> platform = [[GSWeChatPlatformParamConfig alloc] init];
-    [[GSPlatformParamConfigManager share] addPlatformWithPlatformType:[platform platformType] platform:platform];
+    [[GSPlatformParamConfigManager share] addPlatformWithPlatformType:[GSWeChatPlatformParamConfig platformType] platform:platform];
+}
+
++ (GSPlatformType)platformType
+{
+    return GSPlatformTypeWeChat;
 }
 
 - (void)config:(NSDictionary *)config
 {
     [WXApi registerApp:config[@"appID"]];
-}
-
-- (GSPlatformType)platformType
-{
-    return GSPlatformTypeWeChat;
 }
 
 @end

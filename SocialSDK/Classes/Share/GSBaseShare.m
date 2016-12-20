@@ -10,6 +10,16 @@
 
 @implementation GSBaseShare
 
++ (GSPlatformType)platformType
+{
+    return GSPlatformTypeNone;
+}
+
++ (GSShareChannelType)channelType;
+{
+    return GSShareChannelTypeNone;
+}
+
 - (void)shareSimpleText:(NSString *)text
 {
     
@@ -18,16 +28,6 @@
 - (BOOL)handleOpenURL:(NSURL *)url
 {
     return NO;
-}
-
-- (GSShareChannelType)channelType;
-{
-    return GSShareChannelTypeNone;
-}
-
-- (GSPlatformType)platformType
-{
-    return GSPlatformTypeNone;
 }
 
 - (void)setShareCompletionBlock:(GSShareCompletionBlock)completionBlock

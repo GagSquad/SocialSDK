@@ -10,6 +10,4 @@
 
 @interface GSQzoneShare : GSBaseShare
 
-+ (id<GSShareProtocol>)share;
-
 @end

@@ -27,17 +27,17 @@
 
 + (void)load
 {
-    [[GSShareManager share] addChannelWithChannelType:[[GSWeChatTimeLineShare share] channelType] channel:[GSWeChatTimeLineShare share]];
+    [[GSShareManager share] addChannelWithChannelType:[GSWeChatTimeLineShare channelType] channel:[GSWeChatTimeLineShare class]];
 }
 
-- (GSShareChannelType)channelType;
-{
-    return GSShareChannelTypeWechatTimeLine;
-}
-
-- (GSPlatformType)platformType
++ (GSPlatformType)platformType
 {
     return GSPlatformTypeWeChat;
+}
+
++ (GSShareChannelType)channelType
+{
+    return GSShareChannelTypeWechatTimeLine;
 }
 
 - (void)shareSimpleText:(NSString *)text

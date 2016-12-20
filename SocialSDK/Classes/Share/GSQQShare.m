@@ -15,29 +15,19 @@
 
 @implementation GSQQShare
 
-+ (id<GSShareProtocol>)share;
-{
-    static id<GSShareProtocol> res = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        res = [[GSQQShare alloc] init];
-    });
-    return res;
-}
-
 + (void)load
 {
-    [[GSShareManager share] addChannelWithChannelType:[[GSQQShare share] channelType] channel:[GSQQShare share]];
+    [[GSShareManager share] addChannelWithChannelType:[GSQQShare channelType] channel:[GSQQShare class]];
 }
 
-- (GSShareChannelType)channelType
-{
-    return GSShareChannelTypeQQ;
-}
-
-- (GSPlatformType)platformType
++ (GSPlatformType)platformType
 {
     return GSPlatformTypeQQ;
+}
+
++ (GSShareChannelType)channelType
+{
+    return GSShareChannelTypeQQ;
 }
 
 - (void)shareSimpleText:(NSString *)text
