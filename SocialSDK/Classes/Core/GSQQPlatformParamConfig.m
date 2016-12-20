@@ -7,7 +7,6 @@
 //
 
 #import "GSQQPlatformParamConfig.h"
-#import "GSPlatformParamConfigManager.h"
 #import <TencentOpenAPI/TencentOAuth.h>
 
 @interface GSQQPlatformParamConfig ()

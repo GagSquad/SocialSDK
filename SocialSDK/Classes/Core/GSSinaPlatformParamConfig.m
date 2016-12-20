@@ -7,7 +7,6 @@
 //
 
 #import "GSSinaPlatformParamConfig.h"
-#import "GSPlatformParamConfigManager.h"
 #import "WeiboSDK.h"
 
 @implementation GSSinaPlatformParamConfig

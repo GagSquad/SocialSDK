@@ -52,6 +52,12 @@
 		0EF038291E04016100F11B4E /* GSShareResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF038271E04016100F11B4E /* GSShareResult.m */; };
 		0EF0382B1E04018100F11B4E /* GSShareResultProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EF0382A1E04018100F11B4E /* GSShareResultProtocol.h */; };
 		6EE178E64608D9FE80D853D6 /* Pods_SocialSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 828793C50AC8B1B8F0E93277 /* Pods_SocialSDK.framework */; };
+		F538DA0C1E09082F008C0660 /* GSWeChatPlatformParamConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = F538DA0A1E09082F008C0660 /* GSWeChatPlatformParamConfig.h */; };
+		F538DA0D1E09082F008C0660 /* GSWeChatPlatformParamConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F538DA0B1E09082F008C0660 /* GSWeChatPlatformParamConfig.m */; };
+		F538DA141E090C59008C0660 /* GSWeChatSessionShare.h in Headers */ = {isa = PBXBuildFile; fileRef = F538DA121E090C59008C0660 /* GSWeChatSessionShare.h */; };
+		F538DA151E090C59008C0660 /* GSWeChatSessionShare.m in Sources */ = {isa = PBXBuildFile; fileRef = F538DA131E090C59008C0660 /* GSWeChatSessionShare.m */; };
+		F538DA181E090C68008C0660 /* GSWeChatTimeLineShare.h in Headers */ = {isa = PBXBuildFile; fileRef = F538DA161E090C68008C0660 /* GSWeChatTimeLineShare.h */; };
+		F538DA191E090C68008C0660 /* GSWeChatTimeLineShare.m in Sources */ = {isa = PBXBuildFile; fileRef = F538DA171E090C68008C0660 /* GSWeChatTimeLineShare.m */; };
 		F56676391E0518380018F4F9 /* GSQQPlatformParamConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = F56676371E0518380018F4F9 /* GSQQPlatformParamConfig.h */; };
 		F566763A1E0518380018F4F9 /* GSQQPlatformParamConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F56676381E0518380018F4F9 /* GSQQPlatformParamConfig.m */; };
 		F5A3596C1E08F220000AEB64 /* GSQzoneShare.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A3596A1E08F220000AEB64 /* GSQzoneShare.h */; };
@@ -138,6 +144,13 @@
 		828793C50AC8B1B8F0E93277 /* Pods_SocialSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9559809474D9F814326C3975 /* Pods-SocialSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialSDK/Pods-SocialSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		EAA65CA283A949C0585437B0 /* Pods_SocialSDKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialSDKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F538DA0A1E09082F008C0660 /* GSWeChatPlatformParamConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSWeChatPlatformParamConfig.h; sourceTree = "<group>"; };
+		F538DA0B1E09082F008C0660 /* GSWeChatPlatformParamConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSWeChatPlatformParamConfig.m; sourceTree = "<group>"; };
+		F538DA121E090C59008C0660 /* GSWeChatSessionShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSWeChatSessionShare.h; sourceTree = "<group>"; };
+		F538DA131E090C59008C0660 /* GSWeChatSessionShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSWeChatSessionShare.m; sourceTree = "<group>"; };
+		F538DA161E090C68008C0660 /* GSWeChatTimeLineShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSWeChatTimeLineShare.h; sourceTree = "<group>"; };
+		F538DA171E090C68008C0660 /* GSWeChatTimeLineShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSWeChatTimeLineShare.m; sourceTree = "<group>"; };
+		F538DA1A1E090FE2008C0660 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F56676371E0518380018F4F9 /* GSQQPlatformParamConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSQQPlatformParamConfig.h; sourceTree = "<group>"; };
 		F56676381E0518380018F4F9 /* GSQQPlatformParamConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSQQPlatformParamConfig.m; sourceTree = "<group>"; };
 		F5A3596A1E08F220000AEB64 /* GSQzoneShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSQzoneShare.h; sourceTree = "<group>"; };
@@ -186,6 +199,8 @@
 			isa = PBXGroup;
 			children = (
 				0EDF13D41E03BB1B00C554FC /* Base */,
+				F538DA101E090BF8008C0660 /* WeChatSession */,
+				F538DA111E090C12008C0660 /* WeChatTimeLine */,
 				0EDF13D31E03BB1300C554FC /* Sina */,
 				0EDF13D21E03BB0D00C554FC /* QQ */,
 				F5A359691E08F1E8000AEB64 /* Qzone */,
@@ -336,6 +351,7 @@
 		0EAE695C1E04E1B300238DF1 /* PlatformParamConfig */ = {
 			isa = PBXGroup;
 			children = (
+				F538DA091E0907BB008C0660 /* WeChat */,
 				F56676361E05180B0018F4F9 /* QQ */,
 				0EA864531E04E98400B9420D /* Sina */,
 				0EAE695D1E04E2AC00238DF1 /* GSPlatformParamConfigProtocol.h */,
@@ -389,10 +405,38 @@
 		E53E332F43DA01F024BE9E5F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F538DA1A1E090FE2008C0660 /* UIKit.framework */,
 				828793C50AC8B1B8F0E93277 /* Pods_SocialSDK.framework */,
 				EAA65CA283A949C0585437B0 /* Pods_SocialSDKDemo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F538DA091E0907BB008C0660 /* WeChat */ = {
+			isa = PBXGroup;
+			children = (
+				F538DA0A1E09082F008C0660 /* GSWeChatPlatformParamConfig.h */,
+				F538DA0B1E09082F008C0660 /* GSWeChatPlatformParamConfig.m */,
+			);
+			name = WeChat;
+			sourceTree = "<group>";
+		};
+		F538DA101E090BF8008C0660 /* WeChatSession */ = {
+			isa = PBXGroup;
+			children = (
+				F538DA121E090C59008C0660 /* GSWeChatSessionShare.h */,
+				F538DA131E090C59008C0660 /* GSWeChatSessionShare.m */,
+			);
+			name = WeChatSession;
+			sourceTree = "<group>";
+		};
+		F538DA111E090C12008C0660 /* WeChatTimeLine */ = {
+			isa = PBXGroup;
+			children = (
+				F538DA161E090C68008C0660 /* GSWeChatTimeLineShare.h */,
+				F538DA171E090C68008C0660 /* GSWeChatTimeLineShare.m */,
+			);
+			name = WeChatTimeLine;
 			sourceTree = "<group>";
 		};
 		F56676361E05180B0018F4F9 /* QQ */ = {
@@ -431,11 +475,14 @@
 				0E90C0111E03C895000D646E /* GSLoggerConfig.h in Headers */,
 				F56676391E0518380018F4F9 /* GSQQPlatformParamConfig.h in Headers */,
 				0E7A40911E07AF4D0083899C /* GSCollectionViewCell.h in Headers */,
+				F538DA181E090C68008C0660 /* GSWeChatTimeLineShare.h in Headers */,
 				0EDF13CC1E03BAEA00C554FC /* GSShareManager.h in Headers */,
 				0E7144821E051FC300BC105E /* GSShareChannelType.h in Headers */,
+				F538DA0C1E09082F008C0660 /* GSWeChatPlatformParamConfig.h in Headers */,
 				0E90C0141E03CAF4000D646E /* GSPlatformType.h in Headers */,
 				0EDF13C01E03BAB700C554FC /* GSPayManager.h in Headers */,
 				0E4B320C1E02962C00F231F0 /* SocialSDK.h in Headers */,
+				F538DA141E090C59008C0660 /* GSWeChatSessionShare.h in Headers */,
 				0EDF13C81E03BADD00C554FC /* GSSinaShare.h in Headers */,
 				0EDF13C41E03BAC500C554FC /* GSBaseShare.h in Headers */,
 				0EF038281E04016100F11B4E /* GSShareResult.h in Headers */,
@@ -501,7 +548,7 @@
 					0E4B31ED1E0294A000F231F0 = {
 						CreatedOnToolsVersion = 8.2;
 						LastSwiftMigration = 0820;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					0E4B32071E02962C00F231F0 = {
 						CreatedOnToolsVersion = 8.2;
@@ -599,7 +646,9 @@
 			files = (
 				0EDF13BD1E03BAA700C554FC /* GSLoginManager.m in Sources */,
 				F566763A1E0518380018F4F9 /* GSQQPlatformParamConfig.m in Sources */,
+				F538DA191E090C68008C0660 /* GSWeChatTimeLineShare.m in Sources */,
 				0E7A40921E07AF4D0083899C /* GSCollectionViewCell.m in Sources */,
+				F538DA151E090C59008C0660 /* GSWeChatSessionShare.m in Sources */,
 				0EDF13D11E03BB0500C554FC /* GSQQShare.m in Sources */,
 				0E90C0121E03C895000D646E /* GSLoggerConfig.m in Sources */,
 				0E7144891E052C4200BC105E /* GSReourcesManager.m in Sources */,
@@ -613,6 +662,7 @@
 				0EDF13B81E03BA6F00C554FC /* GSPlatformParamConfigManager.m in Sources */,
 				0EDF13CD1E03BAEA00C554FC /* GSShareManager.mm in Sources */,
 				0EDF13C11E03BAB700C554FC /* GSPayManager.m in Sources */,
+				F538DA0D1E09082F008C0660 /* GSWeChatPlatformParamConfig.m in Sources */,
 				0EAE696A1E04E32500238DF1 /* GSSinaPlatformParamConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
