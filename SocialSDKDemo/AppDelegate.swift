@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         GSLoggerConfig.share().openLogger()
         GSPlatformParamConfigManager.share().addSinaPlatformConfigAppKey(SinaWeiBoKey, redirectURI:SinaWeiBoCallBack)
+        GSPlatformParamConfigManager.share().addQQPlatformConfigAppID(QQAppId)
         self.window?.makeKeyAndVisible()
         return true
     }
