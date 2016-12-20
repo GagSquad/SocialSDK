@@ -8,7 +8,6 @@
 
 #import "GSPlatformParamConfigManager.h"
 #import "GSLogger.h"
-#import "WeiboSDK.h"
 #import "GSPlatformParamConfigProtocol.h"
 
 @interface GSPlatformParamConfigManager ()
@@ -68,13 +67,28 @@
     GSPlatformType p = GSPlatformTypeQQ;
     if (appID) {
         NSDictionary *config = @{
-                                 @"appID": appID,
+                                 @"appID": appID
                                  };
         _configs[@(p)] = config;
         [_platforms[@(p)] config:config];
         GSLogger(@"设QQ_appID%@", appID);
     } else {
         GSLogger(@"请设置正确的Key");
+    }
+}
+
+- (void)addWeChatPlatformConfigAppID:(NSString *)appID
+{
+    GSPlatformType p = GSPlatformTypeWeChat;
+    if (appID) {
+        NSDictionary *config = @{
+                                 @"appID": appID
+                                 };
+        _configs[@(p)] = config;
+        [_platforms[@(p)] config:config];
+        GSLogger(@"设置WeChat_appID%@",appID);
+    } else {
+        GSLogger(@"请设置正确的appID");
     }
 }
 

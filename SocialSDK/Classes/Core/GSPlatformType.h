@@ -12,7 +12,8 @@
 typedef enum : NSUInteger {
     GSPlatformTypeNone,
     GSPlatformTypeSina,
-    GSPlatformTypeQQ
+    GSPlatformTypeQQ,
+    GSPlatformTypeWeChat
 } GSPlatformType;
 
 #endif /* GSPlatformType_h */

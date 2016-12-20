@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "GSPlatformParamConfigProtocol.h"
+#import "GSPlatformParamConfigManager.h"
 
 @interface GSBasePlatformParamConfig : NSObject <GSPlatformParamConfigProtocol>
 {
