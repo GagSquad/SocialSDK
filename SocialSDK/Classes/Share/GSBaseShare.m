@@ -7,6 +7,14 @@
 //
 
 #import "GSBaseShare.h"
+#import "GSShareManager.h"
+
+@interface GSBaseShare ()
+{
+    GSShareCompletionBlock _completionBlock;
+}
+
+@end
 
 @implementation GSBaseShare
 
@@ -33,6 +41,15 @@
 - (void)setShareCompletionBlock:(GSShareCompletionBlock)completionBlock
 {
     _completionBlock = completionBlock;
+}
+
+- (void)completionWithResult:(id<GSShareResultProtocol>)result
+{
+    if (_completionBlock) {
+        _completionBlock(result);
+    }
+    _completionBlock = nil;
+    [[GSShareManager share] cleanChannel];
 }
 
 @end

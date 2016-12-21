@@ -40,6 +40,11 @@
 - (void)addChannelWithChannelType:(GSShareChannelType)channelType channel:(Class)channel;
 
 /**
+ 清除Channel，释放内存
+ */
+- (void)cleanChannel;
+
+/**
  openURL回调
 
  @param url url

@@ -62,4 +62,9 @@
     return res;
 }
 
+- (void)cleanChannel
+{
+    _channel = nil;
+}
+
 @end

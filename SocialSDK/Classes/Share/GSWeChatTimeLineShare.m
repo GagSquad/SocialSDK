@@ -51,10 +51,7 @@
 
 - (void)onResp:(BaseResp *)resp
 {
-    if (_completionBlock) {
-        _completionBlock([self createResultWithResponse:resp]);
-    }
-    _completionBlock = nil;
+    [self completionWithResult:[self createResultWithResponse:resp]];
 }
 
 - (id<GSShareResultProtocol>)createResultWithResponse:(BaseResp *)response

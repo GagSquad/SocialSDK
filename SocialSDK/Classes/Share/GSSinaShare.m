@@ -71,10 +71,7 @@
 
 - (void)didReceiveWeiboResponse:(WBBaseResponse *)response
 {
-    if (_completionBlock) {
-        _completionBlock([self createResultWithResponse:response]);
-    }
-    _completionBlock = nil;
+    [self completionWithResult:[self createResultWithResponse:response]];
 }
 
 - (id<GSShareResultProtocol>)createResultWithResponse:(WBBaseResponse *)response

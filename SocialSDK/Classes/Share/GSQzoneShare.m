@@ -43,10 +43,7 @@
 - (void)handleSendResult:(QQApiSendResultCode)sendResult
 {
     if (sendResult != EQQAPISENDSUCESS) {
-        if (_completionBlock) {
-            _completionBlock([self createErrorResult:sendResult]);
-        }
-        _completionBlock = nil;
+        [self completionWithResult:[self createErrorResult:sendResult]];
     }
 }
 
@@ -88,10 +85,7 @@
 #pragma mark QQApiInterfaceDelegate
 - (void)onResp:(QQBaseResp *)resp
 {
-    if (_completionBlock) {
-        _completionBlock([self createResultWithResponse:resp]);
-    }
-    _completionBlock = nil;
+    [self completionWithResult:[self createResultWithResponse:resp]];
 }
 
 - (void)onReq:(QQBaseReq *)req

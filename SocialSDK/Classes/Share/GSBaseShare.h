@@ -14,10 +14,9 @@
 #import "GSShareResult.h"
 
 @interface GSBaseShare : NSObject <GSShareProtocol>
-{
-    GSShareCompletionBlock _completionBlock;
-}
 
-@property (nonatomic, strong) GSShareCompletionBlock completionBlock;
+- (void)setShareCompletionBlock:(GSShareCompletionBlock)completionBlock;
+
+- (void)completionWithResult:(id<GSShareResultProtocol>)result;
 
 @end
