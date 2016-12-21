@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "GSShareChannelType.h"
+#import "GSPlatformType.h"
 #import "GSShareProtocol.h"
 
 
@@ -22,6 +23,15 @@
  @return 返回 GSShareManager 实例
  */
 + (instancetype)share;
+
+
+/**
+ 根据分享渠道类型获取平台类型
+
+ @param shareChannelType 分享渠道类型
+ @return 返回平台类型
+ */
++ (GSPlatformType)getPlatformTypeWithShareChannelType:(GSShareChannelType)shareChannelType;
 
 /**
  根据 GSShareChannelType 获取 GSShareProtocol 接口

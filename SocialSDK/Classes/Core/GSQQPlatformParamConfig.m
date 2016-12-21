@@ -8,6 +8,7 @@
 
 #import "GSQQPlatformParamConfig.h"
 #import <TencentOpenAPI/TencentOAuth.h>
+#import <TencentOpenAPI/QQApiInterface.h>
 
 @interface GSQQPlatformParamConfig ()
 {
@@ -26,6 +27,11 @@
 + (GSPlatformType)platformType
 {
     return GSPlatformTypeQQ;
+}
+
++ (BOOL)isInstalled
+{
+    return [QQApiInterface isQQInstalled];
 }
 
 - (void)config:(NSDictionary *)config

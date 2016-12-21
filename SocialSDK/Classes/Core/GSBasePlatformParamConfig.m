@@ -15,6 +15,11 @@
     return GSPlatformTypeNone;
 }
 
++ (BOOL)isInstalled
+{
+    return NO;
+}
+
 - (void)config:(NSDictionary *)config
 {
     

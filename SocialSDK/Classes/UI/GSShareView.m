@@ -10,11 +10,17 @@
 #import "GSLogger.h"
 #import "GSCollectionViewHorizontalLayout.h"
 #import "GSCollectionViewCell.h"
+#import "GSShareManager.h"
+#import "GSPlatformParamConfigManager.h"
+#import "GSPlatformParamConfigProtocol.h"
 
 @interface GSShareView () <UICollectionViewDataSource, UICollectionViewDelegate>
 {
     NSArray<NSNumber *>* _channels;
+    
     GSShareViewCompletionBlock _completionBlock;
+    
+    BOOL _isUninstall;//标记是否有不支持的平台
 }
 
 @property (nonatomic, strong) UIWindow *window;
@@ -39,10 +45,26 @@
 {
     self = [super initWithFrame:[UIScreen mainScreen].bounds];
     if (self) {
+        _isUninstall = NO;
         [self setWindowLevel:UIWindowLevelAlert + 100];
         self.backgroundColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.3];
         self.userInteractionEnabled = YES;
-        _channels = channels;
+        NSMutableArray<NSNumber *> *temp = [NSMutableArray array];
+        for (NSNumber *number in channels) {
+            GSShareChannelType type = [number unsignedIntegerValue];
+            id<GSPlatformParamConfigProtocol> config = [[GSPlatformParamConfigManager share] getConfigProtocolWithPlatformType:[GSShareManager getPlatformTypeWithShareChannelType:type]];
+            if (type == GSShareChannelTypeSina) {
+                [temp addObject:@(type)];
+            } else {
+                if (config && [[config class] isInstalled]) {
+                    [temp addObject:@(type)];
+                } else {
+                    _isUninstall = YES;
+                    GSLogger(@"不支持分享渠道GSShareChannelType = %ld", type);
+                }
+            }
+        }
+        _channels = [temp copy];
         _completionBlock = completionBlock;
         [self createView];
     }
@@ -107,6 +129,17 @@
     [UIView animateWithDuration:0.3 animations:^{
         shareBGView.frame = CGRectMake(0, size.height - height, size.width, height);
     }];
+    
+#if TARGET_IPHONE_SIMULATOR
+    if (_isUninstall) {
+        UILabel *error = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, size.width, 16)];
+        error.backgroundColor = [UIColor redColor];
+        error.numberOfLines = 0;
+        error.text = @"由于部分分享平台不支持，所以隐藏了相关平台的图标，此消息只在模拟器提示";
+        [error sizeToFit];
+        [self addSubview:error];
+    }
+#endif
 }
 
 - (void)cancelAction:(id)sender

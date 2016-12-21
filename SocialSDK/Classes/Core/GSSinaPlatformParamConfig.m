@@ -22,6 +22,11 @@
     return GSPlatformTypeSina;
 }
 
++ (BOOL)isInstalled
+{
+    return [WeiboSDK isWeiboAppInstalled];
+}
+
 - (void)config:(NSDictionary *)config
 {
     [WeiboSDK registerApp:config[@"appKey"]];

@@ -22,6 +22,11 @@
     return GSPlatformTypeWeChat;
 }
 
++ (BOOL)isInstalled
+{
+    return [WXApi isWXAppInstalled];
+}
+
 - (void)config:(NSDictionary *)config
 {
     [WXApi registerApp:config[@"appID"]];

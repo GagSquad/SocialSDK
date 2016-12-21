@@ -13,6 +13,8 @@
 
 + (GSPlatformType)platformType;
 
++ (BOOL)isInstalled;
+
 - (void)config:(NSDictionary *)config;
 
 @end

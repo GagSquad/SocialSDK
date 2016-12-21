@@ -97,4 +97,9 @@
     return _configs[@(platformType)];
 }
 
+- (id<GSPlatformParamConfigProtocol>)getConfigProtocolWithPlatformType:(GSPlatformType)platformType
+{
+    return _platforms[@(platformType)];
+}
+
 @end

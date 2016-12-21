@@ -25,4 +25,6 @@
 
 - (NSDictionary *)getConfigWithPlatformType:(GSPlatformType)platformType;
 
+- (id<GSPlatformParamConfigProtocol>)getConfigProtocolWithPlatformType:(GSPlatformType)platformType;
+
 @end
