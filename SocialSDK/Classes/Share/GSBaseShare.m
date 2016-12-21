@@ -38,6 +38,11 @@
     
 }
 
+- (void)shareURL:(NSString *)url title:(NSString *)title description:(NSString *)description thumbnail:(id)thumbnail
+{
+    
+}
+
 - (BOOL)handleOpenURL:(NSURL *)url
 {
     return NO;

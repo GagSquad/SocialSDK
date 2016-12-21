@@ -55,8 +55,8 @@
                                  };
         _configs[@(p)] = config;
         [_platforms[@(p)] config:config];
-        GSLogger(@"设Sina_appKey%@", appKey);
-        GSLogger(@"设Sina_redirectURI%@", redirectURI);
+        GSLogger(@"设Sina_appKey = %@", appKey);
+        GSLogger(@"设Sina_redirectURI = %@", redirectURI);
     } else {
         GSLogger(@"请设置正确的Key");
     }
@@ -71,7 +71,7 @@
                                  };
         _configs[@(p)] = config;
         [_platforms[@(p)] config:config];
-        GSLogger(@"设QQ_appID%@", appID);
+        GSLogger(@"设QQ_appID = %@", appID);
     } else {
         GSLogger(@"请设置正确的Key");
     }
@@ -86,7 +86,7 @@
                                  };
         _configs[@(p)] = config;
         [_platforms[@(p)] config:config];
-        GSLogger(@"设置WeChat_appID%@",appID);
+        GSLogger(@"设置WeChat_appID = %@",appID);
     } else {
         GSLogger(@"请设置正确的appID");
     }

@@ -60,7 +60,27 @@
     } else if ([image isKindOfClass:[UIImage class]]) {
         imageObject.imageData = UIImagePNGRepresentation(image);
     }
-    message.imageObject = image;
+    message.imageObject = imageObject;
+    WBSendMessageToWeiboRequest *request = [WBSendMessageToWeiboRequest requestWithMessage:message authInfo:[self authRequest] access_token:nil];
+    [WeiboSDK sendRequest:request];
+}
+
+- (void)shareURL:(NSString *)url title:(NSString *)title description:(NSString *)description thumbnail:(id)thumbnail
+{
+    WBMessageObject *message = [WBMessageObject message];
+    message.text = title;
+    WBWebpageObject *webpageObject = [WBWebpageObject object];
+    webpageObject.objectID = [[NSUUID UUID] UUIDString];
+    webpageObject.webpageUrl = url;
+    webpageObject.title = title;
+    webpageObject.description = description;
+    webpageObject.thumbnailData = thumbnail;
+    if ([thumbnail isKindOfClass:[NSData class]]) {
+        webpageObject.thumbnailData = thumbnail;
+    } else if ([thumbnail isKindOfClass:[UIImage class]]) {
+        webpageObject.thumbnailData = UIImagePNGRepresentation(thumbnail);
+    }
+    message.mediaObject = webpageObject;
     WBSendMessageToWeiboRequest *request = [WBSendMessageToWeiboRequest requestWithMessage:message authInfo:[self authRequest] access_token:nil];
     [WeiboSDK sendRequest:request];
 }
@@ -109,7 +129,6 @@
         default:
             break;
     }
-    
     return res;
 }
 

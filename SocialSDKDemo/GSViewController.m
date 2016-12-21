@@ -38,7 +38,12 @@
                                    [share setShareCompletionBlock:^(id<GSShareResultProtocol> result) {
                                        NSLog(@"%@", result.message);
                                    }];
-                                   [share shareSimpleText:@"测试分享"];
+                                   //分享纯文本
+//                                   [share shareSimpleText:@"测试分享"];
+                                   //分享图片
+//                                   [share shareSingleImage:[UIImage imageNamed:@"default"] title:@"分享图片title" description:@"分享图片description"];
+                                   //分享url
+                                   [share shareURL:@"https://github.com/GagSquad/SocialSDK" title:@"分享链接title" description:@"分享链接description" thumbnail:[UIImage imageNamed:@"default"]];
                                }
     }];
 }
