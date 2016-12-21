@@ -29,6 +29,7 @@
 		0E90C0111E03C895000D646E /* GSLoggerConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E90C00F1E03C895000D646E /* GSLoggerConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E90C0121E03C895000D646E /* GSLoggerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E90C0101E03C895000D646E /* GSLoggerConfig.m */; };
 		0E90C0141E03CAF4000D646E /* GSPlatformType.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EDF13B91E03BA8B00C554FC /* GSPlatformType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0EAB85951E0A8265004C6004 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EAB85941E0A8265004C6004 /* default.png */; };
 		0EAE695E1E04E2AC00238DF1 /* GSPlatformParamConfigProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EAE695D1E04E2AC00238DF1 /* GSPlatformParamConfigProtocol.h */; };
 		0EAE69611E04E2D000238DF1 /* GSBasePlatformParamConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EAE695F1E04E2D000238DF1 /* GSBasePlatformParamConfig.h */; };
 		0EAE69621E04E2D000238DF1 /* GSBasePlatformParamConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAE69601E04E2D000238DF1 /* GSBasePlatformParamConfig.m */; };
@@ -116,6 +117,7 @@
 		0E90C0101E03C895000D646E /* GSLoggerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSLoggerConfig.m; sourceTree = "<group>"; };
 		0E90C0131E03C8B3000D646E /* GSLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSLogger.h; sourceTree = "<group>"; };
 		0E90C0171E03D05C000D646E /* CUThirdPartyConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUThirdPartyConstant.h; sourceTree = "<group>"; };
+		0EAB85941E0A8265004C6004 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
 		0EAE695D1E04E2AC00238DF1 /* GSPlatformParamConfigProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPlatformParamConfigProtocol.h; sourceTree = "<group>"; };
 		0EAE695F1E04E2D000238DF1 /* GSBasePlatformParamConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSBasePlatformParamConfig.h; sourceTree = "<group>"; };
 		0EAE69601E04E2D000238DF1 /* GSBasePlatformParamConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSBasePlatformParamConfig.m; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 		0E4B31F01E0294A000F231F0 /* SocialSDKDemo */ = {
 			isa = PBXGroup;
 			children = (
+				0EAB85931E0A8265004C6004 /* Rrources */,
 				0E90C0171E03D05C000D646E /* CUThirdPartyConstant.h */,
 				0E4B31F11E0294A000F231F0 /* AppDelegate.swift */,
 				0E90C00C1E03C6C9000D646E /* GSViewController.h */,
@@ -346,6 +349,14 @@
 				0EDF13B91E03BA8B00C554FC /* GSPlatformType.h */,
 			);
 			name = ConfigManager;
+			sourceTree = "<group>";
+		};
+		0EAB85931E0A8265004C6004 /* Rrources */ = {
+			isa = PBXGroup;
+			children = (
+				0EAB85941E0A8265004C6004 /* default.png */,
+			);
+			path = Rrources;
 			sourceTree = "<group>";
 		};
 		0EAE695C1E04E1B300238DF1 /* PlatformParamConfig */ = {
@@ -586,6 +597,7 @@
 				0E7144841E052AAD00BC105E /* GSSocialSDKResources.bundle in Resources */,
 				0E4B31F91E0294A000F231F0 /* Assets.xcassets in Resources */,
 				0E4B31F71E0294A000F231F0 /* Main.storyboard in Resources */,
+				0EAB85951E0A8265004C6004 /* default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

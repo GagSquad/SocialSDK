@@ -33,6 +33,11 @@
     
 }
 
+- (void)shareSingleImage:(id)image title:(NSString *)title description:(NSString *)description
+{
+    
+}
+
 - (BOOL)handleOpenURL:(NSURL *)url
 {
     return NO;

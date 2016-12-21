@@ -49,6 +49,23 @@
     [WeiboSDK sendRequest:request];
 }
 
+- (void)shareSingleImage:(id)image title:(NSString *)title description:(NSString *)description
+{
+    WBMessageObject *message = [WBMessageObject message];
+    
+    message.text = title;
+    WBImageObject *imageObject = [WBImageObject object];
+    if ([image isKindOfClass:[NSData class]]) {
+        imageObject.imageData = image;
+    } else if ([image isKindOfClass:[UIImage class]]) {
+        imageObject.imageData = UIImagePNGRepresentation(image);
+    }
+    message.imageObject = image;
+    WBSendMessageToWeiboRequest *request = [WBSendMessageToWeiboRequest requestWithMessage:message authInfo:[self authRequest] access_token:nil];
+    [WeiboSDK sendRequest:request];
+}
+
+
 - (WBAuthorizeRequest *)authRequest
 {
     WBAuthorizeRequest *authRequest = [WBAuthorizeRequest request];

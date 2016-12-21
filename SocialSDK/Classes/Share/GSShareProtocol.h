@@ -22,6 +22,8 @@ typedef void (^GSShareCompletionBlock) (id<GSShareResultProtocol> result);
 
 - (void)shareSimpleText:(NSString *)text;
 
+- (void)shareSingleImage:(id)image title:(NSString *)title description:(NSString *)description;
+
 - (BOOL)handleOpenURL:(NSURL *)url;
 
 - (void)setShareCompletionBlock:(GSShareCompletionBlock)completionBlock;
