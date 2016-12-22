@@ -69,12 +69,12 @@
 {
     WBMessageObject *message = [WBMessageObject message];
     message.text = title;
+    
     WBWebpageObject *webpageObject = [WBWebpageObject object];
     webpageObject.objectID = [[NSUUID UUID] UUIDString];
     webpageObject.webpageUrl = url;
     webpageObject.title = title;
     webpageObject.description = description;
-    webpageObject.thumbnailData = thumbnail;
     if ([thumbnail isKindOfClass:[NSData class]]) {
         webpageObject.thumbnailData = thumbnail;
     } else if ([thumbnail isKindOfClass:[UIImage class]]) {

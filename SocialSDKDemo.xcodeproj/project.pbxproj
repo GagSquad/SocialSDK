@@ -52,6 +52,7 @@
 		0EF038281E04016100F11B4E /* GSShareResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EF038261E04016100F11B4E /* GSShareResult.h */; };
 		0EF038291E04016100F11B4E /* GSShareResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF038271E04016100F11B4E /* GSShareResult.m */; };
 		0EF0382B1E04018100F11B4E /* GSShareResultProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EF0382A1E04018100F11B4E /* GSShareResultProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B19FE4FCCAA38FC76F03105 /* Pods_SocialSDKDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA65CA283A949C0585437B0 /* Pods_SocialSDKDemo.framework */; };
 		6EE178E64608D9FE80D853D6 /* Pods_SocialSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 828793C50AC8B1B8F0E93277 /* Pods_SocialSDK.framework */; };
 		F538DA0C1E09082F008C0660 /* GSWeChatPlatformParamConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = F538DA0A1E09082F008C0660 /* GSWeChatPlatformParamConfig.h */; };
 		F538DA0D1E09082F008C0660 /* GSWeChatPlatformParamConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F538DA0B1E09082F008C0660 /* GSWeChatPlatformParamConfig.m */; };
@@ -144,7 +145,9 @@
 		0EF0382A1E04018100F11B4E /* GSShareResultProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSShareResultProtocol.h; sourceTree = "<group>"; };
 		257AA106F638C7438C63C51D /* Pods-SocialSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialSDK/Pods-SocialSDK.release.xcconfig"; sourceTree = "<group>"; };
 		828793C50AC8B1B8F0E93277 /* Pods_SocialSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		829D9DA51FC276C3BD9B6F0B /* Pods-SocialSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialSDKDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialSDKDemo/Pods-SocialSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9559809474D9F814326C3975 /* Pods-SocialSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialSDK/Pods-SocialSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		9601BEE627C7FE4B39525D71 /* Pods-SocialSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialSDKDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialSDKDemo/Pods-SocialSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		EAA65CA283A949C0585437B0 /* Pods_SocialSDKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialSDKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F538DA0A1E09082F008C0660 /* GSWeChatPlatformParamConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSWeChatPlatformParamConfig.h; sourceTree = "<group>"; };
 		F538DA0B1E09082F008C0660 /* GSWeChatPlatformParamConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSWeChatPlatformParamConfig.m; sourceTree = "<group>"; };
@@ -165,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E4B320F1E02962C00F231F0 /* SocialSDK.framework in Frameworks */,
+				3B19FE4FCCAA38FC76F03105 /* Pods_SocialSDKDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +413,8 @@
 			children = (
 				9559809474D9F814326C3975 /* Pods-SocialSDK.debug.xcconfig */,
 				257AA106F638C7438C63C51D /* Pods-SocialSDK.release.xcconfig */,
+				9601BEE627C7FE4B39525D71 /* Pods-SocialSDKDemo.debug.xcconfig */,
+				829D9DA51FC276C3BD9B6F0B /* Pods-SocialSDKDemo.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -511,10 +517,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E4B32001E0294A000F231F0 /* Build configuration list for PBXNativeTarget "SocialSDKDemo" */;
 			buildPhases = (
+				DA6BE60F9B0D1C2674110822 /* [CP] Check Pods Manifest.lock */,
 				0E4B31EA1E0294A000F231F0 /* Sources */,
 				0E4B31EB1E0294A000F231F0 /* Frameworks */,
 				0E4B31EC1E0294A000F231F0 /* Resources */,
 				0E4B32141E02962C00F231F0 /* Embed Frameworks */,
+				7A0F07883E33AEBB9A4AB224 /* [CP] Embed Pods Frameworks */,
+				18BC2011F8244B9EFA80EE77 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -611,7 +620,52 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		18BC2011F8244B9EFA80EE77 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialSDKDemo/Pods-SocialSDKDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A0F07883E33AEBB9A4AB224 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialSDKDemo/Pods-SocialSDKDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BB93FD2D01FDF749F9952DE8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DA6BE60F9B0D1C2674110822 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -803,6 +857,7 @@
 		};
 		0E4B32011E0294A000F231F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9601BEE627C7FE4B39525D71 /* Pods-SocialSDKDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -824,6 +879,7 @@
 		};
 		0E4B32021E0294A000F231F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 829D9DA51FC276C3BD9B6F0B /* Pods-SocialSDKDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
