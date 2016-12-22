@@ -68,6 +68,26 @@
     [self handleSendResult:sent];
 }
 
+- (void)shareMusicURL:(NSString *)musicURL
+      musicLowBandURL:(NSString *)musicLowBandURL
+         musicDataURL:(NSString *)musicDataURL
+  musicLowBandDataURL:(NSString *)musicLowBandDataURL
+                title:(NSString *)title
+          description:(NSString *)description
+            thumbnail:(id)thumbnail
+{
+    QQApiAudioObject *obj;
+    if ([thumbnail isKindOfClass:[NSData class]]) {
+        obj = [QQApiAudioObject objectWithURL:[NSURL URLWithString:musicURL] title:title description:description previewImageData:thumbnail];
+    } else if ([thumbnail isKindOfClass:[UIImage class]]) {
+        obj = [QQApiAudioObject objectWithURL:[NSURL URLWithString:musicURL] title:title description:description previewImageData:UIImagePNGRepresentation(thumbnail)];
+    }
+    [obj setCflag:kQQAPICtrlFlagQZoneShareOnStart];
+    SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:obj];
+    QQApiSendResultCode sent = [QQApiInterface sendReq:req];
+    [self handleSendResult:sent];
+}
+
 - (void)handleSendResult:(QQApiSendResultCode)sendResult
 {
     if (sendResult != EQQAPISENDSUCESS) {

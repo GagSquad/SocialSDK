@@ -91,6 +91,38 @@
     [WXApi sendReq:req];
 }
 
+- (void)shareMusicURL:(NSString *)musicURL
+      musicLowBandURL:(NSString *)musicLowBandURL
+         musicDataURL:(NSString *)musicDataURL
+  musicLowBandDataURL:(NSString *)musicLowBandDataURL
+                title:(NSString *)title
+          description:(NSString *)description
+            thumbnail:(id)thumbnail
+{
+    WXMusicObject *musicObject = [WXMusicObject object];
+    musicObject.musicUrl = musicURL;
+    musicObject.musicLowBandUrl = musicLowBandURL;
+    musicObject.musicDataUrl = musicDataURL;
+    musicObject.musicLowBandDataUrl = musicLowBandDataURL;
+    
+    WXMediaMessage *message = [WXMediaMessage message];
+    message.title = title;
+    message.description = description;
+    message.mediaObject = musicObject;
+    
+    if ([thumbnail isKindOfClass:[NSData class]]) {
+        message.thumbData = thumbnail;
+    } else if ([thumbnail isKindOfClass:[UIImage class]]) {
+        message.thumbData = UIImagePNGRepresentation(thumbnail);
+    }
+    
+    SendMessageToWXReq *req = [[SendMessageToWXReq alloc] init];
+    req.bText = NO;
+    req.scene = WXSceneTimeline;
+    req.message = message;
+    [WXApi sendReq:req];
+}
+
 - (void)onResp:(BaseResp *)resp
 {
     [self completionWithResult:[self createResultWithResponse:resp]];
