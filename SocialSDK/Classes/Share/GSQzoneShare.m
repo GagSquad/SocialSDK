@@ -88,6 +88,26 @@
     [self handleSendResult:sent];
 }
 
+- (void)shareVideoURL:(NSString *)videoURL
+      videoLowBandURL:(NSString *)videoLowBandURL
+       videoStreamURL:(NSString *)videoStreamURL
+videoLowBandStreamURL:(NSString *)videoLowBandStreamURL
+                title:(NSString *)title
+          description:(NSString *)description
+            thumbnail:(id)thumbnail
+{
+    QQApiVideoObject *obj;
+    if ([thumbnail isKindOfClass:[NSData class]]) {
+        obj = [QQApiVideoObject objectWithURL:[NSURL URLWithString:videoURL] title:title description:description previewImageData:thumbnail];
+    } else if ([thumbnail isKindOfClass:[UIImage class]]) {
+        obj = [QQApiVideoObject objectWithURL:[NSURL URLWithString:videoURL] title:title description:description previewImageData:UIImagePNGRepresentation(thumbnail)];
+    }
+    [obj setCflag:kQQAPICtrlFlagQZoneShareOnStart];
+    SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:obj];
+    QQApiSendResultCode sent = [QQApiInterface sendReq:req];
+    [self handleSendResult:sent];
+}
+
 - (void)handleSendResult:(QQApiSendResultCode)sendResult
 {
     if (sendResult != EQQAPISENDSUCESS) {

@@ -123,6 +123,36 @@
     [WXApi sendReq:req];
 }
 
+- (void)shareVideoURL:(NSString *)videoURL
+      videoLowBandURL:(NSString *)videoLowBandURL
+       videoStreamURL:(NSString *)videoStreamURL
+videoLowBandStreamURL:(NSString *)videoLowBandStreamURL
+                title:(NSString *)title
+          description:(NSString *)description
+            thumbnail:(id)thumbnail
+{
+    WXVideoObject *videoObject = [WXVideoObject object];
+    videoObject.videoUrl = videoURL;
+    videoObject.videoLowBandUrl = videoLowBandURL;
+    
+    WXMediaMessage *message = [WXMediaMessage message];
+    message.title = title;
+    message.description = description;
+    message.mediaObject = videoObject;
+    
+    if ([thumbnail isKindOfClass:[NSData class]]) {
+        message.thumbData = thumbnail;
+    } else if ([thumbnail isKindOfClass:[UIImage class]]) {
+        message.thumbData = UIImagePNGRepresentation(thumbnail);
+    }
+    
+    SendMessageToWXReq *req = [[SendMessageToWXReq alloc] init];
+    req.bText = NO;
+    req.scene = WXSceneTimeline;
+    req.message = message;
+    [WXApi sendReq:req];
+}
+
 - (void)onResp:(BaseResp *)resp
 {
     [self completionWithResult:[self createResultWithResponse:resp]];
