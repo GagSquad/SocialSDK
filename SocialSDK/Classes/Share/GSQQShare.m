@@ -8,6 +8,7 @@
 
 #import "GSQQShare.h"
 #import <TencentOpenAPI/QQApiInterface.h>
+#import <UIKit/UIKit.h>
 
 @interface GSQQShare ()<QQApiInterfaceDelegate>
 
@@ -35,6 +36,34 @@
     QQApiTextObject *txtObj = [QQApiTextObject objectWithText:text];
     SendMessageToQQReq *request = [SendMessageToQQReq reqWithContent:txtObj];
     QQApiSendResultCode sent = [QQApiInterface sendReq:request];
+    [self handleSendResult:sent];
+}
+
+- (void)shareSingleImage:(id)image title:(NSString *)title description:(NSString *)description
+{
+    QQApiImageObject *img;
+    if ([image isKindOfClass:[NSData class]]) {
+        img = [QQApiImageObject objectWithData:image previewImageData:image title:title description:description];
+    } else if ([image isKindOfClass:[UIImage class]]) {
+        img = [QQApiImageObject objectWithData:UIImagePNGRepresentation(image) previewImageData:UIImagePNGRepresentation(image) title:title description:description];
+    }
+    [img setCflag:kQQAPICtrlFlagQQShare];
+    SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:img];
+    QQApiSendResultCode sent = [QQApiInterface sendReq:req];
+    [self handleSendResult:sent];
+}
+
+- (void)shareURL:(NSString *)url title:(NSString *)title description:(NSString *)description thumbnail:(id)thumbnail
+{
+    QQApiNewsObject *obj;
+    if ([thumbnail isKindOfClass:[NSData class]]) {
+        obj = [QQApiNewsObject objectWithURL:[NSURL URLWithString:url] title:title description:description previewImageData:thumbnail];
+    } else if ([thumbnail isKindOfClass:[UIImage class]]) {
+        obj = [QQApiNewsObject objectWithURL:[NSURL URLWithString:url] title:title description:description previewImageData:UIImagePNGRepresentation(thumbnail)];
+    }
+    [obj setCflag:kQQAPICtrlFlagQQShare];
+    SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:obj];
+    QQApiSendResultCode sent = [QQApiInterface sendReq:req];
     [self handleSendResult:sent];
 }
 
