@@ -42,13 +42,12 @@
 
 - (void)shareSingleImage:(id)image title:(NSString *)title description:(NSString *)description
 {
-    NSMutableArray *imageArr = [NSMutableArray arrayWithCapacity:0];
+    QQApiImageArrayForQZoneObject *img ;
     if ([image isKindOfClass:[NSData class]]) {
-        [imageArr addObject:image];
+        img = [QQApiImageArrayForQZoneObject objectWithimageDataArray:@[image] title:title];
     } else if ([image isKindOfClass:[UIImage class]]) {
-        [imageArr addObject:UIImagePNGRepresentation(image)];
+        img = [QQApiImageArrayForQZoneObject objectWithimageDataArray:@[UIImagePNGRepresentation(image)] title:title];
     }
-    QQApiImageArrayForQZoneObject *img = [QQApiImageArrayForQZoneObject objectWithimageDataArray:[imageArr copy] title:title];
     img.description = description;
     SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:img];;
     QQApiSendResultCode sent = [QQApiInterface SendReqToQZone:req];
