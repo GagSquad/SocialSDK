@@ -26,6 +26,22 @@ typedef void (^GSShareCompletionBlock) (id<GSShareResultProtocol> result);
 
 - (void)shareURL:(NSString *)url title:(NSString *)title description:(NSString *)description thumbnail:(id)thumbnail;
 
+- (void)shareMusicURL:(NSString *)musicURL
+      musicLowBandURL:(NSString *)musicLowBandURL
+         musicDataURL:(NSString *)musicDataURL
+  musicLowBandDataURL:(NSString *)musicLowBandDataURL
+                title:(NSString *)title
+          description:(NSString *)description
+            thumbnail:(id)thumbnail;
+
+- (void)shareVideoURL:(NSString *)videoURL
+      videoLowBandURL:(NSString *)videoLowBandURL
+       videoStreamURL:(NSString *)videoStreamURL
+videoLowBandStreamURL:(NSString *)videoLowBandStreamURL
+                title:(NSString *)title
+          description:(NSString *)description
+            thumbnail:(id)thumbnail;
+
 - (BOOL)handleOpenURL:(NSURL *)url;
 
 - (void)setShareCompletionBlock:(GSShareCompletionBlock)completionBlock;
