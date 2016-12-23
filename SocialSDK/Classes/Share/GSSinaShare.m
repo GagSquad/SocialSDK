@@ -85,6 +85,63 @@
     [WeiboSDK sendRequest:request];
 }
 
+- (void)shareMusicURL:(NSString *)musicURL
+      musicLowBandURL:(NSString *)musicLowBandURL
+         musicDataURL:(NSString *)musicDataURL
+  musicLowBandDataURL:(NSString *)musicLowBandDataURL
+                title:(NSString *)title
+          description:(NSString *)description
+            thumbnail:(id)thumbnail
+{
+    WBMessageObject *message = [WBMessageObject message];
+    message.text = title;
+    
+    WBMusicObject *musicObject = [WBMusicObject object];
+    musicObject.objectID = [[NSUUID UUID] UUIDString];
+    musicObject.musicUrl = musicURL;
+    musicObject.musicLowBandUrl = musicLowBandURL;
+    musicObject.musicStreamUrl = musicDataURL;
+    musicObject.musicLowBandStreamUrl = musicLowBandDataURL;
+    musicObject.title = title;
+    musicObject.description = description;
+    if ([thumbnail isKindOfClass:[NSData class]]) {
+        musicObject.thumbnailData = thumbnail;
+    } else if ([thumbnail isKindOfClass:[UIImage class]]) {
+        musicObject.thumbnailData = UIImagePNGRepresentation(thumbnail);
+    }
+    message.mediaObject = musicObject;
+    WBSendMessageToWeiboRequest *request = [WBSendMessageToWeiboRequest requestWithMessage:message authInfo:[self authRequest] access_token:nil];
+    [WeiboSDK sendRequest:request];
+}
+
+- (void)shareVideoURL:(NSString *)videoURL
+      videoLowBandURL:(NSString *)videoLowBandURL
+       videoStreamURL:(NSString *)videoStreamURL
+videoLowBandStreamURL:(NSString *)videoLowBandStreamURL
+                title:(NSString *)title
+          description:(NSString *)description
+            thumbnail:(id)thumbnail
+{
+    WBMessageObject *message = [WBMessageObject message];
+    message.text = title;
+    
+    WBVideoObject *videoObject = [WBVideoObject object];
+    videoObject.objectID = [[NSUUID UUID] UUIDString];
+    videoObject.videoUrl = videoURL;
+    videoObject.videoLowBandUrl = videoLowBandURL;
+    videoObject.videoStreamUrl = videoStreamURL;
+    videoObject.videoLowBandStreamUrl = videoLowBandStreamURL;
+    videoObject.title = title;
+    videoObject.description = description;
+    if ([thumbnail isKindOfClass:[NSData class]]) {
+        videoObject.thumbnailData = thumbnail;
+    } else if ([thumbnail isKindOfClass:[UIImage class]]) {
+        videoObject.thumbnailData = UIImagePNGRepresentation(thumbnail);
+    }
+    message.mediaObject = videoObject;
+    WBSendMessageToWeiboRequest *request = [WBSendMessageToWeiboRequest requestWithMessage:message authInfo:[self authRequest] access_token:nil];
+    [WeiboSDK sendRequest:request];
+}
 
 - (WBAuthorizeRequest *)authRequest
 {
