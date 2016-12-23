@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GSShareChannelType.h"
+#import "GSLogoReourcesType.h"
 
 @interface GSCollectionViewCell : UICollectionViewCell
 {
     
 }
 
-- (void)updateUI:(GSShareChannelType)channelType;
+- (void)updateUI:(GSLogoReourcesType)reourcesType;
 
 @end

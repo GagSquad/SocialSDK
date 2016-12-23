@@ -53,6 +53,36 @@
     return res;
 }
 
++ (GSShareChannelType)getShareChannelTypeWithLogoReourcesType:(GSLogoReourcesType)reourcesType;
+{
+    GSShareChannelType res = GSShareChannelTypeNone;
+    switch (reourcesType) {
+        case GSLogoReourcesTypeSina: {
+            res = GSShareChannelTypeSina;
+            break;
+        }
+        case GSLogoReourcesTypeQQ: {
+            res = GSShareChannelTypeQQ;
+            break;
+        }
+        case GSLogoReourcesTypeQzone: {
+            res = GSShareChannelTypeQzone;
+            break;
+        }
+        case GSLogoReourcesTypeWechatSession: {
+            res = GSShareChannelTypeWechatSession;
+            break;
+        }
+        case GSLogoReourcesTypeWechatTimeLine: {
+            res = GSShareChannelTypeWechatTimeLine;
+            break;
+        }
+        default:
+            break;
+    }
+    return res;
+}
+
 - (instancetype)init
 {
     self = [super init];

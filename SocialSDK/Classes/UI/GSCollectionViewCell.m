@@ -50,30 +50,30 @@
     return self;
 }
 
-- (void)updateUI:(GSShareChannelType)channelType
+- (void)updateUI:(GSLogoReourcesType)reourcesType;
 {
-    switch (channelType) {
-        case GSShareChannelTypeSina: {
+    switch (reourcesType) {
+        case GSLogoReourcesTypeSina: {
             [_logo setImage:[[GSReourcesManager share] logoWithName:@"sina"]];
             _name.text = @"新浪";
             break;
         }
-        case GSShareChannelTypeQQ: {
+        case GSLogoReourcesTypeQQ: {
             [_logo setImage:[[GSReourcesManager share] logoWithName:@"qq"]];
             _name.text = @"QQ好友";
             break;
         }
-        case GSShareChannelTypeQzone: {
+        case GSLogoReourcesTypeQzone: {
             [_logo setImage:[[GSReourcesManager share] logoWithName:@"qzone"]];
             _name.text = @"QQ空间";
             break;
         }
-        case GSShareChannelTypeWechatSession: {
+        case GSLogoReourcesTypeWechatSession: {
             [_logo setImage:[[GSReourcesManager share] logoWithName:@"wechat"]];
             _name.text = @"微信好友";
             break;
         }
-        case GSShareChannelTypeWechatTimeLine: {
+        case GSLogoReourcesTypeWechatTimeLine: {
             [_logo setImage:[[GSReourcesManager share] logoWithName:@"wechat_timeline"]];
             _name.text = @"微信朋友圈";
             break;

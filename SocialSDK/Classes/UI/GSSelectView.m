@@ -1,24 +1,24 @@
 //
-//  GSShareView.m
+//  GSSelectView.m
 //  SocialSDKDemo
 //
 //  Created by lijunjie on 17/12/2016.
 //  Copyright © 2016 GagSquad. All rights reserved.
 //
 
-#import "GSShareView.h"
+#import "GSSelectView.h"
 #import "GSLogger.h"
 #import "GSCollectionViewHorizontalLayout.h"
 #import "GSCollectionViewCell.h"
-#import "GSShareManager.h"
+#import "GSLogoReources.h"
 #import "GSPlatformParamConfigManager.h"
 #import "GSPlatformParamConfigProtocol.h"
 
-@interface GSShareView () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface GSSelectView () <UICollectionViewDataSource, UICollectionViewDelegate>
 {
     NSArray<NSNumber *>* _channels;
     
-    GSShareViewCompletionBlock _completionBlock;
+    GSSelectViewCompletionBlock _completionBlock;
     
     BOOL _isUninstall;//标记是否有不支持的平台
 }
@@ -27,21 +27,21 @@
 
 @end
 
-@implementation GSShareView
+@implementation GSSelectView
 
 - (void)dealloc
 {
-    GSLogger(@"GSShareView 释放了");
+    GSLogger(@"GSSelectView 释放了");
 }
 
-+ (void)showShareViewWithChannels:(NSArray *)channels completionBlock:(GSShareViewCompletionBlock)completionBlock;
++ (void)showShareViewWithChannels:(NSArray *)channels completionBlock:(GSSelectViewCompletionBlock)completionBlock;
 {
-    GSShareView *w = [[GSShareView alloc] initWithChannels:channels completionBlock:completionBlock];
+    GSSelectView *w = [[GSSelectView alloc] initWithChannels:channels completionBlock:completionBlock];
     [w makeKeyAndVisible];
     w.window = w;
 }
 
-- (instancetype)initWithChannels:(NSArray<NSNumber *> *)channels completionBlock:(GSShareViewCompletionBlock)completionBlock
+- (instancetype)initWithChannels:(NSArray<NSNumber *> *)channels completionBlock:(GSSelectViewCompletionBlock)completionBlock
 {
     self = [super initWithFrame:[UIScreen mainScreen].bounds];
     if (self) {
@@ -51,9 +51,9 @@
         self.userInteractionEnabled = YES;
         NSMutableArray<NSNumber *> *temp = [NSMutableArray array];
         for (NSNumber *number in channels) {
-            GSShareChannelType type = [number unsignedIntegerValue];
-            id<GSPlatformParamConfigProtocol> config = [[GSPlatformParamConfigManager share] getConfigProtocolWithPlatformType:[GSShareManager getPlatformTypeWithShareChannelType:type]];
-            if (type == GSShareChannelTypeSina) {
+            GSLogoReourcesType type = [number unsignedIntegerValue];
+            id<GSPlatformParamConfigProtocol> config = [[GSPlatformParamConfigManager share] getConfigProtocolWithPlatformType:[GSLogoReources getPlatformTypeWithLogoReourcesType:type]];
+            if (type == GSLogoReourcesTypeSina) {
                 [temp addObject:@(type)];
             } else {
                 if (config && [[config class] isInstalled]) {
@@ -145,18 +145,18 @@
 - (void)cancelAction:(id)sender
 {
     GSLogger(@"cancel");
-    [self removeIsCancel:YES channelType:GSShareChannelTypeNone];
+    [self removeIsCancel:YES reourcesType:GSLogoReourcesTypeNone];
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self removeIsCancel:YES channelType:GSShareChannelTypeNone];
+    [self removeIsCancel:YES reourcesType:GSLogoReourcesTypeNone];
 }
 
-- (void)removeIsCancel:(BOOL)isCancel channelType:(GSShareChannelType)channelType;
+- (void)removeIsCancel:(BOOL)isCancel reourcesType:(GSLogoReourcesType)reourcesType;
 {
     if (_completionBlock) {
-        _completionBlock(isCancel,channelType);
+        _completionBlock(isCancel,reourcesType);
     }
     [self resignKeyWindow];
     _window = nil;
@@ -199,7 +199,7 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSInteger row = indexPath.row;
-    [self removeIsCancel:NO channelType:[_channels[row] unsignedIntegerValue]];
+    [self removeIsCancel:NO reourcesType:[_channels[row] unsignedIntegerValue]];
 }
 
 @end

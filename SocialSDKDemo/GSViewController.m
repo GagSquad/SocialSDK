@@ -23,18 +23,18 @@
 
 - (IBAction)selectSharePlan:(id)sender
 {
-    [GSShareView showShareViewWithChannels:@[
+    [GSSelectView showShareViewWithChannels:@[
                                              @(GSShareChannelTypeSina),
                                              @(GSShareChannelTypeQQ),
                                              @(GSShareChannelTypeQzone),
                                              @(GSShareChannelTypeWechatSession),
                                              @(GSShareChannelTypeWechatTimeLine)
                                              ]
-                           completionBlock:^(BOOL isCancel, GSShareChannelType channelType) {
+                           completionBlock:^(BOOL isCancel, GSLogoReourcesType reourcesType) {
                                if (isCancel) {
                                    NSLog(@"用户点击了取消分享");
                                } else {
-                                   id<GSShareProtocol> share = [[GSShareManager share] getShareProtocolWithChannelType:channelType];
+                                   id<GSShareProtocol> share = [[GSShareManager share] getShareProtocolWithChannelType:[GSShareManager getShareChannelTypeWithLogoReourcesType:reourcesType]];
                                    [share setShareCompletionBlock:^(id<GSShareResultProtocol> result) {
                                        NSLog(@"%@", result.message);
                                    }];

@@ -10,7 +10,7 @@
 #import "GSShareChannelType.h"
 #import "GSPlatformType.h"
 #import "GSShareProtocol.h"
-
+#import "GSLogoReourcesType.h"
 
 /**
  分享管理类
@@ -32,6 +32,15 @@
  @return 返回平台类型
  */
 + (GSPlatformType)getPlatformTypeWithShareChannelType:(GSShareChannelType)shareChannelType;
+
+
+/**
+ 根据UI选中的类型获得分享渠道类型
+
+ @param reourcesType UI选中的类型
+ @return 渠道类型
+ */
++ (GSShareChannelType)getShareChannelTypeWithLogoReourcesType:(GSLogoReourcesType)reourcesType;
 
 /**
  根据 GSShareChannelType 获取 GSShareProtocol 接口
