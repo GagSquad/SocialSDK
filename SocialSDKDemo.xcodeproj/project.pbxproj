@@ -106,6 +106,7 @@
 		0E53689F1E0D1B7600792F90 /* GSLogoReources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLogoReources.h; sourceTree = "<group>"; };
 		0E5368A01E0D1B7600792F90 /* GSLogoReources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSLogoReources.m; sourceTree = "<group>"; };
 		0E5368A31E0D1D7900792F90 /* GSLogoReourcesType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSLogoReourcesType.h; sourceTree = "<group>"; };
+		0E5368A61E0D279A00792F90 /* GSLoginChannelType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSLoginChannelType.h; sourceTree = "<group>"; };
 		0E7144811E051E0500BC105E /* GSShareChannelType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSShareChannelType.h; sourceTree = "<group>"; };
 		0E7144831E052AAD00BC105E /* GSSocialSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GSSocialSDKResources.bundle; sourceTree = "<group>"; };
 		0E7144861E052C4200BC105E /* GSReourcesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSReourcesManager.h; sourceTree = "<group>"; };
@@ -192,6 +193,10 @@
 		0E3171231E02B7C800A75EA4 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				0E5368A51E0D278400792F90 /* Base */,
+				0E5368A71E0D3CE800792F90 /* Sina */,
+				0E5368A81E0D3CF700792F90 /* QQ */,
+				0E5368A91E0D3CFD00792F90 /* WeChat */,
 				0EDF13BA1E03BAA700C554FC /* GSLoginManager.h */,
 				0EDF13BB1E03BAA700C554FC /* GSLoginManager.m */,
 			);
@@ -296,9 +301,9 @@
 			children = (
 				0E31712C1E0387C500A75EA4 /* Core */,
 				0E31712F1E0387C500A75EA4 /* UI */,
+				0E3171251E02B7C800A75EA4 /* Share */,
 				0E3171231E02B7C800A75EA4 /* Login */,
 				0E3171241E02B7C800A75EA4 /* Pay */,
-				0E3171251E02B7C800A75EA4 /* Share */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -313,6 +318,36 @@
 				0E5368A31E0D1D7900792F90 /* GSLogoReourcesType.h */,
 			);
 			name = ReourcesManager;
+			sourceTree = "<group>";
+		};
+		0E5368A51E0D278400792F90 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				0E5368A61E0D279A00792F90 /* GSLoginChannelType.h */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		0E5368A71E0D3CE800792F90 /* Sina */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Sina;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		0E5368A81E0D3CF700792F90 /* QQ */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = QQ;
+			sourceTree = "<group>";
+		};
+		0E5368A91E0D3CFD00792F90 /* WeChat */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = WeChat;
 			sourceTree = "<group>";
 		};
 		0E7144851E052B3C00BC105E /* Util */ = {
