@@ -10,4 +10,30 @@
 
 @implementation GSLoginManager
 
++ (instancetype)share
+{
+    static dispatch_once_t onceToken;
+    static GSLoginManager *share = nil;
+    dispatch_once(&onceToken, ^{
+        share = [[GSLoginManager alloc] init];
+    });
+    return share;
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+
+- (BOOL)handleOpenURL:(NSURL *)url
+{
+    BOOL res = NO;
+    
+    return res;
+}
+
 @end

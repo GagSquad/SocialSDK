@@ -24,7 +24,6 @@
  */
 + (instancetype)share;
 
-
 /**
  根据分享渠道类型获取平台类型
 
@@ -32,7 +31,6 @@
  @return 返回平台类型
  */
 + (GSPlatformType)getPlatformTypeWithShareChannelType:(GSShareChannelType)shareChannelType;
-
 
 /**
  根据UI选中的类型获得分享渠道类型
