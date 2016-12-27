@@ -10,4 +10,32 @@
 
 @implementation GSLoginResult
 
+- (BOOL)isSuccess
+{
+    return (_status == GSLoginResultStatusSuccess);
+}
+
+- (NSString *)message
+{
+    NSString *res = _message;
+    if (res == nil) {
+        switch (_status) {
+            case GSLoginResultStatusSuccess: {
+                res = @"登陆成功";
+                break;
+            }
+            case GSLoginResultStatusFailing: {
+                res = @"登陆失败";
+                break;
+            }
+            case GSLoginResultStatusCancel: {
+                res = @"登录取消";
+                break;
+            }
+            default:
+                break;
+        }
+    }
+    return res;
+}
 @end
