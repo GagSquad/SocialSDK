@@ -86,7 +86,9 @@
 - (BOOL)handleOpenURL:(NSURL *)url
 {
     BOOL res = NO;
-    
+    if (_channel) {
+        res = [_channel handleOpenURL:url];
+    }
     return res;
 }
 
