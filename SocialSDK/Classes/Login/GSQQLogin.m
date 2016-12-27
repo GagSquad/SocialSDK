@@ -58,6 +58,17 @@
 - (id<GSLoginResultProtocol>)createResultWithResponse:(APIResponse *)res
 {
     GSLoginResult *result = [[GSLoginResult alloc] init];
+    result.status = GSLoginResultStatusFailing;
+    result.sourceCode = res.retCode;
+    if (res.retCode == URLREQUEST_SUCCEED) {
+        result.status = GSLoginResultStatusSuccess;
+        result.accessToken = _oauth.accessToken;
+        result.openid = _oauth.openId;
+        result.expiration = _oauth.expirationDate;
+        result.gender = res.jsonResponse[@"gender"];
+        result.name = res.jsonResponse[@"nickname"];
+        result.iconurl = res.jsonResponse[@"figureurl_qq_2"];
+    }
     return result;
 }
 #pragma mark TencentLoginDelegate
@@ -76,18 +87,25 @@
  */
 - (void)tencentDidNotLogin:(BOOL)cancelled
 {
+    GSLoginResult *res = [[GSLoginResult alloc] init];
     if (cancelled) {
-        
+        res.status = GSLoginResultStatusCancel;
+        res.sourceCode = kOpenSDKErrorUserCancel;
     } else {
-        
+        res.status = GSLoginResultStatusFailing;
+        res.sourceCode = URLREQUEST_FAILED;
     }
+    [self completionWithResult:res];
 }
 /**
  * 登录时网络有问题的回调
  */
 - (void)tencentDidNotNetWork
 {
-    
+    GSLoginResult *res = [[GSLoginResult alloc] init];
+    res.status = GSLoginResultStatusFailing;
+    res.soucreMessage = @"网络异常";
+    [self completionWithResult:res];
 }
 #pragma mark TencentSessionDelegate getUserInfo
 - (void)getUserInfoResponse:(APIResponse *)response
