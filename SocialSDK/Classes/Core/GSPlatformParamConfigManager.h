@@ -21,7 +21,7 @@
 
 - (void)addQQPlatformConfigAppID:(NSString *)appID;
 
-- (void)addWeChatPlatformConfigAppID:(NSString *)appID;
+- (void)addWeChatPlatformConfigAppID:(NSString *)appID secret:(NSString *)secret;
 
 - (NSDictionary *)getConfigWithPlatformType:(GSPlatformType)platformType;
 

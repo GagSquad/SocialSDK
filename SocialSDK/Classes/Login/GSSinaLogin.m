@@ -73,7 +73,7 @@
             res.refreshToken = auth.refreshToken;
             res.expiration = auth.expirationDate;
             
-            __weak GSSinaLogin * weakSelf = self;
+            __weak GSSinaLogin *weakSelf = self;
             [WBHttpRequest requestForUserProfile:auth.userID withAccessToken:auth.accessToken andOtherProperties:nil queue:nil withCompletionHandler:^(WBHttpRequest *httpRequest, id result, NSError *error) {
                 if (error) {
                     [weakSelf completionWithResult:res];

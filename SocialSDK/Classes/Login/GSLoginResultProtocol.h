@@ -13,6 +13,13 @@ typedef NS_ENUM(NSUInteger, GSLoginResultStatus) {
     GSLoginResultStatusFailing,
     GSLoginResultStatusCancel
 };
+
+typedef enum : NSUInteger {
+    GSLoginResultGenderNone,//未定义
+    GSLoginResultGenderMale,//男
+    GSLoginResultGenderFemale,//女
+} GSLoginResultGender;
+
 @protocol GSLoginResultProtocol <NSObject>
 
 - (BOOL)isSuccess;
@@ -30,6 +37,6 @@ typedef NS_ENUM(NSUInteger, GSLoginResultStatus) {
 
 - (NSString *)name;
 - (NSString *)iconurl;
-- (NSString *)gender;
+- (GSLoginResultGender)gender;
 
 @end

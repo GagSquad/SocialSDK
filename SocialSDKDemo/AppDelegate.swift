@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GSLoggerConfig.share().openLogger()
         GSPlatformParamConfigManager.share().addSinaPlatformConfigAppKey(SinaWeiBoKey, redirectURI:SinaWeiBoCallBack)
         GSPlatformParamConfigManager.share().addQQPlatformConfigAppID(QQAppId)
-        GSPlatformParamConfigManager.share().addWeChatPlatformConfigAppID(WeiXinKey)
+        GSPlatformParamConfigManager.share().addWeChatPlatformConfigAppID(WeiXinKey, secret: WeiXinSecret)
         self.window?.makeKeyAndVisible()
         return true
     }

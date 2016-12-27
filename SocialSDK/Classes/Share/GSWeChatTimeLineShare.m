@@ -156,11 +156,11 @@ videoLowBandStreamURL:(NSString *)videoLowBandStreamURL
     res.soucreMessage = @"";
     res.status = GSShareResultStatusFailing;
     switch (errCode) {
-        case 0: {
+        case WXSuccess: {
             res.status = GSShareResultStatusSuccess;
             break;
         }
-        case -2: {
+        case WXErrCodeUserCancel: {
             res.status = GSShareResultStatusCancel;
             break;
         }

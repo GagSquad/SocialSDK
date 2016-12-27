@@ -77,12 +77,13 @@
     }
 }
 
-- (void)addWeChatPlatformConfigAppID:(NSString *)appID
+- (void)addWeChatPlatformConfigAppID:(NSString *)appID secret:(NSString *)secret
 {
     GSPlatformType p = GSPlatformTypeWeChat;
     if (appID) {
         NSDictionary *config = @{
-                                 @"appID": appID
+                                 @"appID": appID,
+                                 @"secret": secret
                                  };
         _configs[@(p)] = config;
         [_platforms[@(p)] config:config];

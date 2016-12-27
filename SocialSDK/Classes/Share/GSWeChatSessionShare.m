@@ -144,6 +144,12 @@ videoLowBandStreamURL:(NSString *)videoLowBandStreamURL
     [WXApi sendReq:req];
 }
 
+- (BOOL)handleOpenURL:(NSURL *)url
+{
+    return [WXApi handleOpenURL:url delegate:self];
+}
+
+#pragma mark - WXApiDelegate
 - (void)onResp:(BaseResp *)resp
 {
     [self completionWithResult:[self createResultWithResponse:resp]];
@@ -157,11 +163,11 @@ videoLowBandStreamURL:(NSString *)videoLowBandStreamURL
     res.soucreMessage = @"";
     res.status = GSShareResultStatusFailing;
     switch (errCode) {
-        case 0: {
+        case WXSuccess: {
             res.status = GSShareResultStatusSuccess;
             break;
         }
-        case -2: {
+        case WXErrCodeUserCancel: {
             res.status = GSShareResultStatusCancel;
             break;
         }
@@ -171,8 +177,4 @@ videoLowBandStreamURL:(NSString *)videoLowBandStreamURL
     return res;
 }
 
-- (BOOL)handleOpenURL:(NSURL *)url
-{
-    return [WXApi handleOpenURL:url delegate:self];
-}
 @end
