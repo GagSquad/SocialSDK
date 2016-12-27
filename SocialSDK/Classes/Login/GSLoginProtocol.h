@@ -15,7 +15,7 @@ typedef void(^GSLoginCompletionBlock)(id<GSLoginResultProtocol>result);
 
 @protocol GSLoginProtocol <NSObject>
 
-- (GSLoginChannelType)channelType;
++ (GSLoginChannelType)channelType;
 
 - (void)doLogin;
 

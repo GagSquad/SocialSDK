@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "GSLoginProtocol.h"
+#import "GSLoginManager.h"
 
 @interface GSBaseLogin : NSObject<GSLoginProtocol>
 

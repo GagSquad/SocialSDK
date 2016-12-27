@@ -16,7 +16,7 @@
 
 @implementation GSBaseLogin
 
-- (GSLoginChannelType)channelType
++ (GSLoginChannelType)channelType
 {
     return GSLoginChannelTypeNone;
 }
