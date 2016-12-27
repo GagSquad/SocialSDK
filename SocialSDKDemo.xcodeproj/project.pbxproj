@@ -921,7 +921,7 @@
 				INFOPLIST_FILE = SocialSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.xingengyuan.wanduoduo;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lollipop.LLPP-IOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "20597e6c-c438-4f47-8e5e-69702aa320a5";
 				PROVISIONING_PROFILE_SPECIFIER = dev_wanduoduo;
@@ -943,7 +943,7 @@
 				INFOPLIST_FILE = SocialSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.xingengyuan.wanduoduo;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lollipop.LLPP-IOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SocialSDKDemo/SocialSDKDemo-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
