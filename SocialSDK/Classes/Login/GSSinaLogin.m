@@ -27,7 +27,7 @@
     return GSLoginChannelTypeSina;
 }
 
-- (void)login
+- (void)doLogin
 {
     GSLogger(@"新浪登录");
 }

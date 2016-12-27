@@ -26,16 +26,14 @@
     [GSSelectView showShareViewWithChannels:@[
                                              @(GSShareChannelTypeSina),
                                              @(GSShareChannelTypeQQ),
-                                             @(GSShareChannelTypeQzone),
                                              @(GSShareChannelTypeWechatSession),
-                                             @(GSShareChannelTypeWechatTimeLine)
                                              ]
                            completionBlock:^(BOOL isCancel, GSLogoReourcesType reourcesType) {
                                if (isCancel) {
                                    NSLog(@"用户点击了取消");
                                } else {
                                    //支付
-                                   [self testPay:reourcesType];
+                                   //[self testPay:reourcesType];
                                    
                                    //登录
                                    [self testLogin:reourcesType];
@@ -54,6 +52,12 @@
 - (void)testLogin:(GSLogoReourcesType)reourcesType
 {
     NSLog(@"%@",NSStringFromSelector(_cmd));
+    id<GSLoginProtocol> login = [[GSLoginManager share] getShareProtocolWithChannelType:[GSLoginManager getShareChannelTypeWithLogoReourcesType:reourcesType]];
+    [login setLoginCompletionBlock:^(id<GSLoginResultProtocol> result) {
+        NSLog(@"");
+    }];
+    
+    [login doLogin];
 }
 
 - (void)testShare:(GSLogoReourcesType)reourcesType

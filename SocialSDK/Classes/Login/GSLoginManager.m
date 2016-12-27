@@ -7,8 +7,26 @@
 //
 
 #import "GSLoginManager.h"
+#import "GSLogger.h"
+
+@interface GSLoginManager ()
+{
+    NSMutableDictionary <NSNumber *, Class> *_platforms;
+    id<GSLoginProtocol> _channel;
+}
+
+@end
 
 @implementation GSLoginManager
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _platforms = [[NSMutableDictionary alloc] init];
+    }
+    return self;
+}
 
 + (instancetype)share
 {
@@ -20,13 +38,49 @@
     return share;
 }
 
-- (instancetype)init
++ (GSLoginChannelType)getShareChannelTypeWithLogoReourcesType:(GSLogoReourcesType)reourcesType;
 {
-    self = [super init];
-    if (self) {
-        
+    GSLoginChannelType res = GSLoginChannelTypeNone;
+    switch (reourcesType) {
+        case GSLogoReourcesTypeSina: {
+            res = GSLoginChannelTypeSina;
+            break;
+        }
+        case GSLogoReourcesTypeQQ:
+        case GSLogoReourcesTypeQzone: {
+            res = GSLoginChannelTypeQQ;
+            break;
+        }
+        case GSLogoReourcesTypeWechatSession:
+        case GSLogoReourcesTypeWechatTimeLine: {
+            res = GSLoginChannelTypeWeChat;
+            break;
+        }
+        default:
+            break;
     }
-    return self;
+    return res;
+}
+
+- (id<GSLoginProtocol>)getShareProtocolWithChannelType:(GSLoginChannelType)channelType;
+{
+    id<GSLoginProtocol> res = [[(Class)_platforms[@(channelType)] alloc] init];
+    _channel = res;
+    if (!res) {
+        GSLogger(@"未载入该平台");
+    }
+    return res;
+
+}
+
+- (void)addChannelWithChannelType:(GSLoginChannelType)channelType channel:(Class)channel;
+{
+    _platforms[@(channelType)] = channel;
+}
+
+- (void)cleanChannel
+{
+    _channel = nil;
 }
 
 - (BOOL)handleOpenURL:(NSURL *)url

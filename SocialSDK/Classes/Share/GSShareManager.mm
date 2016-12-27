@@ -19,6 +19,15 @@
 
 @implementation GSShareManager
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _platforms = [[NSMutableDictionary alloc] init];
+    }
+    return self;
+}
+
 + (instancetype)share
 {
     static GSShareManager *res = nil;
@@ -59,15 +68,6 @@
     return res;
 }
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        _platforms = [[NSMutableDictionary alloc] init];
-    }
-    return self;
-}
-
 - (id<GSShareProtocol>)getShareProtocolWithChannelType:(GSShareChannelType)channelType
 {
     id<GSShareProtocol> res = [[(Class)_platforms[@(channelType)] alloc] init];
@@ -83,6 +83,11 @@
     _platforms[@(channelType)] = channel;
 }
 
+- (void)cleanChannel
+{
+    _channel = nil;
+}
+
 - (BOOL)handleOpenURL:(NSURL *)url
 {
     BOOL res = NO;
@@ -90,11 +95,6 @@
         res = [_channel handleOpenURL:url];
     }
     return res;
-}
-
-- (void)cleanChannel
-{
-    _channel = nil;
 }
 
 @end

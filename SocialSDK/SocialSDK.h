@@ -28,3 +28,4 @@ FOUNDATION_EXPORT const unsigned char SocialSDKVersionString[];
 #import <SocialSDK/GSLoginManager.h>
 #import <SocialSDK/GSLoginProtocol.h>
 #import <SocialSDK/GSLoginChannelType.h>
+#import <SocialSDK/GSLoginResultProtocol.h>

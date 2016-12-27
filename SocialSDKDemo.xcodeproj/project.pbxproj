@@ -10,7 +10,7 @@
 		0E31DEE11E120E380014F2DF /* GSLoginProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E31DEE01E120E380014F2DF /* GSLoginProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E31DEE41E120E520014F2DF /* GSBaseLogin.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E31DEE21E120E520014F2DF /* GSBaseLogin.h */; };
 		0E31DEE51E120E520014F2DF /* GSBaseLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E31DEE31E120E520014F2DF /* GSBaseLogin.m */; };
-		0E31DEE71E120E810014F2DF /* GSLoginResultProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E31DEE61E120E810014F2DF /* GSLoginResultProtocol.h */; };
+		0E31DEE71E120E810014F2DF /* GSLoginResultProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E31DEE61E120E810014F2DF /* GSLoginResultProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E31DEEA1E120E8E0014F2DF /* GSLoginResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E31DEE81E120E8E0014F2DF /* GSLoginResult.h */; };
 		0E31DEEB1E120E8E0014F2DF /* GSLoginResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E31DEE91E120E8E0014F2DF /* GSLoginResult.m */; };
 		0E31DEEE1E120FB70014F2DF /* GSSinaLogin.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E31DEEC1E120FB70014F2DF /* GSSinaLogin.h */; };
@@ -573,6 +573,7 @@
 				0E31DEE11E120E380014F2DF /* GSLoginProtocol.h in Headers */,
 				0EAE69691E04E32500238DF1 /* GSSinaPlatformParamConfig.h in Headers */,
 				0E7144881E052C4200BC105E /* GSReourcesManager.h in Headers */,
+				0E31DEE71E120E810014F2DF /* GSLoginResultProtocol.h in Headers */,
 				0EAE695E1E04E2AC00238DF1 /* GSPlatformParamConfigProtocol.h in Headers */,
 				0EF0382B1E04018100F11B4E /* GSShareResultProtocol.h in Headers */,
 				0EDF13BC1E03BAA700C554FC /* GSLoginManager.h in Headers */,
@@ -594,7 +595,6 @@
 				0EDF13C81E03BADD00C554FC /* GSSinaShare.h in Headers */,
 				0EDF13C41E03BAC500C554FC /* GSBaseShare.h in Headers */,
 				0E31DEEE1E120FB70014F2DF /* GSSinaLogin.h in Headers */,
-				0E31DEE71E120E810014F2DF /* GSLoginResultProtocol.h in Headers */,
 				0EF038281E04016100F11B4E /* GSShareResult.h in Headers */,
 				0EAE69611E04E2D000238DF1 /* GSBasePlatformParamConfig.h in Headers */,
 				0EDF13D01E03BB0500C554FC /* GSQQShare.h in Headers */,
