@@ -7,7 +7,6 @@
 //
 
 #import "GSQQPlatformParamConfig.h"
-#import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/QQApiInterface.h>
 
 @interface GSQQPlatformParamConfig ()
@@ -37,6 +36,11 @@
 - (void)config:(NSDictionary *)config
 {
    _oauth = [[TencentOAuth alloc] initWithAppId:config[@"appID"] andDelegate:nil];
+}
+
+- (TencentOAuth *)oauth
+{
+    return _oauth;
 }
 
 @end
