@@ -15,16 +15,6 @@
 
 @implementation GSWeChatTimeLineShare
 
-+ (id<GSShareProtocol>)share
-{
-    static id<GSShareProtocol> res = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        res = [[GSWeChatTimeLineShare alloc] init];
-    });
-    return res;
-}
-
 + (void)load
 {
     [[GSShareManager share] addChannelWithChannelType:[GSWeChatTimeLineShare channelType] channel:[GSWeChatTimeLineShare class]];

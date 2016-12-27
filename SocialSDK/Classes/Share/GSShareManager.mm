@@ -29,30 +29,6 @@
     return res;
 }
 
-+ (GSPlatformType)getPlatformTypeWithShareChannelType:(GSShareChannelType)shareChannelType
-{
-    GSPlatformType res = GSPlatformTypeNone;
-    switch (shareChannelType) {
-        case GSShareChannelTypeSina: {
-            res = GSPlatformTypeSina;
-            break;
-        }
-        case GSShareChannelTypeQQ:
-        case GSShareChannelTypeQzone: {
-            res = GSPlatformTypeQQ;
-            break;
-        }
-        case GSShareChannelTypeWechatSession:
-        case GSShareChannelTypeWechatTimeLine: {
-            res = GSPlatformTypeWeChat;
-            break;
-        }
-        default:
-            break;
-    }
-    return res;
-}
-
 + (GSShareChannelType)getShareChannelTypeWithLogoReourcesType:(GSLogoReourcesType)reourcesType;
 {
     GSShareChannelType res = GSShareChannelTypeNone;

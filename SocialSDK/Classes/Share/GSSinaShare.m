@@ -16,16 +16,6 @@
 
 @implementation GSSinaShare
 
-+ (id<GSShareProtocol>)share;
-{
-    static id<GSShareProtocol> res = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        res = [[GSSinaShare alloc] init];
-    });
-    return res;
-}
-
 + (void)load
 {
     [[GSShareManager share] addChannelWithChannelType:[GSSinaShare channelType] channel:[GSSinaShare class]];

@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E31DEE11E120E380014F2DF /* GSLoginProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E31DEE01E120E380014F2DF /* GSLoginProtocol.h */; };
+		0E31DEE11E120E380014F2DF /* GSLoginProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E31DEE01E120E380014F2DF /* GSLoginProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E31DEE41E120E520014F2DF /* GSBaseLogin.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E31DEE21E120E520014F2DF /* GSBaseLogin.h */; };
 		0E31DEE51E120E520014F2DF /* GSBaseLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E31DEE31E120E520014F2DF /* GSBaseLogin.m */; };
 		0E31DEE71E120E810014F2DF /* GSLoginResultProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E31DEE61E120E810014F2DF /* GSLoginResultProtocol.h */; };
 		0E31DEEA1E120E8E0014F2DF /* GSLoginResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E31DEE81E120E8E0014F2DF /* GSLoginResult.h */; };
 		0E31DEEB1E120E8E0014F2DF /* GSLoginResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E31DEE91E120E8E0014F2DF /* GSLoginResult.m */; };
+		0E31DEEE1E120FB70014F2DF /* GSSinaLogin.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E31DEEC1E120FB70014F2DF /* GSSinaLogin.h */; };
+		0E31DEEF1E120FB70014F2DF /* GSSinaLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E31DEED1E120FB70014F2DF /* GSSinaLogin.m */; };
+		0E31DEF01E12131C0014F2DF /* GSLoginChannelType.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E5368A61E0D279A00792F90 /* GSLoginChannelType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E4B31F21E0294A000F231F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4B31F11E0294A000F231F0 /* AppDelegate.swift */; };
 		0E4B31F71E0294A000F231F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E4B31F51E0294A000F231F0 /* Main.storyboard */; };
 		0E4B31F91E0294A000F231F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E4B31F81E0294A000F231F0 /* Assets.xcassets */; };
@@ -106,6 +109,8 @@
 		0E31DEE61E120E810014F2DF /* GSLoginResultProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLoginResultProtocol.h; sourceTree = "<group>"; };
 		0E31DEE81E120E8E0014F2DF /* GSLoginResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLoginResult.h; sourceTree = "<group>"; };
 		0E31DEE91E120E8E0014F2DF /* GSLoginResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSLoginResult.m; sourceTree = "<group>"; };
+		0E31DEEC1E120FB70014F2DF /* GSSinaLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GSSinaLogin.h; path = Login/GSSinaLogin.h; sourceTree = "<group>"; };
+		0E31DEED1E120FB70014F2DF /* GSSinaLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GSSinaLogin.m; path = Login/GSSinaLogin.m; sourceTree = "<group>"; };
 		0E4B31EE1E0294A000F231F0 /* SocialSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E4B31F11E0294A000F231F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E4B31F61E0294A000F231F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -349,6 +354,8 @@
 		0E5368A71E0D3CE800792F90 /* Sina */ = {
 			isa = PBXGroup;
 			children = (
+				0E31DEEC1E120FB70014F2DF /* GSSinaLogin.h */,
+				0E31DEED1E120FB70014F2DF /* GSSinaLogin.m */,
 			);
 			name = Sina;
 			path = ..;
@@ -552,6 +559,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E71448C1E0536D000BC105E /* GSSelectView.h in Headers */,
+				0E31DEF01E12131C0014F2DF /* GSLoginChannelType.h in Headers */,
 				F5A3596C1E08F220000AEB64 /* GSQzoneShare.h in Headers */,
 				0E7A408B1E078C9C0083899C /* GSCollectionViewHorizontalLayout.h in Headers */,
 				0E5368A41E0D1DC300792F90 /* GSLogoReourcesType.h in Headers */,
@@ -578,6 +586,7 @@
 				F538DA141E090C59008C0660 /* GSWeChatSessionShare.h in Headers */,
 				0EDF13C81E03BADD00C554FC /* GSSinaShare.h in Headers */,
 				0EDF13C41E03BAC500C554FC /* GSBaseShare.h in Headers */,
+				0E31DEEE1E120FB70014F2DF /* GSSinaLogin.h in Headers */,
 				0E31DEE71E120E810014F2DF /* GSLoginResultProtocol.h in Headers */,
 				0EF038281E04016100F11B4E /* GSShareResult.h in Headers */,
 				0EAE69611E04E2D000238DF1 /* GSBasePlatformParamConfig.h in Headers */,
@@ -793,6 +802,7 @@
 				0E5368A21E0D1B7600792F90 /* GSLogoReources.m in Sources */,
 				0E7A40921E07AF4D0083899C /* GSCollectionViewCell.m in Sources */,
 				F538DA151E090C59008C0660 /* GSWeChatSessionShare.m in Sources */,
+				0E31DEEF1E120FB70014F2DF /* GSSinaLogin.m in Sources */,
 				0EDF13D11E03BB0500C554FC /* GSQQShare.m in Sources */,
 				0E90C0121E03C895000D646E /* GSLoggerConfig.m in Sources */,
 				0E31DEEB1E120E8E0014F2DF /* GSLoginResult.m in Sources */,
