@@ -7,12 +7,34 @@
 //
 
 #import "GSSinaLogin.h"
+#import "GSLoginManager.h"
+#import "GSLogger.h"
 
 @implementation GSSinaLogin
 
 + (void)load
 {
-//    [[GSShareManager share] addChannelWithChannelType:[GSWeChatSessionShare channelType] channel:[GSWeChatSessionShare class]];
+    [[GSLoginManager share] addChannelWithChannelType:[GSSinaLogin channelType] channel:[GSSinaLogin class]];
+}
+
++ (GSPlatformType)platformType
+{
+    return GSPlatformTypeSina;
+}
+
++ (GSLoginChannelType)channelType
+{
+    return GSLoginChannelTypeSina;
+}
+
+- (void)login
+{
+    GSLogger(@"新浪登录");
+}
+
+- (BOOL)handleOpenURL:(NSURL *)url
+{
+    return NO;
 }
 
 @end

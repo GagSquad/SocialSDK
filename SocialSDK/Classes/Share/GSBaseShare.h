@@ -15,8 +15,6 @@
 
 @interface GSBaseShare : NSObject <GSShareProtocol>
 
-- (void)setShareCompletionBlock:(GSShareCompletionBlock)completionBlock;
-
 - (void)completionWithResult:(id<GSShareResultProtocol>)result;
 
 @end

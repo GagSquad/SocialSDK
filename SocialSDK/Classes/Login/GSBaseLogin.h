@@ -6,8 +6,8 @@
 //  Copyright © 2016 GagSquad. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "GSLoginProtocol.h"
 
-@interface GSBaseLogin : NSObject
+@interface GSBaseLogin : NSObject <GSLoginProtocol>
 
 @end
