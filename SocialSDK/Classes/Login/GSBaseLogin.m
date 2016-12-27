@@ -12,24 +12,23 @@
 {
     GSLoginCompletionBlock _completionBlock;
 }
-
 @end
 
 @implementation GSBaseLogin
-
-+ (GSPlatformType)platformType
-{
-    return GSPlatformTypeNone;
-}
 
 + (GSLoginChannelType)channelType
 {
     return GSLoginChannelTypeNone;
 }
 
-- (void)login
+- (void)doLogin
 {
     
+}
+
+- (void)setLoginCompletionBlock:(GSLoginCompletionBlock)completionBlock
+{
+    _completionBlock = completionBlock;
 }
 
 - (BOOL)handleOpenURL:(NSURL *)url
@@ -37,9 +36,12 @@
     return NO;
 }
 
-- (void)setShareCompletionBlock:(GSLoginCompletionBlock)completionBlock
+- (void)completionWithResult:(id<GSLoginResultProtocol>)result
 {
-    _completionBlock = completionBlock;
+    if (_completionBlock) {
+        _completionBlock(result);
+    }
+    _completionBlock = nil;
 }
 
 @end

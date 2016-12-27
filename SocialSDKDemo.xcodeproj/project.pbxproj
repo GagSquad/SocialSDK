@@ -74,6 +74,8 @@
 		F538DA191E090C68008C0660 /* GSWeChatTimeLineShare.m in Sources */ = {isa = PBXBuildFile; fileRef = F538DA171E090C68008C0660 /* GSWeChatTimeLineShare.m */; };
 		F56676391E0518380018F4F9 /* GSQQPlatformParamConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = F56676371E0518380018F4F9 /* GSQQPlatformParamConfig.h */; };
 		F566763A1E0518380018F4F9 /* GSQQPlatformParamConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F56676381E0518380018F4F9 /* GSQQPlatformParamConfig.m */; };
+		F568ECC21E122EE3009700F2 /* GSQQLogin.h in Headers */ = {isa = PBXBuildFile; fileRef = F568ECC01E122EE3009700F2 /* GSQQLogin.h */; };
+		F568ECC31E122EE3009700F2 /* GSQQLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = F568ECC11E122EE3009700F2 /* GSQQLogin.m */; };
 		F5A3596C1E08F220000AEB64 /* GSQzoneShare.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A3596A1E08F220000AEB64 /* GSQzoneShare.h */; };
 		F5A3596D1E08F220000AEB64 /* GSQzoneShare.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A3596B1E08F220000AEB64 /* GSQzoneShare.m */; };
 /* End PBXBuildFile section */
@@ -182,6 +184,8 @@
 		F538DA1A1E090FE2008C0660 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F56676371E0518380018F4F9 /* GSQQPlatformParamConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSQQPlatformParamConfig.h; sourceTree = "<group>"; };
 		F56676381E0518380018F4F9 /* GSQQPlatformParamConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSQQPlatformParamConfig.m; sourceTree = "<group>"; };
+		F568ECC01E122EE3009700F2 /* GSQQLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSQQLogin.h; sourceTree = "<group>"; };
+		F568ECC11E122EE3009700F2 /* GSQQLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSQQLogin.m; sourceTree = "<group>"; };
 		F5A3596A1E08F220000AEB64 /* GSQzoneShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSQzoneShare.h; sourceTree = "<group>"; };
 		F5A3596B1E08F220000AEB64 /* GSQzoneShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSQzoneShare.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -364,6 +368,8 @@
 		0E5368A81E0D3CF700792F90 /* QQ */ = {
 			isa = PBXGroup;
 			children = (
+				F568ECC01E122EE3009700F2 /* GSQQLogin.h */,
+				F568ECC11E122EE3009700F2 /* GSQQLogin.m */,
 			);
 			name = QQ;
 			sourceTree = "<group>";
@@ -575,6 +581,7 @@
 				F56676391E0518380018F4F9 /* GSQQPlatformParamConfig.h in Headers */,
 				0E5368A11E0D1B7600792F90 /* GSLogoReources.h in Headers */,
 				0E7A40911E07AF4D0083899C /* GSCollectionViewCell.h in Headers */,
+				F568ECC21E122EE3009700F2 /* GSQQLogin.h in Headers */,
 				F538DA181E090C68008C0660 /* GSWeChatTimeLineShare.h in Headers */,
 				0EDF13CC1E03BAEA00C554FC /* GSShareManager.h in Headers */,
 				0E7144821E051FC300BC105E /* GSShareChannelType.h in Headers */,
@@ -818,6 +825,7 @@
 				0EDF13CD1E03BAEA00C554FC /* GSShareManager.mm in Sources */,
 				0E31DEE51E120E520014F2DF /* GSBaseLogin.m in Sources */,
 				0EDF13C11E03BAB700C554FC /* GSPayManager.m in Sources */,
+				F568ECC31E122EE3009700F2 /* GSQQLogin.m in Sources */,
 				F538DA0D1E09082F008C0660 /* GSWeChatPlatformParamConfig.m in Sources */,
 				0EAE696A1E04E32500238DF1 /* GSSinaPlatformParamConfig.m in Sources */,
 			);

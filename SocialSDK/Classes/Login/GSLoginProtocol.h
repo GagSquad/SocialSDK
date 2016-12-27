@@ -7,23 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GSPlatformType.h"
 #import "GSLoginChannelType.h"
 
 @protocol GSLoginResultProtocol;
 
-typedef void (^GSLoginCompletionBlock) (id<GSLoginResultProtocol> result);
+typedef void(^GSLoginCompletionBlock)(id<GSLoginResultProtocol>result);
 
 @protocol GSLoginProtocol <NSObject>
 
-+ (GSPlatformType)platformType;
-
 + (GSLoginChannelType)channelType;
 
-- (void)login;
+- (void)doLogin;
 
 - (BOOL)handleOpenURL:(NSURL *)url;
 
-- (void)setShareCompletionBlock:(GSLoginCompletionBlock)completionBlock;
+- (void)setLoginCompletionBlock:(GSLoginCompletionBlock)completionBlock;
 
 @end
