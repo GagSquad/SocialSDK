@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GSLoginProtocol.h"
 
-@interface GSBaseLogin : NSObject
+@interface GSBaseLogin : NSObject<GSLoginProtocol>
+
+- (void)completionWithResult:(id<GSLoginResultProtocol>)result;
 
 @end
