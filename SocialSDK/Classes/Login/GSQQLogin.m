@@ -68,6 +68,7 @@
         result.gender = res.jsonResponse[@"gender"];
         result.name = res.jsonResponse[@"nickname"];
         result.iconurl = res.jsonResponse[@"figureurl_qq_2"];
+        result.originalResponse = res.jsonResponse;
     }
     return result;
 }
