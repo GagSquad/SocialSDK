@@ -14,7 +14,7 @@
 @property (nonatomic, assign) GSLoginResultStatus status;
 @property (nonatomic, assign) NSInteger sourceCode;
 @property (nonatomic, copy) NSString *soucreMessage;
-@property (nonatomic, copy,) NSString *message;
+@property (nonatomic, copy) NSString *message;
 
 @property (nonatomic, copy) NSString *uid;
 @property (nonatomic, copy) NSString *openid;

@@ -60,7 +60,7 @@
         }
         case GSLogoReourcesTypeQQ: {
             [_logo setImage:[[GSReourcesManager share] logoWithName:@"qq"]];
-            _name.text = @"QQ好友";
+            _name.text = @"QQ";
             break;
         }
         case GSLogoReourcesTypeQzone: {
@@ -70,7 +70,7 @@
         }
         case GSLogoReourcesTypeWechatSession: {
             [_logo setImage:[[GSReourcesManager share] logoWithName:@"wechat"]];
-            _name.text = @"微信好友";
+            _name.text = @"微信";
             break;
         }
         case GSLogoReourcesTypeWechatTimeLine: {

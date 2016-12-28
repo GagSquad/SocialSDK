@@ -157,7 +157,6 @@
                                           
                                           weakSelf.result.name = dic[@"nickname"];
                                           weakSelf.result.iconurl = dic[@"headimgurl"];
-                                          weakSelf.result.name = dic[@"nickname"];
                                           weakSelf.result.gender = [GSWeChatLogin gender:dic[@"sex"]];
                                           
                                           [weakSelf completionWithResult:weakSelf.result];
