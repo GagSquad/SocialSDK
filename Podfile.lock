@@ -1,37 +1,18 @@
 PODS:
-  - TencentOpenApiSDK (3.1.3)
-  - WeChatSDK (1.7.5)
-  - WeiboSDK (3.1.4)
+  - GSTencentOpenApiSDK (3.1.3)
+  - GSWeChatSDK (1.7.5)
+  - GSWeiboSDK (3.1.4)
 
 DEPENDENCIES:
-  - TencentOpenApiSDK (from `https://github.com/GagSquad/TencentOpenApiSDK.git`)
-  - WeChatSDK (from `https://github.com/GagSquad/WeChatSDK.git`)
-  - WeiboSDK (from `https://github.com/sinaweibosdk/weibo_ios_sdk.git`)
-
-EXTERNAL SOURCES:
-  TencentOpenApiSDK:
-    :git: https://github.com/GagSquad/TencentOpenApiSDK.git
-  WeChatSDK:
-    :git: https://github.com/GagSquad/WeChatSDK.git
-  WeiboSDK:
-    :git: https://github.com/sinaweibosdk/weibo_ios_sdk.git
-
-CHECKOUT OPTIONS:
-  TencentOpenApiSDK:
-    :commit: db353690d46a10c45a9b82a15a1b49561db67482
-    :git: https://github.com/GagSquad/TencentOpenApiSDK.git
-  WeChatSDK:
-    :commit: 59a24d996bf616f22a997b3eadb9012676cdc064
-    :git: https://github.com/GagSquad/WeChatSDK.git
-  WeiboSDK:
-    :commit: 3daf7147ddd0fde3b04a61d8d94327d41d0c239c
-    :git: https://github.com/sinaweibosdk/weibo_ios_sdk.git
+  - GSTencentOpenApiSDK (~> 3.1.3)
+  - GSWeChatSDK (~> 1.7.5)
+  - GSWeiboSDK (~> 3.1.4)
 
 SPEC CHECKSUMS:
-  TencentOpenApiSDK: 83ba912712a5b86379a19303421e00ab5234e0a4
-  WeChatSDK: 02541adbc7e33995541d0d0cfa4fd73560f5bfd9
-  WeiboSDK: bceab625ec59b7039ba721cc4ba9f5868804f63e
+  GSTencentOpenApiSDK: 637c49faa1dd6656266b8fe95eaa31babff11d92
+  GSWeChatSDK: 05aec73b2e645c3a3d76f68f513e935604f4886b
+  GSWeiboSDK: 7ba13169ecd2f47ab4f4c14130ae0aedfe3d63a7
 
-PODFILE CHECKSUM: 97bfe140533fec5a4f23adfe908e9c252f4dfea0
+PODFILE CHECKSUM: f69a8e433675c5dc94caa838f3361e38292f70dc
 
 COCOAPODS: 1.1.1
