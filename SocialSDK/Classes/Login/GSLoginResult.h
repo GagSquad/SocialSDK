@@ -25,6 +25,6 @@
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *iconurl;
-@property (nonatomic, copy) NSString *gender;
+@property (nonatomic, assign) GSLoginResultGender gender;
 
 @end

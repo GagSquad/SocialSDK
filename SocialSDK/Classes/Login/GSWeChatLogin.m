@@ -158,12 +158,32 @@
                                           weakSelf.result.name = dic[@"nickname"];
                                           weakSelf.result.iconurl = dic[@"headimgurl"];
                                           weakSelf.result.name = dic[@"nickname"];
-                                          weakSelf.result.gender = dic[@"sex"];
+                                          weakSelf.result.gender = [GSWeChatLogin gender:dic[@"sex"]];
                                           
                                           [weakSelf completionWithResult:weakSelf.result];
                                       }
                                   }];
     [task resume];
+}
+
++ (GSLoginResultGender)gender:(NSNumber *)sex
+{
+    GSLoginResultGender res = GSLoginResultGenderNone;
+    if ([sex isKindOfClass:[NSNumber class]]) {
+        switch ([sex integerValue]) {
+            case 1: {
+                res = GSLoginResultGenderMale;
+                break;
+            }
+            case 2: {
+                res = GSLoginResultGenderFemale;
+                break;
+            }
+            default:
+                break;
+        }
+    }
+    return res;
 }
 
 + (NSDictionary *)dictionaryFromJSONString:(NSString *)str

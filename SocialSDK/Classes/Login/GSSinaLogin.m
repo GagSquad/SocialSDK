@@ -81,7 +81,7 @@
                     WeiboUser *user = (WeiboUser *)result;
                     res.name = user.name;
                     res.iconurl = user.profileImageUrl;
-                    res.gender = user.gender;
+                    res.gender = [GSSinaLogin gender:user.gender];
                     [weakSelf completionWithResult:res];
                 }
             }];
@@ -97,6 +97,19 @@
             break;
         }
     }
+}
+
++ (GSLoginResultGender)gender:(NSString *)gender
+{
+    GSLoginResultGender res = GSLoginResultGenderNone;
+    if (gender && [gender isKindOfClass:[NSString class]]) {
+        if ([gender isEqualToString:@"m"]) {
+            res = GSLoginResultGenderMale;
+        } else if ([gender isEqualToString:@"f"]) {
+            res = GSLoginResultGenderFemale;
+        }
+    }
+    return res;
 }
 
 @end
