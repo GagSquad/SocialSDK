@@ -12,7 +12,7 @@
 typedef void (^GSSelectViewCompletionBlock) (BOOL isCancel, GSLogoReourcesType reourcesType);
 
 /**
- 选择分享渠道UI
+ 选择渠道UI
  */
 @interface GSSelectView : UIWindow
 

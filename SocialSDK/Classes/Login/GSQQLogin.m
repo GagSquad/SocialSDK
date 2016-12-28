@@ -65,13 +65,27 @@
         result.accessToken = _oauth.accessToken;
         result.openid = _oauth.openId;
         result.expiration = _oauth.expirationDate;
-        result.gender = res.jsonResponse[@"gender"];
+        result.gender = [GSQQLogin gender:res.jsonResponse[@"gender"]];
         result.name = res.jsonResponse[@"nickname"];
         result.iconurl = res.jsonResponse[@"figureurl_qq_2"];
         result.originalResponse = res.jsonResponse;
     }
     return result;
 }
+
++ (GSLoginResultGender)gender:(NSString *)gender
+{
+    GSLoginResultGender res = GSLoginResultGenderNone;
+    if (gender && [gender isKindOfClass:[NSString class]]) {
+        if ([gender isEqualToString:@"男"]) {
+            res = GSLoginResultGenderMale;
+        } else if([gender isEqualToString:@"女"]) {
+            res = GSLoginResultGenderFemale;
+        }
+    }
+    return res;
+}
+
 #pragma mark TencentLoginDelegate
 /**
  * 登录成功后的回调
