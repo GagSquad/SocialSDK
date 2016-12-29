@@ -8,6 +8,7 @@
 
 #import "GSQQLogin.h"
 #import "GSQQPlatformParamConfig.h"
+#import <TencentOpenAPI/TencentOAuth.h>
 
 @interface GSQQLogin ()<TencentSessionDelegate>
 {
@@ -44,8 +45,8 @@
                             kOPEN_PERMISSION_GET_VIP_INFO,
                             kOPEN_PERMISSION_GET_VIP_RICH_INFO,
                             nil];
-    GSQQPlatformParamConfig *qqConfig = [[GSPlatformParamConfigManager share] getConfigProtocolWithPlatformType:GSPlatformTypeQQ];
-    _oauth = [qqConfig oauth];
+    NSDictionary *config = [[GSPlatformParamConfigManager share] getConfigWithPlatformType:GSPlatformTypeQQ];
+    _oauth = [[TencentOAuth alloc] initWithAppId:config[@"appID"] andDelegate:nil];
     [_oauth setSessionDelegate:self];
     [_oauth authorize:permissions];
 }

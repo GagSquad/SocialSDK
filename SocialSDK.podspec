@@ -37,25 +37,16 @@ Pod::Spec.new do |s|
     end
     
     s.subspec 'WeChatSDK' do |ss|
-        s.source_files = "SDK/WeChatSDK/"
-        s.vendored_libraries = "SDK/WeChatSDK/libWeChatSDK.a"
-        s.preserve_paths = "SDK/WeChatSDK/README.txt", "WeChatSDK/libWeChatSDK.a"
-        s.frameworks = [
-        'Foundation',
-        'SystemConfiguration',
-        'CoreTelephony',
-        'CFNetwork'
-        ]
-        s.libraries = [
-        'z',
-        'c++',
-        'sqlite3',
-        ]
+        ss.source_files = 'SDK/WeChatSDK/'
+        ss.vendored_libraries = 'SDK/WeChatSDK/libWeChatSDK.a'
+        ss.preserve_paths = 'SDK/WeChatSDK/README.txt", "WeChatSDK/libWeChatSDK.a'
+        ss.frameworks = 'Foundation', 'SystemConfiguration', 'CoreTelephony', 'CFNetwork'
+        ss.libraries = 'z', 'c++', 'sqlite3'
     end
     
     s.subspec 'Core' do |ss|
-        s.source_files = 'SocialSDK/Classes/Core/Logger/**/*.{h,m}', 'SocialSDK/Classes/Core/Util/**/*.{h,m}', 'SocialSDK/Classes/Core/PlatformParamConfig/Base/**/*.{h,m}'
-        s.public_header_files = 'SocialSDK/Classes/Core/Logger/**/*.h', 'SocialSDK/Classes/Core/Util/**/*.h', 'SocialSDK/Classes/Core/PlatformParamConfig/Base/**/*.h'
+        ss.source_files = 'SocialSDK/Classes/Core/Logger/**/*.{h,m}', 'SocialSDK/Classes/Core/Util/**/*.{h,m}', 'SocialSDK/Classes/Core/PlatformParamConfig/Base/**/*.{h,m}'
+        ss.public_header_files = 'SocialSDK/Classes/Core/Logger/**/*.h', 'SocialSDK/Classes/Core/Util/**/*.h', 'SocialSDK/Classes/Core/PlatformParamConfig/Base/**/*.h'
     end
     
     s.subspec 'UI' do |ss|
@@ -95,7 +86,6 @@ Pod::Spec.new do |s|
         ss.public_header_files = 'SocialSDK/Classes/Share/QQ/**/*.h'
         ss.dependency 'SocialSDK/QQPlatformParamConfig'
         ss.dependency 'SocialSDK/ShareBase'
-#        ss.dependency 'GSTencentOpenApiSDK', '~> 3.1.3'
     end
     
     s.subspec 'QzoneShare' do |ss|
@@ -103,7 +93,6 @@ Pod::Spec.new do |s|
         ss.public_header_files = 'SocialSDK/Classes/Share/Qzone/**/*.h'
         ss.dependency 'SocialSDK/QQPlatformParamConfig'
         ss.dependency 'SocialSDK/ShareBase'
-#        ss.dependency 'GSTencentOpenApiSDK', '~> 3.1.3'
     end
     
     s.subspec 'SinaShare' do |ss|
@@ -111,7 +100,6 @@ Pod::Spec.new do |s|
         ss.public_header_files = 'SocialSDK/Classes/Share/Sina/**/*.h'
         ss.dependency 'SocialSDK/SinaPlatformParamConfig'
         ss.dependency 'SocialSDK/ShareBase'
-#        ss.dependency 'GSWeChatSDK', '~> 1.7.5'
     end
     
     s.subspec 'WeChatSessionShare' do |ss|
@@ -119,7 +107,6 @@ Pod::Spec.new do |s|
         ss.public_header_files = 'SocialSDK/Classes/Share/WeChatSession/**/*.h'
         ss.dependency 'SocialSDK/WeChatPlatformParamConfig'
         ss.dependency 'SocialSDK/ShareBase'
-#        ss.dependency 'GSWeChatSDK', '~> 1.7.5'
     end
     
     s.subspec 'WeChatTimeLineShare' do |ss|
@@ -127,7 +114,32 @@ Pod::Spec.new do |s|
         ss.public_header_files = 'SocialSDK/Classes/Share/WeChatTimeLine/**/*.h'
         ss.dependency 'SocialSDK/WeChatPlatformParamConfig'
         ss.dependency 'SocialSDK/ShareBase'
-#        ss.dependency 'GSWeiboSDK', '~> 3.1.4'
+    end
+
+    s.subspec 'LoginBase' do |ss|
+        ss.source_files = 'SocialSDK/Classes/Login/Base/**/*.{h,m,mm}'
+        ss.public_header_files = 'SocialSDK/Classes/Login/Base/**/*.h'
+    end
+
+    s.subspec 'QQLogin' do |ss|
+        ss.source_files = 'SocialSDK/Classes/Login/QQ/**/*.{h,m}'
+        ss.public_header_files = 'SocialSDK/Classes/Login/QQ/**/*.h'
+        ss.dependency 'SocialSDK/QQPlatformParamConfig'
+        ss.dependency 'SocialSDK/ShareBase'
+    end
+
+    s.subspec 'SinaLogin' do |ss|
+        ss.source_files = 'SocialSDK/Classes/Login/Sina/**/*.{h,m}'
+        ss.public_header_files = 'SocialSDK/Classes/Login/Sina/**/*.h'
+        ss.dependency 'SocialSDK/SinaPlatformParamConfig'
+        ss.dependency 'SocialSDK/ShareBase'
+    end
+
+    s.subspec 'WeChatLogin' do |ss|
+        ss.source_files = 'SocialSDK/Classes/Login/WeChat/**/*.{h,m}'
+        ss.public_header_files = 'SocialSDK/Classes/Login/WeChat/**/*.h'
+        ss.dependency 'SocialSDK/WeChatPlatformParamConfig'
+        ss.dependency 'SocialSDK/ShareBase'
     end
 
 #    s.subspec 'QQSDK' do |ss|
