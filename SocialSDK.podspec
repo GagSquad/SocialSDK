@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
     
     
     s.subspec 'TencentOpenApiSDK' do |ss|
-        ss.source_files = 'SDK/TencentOpenApi/*.{h,m}'
-        ss.resources = 'SDK/TencentOpenApi/TencentOpenApi_IOS_Bundle.bundle'
         ss.vendored_frameworks = 'SDK/TencentOpenApi/TencentOpenAPI.framework'
+        
+        ss.resources = 'SDK/TencentOpenApi/TencentOpenApi_IOS_Bundle.bundle'
         
         the_frameworks =  [
         '"SystemConfiguration"',
@@ -30,37 +30,39 @@ Pod::Spec.new do |s|
     
     s.subspec 'WeiboSDK' do |ss|
         ss.source_files = 'SDK/libWeiboSDK/*.{h,m}'
-        ss.resources     = 'SDK/libWeiboSDK/WeiboSDK.bundle'
         ss.vendored_libraries  = 'SDK/libWeiboSDK/libWeiboSDK.a'
+        
+        ss.resources     = 'SDK/libWeiboSDK/WeiboSDK.bundle'
+        
         ss.frameworks   = 'ImageIO', 'SystemConfiguration', 'CoreText', 'QuartzCore', 'Security', 'UIKit', 'Foundation', 'CoreGraphics','CoreTelephony'
         ss.libraries = 'sqlite3', 'z'
     end
     
     s.subspec 'WeChatSDK' do |ss|
-        ss.source_files = 'SDK/WeChatSDK/'
+        ss.source_files = 'SDK/WeChatSDK/*.{h,m}'
         ss.vendored_libraries = 'SDK/WeChatSDK/libWeChatSDK.a'
-        ss.preserve_paths = 'SDK/WeChatSDK/README.txt", "WeChatSDK/libWeChatSDK.a'
+        
         ss.frameworks = 'Foundation', 'SystemConfiguration', 'CoreTelephony', 'CFNetwork'
         ss.libraries = 'z', 'c++', 'sqlite3'
     end
     
     s.subspec 'Core' do |ss|
-        ss.resources     = 'SocialSDK/Rrources/GSSocialSDKResources.bundle'
         ss.source_files = 'SocialSDK/Classes/Core/Logger/**/*.{h,m}', 'SocialSDK/Classes/Core/Util/**/*.{h,m}', 'SocialSDK/Classes/Core/PlatformParamConfig/Base/**/*.{h,m}'
+        ss.resources     = 'SocialSDK/Rrources/GSSocialSDKResources.bundle'
         ss.public_header_files = 'SocialSDK/Classes/Core/Logger/**/*.h', 'SocialSDK/Classes/Core/Util/**/*.h', 'SocialSDK/Classes/Core/PlatformParamConfig/Base/**/*.h'
     end
     
     s.subspec 'UI' do |ss|
         ss.source_files = 'SocialSDK/Classes/UI/**/*.{h,m}'
-        ss.public_header_files = 'SocialSDK/UI/**/*.h'
+        ss.public_header_files = 'SocialSDK/Classes/UI/**/*.h'
         ss.dependency 'SocialSDK/Core'
     end
     
     s.subspec 'QQPlatformParamConfig' do |ss|
         ss.source_files = 'SocialSDK/Classes/Core/PlatformParamConfig/QQ/**/*.{h,m}'
         ss.public_header_files = 'SocialSDK/Classes/Core/PlatformParamConfig/QQ/**/*.h'
-    ss.dependency 'SocialSDK/TencentOpenApiSDK'
-    ss.dependency 'SocialSDK/Core'
+        ss.dependency 'SocialSDK/TencentOpenApiSDK'
+        ss.dependency 'SocialSDK/Core'
     end
     
     s.subspec 'SinaPlatformParamConfig' do |ss|
@@ -144,19 +146,5 @@ Pod::Spec.new do |s|
         ss.dependency 'SocialSDK/WeChatPlatformParamConfig'
         ss.dependency 'SocialSDK/LoginBase'
     end
-
-#    s.subspec 'QQSDK' do |ss|
-#        ss.source_files = 'AFNetworking/AFURL{Request,Response}Serialization.{h,m}'
-#        ss.public_header_files = 'AFNetworking/AFURL{Request,Response}Serialization.h'
-#        ss.watchos.frameworks = 'MobileCoreServices', 'CoreGraphics'
-#        ss.ios.frameworks = 'MobileCoreServices', 'CoreGraphics'
-#    end
-#    
-#    s.subspec 'SinaSDK' do |ss|
-#        ss.source_files = 'AFNetworking/AFURL{Request,Response}Serialization.{h,m}'
-#        ss.public_header_files = 'AFNetworking/AFURL{Request,Response}Serialization.h'
-#        ss.watchos.frameworks = 'MobileCoreServices', 'CoreGraphics'
-#        ss.ios.frameworks = 'MobileCoreServices', 'CoreGraphics'
-#    end
 
 end
