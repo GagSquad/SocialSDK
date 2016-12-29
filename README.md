@@ -19,15 +19,20 @@
 ### [WeChat](#WeChat)
 ### [QQ](#QQ)
 ### <a id="SinaWeiBo"></a>SinaWeiBo平台配置
-* *1、* 添加URL Schemes 格式"wb"+新浪appKey
-  <img src="Images/sinaGuide/sinaGuide-1.png" width="280">
+* *1、* 添加URL Schemes 格式"wb"+新浪appKey  
+* <img src="Images/sinaGuide/sinaGuide-1.png" width="1000">
 * *2、* [适配iOS9+系统](#iOS9+)
 
 ### <a id="WeChat"></a>WeChat平台配置
 * 添加URL Schemes
 
-### <a id="QQ"></a>QQ平台配置
-* 添加URL Schemes
+### <a id="QQ"></a>QQ/Qzone平台配置
+* *1、* 添加URL Schemes  
+* 格式"tencent"+QQ的appID + "QQ"+QQ的appID转换成十六进制（不足8位前面补0)  
+* 例如: appID:100424468 --> tencent100424468  QQ05fc5b14
+* <img src="Images/QQGuide/QQGuide-1.png" width="1000">  
+* *2、*[适配iOS9+系统](#iOS9+)
+
 
 ## <a id="iOS9+"></a>iOS9+适配
 #### 1. HTTPS传输 在info.plist中加入安全域名白名单(右键info.plist用source code打开)
