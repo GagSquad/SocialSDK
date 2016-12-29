@@ -23,19 +23,19 @@ Pod::Spec.new do |s|
     s.subspec 'QQPlatformParamConfig' do |ss|
         ss.source_files = 'SocialSDK/Classes/Core/PlatformParamConfig/QQ/**/*.{h,m}'
         ss.public_header_files = 'SocialSDK/Classes/Core/PlatformParamConfig/QQ/**/*.h'
-        ss.dependency 'GSTencentOpenApiSDK', '~> 3.1.3'
+#        ss.dependency 'GSTencentOpenApiSDK', '~> 3.1.3'
     end
     
     s.subspec 'SinaPlatformParamConfig' do |ss|
         ss.source_files = 'SocialSDK/Classes/Core/PlatformParamConfig/Sina/**/*.{h,m}'
         ss.public_header_files = 'SocialSDK/Classes/Core/PlatformParamConfig/Sina/**/*.h'
-        ss.dependency 'GSWeiboSDK', '~> 3.1.4'
+#        ss.dependency 'GSWeiboSDK', '~> 3.1.4'
     end
     
     s.subspec 'WeChatPlatformParamConfig' do |ss|
         ss.source_files = 'SocialSDK/Classes/Core/PlatformParamConfig/WeChat/**/*.{h,m}'
         ss.public_header_files = 'SocialSDK/Classes/Core/PlatformParamConfig/WeChat/**/*.h'
-        ss.dependency 'GSWeChatSDK', '~> 1.7.5'
+#        ss.dependency 'GSWeChatSDK', '~> 1.7.5'
     end
     
     s.subspec 'ShareBase' do |ss|
