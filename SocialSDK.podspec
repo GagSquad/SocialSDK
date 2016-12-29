@@ -12,30 +12,77 @@ Pod::Spec.new do |s|
     s.source            = { :git => 'https://github.com/GagSquad/SocialSDK.git', :branch => 'master' }
     
     s.requires_arc = true
-    s.source_files = 'SocialSDK/Classes/Core/Logger/**/*.{h,m}', 'SocialSDK/Classes/Core/Util/**/*.{h,m}', 'SocialSDK/Classes/Core/PlatformParamConfig/Base/**/*.{h,m}'
-    s.public_header_files = 'SocialSDK/Classes/Core/Logger/**/*.h', 'SocialSDK/Classes/Core/Util/**/*.h', 'SocialSDK/Classes/Core/PlatformParamConfig/Base/**/*.h'
+    
+    
+    s.subspec 'TencentOpenApiSDK' do |ss|
+        s.source_files = "SDK/TencentOpenApi/"
+        ss.resources = "SDK/TencentOpenApi/TencentOpenApi_IOS_Bundle.bundle"
+        ss.vendored_frameworks = 'SDK/TencentOpenApi/TencentOpenAPI.framework'
+        
+        the_frameworks =  [
+        '"SystemConfiguration"',
+        '"CoreTelephony"'
+        ]
+        the_ldflags    = '$(inherited) -lz -lsqlite3 -liconv -lstdc++ -framework ' + the_frameworks.join(' -framework ') + ''
+        
+        ss.xcconfig = { 'OTHER_LDFLAGS' => the_ldflags }
+    end
+    
+    s.subspec 'WeiboSDK' do |ss|
+        ss.source_files = 'SDK/libWeiboSDK/*.{h,m}'
+        ss.resource     = 'SDK/libWeiboSDK/WeiboSDK.bundle'
+        ss.vendored_libraries  = 'SDK/libWeiboSDK/libWeiboSDK.a'
+        ss.frameworks   = 'ImageIO', 'SystemConfiguration', 'CoreText', 'QuartzCore', 'Security', 'UIKit', 'Foundation', 'CoreGraphics','CoreTelephony'
+        ss.libraries = 'sqlite3', 'z'
+    end
+    
+    s.subspec 'WeChatSDK' do |ss|
+        s.source_files = "SDK/WeChatSDK/"
+        s.vendored_libraries = "SDK/WeChatSDK/libWeChatSDK.a"
+        s.preserve_paths = "SDK/WeChatSDK/README.txt", "WeChatSDK/libWeChatSDK.a"
+        s.frameworks = [
+        'Foundation',
+        'SystemConfiguration',
+        'CoreTelephony',
+        'CFNetwork'
+        ]
+        s.libraries = [
+        'z',
+        'c++',
+        'sqlite3',
+        ]
+    end
+    
+    s.subspec 'Core' do |ss|
+        s.source_files = 'SocialSDK/Classes/Core/Logger/**/*.{h,m}', 'SocialSDK/Classes/Core/Util/**/*.{h,m}', 'SocialSDK/Classes/Core/PlatformParamConfig/Base/**/*.{h,m}'
+        s.public_header_files = 'SocialSDK/Classes/Core/Logger/**/*.h', 'SocialSDK/Classes/Core/Util/**/*.h', 'SocialSDK/Classes/Core/PlatformParamConfig/Base/**/*.h'
+    end
     
     s.subspec 'UI' do |ss|
         ss.source_files = 'SocialSDK/Classes/UI/**/*.{h,m}'
         ss.public_header_files = 'SocialSDK/UI/**/*.h'
+        ss.dependency 'SocialSDK/Core'
     end
     
     s.subspec 'QQPlatformParamConfig' do |ss|
         ss.source_files = 'SocialSDK/Classes/Core/PlatformParamConfig/QQ/**/*.{h,m}'
         ss.public_header_files = 'SocialSDK/Classes/Core/PlatformParamConfig/QQ/**/*.h'
-        ss.dependency 'GSTencentOpenApiSDK', '~> 3.1.3'
+    ss.dependency 'SocialSDK/TencentOpenApiSDK'
+    ss.dependency 'SocialSDK/Core'
     end
     
     s.subspec 'SinaPlatformParamConfig' do |ss|
         ss.source_files = 'SocialSDK/Classes/Core/PlatformParamConfig/Sina/**/*.{h,m}'
         ss.public_header_files = 'SocialSDK/Classes/Core/PlatformParamConfig/Sina/**/*.h'
-        ss.dependency 'GSWeiboSDK', '~> 3.1.4'
+        ss.dependency 'SocialSDK/WeiboSDK'
+        ss.dependency 'SocialSDK/Core'
     end
     
     s.subspec 'WeChatPlatformParamConfig' do |ss|
         ss.source_files = 'SocialSDK/Classes/Core/PlatformParamConfig/WeChat/**/*.{h,m}'
         ss.public_header_files = 'SocialSDK/Classes/Core/PlatformParamConfig/WeChat/**/*.h'
-        ss.dependency 'GSWeChatSDK', '~> 1.7.5'
+        ss.dependency 'SocialSDK/WeChatSDK'
+        ss.dependency 'SocialSDK/Core'
     end
     
     s.subspec 'ShareBase' do |ss|
@@ -48,7 +95,7 @@ Pod::Spec.new do |s|
         ss.public_header_files = 'SocialSDK/Classes/Share/QQ/**/*.h'
         ss.dependency 'SocialSDK/QQPlatformParamConfig'
         ss.dependency 'SocialSDK/ShareBase'
-        ss.dependency 'GSTencentOpenApiSDK', '~> 3.1.3'
+#        ss.dependency 'GSTencentOpenApiSDK', '~> 3.1.3'
     end
     
     s.subspec 'QzoneShare' do |ss|
@@ -56,7 +103,7 @@ Pod::Spec.new do |s|
         ss.public_header_files = 'SocialSDK/Classes/Share/Qzone/**/*.h'
         ss.dependency 'SocialSDK/QQPlatformParamConfig'
         ss.dependency 'SocialSDK/ShareBase'
-        ss.dependency 'GSTencentOpenApiSDK', '~> 3.1.3'
+#        ss.dependency 'GSTencentOpenApiSDK', '~> 3.1.3'
     end
     
     s.subspec 'SinaShare' do |ss|
@@ -64,7 +111,7 @@ Pod::Spec.new do |s|
         ss.public_header_files = 'SocialSDK/Classes/Share/Sina/**/*.h'
         ss.dependency 'SocialSDK/SinaPlatformParamConfig'
         ss.dependency 'SocialSDK/ShareBase'
-        ss.dependency 'GSWeChatSDK', '~> 1.7.5'
+#        ss.dependency 'GSWeChatSDK', '~> 1.7.5'
     end
     
     s.subspec 'WeChatSessionShare' do |ss|
@@ -72,7 +119,7 @@ Pod::Spec.new do |s|
         ss.public_header_files = 'SocialSDK/Classes/Share/WeChatSession/**/*.h'
         ss.dependency 'SocialSDK/WeChatPlatformParamConfig'
         ss.dependency 'SocialSDK/ShareBase'
-        ss.dependency 'GSWeChatSDK', '~> 1.7.5'
+#        ss.dependency 'GSWeChatSDK', '~> 1.7.5'
     end
     
     s.subspec 'WeChatTimeLineShare' do |ss|
@@ -80,7 +127,7 @@ Pod::Spec.new do |s|
         ss.public_header_files = 'SocialSDK/Classes/Share/WeChatTimeLine/**/*.h'
         ss.dependency 'SocialSDK/WeChatPlatformParamConfig'
         ss.dependency 'SocialSDK/ShareBase'
-        ss.dependency 'GSWeiboSDK', '~> 3.1.4'
+#        ss.dependency 'GSWeiboSDK', '~> 3.1.4'
     end
 
 #    s.subspec 'QQSDK' do |ss|
