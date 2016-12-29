@@ -48,7 +48,6 @@ Pod::Spec.new do |s|
         ss.public_header_files = 'SocialSDK/Classes/Share/QQ/**/*.h'
         ss.dependency 'SocialSDK/QQPlatformParamConfig'
         ss.dependency 'SocialSDK/ShareBase'
-        ss.dependency 'GSTencentOpenApiSDK', '~> 3.1.3'
     end
     
     s.subspec 'QzoneShare' do |ss|
@@ -56,7 +55,6 @@ Pod::Spec.new do |s|
         ss.public_header_files = 'SocialSDK/Classes/Share/Qzone/**/*.h'
         ss.dependency 'SocialSDK/QQPlatformParamConfig'
         ss.dependency 'SocialSDK/ShareBase'
-        ss.dependency 'GSTencentOpenApiSDK', '~> 3.1.3'
     end
     
     s.subspec 'SinaShare' do |ss|
@@ -64,7 +62,6 @@ Pod::Spec.new do |s|
         ss.public_header_files = 'SocialSDK/Classes/Share/Sina/**/*.h'
         ss.dependency 'SocialSDK/SinaPlatformParamConfig'
         ss.dependency 'SocialSDK/ShareBase'
-        ss.dependency 'GSWeChatSDK', '~> 1.7.5'
     end
     
     s.subspec 'WeChatSessionShare' do |ss|
@@ -72,7 +69,6 @@ Pod::Spec.new do |s|
         ss.public_header_files = 'SocialSDK/Classes/Share/WeChatSession/**/*.h'
         ss.dependency 'SocialSDK/WeChatPlatformParamConfig'
         ss.dependency 'SocialSDK/ShareBase'
-        ss.dependency 'GSWeChatSDK', '~> 1.7.5'
     end
     
     s.subspec 'WeChatTimeLineShare' do |ss|
@@ -80,7 +76,6 @@ Pod::Spec.new do |s|
         ss.public_header_files = 'SocialSDK/Classes/Share/WeChatTimeLine/**/*.h'
         ss.dependency 'SocialSDK/WeChatPlatformParamConfig'
         ss.dependency 'SocialSDK/ShareBase'
-        ss.dependency 'GSWeiboSDK', '~> 3.1.4'
     end
 
 #    s.subspec 'QQSDK' do |ss|
