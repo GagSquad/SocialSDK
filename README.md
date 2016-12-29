@@ -15,12 +15,10 @@
 | WechatSession | ✔️ | ✔️ | ✔️ | ✔️ | ✔️  |
 | WechatTimeLine | ✔️ | ✔️ | ✔️ | ✔️ | ✔️  |
 ## 平台配置
-### [SinaWeiBo](#SinaWeiBo)
-### [WeChat](#WeChat)
-### [QQ](#QQ)
+#### [SinaWeiBo](#SinaWeiBo)  [WeChat](#WeChat)  [QQ/Qzone](#QQ)
 ### <a id="SinaWeiBo"></a>SinaWeiBo平台配置
 * *1、* 添加URL Schemes 格式"wb"+新浪appKey  
-* <img src="Images/sinaGuide/sinaGuide-1.png" width="1000">
+* <img src="Images/sinaGuide/sinaGuide-1.png" width="500">
 * *2、* [适配iOS9+系统](#iOS9+)
 
 ### <a id="WeChat"></a>WeChat平台配置
@@ -30,7 +28,7 @@
 * *1、* 添加URL Schemes  
 * 格式"tencent"+QQ的appID + "QQ"+QQ的appID转换成十六进制（不足8位前面补0)  
 * 例如: appID:100424468 --> tencent100424468  QQ05fc5b14
-* <img src="Images/QQGuide/QQGuide-1.png" width="1000">  
+* <img src="Images/QQGuide/QQGuide-1.png" width="500">  
 * *2、*[适配iOS9+系统](#iOS9+)
 
 
