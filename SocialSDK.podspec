@@ -9,13 +9,13 @@ Pod::Spec.new do |s|
     s.platform          = :ios, '8.0'
     s.ios.deployment_target = '8.0'
     
-    s.source            = { :git => 'https://github.com/GagSquad/SocialSDK.git', :branch => 'master' }
+    s.source            = { :git => 'https://github.com/GagSquad/SocialSDK.git', :tag => '#{s.version}' }
     
     s.requires_arc = true
     
     
     s.subspec 'TencentOpenApiSDK' do |ss|
-        s.source_files = "SDK/TencentOpenApi/"
+        ss.source_files = "SDK/TencentOpenApi/"
         ss.resources = "SDK/TencentOpenApi/TencentOpenApi_IOS_Bundle.bundle"
         ss.vendored_frameworks = 'SDK/TencentOpenApi/TencentOpenAPI.framework'
         
