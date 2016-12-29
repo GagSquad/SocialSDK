@@ -80,6 +80,7 @@ Pod::Spec.new do |s|
     s.subspec 'ShareBase' do |ss|
         ss.source_files = 'SocialSDK/Classes/Share/Base/**/*.{h,m,mm}'
         ss.public_header_files = 'SocialSDK/Classes/Share/Base/**/*.h'
+        ss.dependency 'SocialSDK/Core'
     end
     
     s.subspec 'QQShare' do |ss|
@@ -120,27 +121,28 @@ Pod::Spec.new do |s|
     s.subspec 'LoginBase' do |ss|
         ss.source_files = 'SocialSDK/Classes/Login/Base/**/*.{h,m,mm}'
         ss.public_header_files = 'SocialSDK/Classes/Login/Base/**/*.h'
+        ss.dependency 'SocialSDK/Core'
     end
 
     s.subspec 'QQLogin' do |ss|
         ss.source_files = 'SocialSDK/Classes/Login/QQ/**/*.{h,m}'
         ss.public_header_files = 'SocialSDK/Classes/Login/QQ/**/*.h'
         ss.dependency 'SocialSDK/QQPlatformParamConfig'
-        ss.dependency 'SocialSDK/ShareBase'
+        ss.dependency 'SocialSDK/LoginBase'
     end
 
     s.subspec 'SinaLogin' do |ss|
         ss.source_files = 'SocialSDK/Classes/Login/Sina/**/*.{h,m}'
         ss.public_header_files = 'SocialSDK/Classes/Login/Sina/**/*.h'
         ss.dependency 'SocialSDK/SinaPlatformParamConfig'
-        ss.dependency 'SocialSDK/ShareBase'
+        ss.dependency 'SocialSDK/LoginBase'
     end
 
     s.subspec 'WeChatLogin' do |ss|
         ss.source_files = 'SocialSDK/Classes/Login/WeChat/**/*.{h,m}'
         ss.public_header_files = 'SocialSDK/Classes/Login/WeChat/**/*.h'
         ss.dependency 'SocialSDK/WeChatPlatformParamConfig'
-        ss.dependency 'SocialSDK/ShareBase'
+        ss.dependency 'SocialSDK/LoginBase'
     end
 
 #    s.subspec 'QQSDK' do |ss|
