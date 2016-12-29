@@ -45,6 +45,7 @@ Pod::Spec.new do |s|
     end
     
     s.subspec 'Core' do |ss|
+        ss.resource     = 'SocialSDK/Rrources/GSSocialSDKResources.bundle'
         ss.source_files = 'SocialSDK/Classes/Core/Logger/**/*.{h,m}', 'SocialSDK/Classes/Core/Util/**/*.{h,m}', 'SocialSDK/Classes/Core/PlatformParamConfig/Base/**/*.{h,m}'
         ss.public_header_files = 'SocialSDK/Classes/Core/Logger/**/*.h', 'SocialSDK/Classes/Core/Util/**/*.h', 'SocialSDK/Classes/Core/PlatformParamConfig/Base/**/*.h'
     end

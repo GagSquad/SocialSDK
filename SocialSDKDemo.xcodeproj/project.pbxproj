@@ -14,7 +14,6 @@
 		0E4B320C1E02962C00F231F0 /* SocialSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E4B320A1E02962C00F231F0 /* SocialSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E4B320F1E02962C00F231F0 /* SocialSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4B32081E02962C00F231F0 /* SocialSDK.framework */; };
 		0E4B32101E02962C00F231F0 /* SocialSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4B32081E02962C00F231F0 /* SocialSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0E7144841E052AAD00BC105E /* GSSocialSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E7144831E052AAD00BC105E /* GSSocialSDKResources.bundle */; };
 		0E71448C1E0536D000BC105E /* GSSelectView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E71448A1E0536D000BC105E /* GSSelectView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E71448D1E0536D000BC105E /* GSSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E71448B1E0536D000BC105E /* GSSelectView.m */; };
 		0E7A408B1E078C9C0083899C /* GSCollectionViewHorizontalLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E7A40891E078C9C0083899C /* GSCollectionViewHorizontalLayout.h */; };
@@ -76,6 +75,7 @@
 		0E97D17E1E14AD120077B44E /* GSSinaLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E97D16E1E14AD120077B44E /* GSSinaLogin.m */; };
 		0E97D17F1E14AD120077B44E /* GSWeChatLogin.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D1701E14AD120077B44E /* GSWeChatLogin.h */; };
 		0E97D1801E14AD120077B44E /* GSWeChatLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E97D1711E14AD120077B44E /* GSWeChatLogin.m */; };
+		0E97D1AC1E14F3310077B44E /* GSSocialSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E97D1AB1E14F3310077B44E /* GSSocialSDKResources.bundle */; };
 		0EAB85951E0A8265004C6004 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EAB85941E0A8265004C6004 /* default.png */; };
 		0EDF13C01E03BAB700C554FC /* GSPayManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EDF13BE1E03BAB700C554FC /* GSPayManager.h */; };
 		0EDF13C11E03BAB700C554FC /* GSPayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF13BF1E03BAB700C554FC /* GSPayManager.m */; };
@@ -117,7 +117,6 @@
 		0E4B32081E02962C00F231F0 /* SocialSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SocialSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E4B320A1E02962C00F231F0 /* SocialSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocialSDK.h; sourceTree = "<group>"; };
 		0E4B320B1E02962C00F231F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0E7144831E052AAD00BC105E /* GSSocialSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GSSocialSDKResources.bundle; sourceTree = "<group>"; };
 		0E71448A1E0536D000BC105E /* GSSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSSelectView.h; sourceTree = "<group>"; };
 		0E71448B1E0536D000BC105E /* GSSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSSelectView.m; sourceTree = "<group>"; };
 		0E7A40891E078C9C0083899C /* GSCollectionViewHorizontalLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCollectionViewHorizontalLayout.h; sourceTree = "<group>"; };
@@ -182,6 +181,7 @@
 		0E97D16E1E14AD120077B44E /* GSSinaLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSSinaLogin.m; sourceTree = "<group>"; };
 		0E97D1701E14AD120077B44E /* GSWeChatLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSWeChatLogin.h; sourceTree = "<group>"; };
 		0E97D1711E14AD120077B44E /* GSWeChatLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSWeChatLogin.m; sourceTree = "<group>"; };
+		0E97D1AB1E14F3310077B44E /* GSSocialSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GSSocialSDKResources.bundle; sourceTree = "<group>"; };
 		0EAB85941E0A8265004C6004 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
 		0EDF13A71E039D3900C554FC /* SocialSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = SocialSDK.podspec; sourceTree = "<group>"; };
 		0EDF13BE1E03BAB700C554FC /* GSPayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPayManager.h; sourceTree = "<group>"; };
@@ -278,7 +278,6 @@
 				0E4B31FA1E0294A000F231F0 /* LaunchScreen.storyboard */,
 				0E4B31FD1E0294A000F231F0 /* Info.plist */,
 				0E90C00B1E03C6C8000D646E /* SocialSDKDemo-Bridging-Header.h */,
-				0E7144831E052AAD00BC105E /* GSSocialSDKResources.bundle */,
 			);
 			path = SocialSDKDemo;
 			sourceTree = "<group>";
@@ -286,6 +285,7 @@
 		0E4B32091E02962C00F231F0 /* SocialSDK */ = {
 			isa = PBXGroup;
 			children = (
+				0E97D1AA1E14F3310077B44E /* Rrources */,
 				0E4B32381E02973100F231F0 /* Classes */,
 				0E4B320A1E02962C00F231F0 /* SocialSDK.h */,
 				0E4B320B1E02962C00F231F0 /* Info.plist */,
@@ -534,6 +534,14 @@
 			path = WeChat;
 			sourceTree = "<group>";
 		};
+		0E97D1AA1E14F3310077B44E /* Rrources */ = {
+			isa = PBXGroup;
+			children = (
+				0E97D1AB1E14F3310077B44E /* GSSocialSDKResources.bundle */,
+			);
+			path = Rrources;
+			sourceTree = "<group>";
+		};
 		0EAB85931E0A8265004C6004 /* Rrources */ = {
 			isa = PBXGroup;
 			children = (
@@ -703,7 +711,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E4B31FC1E0294A000F231F0 /* LaunchScreen.storyboard in Resources */,
-				0E7144841E052AAD00BC105E /* GSSocialSDKResources.bundle in Resources */,
+				0E97D1AC1E14F3310077B44E /* GSSocialSDKResources.bundle in Resources */,
 				0E4B31F91E0294A000F231F0 /* Assets.xcassets in Resources */,
 				0E4B31F71E0294A000F231F0 /* Main.storyboard in Resources */,
 				0EAB85951E0A8265004C6004 /* default.png in Resources */,
