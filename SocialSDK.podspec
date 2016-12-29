@@ -15,8 +15,8 @@ Pod::Spec.new do |s|
     
     
     s.subspec 'TencentOpenApiSDK' do |ss|
-        ss.source_files = "SDK/TencentOpenApi/"
-        ss.resources = "SDK/TencentOpenApi/TencentOpenApi_IOS_Bundle.bundle"
+        ss.source_files = 'SDK/TencentOpenApi/*.{h,m}'
+        ss.resources = 'SDK/TencentOpenApi/TencentOpenApi_IOS_Bundle.bundle'
         ss.vendored_frameworks = 'SDK/TencentOpenApi/TencentOpenAPI.framework'
         
         the_frameworks =  [
@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
     
     s.subspec 'WeiboSDK' do |ss|
         ss.source_files = 'SDK/libWeiboSDK/*.{h,m}'
-        ss.resource     = 'SDK/libWeiboSDK/WeiboSDK.bundle'
+        ss.resources     = 'SDK/libWeiboSDK/WeiboSDK.bundle'
         ss.vendored_libraries  = 'SDK/libWeiboSDK/libWeiboSDK.a'
         ss.frameworks   = 'ImageIO', 'SystemConfiguration', 'CoreText', 'QuartzCore', 'Security', 'UIKit', 'Foundation', 'CoreGraphics','CoreTelephony'
         ss.libraries = 'sqlite3', 'z'
@@ -45,7 +45,7 @@ Pod::Spec.new do |s|
     end
     
     s.subspec 'Core' do |ss|
-        ss.resource     = 'SocialSDK/Rrources/GSSocialSDKResources.bundle'
+        ss.resources     = 'SocialSDK/Rrources/GSSocialSDKResources.bundle'
         ss.source_files = 'SocialSDK/Classes/Core/Logger/**/*.{h,m}', 'SocialSDK/Classes/Core/Util/**/*.{h,m}', 'SocialSDK/Classes/Core/PlatformParamConfig/Base/**/*.{h,m}'
         ss.public_header_files = 'SocialSDK/Classes/Core/Logger/**/*.h', 'SocialSDK/Classes/Core/Util/**/*.h', 'SocialSDK/Classes/Core/PlatformParamConfig/Base/**/*.h'
     end
