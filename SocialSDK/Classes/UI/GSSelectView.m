@@ -60,7 +60,7 @@
                     [temp addObject:@(type)];
                 } else {
                     _isUninstall = YES;
-                    GSLogger(@"不支持分享渠道GSShareChannelType = %ld", type);
+                    GSLogger(@"不支持类型GSLogoReourcesType = %ld", (unsigned long)type);
                 }
             }
         }

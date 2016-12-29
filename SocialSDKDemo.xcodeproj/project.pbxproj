@@ -7,15 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E31DEE11E120E380014F2DF /* GSLoginProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E31DEE01E120E380014F2DF /* GSLoginProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0E31DEE41E120E520014F2DF /* GSBaseLogin.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E31DEE21E120E520014F2DF /* GSBaseLogin.h */; };
-		0E31DEE51E120E520014F2DF /* GSBaseLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E31DEE31E120E520014F2DF /* GSBaseLogin.m */; };
-		0E31DEE71E120E810014F2DF /* GSLoginResultProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E31DEE61E120E810014F2DF /* GSLoginResultProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0E31DEEA1E120E8E0014F2DF /* GSLoginResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E31DEE81E120E8E0014F2DF /* GSLoginResult.h */; };
-		0E31DEEB1E120E8E0014F2DF /* GSLoginResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E31DEE91E120E8E0014F2DF /* GSLoginResult.m */; };
-		0E31DEEE1E120FB70014F2DF /* GSSinaLogin.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E31DEEC1E120FB70014F2DF /* GSSinaLogin.h */; };
-		0E31DEEF1E120FB70014F2DF /* GSSinaLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E31DEED1E120FB70014F2DF /* GSSinaLogin.m */; };
-		0E31DEF01E12131C0014F2DF /* GSLoginChannelType.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E5368A61E0D279A00792F90 /* GSLoginChannelType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E4B31F21E0294A000F231F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4B31F11E0294A000F231F0 /* AppDelegate.swift */; };
 		0E4B31F71E0294A000F231F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E4B31F51E0294A000F231F0 /* Main.storyboard */; };
 		0E4B31F91E0294A000F231F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E4B31F81E0294A000F231F0 /* Assets.xcassets */; };
@@ -23,63 +14,73 @@
 		0E4B320C1E02962C00F231F0 /* SocialSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E4B320A1E02962C00F231F0 /* SocialSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E4B320F1E02962C00F231F0 /* SocialSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4B32081E02962C00F231F0 /* SocialSDK.framework */; };
 		0E4B32101E02962C00F231F0 /* SocialSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4B32081E02962C00F231F0 /* SocialSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0E5368A11E0D1B7600792F90 /* GSLogoReources.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E53689F1E0D1B7600792F90 /* GSLogoReources.h */; };
-		0E5368A21E0D1B7600792F90 /* GSLogoReources.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5368A01E0D1B7600792F90 /* GSLogoReources.m */; };
-		0E5368A41E0D1DC300792F90 /* GSLogoReourcesType.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E5368A31E0D1D7900792F90 /* GSLogoReourcesType.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0E7144821E051FC300BC105E /* GSShareChannelType.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E7144811E051E0500BC105E /* GSShareChannelType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E7144841E052AAD00BC105E /* GSSocialSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E7144831E052AAD00BC105E /* GSSocialSDKResources.bundle */; };
-		0E7144881E052C4200BC105E /* GSReourcesManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E7144861E052C4200BC105E /* GSReourcesManager.h */; };
-		0E7144891E052C4200BC105E /* GSReourcesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7144871E052C4200BC105E /* GSReourcesManager.m */; };
 		0E71448C1E0536D000BC105E /* GSSelectView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E71448A1E0536D000BC105E /* GSSelectView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E71448D1E0536D000BC105E /* GSSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E71448B1E0536D000BC105E /* GSSelectView.m */; };
 		0E7A408B1E078C9C0083899C /* GSCollectionViewHorizontalLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E7A40891E078C9C0083899C /* GSCollectionViewHorizontalLayout.h */; };
 		0E7A408C1E078C9C0083899C /* GSCollectionViewHorizontalLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A408A1E078C9C0083899C /* GSCollectionViewHorizontalLayout.m */; };
 		0E7A40911E07AF4D0083899C /* GSCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E7A408F1E07AF4D0083899C /* GSCollectionViewCell.h */; };
 		0E7A40921E07AF4D0083899C /* GSCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A40901E07AF4D0083899C /* GSCollectionViewCell.m */; };
-		0E90C00A1E03C391000D646E /* GSShareProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E90C0091E03C391000D646E /* GSShareProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E90C00E1E03C6C9000D646E /* GSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E90C00D1E03C6C9000D646E /* GSViewController.m */; };
-		0E90C0111E03C895000D646E /* GSLoggerConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E90C00F1E03C895000D646E /* GSLoggerConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0E90C0121E03C895000D646E /* GSLoggerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E90C0101E03C895000D646E /* GSLoggerConfig.m */; };
-		0E90C0141E03CAF4000D646E /* GSPlatformType.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EDF13B91E03BA8B00C554FC /* GSPlatformType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E97D1081E14AB9E0077B44E /* GSLogoReources.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D1031E14AB9E0077B44E /* GSLogoReources.h */; };
+		0E97D1091E14AB9E0077B44E /* GSLogoReources.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E97D1041E14AB9E0077B44E /* GSLogoReources.m */; };
+		0E97D10A1E14AB9E0077B44E /* GSLogoReourcesType.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D1051E14AB9E0077B44E /* GSLogoReourcesType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E97D10B1E14AB9E0077B44E /* GSReourcesManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D1061E14AB9E0077B44E /* GSReourcesManager.h */; };
+		0E97D10C1E14AB9E0077B44E /* GSReourcesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E97D1071E14AB9E0077B44E /* GSReourcesManager.m */; };
+		0E97D1111E14ABC40077B44E /* GSLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D10E1E14ABC40077B44E /* GSLogger.h */; };
+		0E97D1121E14ABC40077B44E /* GSLoggerConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D10F1E14ABC40077B44E /* GSLoggerConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E97D1131E14ABC40077B44E /* GSLoggerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E97D1101E14ABC40077B44E /* GSLoggerConfig.m */; };
+		0E97D1251E14AC050077B44E /* GSBasePlatformParamConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D1161E14AC050077B44E /* GSBasePlatformParamConfig.h */; };
+		0E97D1261E14AC050077B44E /* GSBasePlatformParamConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E97D1171E14AC050077B44E /* GSBasePlatformParamConfig.m */; };
+		0E97D1271E14AC050077B44E /* GSPlatformParamConfigManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D1181E14AC050077B44E /* GSPlatformParamConfigManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E97D1281E14AC050077B44E /* GSPlatformParamConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E97D1191E14AC050077B44E /* GSPlatformParamConfigManager.m */; };
+		0E97D1291E14AC050077B44E /* GSPlatformParamConfigProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D11A1E14AC050077B44E /* GSPlatformParamConfigProtocol.h */; };
+		0E97D12A1E14AC050077B44E /* GSPlatformType.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D11B1E14AC050077B44E /* GSPlatformType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E97D12B1E14AC050077B44E /* GSQQPlatformParamConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D11D1E14AC050077B44E /* GSQQPlatformParamConfig.h */; };
+		0E97D12C1E14AC050077B44E /* GSQQPlatformParamConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E97D11E1E14AC050077B44E /* GSQQPlatformParamConfig.m */; };
+		0E97D12D1E14AC050077B44E /* GSSinaPlatformParamConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D1201E14AC050077B44E /* GSSinaPlatformParamConfig.h */; };
+		0E97D12E1E14AC050077B44E /* GSSinaPlatformParamConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E97D1211E14AC050077B44E /* GSSinaPlatformParamConfig.m */; };
+		0E97D12F1E14AC050077B44E /* GSWeChatPlatformParamConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D1231E14AC050077B44E /* GSWeChatPlatformParamConfig.h */; };
+		0E97D1301E14AC050077B44E /* GSWeChatPlatformParamConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E97D1241E14AC050077B44E /* GSWeChatPlatformParamConfig.m */; };
+		0E97D14B1E14ACD20077B44E /* GSBaseShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D1331E14ACD20077B44E /* GSBaseShare.h */; };
+		0E97D14C1E14ACD20077B44E /* GSBaseShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E97D1341E14ACD20077B44E /* GSBaseShare.m */; };
+		0E97D14D1E14ACD20077B44E /* GSShareChannelType.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D1351E14ACD20077B44E /* GSShareChannelType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E97D14E1E14ACD20077B44E /* GSShareManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D1361E14ACD20077B44E /* GSShareManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E97D14F1E14ACD20077B44E /* GSShareManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0E97D1371E14ACD20077B44E /* GSShareManager.mm */; };
+		0E97D1501E14ACD20077B44E /* GSShareProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D1381E14ACD20077B44E /* GSShareProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E97D1511E14ACD20077B44E /* GSShareResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D1391E14ACD20077B44E /* GSShareResult.h */; };
+		0E97D1521E14ACD20077B44E /* GSShareResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E97D13A1E14ACD20077B44E /* GSShareResult.m */; };
+		0E97D1531E14ACD20077B44E /* GSShareResultProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D13B1E14ACD20077B44E /* GSShareResultProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E97D1541E14ACD20077B44E /* GSQQShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D13D1E14ACD20077B44E /* GSQQShare.h */; };
+		0E97D1551E14ACD20077B44E /* GSQQShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E97D13E1E14ACD20077B44E /* GSQQShare.m */; };
+		0E97D1561E14ACD20077B44E /* GSQzoneShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D1401E14ACD20077B44E /* GSQzoneShare.h */; };
+		0E97D1571E14ACD20077B44E /* GSQzoneShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E97D1411E14ACD20077B44E /* GSQzoneShare.m */; };
+		0E97D1581E14ACD20077B44E /* GSSinaShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D1431E14ACD20077B44E /* GSSinaShare.h */; };
+		0E97D1591E14ACD20077B44E /* GSSinaShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E97D1441E14ACD20077B44E /* GSSinaShare.m */; };
+		0E97D15A1E14ACD20077B44E /* GSWeChatSessionShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D1461E14ACD20077B44E /* GSWeChatSessionShare.h */; };
+		0E97D15B1E14ACD20077B44E /* GSWeChatSessionShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E97D1471E14ACD20077B44E /* GSWeChatSessionShare.m */; };
+		0E97D15C1E14ACD20077B44E /* GSWeChatTimeLineShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D1491E14ACD20077B44E /* GSWeChatTimeLineShare.h */; };
+		0E97D15D1E14ACD20077B44E /* GSWeChatTimeLineShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E97D14A1E14ACD20077B44E /* GSWeChatTimeLineShare.m */; };
+		0E97D1721E14AD120077B44E /* GSBaseLogin.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D1601E14AD120077B44E /* GSBaseLogin.h */; };
+		0E97D1731E14AD120077B44E /* GSBaseLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E97D1611E14AD120077B44E /* GSBaseLogin.m */; };
+		0E97D1741E14AD120077B44E /* GSLoginChannelType.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D1621E14AD120077B44E /* GSLoginChannelType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E97D1751E14AD120077B44E /* GSLoginManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D1631E14AD120077B44E /* GSLoginManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E97D1761E14AD120077B44E /* GSLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E97D1641E14AD120077B44E /* GSLoginManager.m */; };
+		0E97D1771E14AD120077B44E /* GSLoginProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D1651E14AD120077B44E /* GSLoginProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E97D1781E14AD120077B44E /* GSLoginResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D1661E14AD120077B44E /* GSLoginResult.h */; };
+		0E97D1791E14AD120077B44E /* GSLoginResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E97D1671E14AD120077B44E /* GSLoginResult.m */; };
+		0E97D17A1E14AD120077B44E /* GSLoginResultProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D1681E14AD120077B44E /* GSLoginResultProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E97D17B1E14AD120077B44E /* GSQQLogin.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D16A1E14AD120077B44E /* GSQQLogin.h */; };
+		0E97D17C1E14AD120077B44E /* GSQQLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E97D16B1E14AD120077B44E /* GSQQLogin.m */; };
+		0E97D17D1E14AD120077B44E /* GSSinaLogin.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D16D1E14AD120077B44E /* GSSinaLogin.h */; };
+		0E97D17E1E14AD120077B44E /* GSSinaLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E97D16E1E14AD120077B44E /* GSSinaLogin.m */; };
+		0E97D17F1E14AD120077B44E /* GSWeChatLogin.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E97D1701E14AD120077B44E /* GSWeChatLogin.h */; };
+		0E97D1801E14AD120077B44E /* GSWeChatLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E97D1711E14AD120077B44E /* GSWeChatLogin.m */; };
 		0EAB85951E0A8265004C6004 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EAB85941E0A8265004C6004 /* default.png */; };
-		0EAE695E1E04E2AC00238DF1 /* GSPlatformParamConfigProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EAE695D1E04E2AC00238DF1 /* GSPlatformParamConfigProtocol.h */; };
-		0EAE69611E04E2D000238DF1 /* GSBasePlatformParamConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EAE695F1E04E2D000238DF1 /* GSBasePlatformParamConfig.h */; };
-		0EAE69621E04E2D000238DF1 /* GSBasePlatformParamConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAE69601E04E2D000238DF1 /* GSBasePlatformParamConfig.m */; };
-		0EAE69691E04E32500238DF1 /* GSSinaPlatformParamConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EAE69671E04E32500238DF1 /* GSSinaPlatformParamConfig.h */; };
-		0EAE696A1E04E32500238DF1 /* GSSinaPlatformParamConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAE69681E04E32500238DF1 /* GSSinaPlatformParamConfig.m */; };
-		0EB0B8411E125EB100BF2049 /* GSWeChatLogin.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EB0B83F1E125EB100BF2049 /* GSWeChatLogin.h */; };
-		0EB0B8421E125EB100BF2049 /* GSWeChatLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB0B8401E125EB100BF2049 /* GSWeChatLogin.m */; };
-		0EDF13B71E03BA6F00C554FC /* GSPlatformParamConfigManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EDF13B51E03BA6F00C554FC /* GSPlatformParamConfigManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0EDF13B81E03BA6F00C554FC /* GSPlatformParamConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF13B61E03BA6F00C554FC /* GSPlatformParamConfigManager.m */; };
-		0EDF13BC1E03BAA700C554FC /* GSLoginManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EDF13BA1E03BAA700C554FC /* GSLoginManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0EDF13BD1E03BAA700C554FC /* GSLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF13BB1E03BAA700C554FC /* GSLoginManager.m */; };
 		0EDF13C01E03BAB700C554FC /* GSPayManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EDF13BE1E03BAB700C554FC /* GSPayManager.h */; };
 		0EDF13C11E03BAB700C554FC /* GSPayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF13BF1E03BAB700C554FC /* GSPayManager.m */; };
-		0EDF13C41E03BAC500C554FC /* GSBaseShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EDF13C21E03BAC500C554FC /* GSBaseShare.h */; };
-		0EDF13C51E03BAC500C554FC /* GSBaseShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF13C31E03BAC500C554FC /* GSBaseShare.m */; };
-		0EDF13C81E03BADD00C554FC /* GSSinaShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EDF13C61E03BADD00C554FC /* GSSinaShare.h */; };
-		0EDF13C91E03BADD00C554FC /* GSSinaShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF13C71E03BADD00C554FC /* GSSinaShare.m */; };
-		0EDF13CC1E03BAEA00C554FC /* GSShareManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EDF13CA1E03BAEA00C554FC /* GSShareManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0EDF13CD1E03BAEA00C554FC /* GSShareManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF13CB1E03BAEA00C554FC /* GSShareManager.mm */; };
-		0EDF13D01E03BB0500C554FC /* GSQQShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EDF13CE1E03BB0500C554FC /* GSQQShare.h */; };
-		0EDF13D11E03BB0500C554FC /* GSQQShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF13CF1E03BB0500C554FC /* GSQQShare.m */; };
-		0EF038281E04016100F11B4E /* GSShareResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EF038261E04016100F11B4E /* GSShareResult.h */; };
-		0EF038291E04016100F11B4E /* GSShareResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF038271E04016100F11B4E /* GSShareResult.m */; };
-		0EF0382B1E04018100F11B4E /* GSShareResultProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EF0382A1E04018100F11B4E /* GSShareResultProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B19FE4FCCAA38FC76F03105 /* Pods_SocialSDKDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA65CA283A949C0585437B0 /* Pods_SocialSDKDemo.framework */; };
 		6EE178E64608D9FE80D853D6 /* Pods_SocialSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 828793C50AC8B1B8F0E93277 /* Pods_SocialSDK.framework */; };
-		F538DA0C1E09082F008C0660 /* GSWeChatPlatformParamConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = F538DA0A1E09082F008C0660 /* GSWeChatPlatformParamConfig.h */; };
-		F538DA0D1E09082F008C0660 /* GSWeChatPlatformParamConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F538DA0B1E09082F008C0660 /* GSWeChatPlatformParamConfig.m */; };
-		F538DA141E090C59008C0660 /* GSWeChatSessionShare.h in Headers */ = {isa = PBXBuildFile; fileRef = F538DA121E090C59008C0660 /* GSWeChatSessionShare.h */; };
-		F538DA151E090C59008C0660 /* GSWeChatSessionShare.m in Sources */ = {isa = PBXBuildFile; fileRef = F538DA131E090C59008C0660 /* GSWeChatSessionShare.m */; };
-		F538DA181E090C68008C0660 /* GSWeChatTimeLineShare.h in Headers */ = {isa = PBXBuildFile; fileRef = F538DA161E090C68008C0660 /* GSWeChatTimeLineShare.h */; };
-		F538DA191E090C68008C0660 /* GSWeChatTimeLineShare.m in Sources */ = {isa = PBXBuildFile; fileRef = F538DA171E090C68008C0660 /* GSWeChatTimeLineShare.m */; };
-		F56676391E0518380018F4F9 /* GSQQPlatformParamConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = F56676371E0518380018F4F9 /* GSQQPlatformParamConfig.h */; };
-		F566763A1E0518380018F4F9 /* GSQQPlatformParamConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F56676381E0518380018F4F9 /* GSQQPlatformParamConfig.m */; };
-		F568ECC21E122EE3009700F2 /* GSQQLogin.h in Headers */ = {isa = PBXBuildFile; fileRef = F568ECC01E122EE3009700F2 /* GSQQLogin.h */; };
-		F568ECC31E122EE3009700F2 /* GSQQLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = F568ECC11E122EE3009700F2 /* GSQQLogin.m */; };
-		F5A3596C1E08F220000AEB64 /* GSQzoneShare.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A3596A1E08F220000AEB64 /* GSQzoneShare.h */; };
-		F5A3596D1E08F220000AEB64 /* GSQzoneShare.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A3596B1E08F220000AEB64 /* GSQzoneShare.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,14 +108,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0E31DEE01E120E380014F2DF /* GSLoginProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLoginProtocol.h; sourceTree = "<group>"; };
-		0E31DEE21E120E520014F2DF /* GSBaseLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSBaseLogin.h; sourceTree = "<group>"; };
-		0E31DEE31E120E520014F2DF /* GSBaseLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSBaseLogin.m; sourceTree = "<group>"; };
-		0E31DEE61E120E810014F2DF /* GSLoginResultProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLoginResultProtocol.h; sourceTree = "<group>"; };
-		0E31DEE81E120E8E0014F2DF /* GSLoginResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLoginResult.h; sourceTree = "<group>"; };
-		0E31DEE91E120E8E0014F2DF /* GSLoginResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSLoginResult.m; sourceTree = "<group>"; };
-		0E31DEEC1E120FB70014F2DF /* GSSinaLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GSSinaLogin.h; path = Login/GSSinaLogin.h; sourceTree = "<group>"; };
-		0E31DEED1E120FB70014F2DF /* GSSinaLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GSSinaLogin.m; path = Login/GSSinaLogin.m; sourceTree = "<group>"; };
 		0E4B31EE1E0294A000F231F0 /* SocialSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E4B31F11E0294A000F231F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E4B31F61E0294A000F231F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -124,74 +117,82 @@
 		0E4B32081E02962C00F231F0 /* SocialSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SocialSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E4B320A1E02962C00F231F0 /* SocialSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocialSDK.h; sourceTree = "<group>"; };
 		0E4B320B1E02962C00F231F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0E53689F1E0D1B7600792F90 /* GSLogoReources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLogoReources.h; sourceTree = "<group>"; };
-		0E5368A01E0D1B7600792F90 /* GSLogoReources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSLogoReources.m; sourceTree = "<group>"; };
-		0E5368A31E0D1D7900792F90 /* GSLogoReourcesType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSLogoReourcesType.h; sourceTree = "<group>"; };
-		0E5368A61E0D279A00792F90 /* GSLoginChannelType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSLoginChannelType.h; sourceTree = "<group>"; };
-		0E7144811E051E0500BC105E /* GSShareChannelType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSShareChannelType.h; sourceTree = "<group>"; };
 		0E7144831E052AAD00BC105E /* GSSocialSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GSSocialSDKResources.bundle; sourceTree = "<group>"; };
-		0E7144861E052C4200BC105E /* GSReourcesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSReourcesManager.h; sourceTree = "<group>"; };
-		0E7144871E052C4200BC105E /* GSReourcesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSReourcesManager.m; sourceTree = "<group>"; };
 		0E71448A1E0536D000BC105E /* GSSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSSelectView.h; sourceTree = "<group>"; };
 		0E71448B1E0536D000BC105E /* GSSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSSelectView.m; sourceTree = "<group>"; };
 		0E7A40891E078C9C0083899C /* GSCollectionViewHorizontalLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCollectionViewHorizontalLayout.h; sourceTree = "<group>"; };
 		0E7A408A1E078C9C0083899C /* GSCollectionViewHorizontalLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCollectionViewHorizontalLayout.m; sourceTree = "<group>"; };
 		0E7A408F1E07AF4D0083899C /* GSCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCollectionViewCell.h; sourceTree = "<group>"; };
 		0E7A40901E07AF4D0083899C /* GSCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCollectionViewCell.m; sourceTree = "<group>"; };
-		0E90C0091E03C391000D646E /* GSShareProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSShareProtocol.h; sourceTree = "<group>"; };
 		0E90C00B1E03C6C8000D646E /* SocialSDKDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SocialSDKDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		0E90C00C1E03C6C9000D646E /* GSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSViewController.h; sourceTree = "<group>"; };
 		0E90C00D1E03C6C9000D646E /* GSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSViewController.m; sourceTree = "<group>"; };
-		0E90C00F1E03C895000D646E /* GSLoggerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLoggerConfig.h; sourceTree = "<group>"; };
-		0E90C0101E03C895000D646E /* GSLoggerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSLoggerConfig.m; sourceTree = "<group>"; };
-		0E90C0131E03C8B3000D646E /* GSLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSLogger.h; sourceTree = "<group>"; };
 		0E90C0171E03D05C000D646E /* CUThirdPartyConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUThirdPartyConstant.h; sourceTree = "<group>"; };
+		0E97D1031E14AB9E0077B44E /* GSLogoReources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLogoReources.h; sourceTree = "<group>"; };
+		0E97D1041E14AB9E0077B44E /* GSLogoReources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSLogoReources.m; sourceTree = "<group>"; };
+		0E97D1051E14AB9E0077B44E /* GSLogoReourcesType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLogoReourcesType.h; sourceTree = "<group>"; };
+		0E97D1061E14AB9E0077B44E /* GSReourcesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSReourcesManager.h; sourceTree = "<group>"; };
+		0E97D1071E14AB9E0077B44E /* GSReourcesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSReourcesManager.m; sourceTree = "<group>"; };
+		0E97D10E1E14ABC40077B44E /* GSLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLogger.h; sourceTree = "<group>"; };
+		0E97D10F1E14ABC40077B44E /* GSLoggerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLoggerConfig.h; sourceTree = "<group>"; };
+		0E97D1101E14ABC40077B44E /* GSLoggerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSLoggerConfig.m; sourceTree = "<group>"; };
+		0E97D1161E14AC050077B44E /* GSBasePlatformParamConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSBasePlatformParamConfig.h; sourceTree = "<group>"; };
+		0E97D1171E14AC050077B44E /* GSBasePlatformParamConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSBasePlatformParamConfig.m; sourceTree = "<group>"; };
+		0E97D1181E14AC050077B44E /* GSPlatformParamConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPlatformParamConfigManager.h; sourceTree = "<group>"; };
+		0E97D1191E14AC050077B44E /* GSPlatformParamConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPlatformParamConfigManager.m; sourceTree = "<group>"; };
+		0E97D11A1E14AC050077B44E /* GSPlatformParamConfigProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPlatformParamConfigProtocol.h; sourceTree = "<group>"; };
+		0E97D11B1E14AC050077B44E /* GSPlatformType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPlatformType.h; sourceTree = "<group>"; };
+		0E97D11D1E14AC050077B44E /* GSQQPlatformParamConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSQQPlatformParamConfig.h; sourceTree = "<group>"; };
+		0E97D11E1E14AC050077B44E /* GSQQPlatformParamConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSQQPlatformParamConfig.m; sourceTree = "<group>"; };
+		0E97D1201E14AC050077B44E /* GSSinaPlatformParamConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSSinaPlatformParamConfig.h; sourceTree = "<group>"; };
+		0E97D1211E14AC050077B44E /* GSSinaPlatformParamConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSSinaPlatformParamConfig.m; sourceTree = "<group>"; };
+		0E97D1231E14AC050077B44E /* GSWeChatPlatformParamConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSWeChatPlatformParamConfig.h; sourceTree = "<group>"; };
+		0E97D1241E14AC050077B44E /* GSWeChatPlatformParamConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSWeChatPlatformParamConfig.m; sourceTree = "<group>"; };
+		0E97D1331E14ACD20077B44E /* GSBaseShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSBaseShare.h; sourceTree = "<group>"; };
+		0E97D1341E14ACD20077B44E /* GSBaseShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSBaseShare.m; sourceTree = "<group>"; };
+		0E97D1351E14ACD20077B44E /* GSShareChannelType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSShareChannelType.h; sourceTree = "<group>"; };
+		0E97D1361E14ACD20077B44E /* GSShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSShareManager.h; sourceTree = "<group>"; };
+		0E97D1371E14ACD20077B44E /* GSShareManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GSShareManager.mm; sourceTree = "<group>"; };
+		0E97D1381E14ACD20077B44E /* GSShareProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSShareProtocol.h; sourceTree = "<group>"; };
+		0E97D1391E14ACD20077B44E /* GSShareResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSShareResult.h; sourceTree = "<group>"; };
+		0E97D13A1E14ACD20077B44E /* GSShareResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSShareResult.m; sourceTree = "<group>"; };
+		0E97D13B1E14ACD20077B44E /* GSShareResultProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSShareResultProtocol.h; sourceTree = "<group>"; };
+		0E97D13D1E14ACD20077B44E /* GSQQShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSQQShare.h; sourceTree = "<group>"; };
+		0E97D13E1E14ACD20077B44E /* GSQQShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSQQShare.m; sourceTree = "<group>"; };
+		0E97D1401E14ACD20077B44E /* GSQzoneShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSQzoneShare.h; sourceTree = "<group>"; };
+		0E97D1411E14ACD20077B44E /* GSQzoneShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSQzoneShare.m; sourceTree = "<group>"; };
+		0E97D1431E14ACD20077B44E /* GSSinaShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSSinaShare.h; sourceTree = "<group>"; };
+		0E97D1441E14ACD20077B44E /* GSSinaShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSSinaShare.m; sourceTree = "<group>"; };
+		0E97D1461E14ACD20077B44E /* GSWeChatSessionShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSWeChatSessionShare.h; sourceTree = "<group>"; };
+		0E97D1471E14ACD20077B44E /* GSWeChatSessionShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSWeChatSessionShare.m; sourceTree = "<group>"; };
+		0E97D1491E14ACD20077B44E /* GSWeChatTimeLineShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSWeChatTimeLineShare.h; sourceTree = "<group>"; };
+		0E97D14A1E14ACD20077B44E /* GSWeChatTimeLineShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSWeChatTimeLineShare.m; sourceTree = "<group>"; };
+		0E97D1601E14AD120077B44E /* GSBaseLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSBaseLogin.h; sourceTree = "<group>"; };
+		0E97D1611E14AD120077B44E /* GSBaseLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSBaseLogin.m; sourceTree = "<group>"; };
+		0E97D1621E14AD120077B44E /* GSLoginChannelType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLoginChannelType.h; sourceTree = "<group>"; };
+		0E97D1631E14AD120077B44E /* GSLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLoginManager.h; sourceTree = "<group>"; };
+		0E97D1641E14AD120077B44E /* GSLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSLoginManager.m; sourceTree = "<group>"; };
+		0E97D1651E14AD120077B44E /* GSLoginProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLoginProtocol.h; sourceTree = "<group>"; };
+		0E97D1661E14AD120077B44E /* GSLoginResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLoginResult.h; sourceTree = "<group>"; };
+		0E97D1671E14AD120077B44E /* GSLoginResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSLoginResult.m; sourceTree = "<group>"; };
+		0E97D1681E14AD120077B44E /* GSLoginResultProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLoginResultProtocol.h; sourceTree = "<group>"; };
+		0E97D16A1E14AD120077B44E /* GSQQLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSQQLogin.h; sourceTree = "<group>"; };
+		0E97D16B1E14AD120077B44E /* GSQQLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSQQLogin.m; sourceTree = "<group>"; };
+		0E97D16D1E14AD120077B44E /* GSSinaLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSSinaLogin.h; sourceTree = "<group>"; };
+		0E97D16E1E14AD120077B44E /* GSSinaLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSSinaLogin.m; sourceTree = "<group>"; };
+		0E97D1701E14AD120077B44E /* GSWeChatLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSWeChatLogin.h; sourceTree = "<group>"; };
+		0E97D1711E14AD120077B44E /* GSWeChatLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSWeChatLogin.m; sourceTree = "<group>"; };
 		0EAB85941E0A8265004C6004 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
-		0EAE695D1E04E2AC00238DF1 /* GSPlatformParamConfigProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPlatformParamConfigProtocol.h; sourceTree = "<group>"; };
-		0EAE695F1E04E2D000238DF1 /* GSBasePlatformParamConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSBasePlatformParamConfig.h; sourceTree = "<group>"; };
-		0EAE69601E04E2D000238DF1 /* GSBasePlatformParamConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSBasePlatformParamConfig.m; sourceTree = "<group>"; };
-		0EAE69671E04E32500238DF1 /* GSSinaPlatformParamConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSSinaPlatformParamConfig.h; sourceTree = "<group>"; };
-		0EAE69681E04E32500238DF1 /* GSSinaPlatformParamConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSSinaPlatformParamConfig.m; sourceTree = "<group>"; };
-		0EB0B83F1E125EB100BF2049 /* GSWeChatLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSWeChatLogin.h; sourceTree = "<group>"; };
-		0EB0B8401E125EB100BF2049 /* GSWeChatLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSWeChatLogin.m; sourceTree = "<group>"; };
 		0EDF13A71E039D3900C554FC /* SocialSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = SocialSDK.podspec; sourceTree = "<group>"; };
-		0EDF13B51E03BA6F00C554FC /* GSPlatformParamConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPlatformParamConfigManager.h; sourceTree = "<group>"; };
-		0EDF13B61E03BA6F00C554FC /* GSPlatformParamConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPlatformParamConfigManager.m; sourceTree = "<group>"; };
-		0EDF13B91E03BA8B00C554FC /* GSPlatformType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSPlatformType.h; sourceTree = "<group>"; };
-		0EDF13BA1E03BAA700C554FC /* GSLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLoginManager.h; sourceTree = "<group>"; };
-		0EDF13BB1E03BAA700C554FC /* GSLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSLoginManager.m; sourceTree = "<group>"; };
 		0EDF13BE1E03BAB700C554FC /* GSPayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPayManager.h; sourceTree = "<group>"; };
 		0EDF13BF1E03BAB700C554FC /* GSPayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPayManager.m; sourceTree = "<group>"; };
-		0EDF13C21E03BAC500C554FC /* GSBaseShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSBaseShare.h; sourceTree = "<group>"; };
-		0EDF13C31E03BAC500C554FC /* GSBaseShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSBaseShare.m; sourceTree = "<group>"; };
-		0EDF13C61E03BADD00C554FC /* GSSinaShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSSinaShare.h; sourceTree = "<group>"; };
-		0EDF13C71E03BADD00C554FC /* GSSinaShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSSinaShare.m; sourceTree = "<group>"; };
-		0EDF13CA1E03BAEA00C554FC /* GSShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSShareManager.h; sourceTree = "<group>"; };
-		0EDF13CB1E03BAEA00C554FC /* GSShareManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GSShareManager.mm; sourceTree = "<group>"; };
-		0EDF13CE1E03BB0500C554FC /* GSQQShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSQQShare.h; sourceTree = "<group>"; };
-		0EDF13CF1E03BB0500C554FC /* GSQQShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSQQShare.m; sourceTree = "<group>"; };
-		0EF038261E04016100F11B4E /* GSShareResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSShareResult.h; sourceTree = "<group>"; };
-		0EF038271E04016100F11B4E /* GSShareResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSShareResult.m; sourceTree = "<group>"; };
-		0EF0382A1E04018100F11B4E /* GSShareResultProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSShareResultProtocol.h; sourceTree = "<group>"; };
 		257AA106F638C7438C63C51D /* Pods-SocialSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialSDK/Pods-SocialSDK.release.xcconfig"; sourceTree = "<group>"; };
 		828793C50AC8B1B8F0E93277 /* Pods_SocialSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		829D9DA51FC276C3BD9B6F0B /* Pods-SocialSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialSDKDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialSDKDemo/Pods-SocialSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9559809474D9F814326C3975 /* Pods-SocialSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialSDK/Pods-SocialSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		9601BEE627C7FE4B39525D71 /* Pods-SocialSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialSDKDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialSDKDemo/Pods-SocialSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		EAA65CA283A949C0585437B0 /* Pods_SocialSDKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialSDKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F538DA0A1E09082F008C0660 /* GSWeChatPlatformParamConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSWeChatPlatformParamConfig.h; sourceTree = "<group>"; };
-		F538DA0B1E09082F008C0660 /* GSWeChatPlatformParamConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSWeChatPlatformParamConfig.m; sourceTree = "<group>"; };
-		F538DA121E090C59008C0660 /* GSWeChatSessionShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSWeChatSessionShare.h; sourceTree = "<group>"; };
-		F538DA131E090C59008C0660 /* GSWeChatSessionShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSWeChatSessionShare.m; sourceTree = "<group>"; };
-		F538DA161E090C68008C0660 /* GSWeChatTimeLineShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSWeChatTimeLineShare.h; sourceTree = "<group>"; };
-		F538DA171E090C68008C0660 /* GSWeChatTimeLineShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSWeChatTimeLineShare.m; sourceTree = "<group>"; };
 		F538DA1A1E090FE2008C0660 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		F56676371E0518380018F4F9 /* GSQQPlatformParamConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSQQPlatformParamConfig.h; sourceTree = "<group>"; };
-		F56676381E0518380018F4F9 /* GSQQPlatformParamConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSQQPlatformParamConfig.m; sourceTree = "<group>"; };
-		F568ECC01E122EE3009700F2 /* GSQQLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSQQLogin.h; sourceTree = "<group>"; };
-		F568ECC11E122EE3009700F2 /* GSQQLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSQQLogin.m; sourceTree = "<group>"; };
-		F5A3596A1E08F220000AEB64 /* GSQzoneShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSQzoneShare.h; sourceTree = "<group>"; };
-		F5A3596B1E08F220000AEB64 /* GSQzoneShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSQzoneShare.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,19 +216,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E3171231E02B7C800A75EA4 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				0E5368A51E0D278400792F90 /* Base */,
-				0E5368A71E0D3CE800792F90 /* Sina */,
-				0E5368A81E0D3CF700792F90 /* QQ */,
-				0E5368A91E0D3CFD00792F90 /* WeChat */,
-				0EDF13BA1E03BAA700C554FC /* GSLoginManager.h */,
-				0EDF13BB1E03BAA700C554FC /* GSLoginManager.m */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
 		0E3171241E02B7C800A75EA4 /* Pay */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,28 +225,12 @@
 			path = Pay;
 			sourceTree = "<group>";
 		};
-		0E3171251E02B7C800A75EA4 /* Share */ = {
-			isa = PBXGroup;
-			children = (
-				0EDF13D41E03BB1B00C554FC /* Base */,
-				F538DA101E090BF8008C0660 /* WeChatSession */,
-				F538DA111E090C12008C0660 /* WeChatTimeLine */,
-				0EDF13D31E03BB1300C554FC /* Sina */,
-				0EDF13D21E03BB0D00C554FC /* QQ */,
-				F5A359691E08F1E8000AEB64 /* Qzone */,
-				0EDF13CA1E03BAEA00C554FC /* GSShareManager.h */,
-				0EDF13CB1E03BAEA00C554FC /* GSShareManager.mm */,
-			);
-			path = Share;
-			sourceTree = "<group>";
-		};
 		0E31712C1E0387C500A75EA4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				0E7144851E052B3C00BC105E /* Util */,
-				0EA864601E04ECA600B9420D /* ConfigManager */,
-				0EA8645F1E04EC9600B9420D /* Logger */,
-				0EAE695C1E04E1B300238DF1 /* PlatformParamConfig */,
+				0E97D1141E14AC050077B44E /* PlatformParamConfig */,
+				0E97D10D1E14ABC40077B44E /* Logger */,
+				0E97D1011E14AB9E0077B44E /* Util */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -326,73 +298,11 @@
 			children = (
 				0E31712C1E0387C500A75EA4 /* Core */,
 				0E31712F1E0387C500A75EA4 /* UI */,
-				0E3171251E02B7C800A75EA4 /* Share */,
-				0E3171231E02B7C800A75EA4 /* Login */,
+				0E97D1311E14ACD20077B44E /* Share */,
+				0E97D15E1E14AD120077B44E /* Login */,
 				0E3171241E02B7C800A75EA4 /* Pay */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		0E53689E1E0D1AF900792F90 /* ReourcesManager */ = {
-			isa = PBXGroup;
-			children = (
-				0E7144861E052C4200BC105E /* GSReourcesManager.h */,
-				0E7144871E052C4200BC105E /* GSReourcesManager.m */,
-				0E53689F1E0D1B7600792F90 /* GSLogoReources.h */,
-				0E5368A01E0D1B7600792F90 /* GSLogoReources.m */,
-				0E5368A31E0D1D7900792F90 /* GSLogoReourcesType.h */,
-			);
-			name = ReourcesManager;
-			sourceTree = "<group>";
-		};
-		0E5368A51E0D278400792F90 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				0E5368A61E0D279A00792F90 /* GSLoginChannelType.h */,
-				0E31DEE01E120E380014F2DF /* GSLoginProtocol.h */,
-				0E31DEE21E120E520014F2DF /* GSBaseLogin.h */,
-				0E31DEE31E120E520014F2DF /* GSBaseLogin.m */,
-				0E31DEE61E120E810014F2DF /* GSLoginResultProtocol.h */,
-				0E31DEE81E120E8E0014F2DF /* GSLoginResult.h */,
-				0E31DEE91E120E8E0014F2DF /* GSLoginResult.m */,
-			);
-			name = Base;
-			sourceTree = "<group>";
-		};
-		0E5368A71E0D3CE800792F90 /* Sina */ = {
-			isa = PBXGroup;
-			children = (
-				0E31DEEC1E120FB70014F2DF /* GSSinaLogin.h */,
-				0E31DEED1E120FB70014F2DF /* GSSinaLogin.m */,
-			);
-			name = Sina;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		0E5368A81E0D3CF700792F90 /* QQ */ = {
-			isa = PBXGroup;
-			children = (
-				F568ECC01E122EE3009700F2 /* GSQQLogin.h */,
-				F568ECC11E122EE3009700F2 /* GSQQLogin.m */,
-			);
-			name = QQ;
-			sourceTree = "<group>";
-		};
-		0E5368A91E0D3CFD00792F90 /* WeChat */ = {
-			isa = PBXGroup;
-			children = (
-				0EB0B83F1E125EB100BF2049 /* GSWeChatLogin.h */,
-				0EB0B8401E125EB100BF2049 /* GSWeChatLogin.m */,
-			);
-			name = WeChat;
-			sourceTree = "<group>";
-		};
-		0E7144851E052B3C00BC105E /* Util */ = {
-			isa = PBXGroup;
-			children = (
-				0E53689E1E0D1AF900792F90 /* ReourcesManager */,
-			);
-			name = Util;
 			sourceTree = "<group>";
 		};
 		0E71448E1E05370B00BC105E /* SelectView */ = {
@@ -415,33 +325,213 @@
 			name = CollectionView;
 			sourceTree = "<group>";
 		};
-		0EA864531E04E98400B9420D /* Sina */ = {
+		0E97D1011E14AB9E0077B44E /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				0EAE69671E04E32500238DF1 /* GSSinaPlatformParamConfig.h */,
-				0EAE69681E04E32500238DF1 /* GSSinaPlatformParamConfig.m */,
+				0E97D1021E14AB9E0077B44E /* ReourcesManager */,
 			);
-			name = Sina;
+			path = Util;
 			sourceTree = "<group>";
 		};
-		0EA8645F1E04EC9600B9420D /* Logger */ = {
+		0E97D1021E14AB9E0077B44E /* ReourcesManager */ = {
 			isa = PBXGroup;
 			children = (
-				0E90C00F1E03C895000D646E /* GSLoggerConfig.h */,
-				0E90C0101E03C895000D646E /* GSLoggerConfig.m */,
-				0E90C0131E03C8B3000D646E /* GSLogger.h */,
+				0E97D1031E14AB9E0077B44E /* GSLogoReources.h */,
+				0E97D1041E14AB9E0077B44E /* GSLogoReources.m */,
+				0E97D1051E14AB9E0077B44E /* GSLogoReourcesType.h */,
+				0E97D1061E14AB9E0077B44E /* GSReourcesManager.h */,
+				0E97D1071E14AB9E0077B44E /* GSReourcesManager.m */,
 			);
-			name = Logger;
+			path = ReourcesManager;
 			sourceTree = "<group>";
 		};
-		0EA864601E04ECA600B9420D /* ConfigManager */ = {
+		0E97D10D1E14ABC40077B44E /* Logger */ = {
 			isa = PBXGroup;
 			children = (
-				0EDF13B51E03BA6F00C554FC /* GSPlatformParamConfigManager.h */,
-				0EDF13B61E03BA6F00C554FC /* GSPlatformParamConfigManager.m */,
-				0EDF13B91E03BA8B00C554FC /* GSPlatformType.h */,
+				0E97D10E1E14ABC40077B44E /* GSLogger.h */,
+				0E97D10F1E14ABC40077B44E /* GSLoggerConfig.h */,
+				0E97D1101E14ABC40077B44E /* GSLoggerConfig.m */,
 			);
-			name = ConfigManager;
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		0E97D1141E14AC050077B44E /* PlatformParamConfig */ = {
+			isa = PBXGroup;
+			children = (
+				0E97D1151E14AC050077B44E /* Base */,
+				0E97D11C1E14AC050077B44E /* QQ */,
+				0E97D11F1E14AC050077B44E /* Sina */,
+				0E97D1221E14AC050077B44E /* WeChat */,
+			);
+			path = PlatformParamConfig;
+			sourceTree = "<group>";
+		};
+		0E97D1151E14AC050077B44E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				0E97D1161E14AC050077B44E /* GSBasePlatformParamConfig.h */,
+				0E97D1171E14AC050077B44E /* GSBasePlatformParamConfig.m */,
+				0E97D1181E14AC050077B44E /* GSPlatformParamConfigManager.h */,
+				0E97D1191E14AC050077B44E /* GSPlatformParamConfigManager.m */,
+				0E97D11A1E14AC050077B44E /* GSPlatformParamConfigProtocol.h */,
+				0E97D11B1E14AC050077B44E /* GSPlatformType.h */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		0E97D11C1E14AC050077B44E /* QQ */ = {
+			isa = PBXGroup;
+			children = (
+				0E97D11D1E14AC050077B44E /* GSQQPlatformParamConfig.h */,
+				0E97D11E1E14AC050077B44E /* GSQQPlatformParamConfig.m */,
+			);
+			path = QQ;
+			sourceTree = "<group>";
+		};
+		0E97D11F1E14AC050077B44E /* Sina */ = {
+			isa = PBXGroup;
+			children = (
+				0E97D1201E14AC050077B44E /* GSSinaPlatformParamConfig.h */,
+				0E97D1211E14AC050077B44E /* GSSinaPlatformParamConfig.m */,
+			);
+			path = Sina;
+			sourceTree = "<group>";
+		};
+		0E97D1221E14AC050077B44E /* WeChat */ = {
+			isa = PBXGroup;
+			children = (
+				0E97D1231E14AC050077B44E /* GSWeChatPlatformParamConfig.h */,
+				0E97D1241E14AC050077B44E /* GSWeChatPlatformParamConfig.m */,
+			);
+			path = WeChat;
+			sourceTree = "<group>";
+		};
+		0E97D1311E14ACD20077B44E /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				0E97D1321E14ACD20077B44E /* Base */,
+				0E97D13C1E14ACD20077B44E /* QQ */,
+				0E97D13F1E14ACD20077B44E /* Qzone */,
+				0E97D1421E14ACD20077B44E /* Sina */,
+				0E97D1451E14ACD20077B44E /* WeChatSession */,
+				0E97D1481E14ACD20077B44E /* WeChatTimeLine */,
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
+		0E97D1321E14ACD20077B44E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				0E97D1331E14ACD20077B44E /* GSBaseShare.h */,
+				0E97D1341E14ACD20077B44E /* GSBaseShare.m */,
+				0E97D1351E14ACD20077B44E /* GSShareChannelType.h */,
+				0E97D1361E14ACD20077B44E /* GSShareManager.h */,
+				0E97D1371E14ACD20077B44E /* GSShareManager.mm */,
+				0E97D1381E14ACD20077B44E /* GSShareProtocol.h */,
+				0E97D1391E14ACD20077B44E /* GSShareResult.h */,
+				0E97D13A1E14ACD20077B44E /* GSShareResult.m */,
+				0E97D13B1E14ACD20077B44E /* GSShareResultProtocol.h */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		0E97D13C1E14ACD20077B44E /* QQ */ = {
+			isa = PBXGroup;
+			children = (
+				0E97D13D1E14ACD20077B44E /* GSQQShare.h */,
+				0E97D13E1E14ACD20077B44E /* GSQQShare.m */,
+			);
+			path = QQ;
+			sourceTree = "<group>";
+		};
+		0E97D13F1E14ACD20077B44E /* Qzone */ = {
+			isa = PBXGroup;
+			children = (
+				0E97D1401E14ACD20077B44E /* GSQzoneShare.h */,
+				0E97D1411E14ACD20077B44E /* GSQzoneShare.m */,
+			);
+			path = Qzone;
+			sourceTree = "<group>";
+		};
+		0E97D1421E14ACD20077B44E /* Sina */ = {
+			isa = PBXGroup;
+			children = (
+				0E97D1431E14ACD20077B44E /* GSSinaShare.h */,
+				0E97D1441E14ACD20077B44E /* GSSinaShare.m */,
+			);
+			path = Sina;
+			sourceTree = "<group>";
+		};
+		0E97D1451E14ACD20077B44E /* WeChatSession */ = {
+			isa = PBXGroup;
+			children = (
+				0E97D1461E14ACD20077B44E /* GSWeChatSessionShare.h */,
+				0E97D1471E14ACD20077B44E /* GSWeChatSessionShare.m */,
+			);
+			path = WeChatSession;
+			sourceTree = "<group>";
+		};
+		0E97D1481E14ACD20077B44E /* WeChatTimeLine */ = {
+			isa = PBXGroup;
+			children = (
+				0E97D1491E14ACD20077B44E /* GSWeChatTimeLineShare.h */,
+				0E97D14A1E14ACD20077B44E /* GSWeChatTimeLineShare.m */,
+			);
+			path = WeChatTimeLine;
+			sourceTree = "<group>";
+		};
+		0E97D15E1E14AD120077B44E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0E97D15F1E14AD120077B44E /* Base */,
+				0E97D1691E14AD120077B44E /* QQ */,
+				0E97D16C1E14AD120077B44E /* Sina */,
+				0E97D16F1E14AD120077B44E /* WeChat */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		0E97D15F1E14AD120077B44E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				0E97D1601E14AD120077B44E /* GSBaseLogin.h */,
+				0E97D1611E14AD120077B44E /* GSBaseLogin.m */,
+				0E97D1621E14AD120077B44E /* GSLoginChannelType.h */,
+				0E97D1631E14AD120077B44E /* GSLoginManager.h */,
+				0E97D1641E14AD120077B44E /* GSLoginManager.m */,
+				0E97D1651E14AD120077B44E /* GSLoginProtocol.h */,
+				0E97D1661E14AD120077B44E /* GSLoginResult.h */,
+				0E97D1671E14AD120077B44E /* GSLoginResult.m */,
+				0E97D1681E14AD120077B44E /* GSLoginResultProtocol.h */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		0E97D1691E14AD120077B44E /* QQ */ = {
+			isa = PBXGroup;
+			children = (
+				0E97D16A1E14AD120077B44E /* GSQQLogin.h */,
+				0E97D16B1E14AD120077B44E /* GSQQLogin.m */,
+			);
+			path = QQ;
+			sourceTree = "<group>";
+		};
+		0E97D16C1E14AD120077B44E /* Sina */ = {
+			isa = PBXGroup;
+			children = (
+				0E97D16D1E14AD120077B44E /* GSSinaLogin.h */,
+				0E97D16E1E14AD120077B44E /* GSSinaLogin.m */,
+			);
+			path = Sina;
+			sourceTree = "<group>";
+		};
+		0E97D16F1E14AD120077B44E /* WeChat */ = {
+			isa = PBXGroup;
+			children = (
+				0E97D1701E14AD120077B44E /* GSWeChatLogin.h */,
+				0E97D1711E14AD120077B44E /* GSWeChatLogin.m */,
+			);
+			path = WeChat;
 			sourceTree = "<group>";
 		};
 		0EAB85931E0A8265004C6004 /* Rrources */ = {
@@ -450,51 +540,6 @@
 				0EAB85941E0A8265004C6004 /* default.png */,
 			);
 			path = Rrources;
-			sourceTree = "<group>";
-		};
-		0EAE695C1E04E1B300238DF1 /* PlatformParamConfig */ = {
-			isa = PBXGroup;
-			children = (
-				F538DA091E0907BB008C0660 /* WeChat */,
-				F56676361E05180B0018F4F9 /* QQ */,
-				0EA864531E04E98400B9420D /* Sina */,
-				0EAE695D1E04E2AC00238DF1 /* GSPlatformParamConfigProtocol.h */,
-				0EAE695F1E04E2D000238DF1 /* GSBasePlatformParamConfig.h */,
-				0EAE69601E04E2D000238DF1 /* GSBasePlatformParamConfig.m */,
-			);
-			name = PlatformParamConfig;
-			sourceTree = "<group>";
-		};
-		0EDF13D21E03BB0D00C554FC /* QQ */ = {
-			isa = PBXGroup;
-			children = (
-				0EDF13CE1E03BB0500C554FC /* GSQQShare.h */,
-				0EDF13CF1E03BB0500C554FC /* GSQQShare.m */,
-			);
-			name = QQ;
-			sourceTree = "<group>";
-		};
-		0EDF13D31E03BB1300C554FC /* Sina */ = {
-			isa = PBXGroup;
-			children = (
-				0EDF13C61E03BADD00C554FC /* GSSinaShare.h */,
-				0EDF13C71E03BADD00C554FC /* GSSinaShare.m */,
-			);
-			name = Sina;
-			sourceTree = "<group>";
-		};
-		0EDF13D41E03BB1B00C554FC /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				0E7144811E051E0500BC105E /* GSShareChannelType.h */,
-				0EF0382A1E04018100F11B4E /* GSShareResultProtocol.h */,
-				0EF038261E04016100F11B4E /* GSShareResult.h */,
-				0EF038271E04016100F11B4E /* GSShareResult.m */,
-				0E90C0091E03C391000D646E /* GSShareProtocol.h */,
-				0EDF13C21E03BAC500C554FC /* GSBaseShare.h */,
-				0EDF13C31E03BAC500C554FC /* GSBaseShare.m */,
-			);
-			name = Base;
 			sourceTree = "<group>";
 		};
 		CAE9A321ADA2282D12CD0928 /* Pods */ = {
@@ -518,51 +563,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F538DA091E0907BB008C0660 /* WeChat */ = {
-			isa = PBXGroup;
-			children = (
-				F538DA0A1E09082F008C0660 /* GSWeChatPlatformParamConfig.h */,
-				F538DA0B1E09082F008C0660 /* GSWeChatPlatformParamConfig.m */,
-			);
-			name = WeChat;
-			sourceTree = "<group>";
-		};
-		F538DA101E090BF8008C0660 /* WeChatSession */ = {
-			isa = PBXGroup;
-			children = (
-				F538DA121E090C59008C0660 /* GSWeChatSessionShare.h */,
-				F538DA131E090C59008C0660 /* GSWeChatSessionShare.m */,
-			);
-			name = WeChatSession;
-			sourceTree = "<group>";
-		};
-		F538DA111E090C12008C0660 /* WeChatTimeLine */ = {
-			isa = PBXGroup;
-			children = (
-				F538DA161E090C68008C0660 /* GSWeChatTimeLineShare.h */,
-				F538DA171E090C68008C0660 /* GSWeChatTimeLineShare.m */,
-			);
-			name = WeChatTimeLine;
-			sourceTree = "<group>";
-		};
-		F56676361E05180B0018F4F9 /* QQ */ = {
-			isa = PBXGroup;
-			children = (
-				F56676371E0518380018F4F9 /* GSQQPlatformParamConfig.h */,
-				F56676381E0518380018F4F9 /* GSQQPlatformParamConfig.m */,
-			);
-			name = QQ;
-			sourceTree = "<group>";
-		};
-		F5A359691E08F1E8000AEB64 /* Qzone */ = {
-			isa = PBXGroup;
-			children = (
-				F5A3596A1E08F220000AEB64 /* GSQzoneShare.h */,
-				F5A3596B1E08F220000AEB64 /* GSQzoneShare.m */,
-			);
-			name = Qzone;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -570,42 +570,43 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E97D1751E14AD120077B44E /* GSLoginManager.h in Headers */,
+				0E97D14E1E14ACD20077B44E /* GSShareManager.h in Headers */,
+				0E97D17A1E14AD120077B44E /* GSLoginResultProtocol.h in Headers */,
 				0E71448C1E0536D000BC105E /* GSSelectView.h in Headers */,
-				0E31DEF01E12131C0014F2DF /* GSLoginChannelType.h in Headers */,
-				F5A3596C1E08F220000AEB64 /* GSQzoneShare.h in Headers */,
+				0E97D1501E14ACD20077B44E /* GSShareProtocol.h in Headers */,
+				0E97D1531E14ACD20077B44E /* GSShareResultProtocol.h in Headers */,
+				0E97D1771E14AD120077B44E /* GSLoginProtocol.h in Headers */,
+				0E97D10A1E14AB9E0077B44E /* GSLogoReourcesType.h in Headers */,
+				0E97D1741E14AD120077B44E /* GSLoginChannelType.h in Headers */,
+				0E97D1121E14ABC40077B44E /* GSLoggerConfig.h in Headers */,
+				0E97D12A1E14AC050077B44E /* GSPlatformType.h in Headers */,
+				0E97D14D1E14ACD20077B44E /* GSShareChannelType.h in Headers */,
+				0E97D1271E14AC050077B44E /* GSPlatformParamConfigManager.h in Headers */,
 				0E7A408B1E078C9C0083899C /* GSCollectionViewHorizontalLayout.h in Headers */,
-				0E5368A41E0D1DC300792F90 /* GSLogoReourcesType.h in Headers */,
-				0E90C00A1E03C391000D646E /* GSShareProtocol.h in Headers */,
-				0E31DEE11E120E380014F2DF /* GSLoginProtocol.h in Headers */,
-				0EAE69691E04E32500238DF1 /* GSSinaPlatformParamConfig.h in Headers */,
-				0E7144881E052C4200BC105E /* GSReourcesManager.h in Headers */,
-				0E31DEE71E120E810014F2DF /* GSLoginResultProtocol.h in Headers */,
-				0EAE695E1E04E2AC00238DF1 /* GSPlatformParamConfigProtocol.h in Headers */,
-				0EF0382B1E04018100F11B4E /* GSShareResultProtocol.h in Headers */,
-				0EDF13BC1E03BAA700C554FC /* GSLoginManager.h in Headers */,
-				0EDF13B71E03BA6F00C554FC /* GSPlatformParamConfigManager.h in Headers */,
-				0E90C0111E03C895000D646E /* GSLoggerConfig.h in Headers */,
-				F56676391E0518380018F4F9 /* GSQQPlatformParamConfig.h in Headers */,
-				0E5368A11E0D1B7600792F90 /* GSLogoReources.h in Headers */,
+				0E97D17F1E14AD120077B44E /* GSWeChatLogin.h in Headers */,
+				0E97D1291E14AC050077B44E /* GSPlatformParamConfigProtocol.h in Headers */,
+				0E97D15C1E14ACD20077B44E /* GSWeChatTimeLineShare.h in Headers */,
 				0E7A40911E07AF4D0083899C /* GSCollectionViewCell.h in Headers */,
-				F568ECC21E122EE3009700F2 /* GSQQLogin.h in Headers */,
-				F538DA181E090C68008C0660 /* GSWeChatTimeLineShare.h in Headers */,
-				0EDF13CC1E03BAEA00C554FC /* GSShareManager.h in Headers */,
-				0E7144821E051FC300BC105E /* GSShareChannelType.h in Headers */,
-				F538DA0C1E09082F008C0660 /* GSWeChatPlatformParamConfig.h in Headers */,
-				0E90C0141E03CAF4000D646E /* GSPlatformType.h in Headers */,
+				0E97D10B1E14AB9E0077B44E /* GSReourcesManager.h in Headers */,
+				0E97D17B1E14AD120077B44E /* GSQQLogin.h in Headers */,
+				0E97D1511E14ACD20077B44E /* GSShareResult.h in Headers */,
+				0E97D1581E14ACD20077B44E /* GSSinaShare.h in Headers */,
+				0E97D1251E14AC050077B44E /* GSBasePlatformParamConfig.h in Headers */,
+				0E97D12F1E14AC050077B44E /* GSWeChatPlatformParamConfig.h in Headers */,
+				0E97D1541E14ACD20077B44E /* GSQQShare.h in Headers */,
+				0E97D1081E14AB9E0077B44E /* GSLogoReources.h in Headers */,
+				0E97D17D1E14AD120077B44E /* GSSinaLogin.h in Headers */,
 				0EDF13C01E03BAB700C554FC /* GSPayManager.h in Headers */,
+				0E97D15A1E14ACD20077B44E /* GSWeChatSessionShare.h in Headers */,
+				0E97D1561E14ACD20077B44E /* GSQzoneShare.h in Headers */,
+				0E97D14B1E14ACD20077B44E /* GSBaseShare.h in Headers */,
 				0E4B320C1E02962C00F231F0 /* SocialSDK.h in Headers */,
-				0E31DEEA1E120E8E0014F2DF /* GSLoginResult.h in Headers */,
-				F538DA141E090C59008C0660 /* GSWeChatSessionShare.h in Headers */,
-				0EDF13C81E03BADD00C554FC /* GSSinaShare.h in Headers */,
-				0EDF13C41E03BAC500C554FC /* GSBaseShare.h in Headers */,
-				0E31DEEE1E120FB70014F2DF /* GSSinaLogin.h in Headers */,
-				0EF038281E04016100F11B4E /* GSShareResult.h in Headers */,
-				0EB0B8411E125EB100BF2049 /* GSWeChatLogin.h in Headers */,
-				0EAE69611E04E2D000238DF1 /* GSBasePlatformParamConfig.h in Headers */,
-				0EDF13D01E03BB0500C554FC /* GSQQShare.h in Headers */,
-				0E31DEE41E120E520014F2DF /* GSBaseLogin.h in Headers */,
+				0E97D1111E14ABC40077B44E /* GSLogger.h in Headers */,
+				0E97D12D1E14AC050077B44E /* GSSinaPlatformParamConfig.h in Headers */,
+				0E97D1721E14AD120077B44E /* GSBaseLogin.h in Headers */,
+				0E97D12B1E14AC050077B44E /* GSQQPlatformParamConfig.h in Headers */,
+				0E97D1781E14AD120077B44E /* GSLoginResult.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -810,32 +811,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EDF13BD1E03BAA700C554FC /* GSLoginManager.m in Sources */,
-				F566763A1E0518380018F4F9 /* GSQQPlatformParamConfig.m in Sources */,
-				F538DA191E090C68008C0660 /* GSWeChatTimeLineShare.m in Sources */,
-				0E5368A21E0D1B7600792F90 /* GSLogoReources.m in Sources */,
+				0E97D1591E14ACD20077B44E /* GSSinaShare.m in Sources */,
+				0E97D1571E14ACD20077B44E /* GSQzoneShare.m in Sources */,
+				0E97D1261E14AC050077B44E /* GSBasePlatformParamConfig.m in Sources */,
+				0E97D1131E14ABC40077B44E /* GSLoggerConfig.m in Sources */,
+				0E97D1761E14AD120077B44E /* GSLoginManager.m in Sources */,
 				0E7A40921E07AF4D0083899C /* GSCollectionViewCell.m in Sources */,
-				F538DA151E090C59008C0660 /* GSWeChatSessionShare.m in Sources */,
-				0E31DEEF1E120FB70014F2DF /* GSSinaLogin.m in Sources */,
-				0EDF13D11E03BB0500C554FC /* GSQQShare.m in Sources */,
-				0E90C0121E03C895000D646E /* GSLoggerConfig.m in Sources */,
-				0E31DEEB1E120E8E0014F2DF /* GSLoginResult.m in Sources */,
-				0E7144891E052C4200BC105E /* GSReourcesManager.m in Sources */,
 				0E7A408C1E078C9C0083899C /* GSCollectionViewHorizontalLayout.m in Sources */,
-				F5A3596D1E08F220000AEB64 /* GSQzoneShare.m in Sources */,
-				0EF038291E04016100F11B4E /* GSShareResult.m in Sources */,
-				0EDF13C91E03BADD00C554FC /* GSSinaShare.m in Sources */,
-				0EDF13C51E03BAC500C554FC /* GSBaseShare.m in Sources */,
+				0E97D12C1E14AC050077B44E /* GSQQPlatformParamConfig.m in Sources */,
 				0E71448D1E0536D000BC105E /* GSSelectView.m in Sources */,
-				0EAE69621E04E2D000238DF1 /* GSBasePlatformParamConfig.m in Sources */,
-				0EDF13B81E03BA6F00C554FC /* GSPlatformParamConfigManager.m in Sources */,
-				0EB0B8421E125EB100BF2049 /* GSWeChatLogin.m in Sources */,
-				0EDF13CD1E03BAEA00C554FC /* GSShareManager.mm in Sources */,
-				0E31DEE51E120E520014F2DF /* GSBaseLogin.m in Sources */,
+				0E97D1551E14ACD20077B44E /* GSQQShare.m in Sources */,
+				0E97D15D1E14ACD20077B44E /* GSWeChatTimeLineShare.m in Sources */,
+				0E97D14C1E14ACD20077B44E /* GSBaseShare.m in Sources */,
+				0E97D1731E14AD120077B44E /* GSBaseLogin.m in Sources */,
+				0E97D1791E14AD120077B44E /* GSLoginResult.m in Sources */,
+				0E97D17C1E14AD120077B44E /* GSQQLogin.m in Sources */,
+				0E97D1091E14AB9E0077B44E /* GSLogoReources.m in Sources */,
+				0E97D1521E14ACD20077B44E /* GSShareResult.m in Sources */,
+				0E97D15B1E14ACD20077B44E /* GSWeChatSessionShare.m in Sources */,
+				0E97D14F1E14ACD20077B44E /* GSShareManager.mm in Sources */,
+				0E97D1281E14AC050077B44E /* GSPlatformParamConfigManager.m in Sources */,
+				0E97D1801E14AD120077B44E /* GSWeChatLogin.m in Sources */,
 				0EDF13C11E03BAB700C554FC /* GSPayManager.m in Sources */,
-				F568ECC31E122EE3009700F2 /* GSQQLogin.m in Sources */,
-				F538DA0D1E09082F008C0660 /* GSWeChatPlatformParamConfig.m in Sources */,
-				0EAE696A1E04E32500238DF1 /* GSSinaPlatformParamConfig.m in Sources */,
+				0E97D12E1E14AC050077B44E /* GSSinaPlatformParamConfig.m in Sources */,
+				0E97D10C1E14AB9E0077B44E /* GSReourcesManager.m in Sources */,
+				0E97D17E1E14AD120077B44E /* GSSinaLogin.m in Sources */,
+				0E97D1301E14AC050077B44E /* GSWeChatPlatformParamConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
