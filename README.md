@@ -22,11 +22,13 @@
 * *2、* [适配iOS9+系统](#iOS9+)
 
 ### <a id="WeChat"></a>WeChat平台配置
-* 添加URL Schemes
+* *1、* 添加URL Schemes 格式 微信appKey  
+* <img src="Images/weChatGuide/weChatGuide-1.png" width="500">  
+* *2、* [适配iOS9+系统](#iOS9+)
 
 ### <a id="QQ"></a>QQ/Qzone平台配置
 * *1、* 添加URL Schemes  
-* 格式"tencent"+QQ的appID + "QQ"+QQ的appID转换成十六进制（不足8位前面补0)  
+* 格式"tencent"+QQ的appID + "QQ"+QQ的appID转换成十六进制（不足8位前面补0) [在线转换十六进制](http://tool.oschina.net/hexconvert/) 
 * 例如: appID:100424468 --> tencent100424468  QQ05fc5b14
 * <img src="Images/QQGuide/QQGuide-1.png" width="500">  
 * *2、*[适配iOS9+系统](#iOS9+)
