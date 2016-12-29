@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
     s.platform          = :ios, '8.0'
     s.ios.deployment_target = '8.0'
     
-    s.source            = { :git => 'https://github.com/GagSquad/SocialSDK.git', :tag => '#{s.version}' }
+    s.source            = { :git => 'https://github.com/GagSquad/SocialSDK.git', :tag => s.version }
     
     s.requires_arc = true
     
