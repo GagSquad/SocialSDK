@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
     s.name              = 'SocialSDK'
-    s.version           = '0.0.1'
-    s.summary           = 'SocialSDK SDK 0.0.1 for iOS'
+    s.version           = '0.0.2'
+    s.summary           = 'SocialSDK SDK for iOS'
     s.homepage          = 'https://github.com/GagSquad/SocialSDK'
     s.author            = { 'itlijunjie@gmail.com' => 'https://github.com/itlijunjie', 'LVJIALIN' => 'https://github.com/LVJIALIN' }
     s.license      = { :type => 'WTFPL', :file => 'LICENSE' }
     
-    s.platform          = :ios, '8.0'
-    s.ios.deployment_target = '8.0'
+    s.platform          = :ios, '7.0'
+    s.ios.deployment_target = '7.0'
     
     s.source            = { :git => 'https://github.com/GagSquad/SocialSDK.git', :tag => s.version }
     
