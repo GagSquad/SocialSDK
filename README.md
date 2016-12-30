@@ -1,41 +1,38 @@
 ## SocialSDK
-实现sina wechat qq 登录和分享功能
-## SDK功能
-| 渠道 | 分享 | 登录 | 支付 |
+ **简介:** 实现 **Sina** **WeChat** **QQ** 登录和分享功能
+#### 1. SDK功能
+| 平台 | 分享 | 登录 | 支付 |
 |:--------------------:|:---------------------------:|:----------------------------:|:----------------------------:|
-| Sina | ✔️ | ✔️ | ✖️ |
-| QQ | ✔️ | ✔️ | ✖️ |
-| Wechat | ✔️ | ✔️ | ✖️ |
-## 分享平台支持
+| Sina | √ | √ | × |
+| QQ | √ | √ | × |
+| Wechat | √ | √ | × |
+#### 2.分享渠道支持
 | 渠道 | 纯文本 | 单图 | 普通链接 | 音频链接 | 视频链接 |
 |:--------------------:|:---------------------------:|:----------------------------:|:----------------------------:|:----------------------------:|:-------------------------------------------------------------------------:|
-| Sina | ✔️ | ✔️ | ✔️ | ✔️ | ✔️  |
-| QQ | ✔️ | ✔️ | ✔️ | ✔️ | ✔️  |
-| Qzone | ✔️ | ✔️ | ✔️ | ✔️ | ✔️  |
-| WechatSession | ✔️ | ✔️ | ✔️ | ✔️ | ✔️  |
-| WechatTimeLine | ✔️ | ✔️ | ✔️ | ✔️ | ✔️  |
-## 平台配置
-#### [SinaWeiBo](#SinaWeiBo)  [WeChat](#WeChat)  [QQ/Qzone](#QQ)
-### <a id="SinaWeiBo"></a>SinaWeiBo平台配置
-* *1、* 添加URL Schemes 格式"wb"+新浪appKey  
-* <img src="Images/sinaGuide/sinaGuide-1.png" width="500">
-* *2、* [适配iOS9+系统](#iOS9+)
+| Sina | √ | √ | √ | √ | √  |
+| QQ | √ | √ | √ | √ | √  |
+| Qzone | √ | √ | √ | √ | √  |
+| WechatSession | √ | √ | √ | √ | √  |
+| WechatTimeLine | √ | √ | √ | √ | √  |
+## 平台集成  
+### 1. SocialSDK集成  
+* 1.1 [通过Cocoapods集成](#CocoaPods集成)
+* 1.2 [手动集成](#手动集成介绍)
+  
+### 2. SocialSDK各平台配置
+* 2.1 [Sina](#SinaWeiBo)
+* 2.2 [WeChat](#WeChat)
+* 2.3 [QQ](#QQ)
 
-### <a id="WeChat"></a>WeChat平台配置
-* *1、* 添加URL Schemes 格式 微信appKey  
-* <img src="Images/weChatGuide/weChatGuide-1.png" width="500">  
-* *2、* [适配iOS9+系统](#iOS9+)
+### 3. 调用SocialSDK
+* 3.1 [初始化配置]()
+* 3.2 [第三方平台登录]()
+* 3.3 [第三方平台分享]()
 
-### <a id="QQ"></a>QQ/Qzone平台配置
-* *1、* 添加URL Schemes  
-* 格式"tencent"+QQ的appID + "QQ"+QQ的appID转换成十六进制（不足8位前面补0) [在线转换十六进制](http://tool.oschina.net/hexconvert/) 
-* 例如: appID:100424468 --> tencent100424468  QQ05fc5b14
-* <img src="Images/QQGuide/QQGuide-1.png" width="500">  
-* *2、*[适配iOS9+系统](#iOS9+)
-
+***
 ## Installation
-手动添加Classes文件中的类。
-### CocoaPods
+
+### <a id="CocoaPods集成"></a>CocoaPods
 ```ruby
 pod 'SocialSDK', '~> 0.0.1'
 ```
@@ -54,8 +51,30 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
 fi
 ```
 
-也可以先去掉`use_frameworks!`拷贝出相应的`install_resource`命令来安装资源文件。
-## <a id="iOS9+"></a>iOS9+适配
+也可以先去掉`use_frameworks!`拷贝出相应的`install_resource`命令来安装资源文件。  
+### <a id="手动集成介绍"></a>手动集成介绍
+手动添加Classes文件中的类。
+
+## SocialSDK各平台配置
+#### <a id="SinaWeiBo"></a>Sina平台配置
+* *1、* 添加URL Schemes 格式"wb"+新浪appKey  
+* <img src="Images/sinaGuide/sinaGuide-1.png" width="500">
+* *2、* [适配iOS9+系统](#iOS9+)
+
+#### <a id="WeChat"></a>WeChat平台配置
+* *1、* 添加URL Schemes 格式 微信appKey  
+* <img src="Images/weChatGuide/weChatGuide-1.png" width="500">  
+* *2、* [适配iOS9+系统](#iOS9+)
+
+#### <a id="QQ"></a>QQ平台配置
+* *1、* 添加URL Schemes  
+* 格式"tencent"+QQ的appID + "QQ"+QQ的appID转换成十六进制（不足8位前面补0) [在线转换十六进制](http://tool.oschina.net/hexconvert/) 
+* 例如: appID:100424468 --> tencent100424468  QQ05fc5b14
+* <img src="Images/QQGuide/QQGuide-1.png" width="500">  
+* *2、*[适配iOS9+系统](#iOS9+)
+
+
+### <a id="iOS9+"></a>iOS9+适配
 #### 1. HTTPS传输 在info.plist中加入安全域名白名单(右键info.plist用source code打开)
 ```objc
 <key>NSAppTransportSecurity</key>
