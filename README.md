@@ -33,7 +33,28 @@
 * <img src="Images/QQGuide/QQGuide-1.png" width="500">  
 * *2、*[适配iOS9+系统](#iOS9+)
 
+## Installation
+手动添加Classes文件中的类。
+### CocoaPods
+```ruby
+pod 'SocialSDK', '~> 0.0.1'
+```
+问题如果podfile里面使用了`use_frameworks!`需要手动修改`Pods-TargetsName-resources.sh`文件(根据添加的平台和CONFIGURATION决定添加下面的语句):
 
+```ruby
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "SocialSDK/SocialSDK/Rrources/GSSocialSDKResources.bundle"
+  install_resource "SocialSDK/SDK/TencentOpenApi/TencentOpenApi_IOS_Bundle.bundle"
+  install_resource "SocialSDK/SDK/libWeiboSDK/WeiboSDK.bundle"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "SocialSDK/SocialSDK/Rrources/GSSocialSDKResources.bundle"
+  install_resource "SocialSDK/SDK/TencentOpenApi/TencentOpenApi_IOS_Bundle.bundle"
+  install_resource "SocialSDK/SDK/libWeiboSDK/WeiboSDK.bundle"
+fi
+```
+
+也可以先去掉`use_frameworks!`拷贝出相应的`install_resource`命令来安装资源文件。
 ## <a id="iOS9+"></a>iOS9+适配
 #### 1. HTTPS传输 在info.plist中加入安全域名白名单(右键info.plist用source code打开)
 ```objc
