@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name              = 'SocialSDK'
-    s.version           = '0.0.2'
+    s.version           = '0.0.3'
     s.summary           = 'SocialSDK SDK for iOS'
     s.homepage          = 'https://github.com/GagSquad/SocialSDK'
     s.author            = { 'itlijunjie@gmail.com' => 'https://github.com/itlijunjie', 'LVJIALIN' => 'https://github.com/LVJIALIN' }
@@ -47,9 +47,9 @@ Pod::Spec.new do |s|
     end
     
     s.subspec 'Core' do |ss|
-        ss.source_files = 'SocialSDK/Classes/Core/Logger/**/*.{h,m}', 'SocialSDK/Classes/Core/Util/**/*.{h,m}', 'SocialSDK/Classes/Core/PlatformParamConfig/Base/**/*.{h,m}'
+        ss.source_files = 'SocialSDK/Classes/Core/Logger/**/*.{h,m}', 'SocialSDK/Classes/Core/Util/**/*.{h,m}', 'SocialSDK/Classes/Core/SocialManager/**/*.{h,m}', 'SocialSDK/Classes/Core/PlatformParamConfig/Base/**/*.{h,m}'
+        ss.public_header_files = 'SocialSDK/Classes/Core/Logger/**/*.h', 'SocialSDK/Classes/Core/Util/**/*.h', 'SocialSDK/Classes/Core/SocialManager/**/*.h', 'SocialSDK/Classes/Core/PlatformParamConfig/Base/**/*.h'
         ss.resources     = 'SocialSDK/Rrources/GSSocialSDKResources.bundle'
-        ss.public_header_files = 'SocialSDK/Classes/Core/Logger/**/*.h', 'SocialSDK/Classes/Core/Util/**/*.h', 'SocialSDK/Classes/Core/PlatformParamConfig/Base/**/*.h'
     end
     
     s.subspec 'UI' do |ss|
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
     end
     
     s.subspec 'ShareBase' do |ss|
-        ss.source_files = 'SocialSDK/Classes/Share/Base/**/*.{h,m,mm}'
+        ss.source_files = 'SocialSDK/Classes/Share/Base/**/*.{h,m}'
         ss.public_header_files = 'SocialSDK/Classes/Share/Base/**/*.h'
         ss.dependency 'SocialSDK/Core'
     end

@@ -53,12 +53,4 @@
  */
 - (void)cleanChannel;
 
-/**
- openURL回调
-
- @param url url
- @return 返回是否处理了当前url 处理了返回YES，否则返回NO
- */
-- (BOOL)handleOpenURL:(NSURL *)url;
-
 @end

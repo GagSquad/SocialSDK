@@ -7,6 +7,7 @@
 //
 
 #import "GSBaseLogin.h"
+#import "GSLogger.h"
 
 @interface GSBaseLogin ()
 {
@@ -15,6 +16,11 @@
 @end
 
 @implementation GSBaseLogin
+
+- (void)dealloc
+{
+    GSLogger(@"%@ 释放了", [self class]);
+}
 
 + (GSLoginChannelType)channelType
 {

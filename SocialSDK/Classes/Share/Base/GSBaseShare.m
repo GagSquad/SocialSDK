@@ -8,6 +8,7 @@
 
 #import "GSBaseShare.h"
 #import "GSShareManager.h"
+#import "GSLogger.h"
 
 @interface GSBaseShare ()
 {
@@ -17,6 +18,11 @@
 @end
 
 @implementation GSBaseShare
+
+- (void)dealloc
+{
+    GSLogger(@"%@ 释放了", [self class]);
+}
 
 + (GSPlatformType)platformType
 {

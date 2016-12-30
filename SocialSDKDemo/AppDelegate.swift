@@ -49,19 +49,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     
     func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
-        var res = GSShareManager.share().handleOpen(url)
-        if res == false {
-            res = GSLoginManager.share().handleOpen(url)
-        }
-        return res
+        return GSSocialManager.share().handleOpen(url)
     }
     
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        var res = GSShareManager.share().handleOpen(url)
-        if res == false {
-            res = GSLoginManager.share().handleOpen(url)
-        }
-        return res
+        return GSSocialManager.share().handleOpen(url)
     }
     
 }

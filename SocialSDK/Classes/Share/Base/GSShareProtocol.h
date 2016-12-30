@@ -9,12 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "GSShareChannelType.h"
 #import "GSPlatformType.h"
+#import "GSHandleProtocol.h"
 
 @protocol GSShareResultProtocol;
 
 typedef void (^GSShareCompletionBlock) (id<GSShareResultProtocol> result);
 
-@protocol GSShareProtocol <NSObject>
+@protocol GSShareProtocol <NSObject, GSHandleProtocol>
 
 + (GSPlatformType)platformType;
 
@@ -41,8 +42,6 @@ videoLowBandStreamURL:(NSString *)videoLowBandStreamURL
                 title:(NSString *)title
           description:(NSString *)description
             thumbnail:(id)thumbnail;
-
-- (BOOL)handleOpenURL:(NSURL *)url;
 
 - (void)setShareCompletionBlock:(GSShareCompletionBlock)completionBlock;
 

@@ -8,11 +8,11 @@
 
 #import "GSShareManager.h"
 #import "GSLogger.h"
+#import "GSSocialManager.h"
 
 @interface GSShareManager ()
 {
     NSMutableDictionary <NSNumber *, Class> *_platforms;
-    id<GSShareProtocol> _channel;
 }
 
 @end
@@ -71,7 +71,7 @@
 - (id<GSShareProtocol>)getShareProtocolWithChannelType:(GSShareChannelType)channelType
 {
     id<GSShareProtocol> res = [[(Class)_platforms[@(channelType)] alloc] init];
-    _channel = res;
+    [[GSSocialManager share] setHandle:res];
     if (!res) {
         GSLogger(@"未载入该平台");
     }
@@ -85,16 +85,7 @@
 
 - (void)cleanChannel
 {
-    _channel = nil;
-}
-
-- (BOOL)handleOpenURL:(NSURL *)url
-{
-    BOOL res = NO;
-    if (_channel) {
-        res = [_channel handleOpenURL:url];
-    }
-    return res;
+    [[GSSocialManager share] clearHandle];
 }
 
 @end

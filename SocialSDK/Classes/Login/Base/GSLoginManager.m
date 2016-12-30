@@ -8,11 +8,11 @@
 
 #import "GSLoginManager.h"
 #import "GSLogger.h"
+#import "GSSocialManager.h"
 
 @interface GSLoginManager ()
 {
     NSMutableDictionary <NSNumber *, Class> *_platforms;
-    id<GSLoginProtocol> _channel;
 }
 
 @end
@@ -65,7 +65,7 @@
 - (id<GSLoginProtocol>)getShareProtocolWithChannelType:(GSLoginChannelType)channelType;
 {
     id<GSLoginProtocol> res = [[(Class)_platforms[@(channelType)] alloc] init];
-    _channel = res;
+    [[GSSocialManager share] setHandle:res];
     if (!res) {
         GSLogger(@"未载入该平台");
     }
@@ -80,16 +80,7 @@
 
 - (void)cleanChannel
 {
-    _channel = nil;
-}
-
-- (BOOL)handleOpenURL:(NSURL *)url
-{
-    BOOL res = NO;
-    if (_channel) {
-        res = [_channel handleOpenURL:url];
-    }
-    return res;
+    [[GSSocialManager share] clearHandle];
 }
 
 @end
