@@ -33,27 +33,16 @@
 ## Installation
 
 ### <a id="CocoaPods集成"></a>CocoaPods
+编写`podfile`分为是否使用了`use_frameworks!`两种情况
+1.如果没使用`use_frameworks!`
 ```ruby
-pod 'SocialSDK', '~> 0.0.1'
+pod 'SocialSDK'
 ```
-问题如果podfile里面使用了`use_frameworks!`需要手动修改`Pods-TargetsName-resources.sh`文件(根据添加的平台和CONFIGURATION决定添加下面的语句):
-
+2.使用了`use_frameworks!`
 ```ruby
-if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "SocialSDK/SocialSDK/Rrources/GSSocialSDKResources.bundle"
-  install_resource "SocialSDK/SDK/TencentOpenApi/TencentOpenApi_IOS_Bundle.bundle"
-  install_resource "SocialSDK/SDK/libWeiboSDK/WeiboSDK.bundle"
-fi
-if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "SocialSDK/SocialSDK/Rrources/GSSocialSDKResources.bundle"
-  install_resource "SocialSDK/SDK/TencentOpenApi/TencentOpenApi_IOS_Bundle.bundle"
-  install_resource "SocialSDK/SDK/libWeiboSDK/WeiboSDK.bundle"
-fi
+pod 'SocialSDK_UF'
+pod 'SocialSDK_R'
 ```
-
-也可以先去掉`use_frameworks!`拷贝出相应的`install_resource`命令来安装资源文件。  
-### <a id="手动集成介绍"></a>手动集成介绍
-手动添加Classes文件中的类。
 
 ## SocialSDK各平台配置
 #### <a id="SinaWeiBo"></a>Sina平台配置
