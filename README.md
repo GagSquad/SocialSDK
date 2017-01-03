@@ -31,9 +31,9 @@
 
 ***
 ## Installation
-
 ### <a id="CocoaPods集成"></a>CocoaPods
-编写`podfile`分为是否使用了`use_frameworks!`两种情况
+编写`podfile`分为是否使用了`use_frameworks!`两种情况</br>
+
 1.如果没使用`use_frameworks!`
 ```ruby
 pod 'SocialSDK'
@@ -43,7 +43,8 @@ pod 'SocialSDK'
 pod 'SocialSDK_UF'
 pod 'SocialSDK_R'
 ```
-
+### <a id="手动集成介绍"></a>手动集成介绍
+直接拖动Classes文件到自己的项目中，添加Resources中的资源文件（推荐使用CocoaPods）。
 ## SocialSDK各平台配置
 #### <a id="SinaWeiBo"></a>Sina平台配置
 * *1、* 添加URL Schemes 格式"wb"+新浪appKey  
