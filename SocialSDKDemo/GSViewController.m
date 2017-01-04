@@ -36,10 +36,10 @@
                                    //[self testPay:reourcesType];
                                    
                                    //登录
-//                                   [self testLogin:reourcesType];
+                                   [self testLogin:reourcesType];
                                    
                                    //分享
-                                   [self testShare:reourcesType];
+//                                   [self testShare:reourcesType];
                                }
     }];
 }
@@ -66,13 +66,17 @@
     [share setShareCompletionBlock:^(id<GSShareResultProtocol> result) {
         NSLog(@"%@", result.message);
     }];
+    
 //    //分享纯文本
 //    [share shareSimpleText:@"测试分享"];
-    //分享图片
+    
+//    //分享图片
 //    [share shareSingleImage:[UIImage imageNamed:@"default"] title:@"分享图片title" description:@"分享图片description"];
-    //分享url
-    [share shareURL:@"https://github.com/GagSquad/SocialSDK" title:@"分享链接title" description:@"分享链接description" thumbnail:[UIImage imageNamed:@"default"]];
-    //分享音频链接
+    
+//    //分享url
+//    [share shareURL:@"https://github.com/GagSquad/SocialSDK" title:@"分享链接title" description:@"分享链接description" thumbnail:[UIImage imageNamed:@"default"]];
+    
+//    //分享音频链接
 //    [share shareMusicURL:@"http://i.y.qq.com/v8/playsong.html?hostuin=0&songid=&songmid=002x5Jje3eUkXT&_wv=1&source=qq&appshare=iphone&media_mid=002x5Jje3eUkXT"
 //         musicLowBandURL:nil
 //            musicDataURL:nil
@@ -80,6 +84,7 @@
 //                   title:@"Wish You Were Here"
 //             description:@"Avril Lavigne"
 //               thumbnail:[UIImage imageNamed:@"default"]];
+    
 //    //分享视频链接
 //    [share shareVideoURL:@"http://www.tudou.com/programs/view/_cVM3aAp270/"
 //         videoLowBandURL:nil

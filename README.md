@@ -14,6 +14,15 @@
 | Qzone | √ | √ | √ | √ | √  |
 | WechatSession | √ | √ | √ | √ | √  |
 | WechatTimeLine | √ | √ | √ | √ | √  |
+## Renderings
+纯文本、单图、URL、音频链接、视频链接分享：</br>
+<img src="Images/Screenshot/新浪纯文本分享.gif" width="200">
+<img src="Images/Screenshot/新浪图片分享.gif" width="200">
+<img src="Images/Screenshot/新浪URL分享.gif" width="200">
+<img src="Images/Screenshot/新浪音频链接分享.gif" width="200">
+<img src="Images/Screenshot/新浪视频链接分享.gif" width="200"></br>
+微博登录:<br/>
+<img src="Images/Screenshot/微博登录.gif" width="200"></br>
 ## 平台集成  
 ### 1. SocialSDK集成  
 * 1.1 [通过Cocoapods集成](#CocoaPods集成)
@@ -47,12 +56,12 @@ pod 'SocialSDK_R'
 ## SocialSDK各平台配置
 #### <a id="SinaWeiBo"></a>Sina平台配置
 * *1、* 添加URL Schemes 格式"wb"+新浪appKey  
-* <img src="Images/sinaGuide/sinaGuide-1.png" width="500">
+* <img src="Images/SinaGuide/SinaGuide-1.png" width="500">
 * *2、* [适配iOS9+系统](#iOS9+)
 
 #### <a id="WeChat"></a>WeChat平台配置
 * *1、* 添加URL Schemes 格式 微信appKey  
-* <img src="Images/weChatGuide/weChatGuide-1.png" width="500">  
+* <img src="Images/WeChatGuide/WeChatGuide-1.png" width="500">  
 * *2、* [适配iOS9+系统](#iOS9+)
 
 #### <a id="QQ"></a>QQ平台配置
@@ -177,12 +186,5 @@ pod 'SocialSDK_R'
     <string>mttbrowser</string>
 </array>
 ```
-## Renderings
-纯文本分享：</br>
-<img src="Images/新浪纯文本分享.gif" width="200"></br>
-单图分享：</br>
-<img src="Images/新浪图片分享.gif" width="200"></br>
-URL分享：</br>
-<img src="Images/新浪URL分享.gif" width="200"></br>
 ## License
 SocialSDK is under [WTFPL](http://www.wtfpl.net/). You can do what the fuck you want with SocialSDK. See [LICENSE](LICENSE) file for more info.
