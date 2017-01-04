@@ -25,9 +25,9 @@
 * 2.3 [QQ](#QQ)
 
 ### 3. 调用SocialSDK
-* 3.1 [初始化配置]()
-* 3.2 [第三方平台登录]()
-* 3.3 [第三方平台分享]()
+* 3.1 [初始化配置](#初始化配置)
+* 3.2 [第三方平台登录](#第三方平台登录)
+* 3.3 [第三方平台分享](#第三方平台分享)
 
 ***
 ## Installation
@@ -178,6 +178,97 @@ pod 'SocialSDK_R'
     <string>mttbrowser</string>
 </array>
 ```
+
+## <a id="初始化配置"></a>初始化配置  
+
+ 在 `AppDelegate.m` 中做如下配置
+
+```objc
+   #import "GSPlatformParamConfigManager.h"
+   #import "GSSocialManager.h"
+   
+ - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
+{
+    [[GSPlatformParamConfigManager share] addSinaPlatformConfigAppKey:@"" redirectURI:@""];
+    [[GSPlatformParamConfigManager share] addQQPlatformConfigAppID:@""];
+    [[GSPlatformParamConfigManager share] addWeChatPlatformConfigAppID:@"" secret:@""];
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
+{
+    BOOL res = [[GSSocialManager share] handleOpenURL:url];
+    if (!res) {
+        //做其他SDK回调处理
+    }
+    return res;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    BOOL res = [[GSSocialManager share] handleOpenURL:url];
+    if (!res) {
+        //做其他SDK回调处理
+    }
+    return res;
+}
+
+```
+## <a id="第三方平台登录"></a>第三方平台登录  
+
+  ```objc
+#import "GSSelectView.h"
+#import "GSShareChannelType.h"
+#import "GSLoginManager.h"
+
+  ```  
+  
+  ```objc
+      [GSSelectView showShareViewWithChannels:@[
+                                              @(GSShareChannelTypeSina),
+                                              @(GSShareChannelTypeQQ),
+                                              @(GSShareChannelTypeQzone),
+                                              @(GSShareChannelTypeWechatSession)
+                                              ] completionBlock:^(BOOL isCancel, GSLogoReourcesType reourcesType) {
+                                                  if (isCancel) {
+                                                      
+                                                  } else {
+                                                      id<GSLoginProtocol> login = [[GSLoginManager share] getShareProtocolWithChannelType:[GSLoginManager getShareChannelTypeWithLogoReourcesType:reourcesType]];
+                                                      [login setLoginCompletionBlock:^(id<GSLoginResultProtocol> result) {
+                                                          
+                                                      }];
+                                                      [login doLogin];
+                                                  }
+    }];
+  
+  ```
+  
+## <a id="第三方平台分享"></a>第三方平台分享
+
+```objc
+#import "GSSelectView.h"
+#import "GSShareChannelType.h"
+#import "GSShareManager.h"
+```
+```objc
+    [GSSelectView showShareViewWithChannels:@[
+                                              @(GSShareChannelTypeSina),
+                                              @(GSShareChannelTypeQQ),
+                                              @(GSShareChannelTypeQzone),
+                                              @(GSShareChannelTypeWechatSession)
+                                              ] completionBlock:^(BOOL isCancel, GSLogoReourcesType reourcesType) {
+                                                  if (isCancel) {
+                                                      
+                                                  } else {
+                                                      id<GSShareProtocol> share = [[GSShareManager share] getShareProtocolWithChannelType:[GSShareManager getShareChannelTypeWithLogoReourcesType:reourcesType]];
+                                                      [share shareSimpleText:@"good day"];
+                                                      [share setShareCompletionBlock:^(id<GSShareResultProtocol> result) {
+                                                          
+                                                      }];
+                                                  }
+    }];
+```
+
 ## Renderings
 纯文本分享：</br>
 <img src="Images/新浪纯文本分享.gif" width="200"></br>
