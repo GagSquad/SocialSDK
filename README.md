@@ -34,15 +34,15 @@
 * 2.3 [QQ](#QQ)
 
 ### 3. 调用SocialSDK
-* 3.1 [初始化配置]()
-* 3.2 [第三方平台登录]()
-* 3.3 [第三方平台分享]()
+* 3.1 [初始化配置](#初始化配置)
+* 3.2 [第三方平台登录](#第三方平台登录)
+* 3.3 [第三方平台分享](#第三方平台分享)
 
 ***
 ## Installation
-
 ### <a id="CocoaPods集成"></a>CocoaPods
-编写`podfile`分为是否使用了`use_frameworks!`两种情况
+编写`podfile`分为是否使用了`use_frameworks!`两种情况</br>
+
 1.如果没使用`use_frameworks!`
 ```ruby
 pod 'SocialSDK'
@@ -52,7 +52,8 @@ pod 'SocialSDK'
 pod 'SocialSDK_UF'
 pod 'SocialSDK_R'
 ```
-
+### <a id="手动集成介绍"></a>手动集成介绍
+直接拖动Classes文件到自己的项目中，添加Resources中的资源文件（推荐使用CocoaPods）。
 ## SocialSDK各平台配置
 #### <a id="SinaWeiBo"></a>Sina平台配置
 * *1、* 添加URL Schemes 格式"wb"+新浪appKey  
@@ -185,6 +186,95 @@ pod 'SocialSDK_R'
     <string>mqqbrowser</string>
     <string>mttbrowser</string>
 </array>
+```
+## <a id="初始化配置"></a>初始化配置  
+
+ 在 `AppDelegate.m` 中做如下配置
+
+```objc
+   #import "GSPlatformParamConfigManager.h"
+   #import "GSSocialManager.h"
+   
+ - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
+{
+    [[GSPlatformParamConfigManager share] addSinaPlatformConfigAppKey:@"" redirectURI:@""];
+    [[GSPlatformParamConfigManager share] addQQPlatformConfigAppID:@""];
+    [[GSPlatformParamConfigManager share] addWeChatPlatformConfigAppID:@"" secret:@""];
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
+{
+    BOOL res = [[GSSocialManager share] handleOpenURL:url];
+    if (!res) {
+        //做其他SDK回调处理
+    }
+    return res;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    BOOL res = [[GSSocialManager share] handleOpenURL:url];
+    if (!res) {
+        //做其他SDK回调处理
+    }
+    return res;
+}
+
+```
+## <a id="第三方平台登录"></a>第三方平台登录  
+
+  ```objc
+#import "GSSelectView.h"
+#import "GSShareChannelType.h"
+#import "GSLoginManager.h"
+
+  ```  
+  
+  ```objc
+      [GSSelectView showShareViewWithChannels:@[
+                                              @(GSShareChannelTypeSina),
+                                              @(GSShareChannelTypeQQ),
+                                              @(GSShareChannelTypeQzone),
+                                              @(GSShareChannelTypeWechatSession)
+                                              ] completionBlock:^(BOOL isCancel, GSLogoReourcesType reourcesType) {
+                                                  if (isCancel) {
+                                                      
+                                                  } else {
+                                                      id<GSLoginProtocol> login = [[GSLoginManager share] getShareProtocolWithChannelType:[GSLoginManager getShareChannelTypeWithLogoReourcesType:reourcesType]];
+                                                      [login setLoginCompletionBlock:^(id<GSLoginResultProtocol> result) {
+                                                          
+                                                      }];
+                                                      [login doLogin];
+                                                  }
+    }];
+  
+  ```
+  
+## <a id="第三方平台分享"></a>第三方平台分享
+
+```objc
+#import "GSSelectView.h"
+#import "GSShareChannelType.h"
+#import "GSShareManager.h"
+```
+```objc
+    [GSSelectView showShareViewWithChannels:@[
+                                              @(GSShareChannelTypeSina),
+                                              @(GSShareChannelTypeQQ),
+                                              @(GSShareChannelTypeQzone),
+                                              @(GSShareChannelTypeWechatSession)
+                                              ] completionBlock:^(BOOL isCancel, GSLogoReourcesType reourcesType) {
+                                                  if (isCancel) {
+                                                      
+                                                  } else {
+                                                      id<GSShareProtocol> share = [[GSShareManager share] getShareProtocolWithChannelType:[GSShareManager getShareChannelTypeWithLogoReourcesType:reourcesType]];
+                                                      [share shareSimpleText:@"good day"];
+                                                      [share setShareCompletionBlock:^(id<GSShareResultProtocol> result) {
+                                                          
+                                                      }];
+                                                  }
+    }];
 ```
 ## License
 SocialSDK is under [WTFPL](http://www.wtfpl.net/). You can do what the fuck you want with SocialSDK. See [LICENSE](LICENSE) file for more info.
