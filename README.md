@@ -57,12 +57,12 @@ pod 'SocialSDK_R'
 ## SocialSDK各平台配置
 #### <a id="SinaWeiBo"></a>Sina平台配置
 * *1、* 添加URL Schemes 格式"wb"+新浪appKey  
-* <img src="Images/sinaGuide/SinaGuide-1.png" width="500">
+* <img src="Images/sinaGuide/sinaGuide-1.png" width="500">
 * *2、* [适配iOS9+系统](#iOS9+)
 
 #### <a id="WeChat"></a>WeChat平台配置
 * *1、* 添加URL Schemes 格式 微信appKey  
-* <img src="Images/weChatGuide/WeChatGuide-1.png" width="500">  
+* <img src="Images/weChatGuide/weChatGuide-1.png" width="500">  
 * *2、* [适配iOS9+系统](#iOS9+)
 
 #### <a id="QQ"></a>QQ平台配置
