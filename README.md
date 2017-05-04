@@ -15,13 +15,13 @@
 | WechatSession | √ | √ | √ | √ | √  |
 | WechatTimeLine | √ | √ | √ | √ | √  |
 ## Renderings
-###纯文本、单图、URL、音频链接、视频链接分享
+### 纯文本、单图、URL、音频链接、视频链接分享
 <img src="Images/Screenshot/新浪纯文本分享.gif" width="200">
 <img src="Images/Screenshot/新浪图片分享.gif" width="200">
 <img src="Images/Screenshot/新浪URL分享.gif" width="200">
 <img src="Images/Screenshot/新浪音频链接分享.gif" width="200">
 <img src="Images/Screenshot/新浪视频链接分享.gif" width="200"></br>
-###微博登录
+### 微博登录
 <img src="Images/Screenshot/微博登录.gif" width="200"></br>
 ## 平台集成  
 ### 1. SocialSDK集成  
