@@ -1,12 +1,12 @@
 ## SocialSDK
  **简介:** 实现 **Sina** **WeChat** **QQ** 登录和分享功能
-#### 1. SDK功能
+### 1. SDK功能
 | 平台 | 分享 | 登录 | 支付 |
 |:--------------------:|:---------------------------:|:----------------------------:|:----------------------------:|
 | Sina | √ | √ | × |
 | QQ | √ | √ | × |
 | Wechat | √ | √ | × |
-#### 2.分享渠道支持
+### 2.分享渠道支持
 | 渠道 | 纯文本 | 单图 | 普通链接 | 音频链接 | 视频链接 |
 |:--------------------:|:---------------------------:|:----------------------------:|:----------------------------:|:----------------------------:|:-------------------------------------------------------------------------:|
 | Sina | √ | √ | √ | √ | √  |
@@ -16,13 +16,13 @@
 | WechatTimeLine | √ | √ | √ | √ | √  |
 ## Renderings
 ### 纯文本、单图、URL、音频链接、视频链接分享
-<img src="Images/Screenshot/新浪纯文本分享.gif" width="200">
-<img src="Images/Screenshot/新浪图片分享.gif" width="200">
-<img src="Images/Screenshot/新浪URL分享.gif" width="200">
-<img src="Images/Screenshot/新浪音频链接分享.gif" width="200">
-<img src="Images/Screenshot/新浪视频链接分享.gif" width="200"></br>
+    <img src="Images/Screenshot/新浪纯文本分享.gif" width="200" />
+    <img src="Images/Screenshot/新浪图片分享.gif" width="200" />
+    <img src="Images/Screenshot/新浪URL分享.gif" width="200" />
+    <img src="Images/Screenshot/新浪音频链接分享.gif" width="200" />
+    <img src="Images/Screenshot/新浪视频链接分享.gif" width="200" />
 ### 微博登录
-<img src="Images/Screenshot/微博登录.gif" width="200"></br>
+    <img src="Images/Screenshot/微博登录.gif" width="200" />
 ## 平台集成  
 ### 1. SocialSDK集成  
 * 1.1 [通过Cocoapods集成](#CocoaPods集成)
