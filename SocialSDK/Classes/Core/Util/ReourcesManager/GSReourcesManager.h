@@ -19,6 +19,8 @@
 
 - (NSBundle *)localizedBundle;
 
+- (void)setThemeName:(NSString *)themeName;
+
 - (UIImage *)logoWithName:(NSString *)name;
 
 @end

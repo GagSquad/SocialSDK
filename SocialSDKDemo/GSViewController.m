@@ -23,25 +23,25 @@
 
 - (IBAction)selectSharePlan:(id)sender
 {
-    [GSSelectView showShareViewWithChannels:@[
-                                             @(GSShareChannelTypeSina),
-                                             @(GSShareChannelTypeQQ),
-                                             @(GSShareChannelTypeWechatSession),
-                                             ]
-                           completionBlock:^(BOOL isCancel, GSLogoReourcesType reourcesType) {
-                               if (isCancel) {
-                                   NSLog(@"用户点击了取消");
-                               } else {
-                                   //支付
-                                   //[self testPay:reourcesType];
-                                   
-                                   //登录
-                                   [self testLogin:reourcesType];
-                                   
-                                   //分享
-//                                   [self testShare:reourcesType];
-                               }
-    }];
+    [GSActionSheetSelectView showShareViewWithChannels:@[
+                                                   @(GSShareChannelTypeSina),
+                                                   @(GSShareChannelTypeQQ),
+                                                   @(GSShareChannelTypeWechatSession),
+                                                   ]
+                                 completionBlock:^(BOOL isCancel, GSLogoReourcesType reourcesType) {
+                                     if (isCancel) {
+                                         NSLog(@"用户点击了取消");
+                                     } else {
+                                         //支付
+                                         //[self testPay:reourcesType];
+                                         
+                                         //登录
+                                         [self testLogin:reourcesType];
+                                         
+                                         //分享
+//                                         [self testShare:reourcesType];
+                                     }
+                                 }];
 }
 
 - (void)testPay:(GSLogoReourcesType)reourcesType

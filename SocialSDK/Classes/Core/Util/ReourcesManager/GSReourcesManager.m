@@ -10,9 +10,11 @@
 #import "GSLogger.h"
 
 @interface GSReourcesManager ()
-
-@property(nonatomic, strong) NSBundle *localizedBundle;
-@property(nonatomic, strong) NSString *mainBundlePath;
+{
+    NSBundle *_localizedBundle;
+    NSString *_mainBundlePath;
+    NSString *_themeName;
+}
 
 @end
 
@@ -38,6 +40,7 @@
     self = [super init];
     if (self) {
         _mainBundlePath = [[NSBundle mainBundle] pathForResource:@"GSSocialSDKResources" ofType:@"bundle"];
+        _themeName = @"default";
     }
     return self;
 }
@@ -45,6 +48,13 @@
 - (NSBundle *)localizedBundle
 {
     return _localizedBundle;
+}
+
+- (void)setThemeName:(NSString *)themeName
+{
+    if (themeName) {
+        _themeName = [themeName copy];
+    }
 }
 
 #pragma maark - private
@@ -71,16 +81,21 @@
 - (UIImage *)logoWithName:(NSString *)name;
 {
     NSBundle *resourceBundle = [NSBundle bundleWithPath:_mainBundlePath];
-    NSString *logoPath = [resourceBundle pathForResource:name ofType:@"png" inDirectory:@"SocialTheme/default"];
+    NSString *logoPath = [resourceBundle pathForResource:name ofType:@"png" inDirectory:[self getLogoDirectory]];
     
     NSString *path = nil;
     if (logoPath) {
         path = logoPath;
     } else {
-        path = [resourceBundle pathForResource:@"default" ofType:@"png" inDirectory:@"SocialTheme/default"];
+        path = [resourceBundle pathForResource:@"default" ofType:@"png" inDirectory:[self getLogoDirectory]];
     }
     
     return [UIImage imageWithContentsOfFile:path];
+}
+
+- (NSString *)getLogoDirectory
+{
+    return [NSString stringWithFormat:@"SocialTheme/%@", _themeName];
 }
 
 @end

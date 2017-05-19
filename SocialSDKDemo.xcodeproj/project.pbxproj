@@ -14,8 +14,13 @@
 		0E4B320C1E02962C00F231F0 /* SocialSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E4B320A1E02962C00F231F0 /* SocialSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E4B320F1E02962C00F231F0 /* SocialSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4B32081E02962C00F231F0 /* SocialSDK.framework */; };
 		0E4B32101E02962C00F231F0 /* SocialSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4B32081E02962C00F231F0 /* SocialSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0E71448C1E0536D000BC105E /* GSSelectView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E71448A1E0536D000BC105E /* GSSelectView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0E71448D1E0536D000BC105E /* GSSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E71448B1E0536D000BC105E /* GSSelectView.m */; };
+		0E5B21861ECEDFAF00CFE867 /* GSSelectViewProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E5B21851ECEDFAF00CFE867 /* GSSelectViewProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E5B218D1ECEE30000CFE867 /* GSActionSheetSelectView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E5B21871ECEE30000CFE867 /* GSActionSheetSelectView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E5B218E1ECEE30000CFE867 /* GSActionSheetSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B21881ECEE30000CFE867 /* GSActionSheetSelectView.m */; };
+		0E5B218F1ECEE30000CFE867 /* GSSimpleSelectView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E5B21891ECEE30000CFE867 /* GSSimpleSelectView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E5B21901ECEE30000CFE867 /* GSSimpleSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B218A1ECEE30000CFE867 /* GSSimpleSelectView.m */; };
+		0E5B21911ECEE30000CFE867 /* GSTextSelectView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E5B218B1ECEE30000CFE867 /* GSTextSelectView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E5B21921ECEE30000CFE867 /* GSTextSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B218C1ECEE30000CFE867 /* GSTextSelectView.m */; };
 		0E7A408B1E078C9C0083899C /* GSCollectionViewHorizontalLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E7A40891E078C9C0083899C /* GSCollectionViewHorizontalLayout.h */; };
 		0E7A408C1E078C9C0083899C /* GSCollectionViewHorizontalLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A408A1E078C9C0083899C /* GSCollectionViewHorizontalLayout.m */; };
 		0E7A40911E07AF4D0083899C /* GSCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E7A408F1E07AF4D0083899C /* GSCollectionViewCell.h */; };
@@ -143,8 +148,13 @@
 		0E4B32081E02962C00F231F0 /* SocialSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SocialSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E4B320A1E02962C00F231F0 /* SocialSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocialSDK.h; sourceTree = "<group>"; };
 		0E4B320B1E02962C00F231F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0E71448A1E0536D000BC105E /* GSSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSSelectView.h; sourceTree = "<group>"; };
-		0E71448B1E0536D000BC105E /* GSSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSSelectView.m; sourceTree = "<group>"; };
+		0E5B21851ECEDFAF00CFE867 /* GSSelectViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSSelectViewProtocol.h; sourceTree = "<group>"; };
+		0E5B21871ECEE30000CFE867 /* GSActionSheetSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSActionSheetSelectView.h; sourceTree = "<group>"; };
+		0E5B21881ECEE30000CFE867 /* GSActionSheetSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSActionSheetSelectView.m; sourceTree = "<group>"; };
+		0E5B21891ECEE30000CFE867 /* GSSimpleSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSSimpleSelectView.h; sourceTree = "<group>"; };
+		0E5B218A1ECEE30000CFE867 /* GSSimpleSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSSimpleSelectView.m; sourceTree = "<group>"; };
+		0E5B218B1ECEE30000CFE867 /* GSTextSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTextSelectView.h; sourceTree = "<group>"; };
+		0E5B218C1ECEE30000CFE867 /* GSTextSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTextSelectView.m; sourceTree = "<group>"; };
 		0E7A40891E078C9C0083899C /* GSCollectionViewHorizontalLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCollectionViewHorizontalLayout.h; sourceTree = "<group>"; };
 		0E7A408A1E078C9C0083899C /* GSCollectionViewHorizontalLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCollectionViewHorizontalLayout.m; sourceTree = "<group>"; };
 		0E7A408F1E07AF4D0083899C /* GSCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCollectionViewCell.h; sourceTree = "<group>"; };
@@ -393,8 +403,13 @@
 		0E71448E1E05370B00BC105E /* SelectView */ = {
 			isa = PBXGroup;
 			children = (
-				0E71448A1E0536D000BC105E /* GSSelectView.h */,
-				0E71448B1E0536D000BC105E /* GSSelectView.m */,
+				0E5B21871ECEE30000CFE867 /* GSActionSheetSelectView.h */,
+				0E5B21881ECEE30000CFE867 /* GSActionSheetSelectView.m */,
+				0E5B21891ECEE30000CFE867 /* GSSimpleSelectView.h */,
+				0E5B218A1ECEE30000CFE867 /* GSSimpleSelectView.m */,
+				0E5B218B1ECEE30000CFE867 /* GSTextSelectView.h */,
+				0E5B218C1ECEE30000CFE867 /* GSTextSelectView.m */,
+				0E5B21851ECEDFAF00CFE867 /* GSSelectViewProtocol.h */,
 			);
 			name = SelectView;
 			sourceTree = "<group>";
@@ -677,7 +692,6 @@
 				0E97D14E1E14ACD20077B44E /* GSShareManager.h in Headers */,
 				0E97D17A1E14AD120077B44E /* GSLoginResultProtocol.h in Headers */,
 				0EB544011E164ABA0078D5FD /* GSSocialManager.h in Headers */,
-				0E71448C1E0536D000BC105E /* GSSelectView.h in Headers */,
 				0E97D1501E14ACD20077B44E /* GSShareProtocol.h in Headers */,
 				0E97D1531E14ACD20077B44E /* GSShareResultProtocol.h in Headers */,
 				0EB543FE1E164A540078D5FD /* GSHandleProtocol.h in Headers */,
@@ -688,12 +702,16 @@
 				0E97D12A1E14AC050077B44E /* GSPlatformType.h in Headers */,
 				0E97D14D1E14ACD20077B44E /* GSShareChannelType.h in Headers */,
 				0E97D1271E14AC050077B44E /* GSPlatformParamConfigManager.h in Headers */,
+				0E5B218F1ECEE30000CFE867 /* GSSimpleSelectView.h in Headers */,
+				0E5B218D1ECEE30000CFE867 /* GSActionSheetSelectView.h in Headers */,
+				0E5B21911ECEE30000CFE867 /* GSTextSelectView.h in Headers */,
+				0E5B21861ECEDFAF00CFE867 /* GSSelectViewProtocol.h in Headers */,
 				0E7A408B1E078C9C0083899C /* GSCollectionViewHorizontalLayout.h in Headers */,
+				0E97D10B1E14AB9E0077B44E /* GSReourcesManager.h in Headers */,
 				0E97D17F1E14AD120077B44E /* GSWeChatLogin.h in Headers */,
 				0E97D1291E14AC050077B44E /* GSPlatformParamConfigProtocol.h in Headers */,
 				0E97D15C1E14ACD20077B44E /* GSWeChatTimeLineShare.h in Headers */,
 				0E7A40911E07AF4D0083899C /* GSCollectionViewCell.h in Headers */,
-				0E97D10B1E14AB9E0077B44E /* GSReourcesManager.h in Headers */,
 				0E97D17B1E14AD120077B44E /* GSQQLogin.h in Headers */,
 				0E97D1511E14ACD20077B44E /* GSShareResult.h in Headers */,
 				0E97D1581E14ACD20077B44E /* GSSinaShare.h in Headers */,
@@ -917,6 +935,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E97D1591E14ACD20077B44E /* GSSinaShare.m in Sources */,
+				0E5B21921ECEE30000CFE867 /* GSTextSelectView.m in Sources */,
 				0E97D1571E14ACD20077B44E /* GSQzoneShare.m in Sources */,
 				0E97D1261E14AC050077B44E /* GSBasePlatformParamConfig.m in Sources */,
 				0E97D1131E14ABC40077B44E /* GSLoggerConfig.m in Sources */,
@@ -924,7 +943,7 @@
 				0E7A40921E07AF4D0083899C /* GSCollectionViewCell.m in Sources */,
 				0E7A408C1E078C9C0083899C /* GSCollectionViewHorizontalLayout.m in Sources */,
 				0E97D12C1E14AC050077B44E /* GSQQPlatformParamConfig.m in Sources */,
-				0E71448D1E0536D000BC105E /* GSSelectView.m in Sources */,
+				0E5B218E1ECEE30000CFE867 /* GSActionSheetSelectView.m in Sources */,
 				0E97D1551E14ACD20077B44E /* GSQQShare.m in Sources */,
 				0E97D15D1E14ACD20077B44E /* GSWeChatTimeLineShare.m in Sources */,
 				0E97D14C1E14ACD20077B44E /* GSBaseShare.m in Sources */,
@@ -932,6 +951,7 @@
 				0E97D1791E14AD120077B44E /* GSLoginResult.m in Sources */,
 				0E97D17C1E14AD120077B44E /* GSQQLogin.m in Sources */,
 				0E97D1091E14AB9E0077B44E /* GSLogoReources.m in Sources */,
+				0E5B21901ECEE30000CFE867 /* GSSimpleSelectView.m in Sources */,
 				0E97D1521E14ACD20077B44E /* GSShareResult.m in Sources */,
 				0E97D15B1E14ACD20077B44E /* GSWeChatSessionShare.m in Sources */,
 				0E97D14F1E14ACD20077B44E /* GSShareManager.m in Sources */,

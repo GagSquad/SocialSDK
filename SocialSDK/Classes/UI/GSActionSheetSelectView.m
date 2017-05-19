@@ -1,20 +1,21 @@
 //
-//  GSSelectView.m
+//  GSActionSheetSelectView.m
 //  SocialSDKDemo
 //
 //  Created by lijunjie on 17/12/2016.
 //  Copyright © 2016 GagSquad. All rights reserved.
 //
 
-#import "GSSelectView.h"
+#import "GSActionSheetSelectView.h"
 #import "GSLogger.h"
 #import "GSCollectionViewHorizontalLayout.h"
 #import "GSCollectionViewCell.h"
 #import "GSLogoReources.h"
 #import "GSPlatformParamConfigManager.h"
 #import "GSPlatformParamConfigProtocol.h"
+#import "GSReourcesManager.h"
 
-@interface GSSelectView () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface GSActionSheetSelectView () <UICollectionViewDataSource, UICollectionViewDelegate>
 {
     NSArray<NSNumber *>* _channels;
     
@@ -27,7 +28,7 @@
 
 @end
 
-@implementation GSSelectView
+@implementation GSActionSheetSelectView
 
 - (void)dealloc
 {
@@ -36,7 +37,8 @@
 
 + (void)showShareViewWithChannels:(NSArray *)channels completionBlock:(GSSelectViewCompletionBlock)completionBlock;
 {
-    GSSelectView *w = [[GSSelectView alloc] initWithChannels:channels completionBlock:completionBlock];
+    [[GSReourcesManager share] setThemeName:@"actionsheet"];
+    GSActionSheetSelectView *w = [[GSActionSheetSelectView alloc] initWithChannels:channels completionBlock:completionBlock];
     [w makeKeyAndVisible];
     w.window = w;
 }
@@ -73,24 +75,17 @@
 
 - (void)createView
 {
-    CGFloat height = 260.f;
-    
+    CGFloat height = 240.f;
+    CGFloat margin = 10.f;//外边距
     CGSize size = self.frame.size;
     UIView *shareBGView = [[UIView alloc] initWithFrame:CGRectMake(0, size.height, size.width, height)];
-    shareBGView.backgroundColor = [UIColor colorWithRed:233/255.f green:239/255.f blue:242/255.f alpha:1.0];
+    shareBGView.backgroundColor = [UIColor clearColor];
     [self addSubview:shareBGView];
     
-    CGFloat hfHeight = 40.f;
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, size.width, hfHeight)];
-    UILabel *title = [[UILabel alloc] initWithFrame:headerView.bounds];
-    title.textAlignment = NSTextAlignmentCenter;
-    title.textColor = [UIColor colorWithRed:143/255.f green:143/255.f blue:143/255.f alpha:1.0];
-    title.font = [UIFont systemFontOfSize:16.f];
-    title.text = @"请选择";
-    [headerView addSubview:title];
-    
-    UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, headerView.frame.size.height + headerView.frame.origin.y, size.width, height - hfHeight * 2)];
-    contentView.backgroundColor = [UIColor clearColor];
+    UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(margin, 0, size.width - margin * 2, height - 60)];
+    contentView.backgroundColor = [UIColor whiteColor];
+    contentView.layer.cornerRadius = 10.f;
+    contentView.layer.masksToBounds = YES;
     
     GSCollectionViewHorizontalLayout *layout =[[GSCollectionViewHorizontalLayout alloc] init];
     layout.itemCountPerRow = 4;
@@ -110,19 +105,21 @@
     [collectionView registerClass:[GSCollectionViewCell class] forCellWithReuseIdentifier:@"GSCollectionViewCell"];
     [contentView addSubview:collectionView];
     
-    UIView *fooderView = [[UIView alloc] initWithFrame:CGRectMake(0, contentView.frame.size.height + contentView.frame.origin.y, size.width, hfHeight)];
-    fooderView.backgroundColor = [UIColor orangeColor];
-    UIButton *cancelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIView *fooderView = [[UIView alloc] initWithFrame:CGRectMake(margin, contentView.frame.size.height + contentView.frame.origin.y + 8, size.width - margin * 2, 44)];
+    fooderView.backgroundColor = [UIColor whiteColor];
+    fooderView.layer.cornerRadius = 10.f;
+    fooderView.layer.masksToBounds = YES;
+    
+    UIButton *cancelBtn = [UIButton buttonWithType:UIButtonTypeSystem];
     cancelBtn.exclusiveTouch = YES;
     cancelBtn.frame = fooderView.bounds;
-    [cancelBtn setTitleColor:[UIColor colorWithRed:90/255.f green:90/255.f blue:90/255.f alpha:1.0] forState:UIControlStateNormal];
-    [cancelBtn setBackgroundColor:[UIColor colorWithRed:246/255.f green:250/255.f blue:252/255.f alpha:1.0]];
+//    [cancelBtn setTitleColor:[UIColor colorWithRed:90/255.f green:90/255.f blue:90/255.f alpha:1.0] forState:UIControlStateNormal];
+    [cancelBtn setBackgroundColor:[UIColor whiteColor]];
     [cancelBtn setTitle:@"取消选择" forState:UIControlStateNormal];
     cancelBtn.titleLabel.font = [UIFont systemFontOfSize:14.f];
     [cancelBtn addTarget:self action:@selector(cancelAction:) forControlEvents:UIControlEventTouchUpInside];
     [fooderView addSubview:cancelBtn];
     //246 250 252
-    [shareBGView addSubview:headerView];
     [shareBGView addSubview:contentView];
     [shareBGView addSubview:fooderView];
     
