@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name              = 'SocialSDK_R'
-    s.version           = '0.0.3'
+    s.version           = '0.0.4'
     s.summary           = 'SocialSDK_R SDK for iOS'
     s.homepage          = 'https://github.com/GagSquad/SocialSDK'
     s.author            = { 'itlijunjie@gmail.com' => 'https://github.com/itlijunjie', 'LVJIALIN' => 'https://github.com/LVJIALIN' }
@@ -13,10 +13,10 @@ Pod::Spec.new do |s|
     
     s.requires_arc = true
 
-    s.subspec 'TencentOpenApiSDK_R' do |ss|
-        ss.resources = 'SDK/TencentOpenApi/TencentOpenApi_IOS_Bundle.bundle'
-    end
-    
+#    s.subspec 'TencentOpenApiSDK_R' do |ss|
+#        ss.resources = 'SDK/TencentOpenApi/TencentOpenApi_IOS_Bundle.bundle'
+#    end
+
     s.subspec 'WeiboSDK_R' do |ss|
         ss.resources     = 'SDK/libWeiboSDK/WeiboSDK.bundle'
     end
@@ -25,6 +25,7 @@ Pod::Spec.new do |s|
         ss.resources     = 'SocialSDK/Rrources/GSSocialSDKResources.bundle'
     end
     
-    s.default_subspecs = 'TencentOpenApiSDK_R', 'WeiboSDK_R', 'SocialSDK_R'
+#    s.default_subspecs = 'TencentOpenApiSDK_R', 'WeiboSDK_R', 'SocialSDK_R'
+    s.default_subspecs = 'WeiboSDK_R', 'SocialSDK_R'
 
 end

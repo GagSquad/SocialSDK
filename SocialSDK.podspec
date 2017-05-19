@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name              = 'SocialSDK'
-    s.version           = '0.0.3'
+    s.version           = '0.0.4'
     s.summary           = 'SocialSDK SDK for iOS'
     s.homepage          = 'https://github.com/GagSquad/SocialSDK'
     s.author            = { 'itlijunjie@gmail.com' => 'https://github.com/itlijunjie', 'LVJIALIN' => 'https://github.com/LVJIALIN' }
@@ -16,9 +16,7 @@ Pod::Spec.new do |s|
     
     s.subspec 'TencentOpenApiSDK' do |ss|
         ss.vendored_frameworks = 'SDK/TencentOpenApi/TencentOpenAPI.framework'
-        
-        ss.resources = 'SDK/TencentOpenApi/TencentOpenApi_IOS_Bundle.bundle'
-        
+#        ss.resources = 'SDK/TencentOpenApi/TencentOpenApi_IOS_Bundle.bundle'
         the_frameworks =  [
         '"SystemConfiguration"',
         '"CoreTelephony"'
