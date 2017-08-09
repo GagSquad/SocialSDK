@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E2A105D1F3ADC270000869A /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 0E2A105C1F3ADC270000869A /* .travis.yml */; };
 		0E4B31F21E0294A000F231F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4B31F11E0294A000F231F0 /* AppDelegate.swift */; };
 		0E4B31F71E0294A000F231F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E4B31F51E0294A000F231F0 /* Main.storyboard */; };
 		0E4B31F91E0294A000F231F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E4B31F81E0294A000F231F0 /* Assets.xcassets */; };
@@ -160,6 +161,7 @@
 		0E21AF981E1B9AAF00F1170B /* WXApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		0E21AF991E1B9AAF00F1170B /* WXApiObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		0E21AF9A1E1B9ABC00F1170B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0E2A105C1F3ADC270000869A /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		0E47AFA71E1B466C00F6E840 /* SocialSDK_R.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = SocialSDK_R.podspec; sourceTree = "<group>"; };
 		0E47AFA81E1B466C00F6E840 /* SocialSDK_UF.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = SocialSDK_UF.podspec; sourceTree = "<group>"; };
 		0E4B31EE1E0294A000F231F0 /* SocialSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -371,6 +373,7 @@
 		0E4B31E51E0294A000F231F0 = {
 			isa = PBXGroup;
 			children = (
+				0E2A105C1F3ADC270000869A /* .travis.yml */,
 				0E47AFA71E1B466C00F6E840 /* SocialSDK_R.podspec */,
 				0E47AFA81E1B466C00F6E840 /* SocialSDK_UF.podspec */,
 				0EDF13A71E039D3900C554FC /* SocialSDK.podspec */,
@@ -866,6 +869,7 @@
 				0E4B31F91E0294A000F231F0 /* Assets.xcassets in Resources */,
 				0E7F52CF1ECF1846002AC132 /* WeiboSDK.bundle in Resources */,
 				0E4B31F71E0294A000F231F0 /* Main.storyboard in Resources */,
+				0E2A105D1F3ADC270000869A /* .travis.yml in Resources */,
 				0EAB85951E0A8265004C6004 /* default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

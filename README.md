@@ -1,4 +1,9 @@
 ## SocialSDK
+[![Version](https://img.shields.io/cocoapods/v/SocialSDK.svg?style=flat)](http://cocoapods.org/pods/SocialSDK)
+[![Platform](https://img.shields.io/cocoapods/p/SocialSDK.svg?style=flat)](http://cocoapods.org/pods/SocialSDK)
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![build](https://travis-ci.org/GagSquad/SocialSDK.svg?branch=master)](https://travis-ci.org/GagSquad/SocialSDK)
+
  **简介:** 实现 **Sina** **WeChat** **QQ** 登录和分享功能
 
 #### 所用第三方SDK版本
