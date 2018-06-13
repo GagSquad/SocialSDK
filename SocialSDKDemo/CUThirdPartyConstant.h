@@ -9,22 +9,23 @@
 #ifndef CommonUtil_CUThirdPartyConstant_h
 #define CommonUtil_CUThirdPartyConstant_h
 
-#define WeiXinKey @"自己的"
-#define WeiXinSecret @"自己的"
-#define WeiXinCallBack @"自己的"
+#define UMengKey @"54914e44fd98c510a100034f"
 
-#define SinaWeiBoKey @"自己的"
-#define SinaWeiBoSecret @"自己的"
-#define SinaWeiBoCallBack @"自己的"
-#define SinaWeiBoCancelCallBack @"自己的"
+#define WeiXinKey @"wxddca27f21f10068a"//@"wx7bf9ba35bd1f2e18"
+#define WeiXinSecret @"8aa35bfda9c924bbb5035c7f941943e4"//@"e184f6ae28fefd8e9fe8dfd483d85719"
+#define WeiXinCallBack @"http://www.llpp.com"//@"http://m.wanduoduo.com"
 
-#define QQAppId @"自己的"
-#define QQAppKey @"自己的"
-#define QQCallBack @"自己的"
+#define SinaWeiBoKey @"1136823502"
+#define SinaWeiBoSecret @"6ff740a2f32c2890dd6ee791f362cf2c"
+#define SinaWeiBoCallBack @"http://sns.whalecloud.com/sina2/callback"
+#define SinaWeiBoCancelCallBack @"http://sns.whalecloud.com/sina2/callback"
 
-//后面支付用
-//#define kAliPayResult @"自己的"
-//#define kWeixinPayResult @"自己的"
-//#define kAlipayScheme @"自己的"
+#define QQAppId @"1103835993"
+#define QQAppKey @"ClGoxTxCenjdnn4T"
+#define QQCallBack @"http://www.wanmei.cn"
+
+#define kAliPayResult @"kAliPayResult"
+#define kWeixinPayResult @"kWeixinPayResult"
+#define kAlipayScheme @"wanduoduoAlipay"
 
 #endif

@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E037CE720D10ADA00B5AA9A /* GSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E90C00D1E03C6C9000D646E /* GSViewController.m */; };
+		0E037CEA20D10ADA00B5AA9A /* SocialSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4B32081E02962C00F231F0 /* SocialSDK.framework */; };
+		0E037CEC20D10ADA00B5AA9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E4B31FA1E0294A000F231F0 /* LaunchScreen.storyboard */; };
+		0E037CED20D10ADA00B5AA9A /* GSSocialSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E97D1AB1E14F3310077B44E /* GSSocialSDKResources.bundle */; };
+		0E037CEE20D10ADA00B5AA9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E4B31F81E0294A000F231F0 /* Assets.xcassets */; };
+		0E037CEF20D10ADA00B5AA9A /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E21AF8E1E1B9AAF00F1170B /* WeiboSDK.bundle */; };
+		0E037CF120D10ADA00B5AA9A /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 0E2A105C1F3ADC270000869A /* .travis.yml */; };
+		0E037CF220D10ADA00B5AA9A /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EAB85941E0A8265004C6004 /* default.png */; };
+		0E037CF420D10ADA00B5AA9A /* SocialSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4B32081E02962C00F231F0 /* SocialSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0E037CFB20D10B6800B5AA9A /* SocialSDKSwiftDemo-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E037CFA20D10B6700B5AA9A /* SocialSDKSwiftDemo-Info.plist */; };
+		0E037CFD20D10CD700B5AA9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E037CFC20D10CD700B5AA9A /* Main.storyboard */; };
+		0E037CFF20D10F4800B5AA9A /* GSSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E037CFE20D10F4800B5AA9A /* GSSViewController.swift */; };
+		0E037D0120D1106100B5AA9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E037D0020D1106100B5AA9A /* AppDelegate.swift */; };
 		0E2A105D1F3ADC270000869A /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 0E2A105C1F3ADC270000869A /* .travis.yml */; };
 		0E4B31F21E0294A000F231F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4B31F11E0294A000F231F0 /* AppDelegate.swift */; };
 		0E4B31F71E0294A000F231F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E4B31F51E0294A000F231F0 /* Main.storyboard */; };
@@ -117,6 +130,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0E037CE520D10ADA00B5AA9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E4B31E61E0294A000F231F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E4B32071E02962C00F231F0;
+			remoteInfo = SocialSDK;
+		};
 		0E4B320D1E02962C00F231F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0E4B31E61E0294A000F231F0 /* Project object */;
@@ -127,6 +147,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		0E037CF320D10ADA00B5AA9A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0E037CF420D10ADA00B5AA9A /* SocialSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0E4B32141E02962C00F231F0 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -141,6 +172,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E037CF720D10ADA00B5AA9A /* SocialSDKSwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialSDKSwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E037CFA20D10B6700B5AA9A /* SocialSDKSwiftDemo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SocialSDKSwiftDemo-Info.plist"; sourceTree = "<group>"; };
+		0E037CFC20D10CD700B5AA9A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		0E037CFE20D10F4800B5AA9A /* GSSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSSViewController.swift; sourceTree = "<group>"; };
+		0E037D0020D1106100B5AA9A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0E037D0220D1108900B5AA9A /* SocialSwiftSDKDemo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocialSwiftSDKDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		0E21AF841E1B9AAF00F1170B /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
 		0E21AF851E1B9AAF00F1170B /* WBHttpRequest+WeiboGame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboGame.h"; sourceTree = "<group>"; };
 		0E21AF861E1B9AAF00F1170B /* WBHttpRequest+WeiboShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboShare.h"; sourceTree = "<group>"; };
@@ -262,6 +299,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0E037CE920D10ADA00B5AA9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E037CEA20D10ADA00B5AA9A /* SocialSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0E4B31EB1E0294A000F231F0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -291,6 +336,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E037CF920D10B6700B5AA9A /* SocialSwiftSDKDemo */ = {
+			isa = PBXGroup;
+			children = (
+				0E037CFA20D10B6700B5AA9A /* SocialSDKSwiftDemo-Info.plist */,
+				0E037CFC20D10CD700B5AA9A /* Main.storyboard */,
+				0E037CFE20D10F4800B5AA9A /* GSSViewController.swift */,
+				0E037D0020D1106100B5AA9A /* AppDelegate.swift */,
+				0E037D0220D1108900B5AA9A /* SocialSwiftSDKDemo-Bridging-Header.h */,
+			);
+			path = SocialSwiftSDKDemo;
+			sourceTree = "<group>";
+		};
 		0E21AF821E1B9AAF00F1170B /* SDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -379,6 +436,7 @@
 				0EDF13A71E039D3900C554FC /* SocialSDK.podspec */,
 				0E21AF9A1E1B9ABC00F1170B /* README.md */,
 				0E21AF821E1B9AAF00F1170B /* SDK */,
+				0E037CF920D10B6700B5AA9A /* SocialSwiftSDKDemo */,
 				0E4B31F01E0294A000F231F0 /* SocialSDKDemo */,
 				0E4B32091E02962C00F231F0 /* SocialSDK */,
 				0E4B31EF1E0294A000F231F0 /* Products */,
@@ -391,6 +449,7 @@
 			children = (
 				0E4B31EE1E0294A000F231F0 /* SocialSDKDemo.app */,
 				0E4B32081E02962C00F231F0 /* SocialSDK.framework */,
+				0E037CF720D10ADA00B5AA9A /* SocialSDKSwiftDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -780,6 +839,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		0E037CE320D10ADA00B5AA9A /* SocialSDKSwiftDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E037CF520D10ADA00B5AA9A /* Build configuration list for PBXNativeTarget "SocialSDKSwiftDemo" */;
+			buildPhases = (
+				0E037CE620D10ADA00B5AA9A /* Sources */,
+				0E037CE920D10ADA00B5AA9A /* Frameworks */,
+				0E037CEB20D10ADA00B5AA9A /* Resources */,
+				0E037CF320D10ADA00B5AA9A /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0E037CE420D10ADA00B5AA9A /* PBXTargetDependency */,
+			);
+			name = SocialSDKSwiftDemo;
+			productName = SocialSDKDemo;
+			productReference = 0E037CF720D10ADA00B5AA9A /* SocialSDKSwiftDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 		0E4B31ED1E0294A000F231F0 /* SocialSDKDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E4B32001E0294A000F231F0 /* Build configuration list for PBXNativeTarget "SocialSDKDemo" */;
@@ -827,6 +905,10 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = GagSquad;
 				TargetAttributes = {
+					0E037CE320D10ADA00B5AA9A = {
+						DevelopmentTeam = 684DUL4925;
+						ProvisioningStyle = Manual;
+					};
 					0E4B31ED1E0294A000F231F0 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 684DUL4925;
@@ -855,11 +937,27 @@
 			targets = (
 				0E4B31ED1E0294A000F231F0 /* SocialSDKDemo */,
 				0E4B32071E02962C00F231F0 /* SocialSDK */,
+				0E037CE320D10ADA00B5AA9A /* SocialSDKSwiftDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0E037CEB20D10ADA00B5AA9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E037CEC20D10ADA00B5AA9A /* LaunchScreen.storyboard in Resources */,
+				0E037CED20D10ADA00B5AA9A /* GSSocialSDKResources.bundle in Resources */,
+				0E037CEE20D10ADA00B5AA9A /* Assets.xcassets in Resources */,
+				0E037CEF20D10ADA00B5AA9A /* WeiboSDK.bundle in Resources */,
+				0E037CF120D10ADA00B5AA9A /* .travis.yml in Resources */,
+				0E037CFD20D10CD700B5AA9A /* Main.storyboard in Resources */,
+				0E037CF220D10ADA00B5AA9A /* default.png in Resources */,
+				0E037CFB20D10B6800B5AA9A /* SocialSDKSwiftDemo-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0E4B31EC1E0294A000F231F0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -884,6 +982,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0E037CE620D10ADA00B5AA9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E037D0120D1106100B5AA9A /* AppDelegate.swift in Sources */,
+				0E037CE720D10ADA00B5AA9A /* GSViewController.m in Sources */,
+				0E037CFF20D10F4800B5AA9A /* GSSViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0E4B31EA1E0294A000F231F0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -932,6 +1040,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0E037CE420D10ADA00B5AA9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E4B32071E02962C00F231F0 /* SocialSDK */;
+			targetProxy = 0E037CE520D10ADA00B5AA9A /* PBXContainerItemProxy */;
+		};
 		0E4B320E1E02962C00F231F0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0E4B32071E02962C00F231F0 /* SocialSDK */;
@@ -959,6 +1072,28 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0E037CF620D10ADA00B5AA9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 684DUL4925;
+				INFOPLIST_FILE = "$(SRCROOT)/SocialSwiftSDKDemo/SocialSDKSwiftDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lollipop.LLPP-IOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "771955af-a3c5-465c-be45-885a02f96fed";
+				PROVISIONING_PROFILE_SPECIFIER = "通用测试证书";
+				SWIFT_OBJC_BRIDGING_HEADER = "SocialSwiftSDKDemo/SocialSwiftSDKDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		0E4B31FE1E0294A000F231F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1068,6 +1203,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0E037CF520D10ADA00B5AA9A /* Build configuration list for PBXNativeTarget "SocialSDKSwiftDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E037CF620D10ADA00B5AA9A /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		0E4B31E91E0294A000F231F0 /* Build configuration list for PBXProject "SocialSDKDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

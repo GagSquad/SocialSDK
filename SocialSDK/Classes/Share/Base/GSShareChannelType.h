@@ -11,7 +11,7 @@
 
 //分享支持的渠道
 typedef enum : NSUInteger {
-    GSShareChannelTypeNone,//未定义渠道
+    GSShareChannelTypeNone = 0,//未定义渠道
     GSShareChannelTypeSina,//新浪分享
     GSShareChannelTypeQQ,//QQ聊天分享
     GSShareChannelTypeQzone,//QQ空间分享

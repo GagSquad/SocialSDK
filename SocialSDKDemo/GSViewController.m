@@ -28,31 +28,31 @@
                                                    @(GSShareChannelTypeQQ),
                                                    @(GSShareChannelTypeWechatSession),
                                                    ]
-                                 completionBlock:^(BOOL isCancel, GSLogoReourcesType reourcesType) {
+                                 completionBlock:^(BOOL isCancel, GSLogoReourcesType resourcesType) {
                                      if (isCancel) {
                                          NSLog(@"用户点击了取消");
                                      } else {
                                          //支付
-                                         //[self testPay:reourcesType];
+                                         //[self testPay:resourcesType];
                                          
                                          //登录
-                                         [self testLogin:reourcesType];
+                                         [self testLogin:resourcesType];
                                          
                                          //分享
-//                                         [self testShare:reourcesType];
+//                                         [self testShare:resourcesType];
                                      }
                                  }];
 }
 
-- (void)testPay:(GSLogoReourcesType)reourcesType
+- (void)testPay:(GSLogoReourcesType)resourcesType
 {
     NSLog(@"%@",NSStringFromSelector(_cmd));
 }
 
-- (void)testLogin:(GSLogoReourcesType)reourcesType
+- (void)testLogin:(GSLogoReourcesType)resourcesType
 {
     NSLog(@"%@",NSStringFromSelector(_cmd));
-    id<GSLoginProtocol> login = [[GSLoginManager share] getShareProtocolWithChannelType:[GSLoginManager getShareChannelTypeWithLogoReourcesType:reourcesType]];
+    id<GSLoginProtocol> login = [[GSLoginManager share] getShareProtocolWithChannelType:[GSLoginManager getShareChannelTypeWithLogoReourcesType:resourcesType]];
     [login setLoginCompletionBlock:^(id<GSLoginResultProtocol> result) {
         NSLog(@"");
     }];
@@ -60,9 +60,9 @@
     [login doLogin];
 }
 
-- (void)testShare:(GSLogoReourcesType)reourcesType
+- (void)testShare:(GSLogoReourcesType)resourcesType
 {
-    id<GSShareProtocol> share = [[GSShareManager share] getShareProtocolWithChannelType:[GSShareManager getShareChannelTypeWithLogoReourcesType:reourcesType]];
+    id<GSShareProtocol> share = [[GSShareManager share] getShareProtocolWithChannelType:[GSShareManager getShareChannelTypeWithLogoReourcesType:resourcesType]];
     [share setShareCompletionBlock:^(id<GSShareResultProtocol> result) {
         NSLog(@"%@", result.message);
     }];
