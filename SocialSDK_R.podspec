@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name              = 'SocialSDK_R'
-    s.version           = '0.0.4'
+    s.version           = '0.0.5'
     s.summary           = 'SocialSDK_R SDK for iOS'
     s.homepage          = 'https://github.com/GagSquad/SocialSDK'
     s.author            = { 'itlijunjie@gmail.com' => 'https://github.com/itlijunjie', 'LVJIALIN' => 'https://github.com/LVJIALIN' }

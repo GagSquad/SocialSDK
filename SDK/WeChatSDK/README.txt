@@ -1,4 +1,24 @@
 重要!
+SDK1.8.2
+1. SDK增加开发票授权 WXInvoiceAuthInsert
+2. SDK增加非税接口   WXNontaxPay
+3. SDK增加医保接口   WXPayInsurance
+4. 更换MTA库
+
+SDK1.8.1
+1. SDK打开小程序支持指定版本（体验，开发，正式版）
+2. SDK分享小程序支持指定版本（体验，开发，正式版）
+3. SDK支持输出log日志
+
+SDK1.8.0
+1. SDK支持打开小程序
+2. SDK分享小程序支持shareTicket
+
+SDK1.7.9
+1. SDK订阅一次性消息
+
+SDK1.7.8
+1 SDK分享小程序支持大图
 
 SDK1.7.7
 1 增加SDK分享小程序
